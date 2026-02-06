@@ -1,6 +1,7 @@
 <script lang="ts">
 	import SEO from '$lib/components/SEO.svelte';
 	import Icon from '@iconify/svelte';
+	import InstagramSection from '$lib/components/InstagramSection.svelte';
 
 	// Contact form state
 	let firstName = $state('');
@@ -319,6 +320,9 @@
 		</div>
 	</div>
 </section>
+
+<!-- Instagram Section -->
+<InstagramSection instagramHandle="impactologyaust" />
 
 <!-- Client Logos -->
 <section class="section-gray py-16">
