@@ -1,42 +1,174 @@
-@import "tailwindcss";
+/* Font imports must be first */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700;900&family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap');
+
+@import 'tailwindcss';
 
 @plugin "daisyui" {
-  themes: winter --default, dark;
-  logs: false;
+	themes: impactology --default;
+	logs: false;
 }
 
-
+/*
+ * ============================================
+ * DaisyUI Theme — Impactology Brand Colors
+ * ============================================
+ * Primary: Bright Yellow (#FFF000)
+ * Dark Sections: #3E3E3E
+ * Gray Sections: #E3E4E8
+ */
 @plugin "daisyui/theme" {
-  name: "winter";
-  default: false;
-  prefersdark: false;
-  color-scheme: "light";
-  --color-base-100: oklch(100% 0 0);
-  --color-base-200: oklch(97.466% 0.011 259.822);
-  --color-base-300: oklch(93.268% 0.016 262.751);
-  --color-base-content: oklch(41.886% 0.053 255.824);
-  --color-primary: oklch(56.86% 0.255 257.57);
-  --color-primary-content: oklch(100% 0 0);
-  --color-secondary: oklch(42.551% 0.161 282.339);
-  --color-secondary-content: oklch(88.51% 0.032 282.339);
-  --color-accent: oklch(59.939% 0.191 335.171);
-  --color-accent-content: oklch(100% 0 0);
-  --color-neutral: oklch(19.616% 0.063 257.651);
-  --color-neutral-content: oklch(83.923% 0.012 257.651);
-  --color-info: oklch(88.127% 0.085 214.515);
-  --color-info-content: oklch(17.625% 0.017 214.515);
-  --color-success: oklch(80.494% 0.077 197.823);
-  --color-success-content: oklch(16.098% 0.015 197.823);
-  --color-warning: oklch(89.172% 0.045 71.47);
-  --color-warning-content: oklch(17.834% 0.009 71.47);
-  --color-error: oklch(73.092% 0.11 20.076);
-  --color-error-content: oklch(14.618% 0.022 20.076);
-  --radius-selector: 1rem;
-  --radius-field: 0.5rem;
-  --radius-box: 1rem;
-  --size-selector: 0.25rem;
-  --size-field: 0.25rem;
-  --border: 1px;
-  --depth: 0;
-  --noise: 0;
+	name: 'impactology';
+	default: true;
+	prefersdark: false;
+	color-scheme: 'light';
+
+	/* Primary - Bright Yellow Brand Color */
+	--color-primary: oklch(0.97 0.17 102); /* #FFF000 yellow */
+	--color-primary-content: oklch(0.2 0 0); /* black text on yellow */
+
+	/* Secondary - Dark Gray for contrast sections */
+	--color-secondary: oklch(0.35 0 0); /* #3E3E3E dark gray */
+	--color-secondary-content: oklch(1 0 0); /* white text on dark */
+
+	/* Accent - Can be used for links or highlights */
+	--color-accent: oklch(0.97 0.17 102); /* same as primary */
+	--color-accent-content: oklch(0.2 0 0);
+
+	/* Neutral - Dark sections, footer */
+	--color-neutral: oklch(0.35 0 0); /* #3E3E3E */
+	--color-neutral-content: oklch(1 0 0); /* white */
+
+	/* Base colors - main backgrounds */
+	--color-base-100: oklch(1 0 0); /* white */
+	--color-base-200: oklch(0.93 0 0); /* #E3E4E8 light gray */
+	--color-base-300: oklch(0.85 0 0); /* borders */
+	--color-base-content: oklch(0.2 0 0); /* black text */
+
+	/* Utility colors */
+	--color-info: oklch(0.7 0.15 230);
+	--color-success: oklch(0.7 0.15 150);
+	--color-warning: oklch(0.8 0.15 80);
+	--color-error: oklch(0.65 0.2 25);
+	--color-info-content: oklch(0.2 0 0);
+	--color-success-content: oklch(0.2 0 0);
+	--color-warning-content: oklch(0.2 0 0);
+	--color-error-content: oklch(1 0 0);
+
+	/* Border radius - WordPress had minimal rounding */
+	--radius-selector: 0;
+	--radius-field: 0;
+	--radius-box: 0;
+	--size-selector: 0;
+	--size-field: 0;
+	--border: 1px;
+	--depth: 0;
+	--noise: 0;
+}
+
+/*
+ * ============================================
+ * Custom Design Tokens — WordPress Extracted
+ * ============================================
+ */
+:root {
+	/* Typography */
+	--font-body: 'DM Sans', sans-serif;
+	--font-heading: 'Barlow Condensed', sans-serif;
+	--font-size-base: 16px;
+	--line-height-base: 1.5;
+
+	/* Layout */
+	--container-max: 1140px;
+
+	/* Custom section backgrounds */
+	--section-dark: oklch(0.35 0 0); /* #3E3E3E */
+	--section-gray: oklch(0.93 0 0); /* #E3E4E8 */
+	--section-yellow: oklch(0.97 0.17 102); /* #FFF000 */
+}
+
+/*
+ * ============================================
+ * Base Styles
+ * ============================================
+ */
+body {
+	font-family: var(--font-body);
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--font-heading);
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 88px;
+	line-height: 1;
+}
+
+h3 {
+	font-size: 29px;
+}
+
+/*
+ * ============================================
+ * Custom Utility Classes
+ * ============================================
+ */
+.section-dark {
+	background-color: var(--section-dark);
+	color: var(--color-neutral-content);
+}
+
+.section-gray {
+	background-color: var(--section-gray);
+}
+
+.section-yellow {
+	background-color: var(--section-yellow);
+	color: var(--color-primary-content);
+}
+
+.container-custom {
+	max-width: var(--container-max);
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+/*
+ * ============================================
+ * IMPACTORA Showcase Section
+ * ============================================
+ */
+.impactora-screenshots {
+	position: relative;
+}
+
+.impactora-screenshot-main {
+	position: relative;
+	z-index: 2;
+}
+
+.impactora-screenshot-secondary {
+	position: absolute;
+	bottom: -2rem;
+	right: -1rem;
+	width: 45%;
+	z-index: 3;
+}
+
+@media (min-width: 1024px) {
+	.impactora-screenshot-secondary {
+		bottom: -3rem;
+		right: -2rem;
+	}
 }
