@@ -2,6 +2,39 @@
 	import SEO from '$lib/components/SEO.svelte';
 	import Icon from '@iconify/svelte';
 
+	// Contact form state
+	let firstName = $state('');
+	let lastName = $state('');
+	let email = $state('');
+	let phone = $state('');
+	let company = $state('');
+	let message = $state('');
+	let formStatus = $state<'idle' | 'sending' | 'sent' | 'error'>('idle');
+	let errorMessage = $state('');
+
+	async function handleContactSubmit(e: SubmitEvent) {
+		e.preventDefault();
+		formStatus = 'sending';
+		try {
+			const res = await fetch('/api/contact', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ firstName, lastName, email, phone, company, message })
+			});
+			if (!res.ok) throw new Error('Failed to send');
+			formStatus = 'sent';
+			firstName = '';
+			lastName = '';
+			email = '';
+			phone = '';
+			company = '';
+			message = '';
+		} catch {
+			formStatus = 'error';
+			errorMessage = 'Something went wrong. Please try again.';
+		}
+	}
+
 	const clientPhotos = [
 		'/client-photo-1.jpg',
 		'/client-photo-2.jpg',
@@ -322,6 +355,129 @@
 					<img src={logo} alt="Client logo" class="max-h-12 w-auto object-contain" />
 				</div>
 			{/each}
+		</div>
+	</div>
+</section>
+
+<!-- Find Out How We Can Help - Contact Form Section -->
+<section id="make_impacts" class="py-20 md:py-28 bg-base-100" data-testid="contact-form-section">
+	<div class="container-custom">
+		<div class="max-w-4xl mx-auto">
+			<h2 class="text-center mb-4">FIND OUT HOW WE CAN HELP</h2>
+			<p class="text-center text-lg mb-12 max-w-2xl mx-auto">
+				Ready to make an impact? Fill out the form below and one of our team members will be in
+				touch to discuss how we can support your business goals.
+			</p>
+
+			<form
+				onsubmit={handleContactSubmit}
+				class="grid grid-cols-1 md:grid-cols-2 gap-6"
+				data-testid="inline-contact-form"
+			>
+				<label class="form-control w-full">
+					<div class="label">
+						<span class="label-text font-medium">First Name</span>
+					</div>
+					<input
+						type="text"
+						bind:value={firstName}
+						required
+						class="input input-bordered w-full rounded-none"
+						placeholder="John"
+					/>
+				</label>
+
+				<label class="form-control w-full">
+					<div class="label">
+						<span class="label-text font-medium">Last Name</span>
+					</div>
+					<input
+						type="text"
+						bind:value={lastName}
+						required
+						class="input input-bordered w-full rounded-none"
+						placeholder="Smith"
+					/>
+				</label>
+
+				<label class="form-control w-full">
+					<div class="label">
+						<span class="label-text font-medium">Email</span>
+					</div>
+					<input
+						type="email"
+						bind:value={email}
+						required
+						class="input input-bordered w-full rounded-none"
+						placeholder="john@company.com"
+					/>
+				</label>
+
+				<label class="form-control w-full">
+					<div class="label">
+						<span class="label-text font-medium">Phone (optional)</span>
+					</div>
+					<input
+						type="tel"
+						bind:value={phone}
+						class="input input-bordered w-full rounded-none"
+						placeholder="+61 400 000 000"
+					/>
+				</label>
+
+				<label class="form-control w-full md:col-span-2">
+					<div class="label">
+						<span class="label-text font-medium">Company</span>
+					</div>
+					<input
+						type="text"
+						bind:value={company}
+						required
+						class="input input-bordered w-full rounded-none"
+						placeholder="Your Company Name"
+					/>
+				</label>
+
+				<label class="form-control w-full md:col-span-2">
+					<div class="label">
+						<span class="label-text font-medium">How can we help?</span>
+					</div>
+					<textarea
+						bind:value={message}
+						required
+						class="textarea textarea-bordered w-full rounded-none h-32"
+						placeholder="Tell us about your goals and how we can support you..."
+					></textarea>
+				</label>
+
+				{#if formStatus === 'error'}
+					<div class="alert alert-error rounded-none md:col-span-2">
+						<Icon icon="ph:warning-circle" class="text-lg" />
+						<span>{errorMessage}</span>
+					</div>
+				{/if}
+				{#if formStatus === 'sent'}
+					<div class="alert alert-success rounded-none md:col-span-2">
+						<Icon icon="ph:check-circle" class="text-lg" />
+						<span>Thanks for reaching out! We'll be in touch within 24 hours.</span>
+					</div>
+				{/if}
+
+				<div class="md:col-span-2">
+					<button
+						type="submit"
+						class="btn btn-secondary btn-lg uppercase font-bold rounded-none w-full md:w-auto md:px-16"
+						disabled={formStatus === 'sending'}
+					>
+						{#if formStatus === 'sending'}
+							<span class="loading loading-spinner loading-sm"></span>
+							Sending...
+						{:else}
+							Get in Touch
+						{/if}
+					</button>
+				</div>
+			</form>
 		</div>
 	</div>
 </section>
