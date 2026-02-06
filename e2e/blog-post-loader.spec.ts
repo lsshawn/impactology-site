@@ -66,6 +66,18 @@ test.describe('Blog Post Loader (+page.ts)', () => {
 			{
 				slug: 'transform-bpo-teams-leadership-business-partnering',
 				titleFragment: 'From Burnout to Brilliance'
+			},
+			{
+				slug: 'tips-to-overcome-local-government-employee-growth-challenges',
+				titleFragment: 'Four Tips to Overcome'
+			},
+			{
+				slug: 'local-councils-employee-growth-community-engagement',
+				titleFragment: 'Three Strategies Local Councils'
+			},
+			{
+				slug: 'the-top-5-personal-growth-strategies-for-it-business-partners',
+				titleFragment: 'Mastering the Art of Negotiation'
 			}
 		];
 

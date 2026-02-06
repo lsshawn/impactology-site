@@ -68,7 +68,7 @@ test.describe('Blog Page', () => {
 		test('displays the correct number of blog posts', async ({ page }) => {
 			const articles = page.locator('article');
 			const count = await articles.count();
-			expect(count).toBe(9);
+			expect(count).toBe(12);
 		});
 
 		test('shows recent post first', async ({ page }) => {

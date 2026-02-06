@@ -247,6 +247,27 @@ test.describe('Blog Post Page', () => {
 			const heading = page.locator('h1');
 			await expect(heading).toContainText('Adapting to Change');
 		});
+
+		test('Local Government Employee Growth post loads correctly', async ({ page }) => {
+			await page.goto('/blog/tips-to-overcome-local-government-employee-growth-challenges');
+			await expect(page).toHaveTitle(/Four Tips to Overcome/i);
+			const heading = page.locator('h1');
+			await expect(heading).toContainText('Four Tips to Overcome');
+		});
+
+		test('Local Councils Employee Growth post loads correctly', async ({ page }) => {
+			await page.goto('/blog/local-councils-employee-growth-community-engagement');
+			await expect(page).toHaveTitle(/Three Strategies Local Councils/i);
+			const heading = page.locator('h1');
+			await expect(heading).toContainText('Three Strategies Local Councils');
+		});
+
+		test('IT Business Partners Negotiation post loads correctly', async ({ page }) => {
+			await page.goto('/blog/the-top-5-personal-growth-strategies-for-it-business-partners');
+			await expect(page).toHaveTitle(/Mastering the Art of Negotiation/i);
+			const heading = page.locator('h1');
+			await expect(heading).toContainText('Mastering the Art of Negotiation');
+		});
 	});
 
 	test.describe('Image Optimization', () => {

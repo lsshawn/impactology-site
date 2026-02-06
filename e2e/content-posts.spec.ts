@@ -10,14 +10,17 @@ test.describe('Content Posts Directory Structure', () => {
 		'top-5-growth-mindset-tips-every-finance-team-needs-for-business-partnering-success',
 		'local-government-strategies-trust-collaboration',
 		'high-performing-cross-functional-bpo-teams',
-		'transform-bpo-teams-leadership-business-partnering'
+		'transform-bpo-teams-leadership-business-partnering',
+		'tips-to-overcome-local-government-employee-growth-challenges',
+		'local-councils-employee-growth-community-engagement',
+		'the-top-5-personal-growth-strategies-for-it-business-partners'
 	];
 
-	test('blog listing loads all 9 posts from markdown content files', async ({ page }) => {
+	test('blog listing loads all 12 posts from markdown content files', async ({ page }) => {
 		await page.goto('/blog');
 		const articles = page.locator('article');
 		const count = await articles.count();
-		expect(count).toBe(9);
+		expect(count).toBe(12);
 	});
 
 	test('blog listing shows posts sorted by date (newest first)', async ({ page }) => {
