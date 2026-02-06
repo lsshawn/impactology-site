@@ -245,6 +245,34 @@
 	</div>
 </section>
 
+<!-- Testimonial Quote Section -->
+<section class="section-yellow py-20 md:py-28" data-testid="testimonial-section">
+	<div class="container-custom">
+		<div class="max-w-4xl mx-auto text-center relative">
+			<!-- Decorative Quote Marks -->
+			<div class="quote-marks absolute -top-8 left-0 md:left-8 text-base-content/10">
+				<Icon icon="ph:quotes-fill" class="text-8xl md:text-9xl" />
+			</div>
+
+			<!-- Quote Content -->
+			<blockquote class="relative z-10">
+				<p class="text-2xl md:text-3xl lg:text-4xl font-bold leading-relaxed mb-8">
+					Impactology helped me achieve breakthrough results with my team. Their approach
+					transformed how we collaborate and drive business outcomes.
+				</p>
+				<footer class="text-lg md:text-xl">
+					<cite class="not-italic font-semibold">— Senior HR Business Partner</cite>
+				</footer>
+			</blockquote>
+
+			<!-- Decorative Quote Marks (closing) -->
+			<div class="quote-marks absolute -bottom-8 right-0 md:right-8 text-base-content/10">
+				<Icon icon="ph:quotes-fill" class="text-8xl md:text-9xl rotate-180" />
+			</div>
+		</div>
+	</div>
+</section>
+
 <!-- Meet Our Clients Carousel -->
 <section class="py-20 bg-base-100">
 	<div class="container-custom">

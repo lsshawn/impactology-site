@@ -172,3 +172,13 @@ h3 {
 		right: -2rem;
 	}
 }
+
+/*
+ * ============================================
+ * Testimonial Quote Section
+ * ============================================
+ */
+.quote-marks {
+	pointer-events: none;
+	user-select: none;
+}
