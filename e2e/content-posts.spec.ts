@@ -13,14 +13,26 @@ test.describe('Content Posts Directory Structure', () => {
 		'transform-bpo-teams-leadership-business-partnering',
 		'tips-to-overcome-local-government-employee-growth-challenges',
 		'local-councils-employee-growth-community-engagement',
-		'the-top-5-personal-growth-strategies-for-it-business-partners'
+		'the-top-5-personal-growth-strategies-for-it-business-partners',
+		'what-does-it-mean-to-be-a-transformational-it-business-partner',
+		'breaking-limiting-beliefs-msp-leadership-growth',
+		'four-strategies-to-transform-procurement-partnering',
+		'employee-growth-for-managed-service-providers-msps-a-strategic-path-to-success',
+		'embracing-imposter-syndrome-hr-leadership',
+		'theme-1-foundation-defining-sustainable-growth-in-the-mssp-msp-world-blog-1-of-6',
+		'balancing-ambition-and-well-being-five-finance-business-partner-strategies-for-personal-growth',
+		'five-tips-to-enhancing-your-business-partnering-judgment-and-intuition-in-procurement',
+		'top-5-ways-to-create-genuine-connections-for-personal-and-professional-growth',
+		'top-4-tips-to-enhance-self-awareness-for-people-culture-business-partners',
+		'7-tips-to-cultivating-creativity-in-procurement',
+		'top-5-mindset-shifts-for-finance-business-partners'
 	];
 
-	test('blog listing loads all 12 posts from markdown content files', async ({ page }) => {
+	test('blog listing loads all 24 posts from markdown content files', async ({ page }) => {
 		await page.goto('/blog');
 		const articles = page.locator('article');
 		const count = await articles.count();
-		expect(count).toBe(12);
+		expect(count).toBe(24);
 	});
 
 	test('blog listing shows posts sorted by date (newest first)', async ({ page }) => {

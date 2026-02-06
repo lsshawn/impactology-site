@@ -44,6 +44,7 @@ test.describe('Blog Post Loader (+page.ts)', () => {
 	});
 
 	test('loads each blog post by its unique slug', async ({ page }) => {
+		test.slow();
 		const slugs = [
 			{ slug: 'drive-results-with-business-partnering', titleFragment: '5 Reminders' },
 			{ slug: 'agile-client-centric-bpo-teams', titleFragment: 'Adapting to Change' },
@@ -78,6 +79,54 @@ test.describe('Blog Post Loader (+page.ts)', () => {
 			{
 				slug: 'the-top-5-personal-growth-strategies-for-it-business-partners',
 				titleFragment: 'Mastering the Art of Negotiation'
+			},
+			{
+				slug: 'what-does-it-mean-to-be-a-transformational-it-business-partner',
+				titleFragment: 'Transformational IT Business Partner'
+			},
+			{
+				slug: 'breaking-limiting-beliefs-msp-leadership-growth',
+				titleFragment: 'Breaking Limiting Beliefs'
+			},
+			{
+				slug: 'four-strategies-to-transform-procurement-partnering',
+				titleFragment: 'Four Strategies to Transform'
+			},
+			{
+				slug: 'employee-growth-for-managed-service-providers-msps-a-strategic-path-to-success',
+				titleFragment: 'Employee Growth for Managed Service Providers'
+			},
+			{
+				slug: 'embracing-imposter-syndrome-hr-leadership',
+				titleFragment: 'Embracing Imposter Syndrome'
+			},
+			{
+				slug: 'theme-1-foundation-defining-sustainable-growth-in-the-mssp-msp-world-blog-1-of-6',
+				titleFragment: 'Foundation'
+			},
+			{
+				slug: 'balancing-ambition-and-well-being-five-finance-business-partner-strategies-for-personal-growth',
+				titleFragment: 'Balancing Ambition'
+			},
+			{
+				slug: 'five-tips-to-enhancing-your-business-partnering-judgment-and-intuition-in-procurement',
+				titleFragment: 'Mindful Decision-Making'
+			},
+			{
+				slug: 'top-5-ways-to-create-genuine-connections-for-personal-and-professional-growth',
+				titleFragment: 'Authentic Networking'
+			},
+			{
+				slug: 'top-4-tips-to-enhance-self-awareness-for-people-culture-business-partners',
+				titleFragment: 'Self-Awareness'
+			},
+			{
+				slug: '7-tips-to-cultivating-creativity-in-procurement',
+				titleFragment: 'Cultivating Creativity'
+			},
+			{
+				slug: 'top-5-mindset-shifts-for-finance-business-partners',
+				titleFragment: 'Mindset Shifts'
 			}
 		];
 
