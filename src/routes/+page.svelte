@@ -408,61 +408,31 @@
 </section>
 
 <!-- Impactora Promo Section -->
-<section class="py-20 md:py-28" style="background-color: #1ECAD3;">
-	<div class="container-custom">
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-			<!-- Text Content -->
-			<div>
-				<div class="flex items-center gap-3 mb-6">
-					<img src="/icon1.png" alt="Impactora" class="w-10 h-10" />
-					<span class="font-bold text-xl text-black uppercase tracking-widest">IMPACTORA</span>
-				</div>
-				<h2 class="mb-6 text-black" style="color: #FFF000;">
-					TAILORED ADVICE &amp; INSIGHTS<br />FOR EMPLOYEES &amp; MANAGERS
-				</h2>
-				<p class="text-black text-base leading-relaxed mb-8 max-w-lg">
-					IMPACTORA is a SaaS platform designed to bridge the loss of organisational knowledge that
-					we are all experiencing with today's remote and hybrid working environments. It provides
-					easy to access and immediate support, advice, and insights that are tailored to the
-					individual employee and organisation.
-				</p>
-				<a
-					href="/impactora"
-					class="btn btn-secondary btn-lg uppercase font-bold rounded-none inline-flex items-center gap-2"
-				>
-					Start Here! See How It Works
-				</a>
-			</div>
-
-			<!-- App Screenshot / Mockup -->
-			<div class="flex justify-center lg:justify-end">
-				<div
-					class="bg-white rounded-2xl shadow-2xl p-6 max-w-xs w-full"
-					style="box-shadow: 0 25px 60px rgba(0,0,0,0.3);"
-				>
-					<p class="text-sm font-bold text-black mb-4 text-center">
-						Take action now – who do you want to positively impact?
-					</p>
-					<div class="space-y-3">
-						<button
-							class="w-full flex items-center gap-3 p-3 border-2 border-gray-200 rounded-lg hover:border-primary transition-colors"
-						>
-							<div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center">
-								<Icon icon="ph:user-fill" class="text-sm text-black" />
-							</div>
-							<span class="font-medium text-black text-sm">Myself</span>
-						</button>
-						<button
-							class="w-full flex items-center gap-3 p-3 border-2 border-gray-200 rounded-lg hover:border-primary transition-colors"
-						>
-							<div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center">
-								<Icon icon="ph:users-fill" class="text-sm text-black" />
-							</div>
-							<span class="font-medium text-black text-sm">My Team</span>
-						</button>
-					</div>
-				</div>
-			</div>
+<section
+	class="min-h-[60vh] flex items-center bg-cover bg-right bg-no-repeat relative"
+	style="background-image: url('/impactora-promo-banner.png');"
+>
+	<div class="w-full relative z-10 py-20 md:py-28 px-4 md:px-[calc((100%-var(--container-max))/2+1rem)]">
+		<div class="max-w-xl">
+			<img src="/impactora-logo.png" alt="Impactora" class="h-12 md:h-14 w-auto mb-8" />
+			<h2 class="text-4xl md:text-6xl font-bold uppercase leading-tight mb-2 text-white">
+				TAILORED ADVICE &amp; INSIGHTS
+			</h2>
+			<h2 class="text-4xl md:text-6xl font-bold uppercase leading-tight mb-8">
+				FOR EMPLOYEES &amp; MANAGERS
+			</h2>
+			<p class="text-base leading-relaxed mb-8 max-w-lg">
+				<strong>IMPACTORA</strong> is a SaaS platform designed to bridge the loss of organisational knowledge
+				that we are all experiencing with today's remote and hybrid working environments. It provides
+				easy to access and immediate support, advice, and insights that are tailored to the individual
+				employee and organisation.
+			</p>
+			<a
+				href="/impactora"
+				class="btn btn-secondary btn-lg uppercase font-bold inline-flex items-center gap-2"
+			>
+				Start Here! See How It Works
+			</a>
 		</div>
 	</div>
 </section>
