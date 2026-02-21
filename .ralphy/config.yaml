@@ -1,0 +1,14 @@
+project:
+  name: impactology
+  language: TypeScript
+  framework: Svelte
+  description: ''
+commands:
+  test: npm test
+  lint: npm run lint
+  build: npm run build
+rules:
+  - use frontend skill for frontend code, and wordpress-site-to-svelte to
+    understand the wordpress page
+boundaries:
+  never_touch: null

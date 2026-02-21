@@ -53,7 +53,7 @@
 	const modules = [
 		{
 			title: 'UNDERSTAND YOUR BUSINESS',
-			subtitle: 'Know how to support your company\'s business model.',
+			subtitle: "Know how to support your company's business model.",
 			description:
 				"We help you grow your ability to think strategically and develop a strong commercial mindset. This module is crucial for building a mature and effective HR function. It covers essential aspects of what are the core elements of a business model, helping you make informed decisions that support the overall business strategy. This module is tailored to your company and industry – no 'off the shelf' solution here!"
 		},
@@ -67,7 +67,7 @@
 			title: 'UNDERSTAND YOUR MACRO WORLD',
 			subtitle: 'Understanding the external influences to improve decision-making.',
 			description:
-				"Business decisions are influenced by internal and external factors across different industries, markets and geographies. This module focuses on building a strong \"outside-in\" view of the world, and how macro-environmental factors impact a company's direction and the HR team's influence and decision-making. A solid understanding of the macro factors that can impact the organisation, is critical to effective HR/P&C decision making."
+				'Business decisions are influenced by internal and external factors across different industries, markets and geographies. This module focuses on building a strong "outside-in" view of the world, and how macro-environmental factors impact a company\'s direction and the HR team\'s influence and decision-making. A solid understanding of the macro factors that can impact the organisation, is critical to effective HR/P&C decision making.'
 		},
 		{
 			title: 'HR / PEOPLE & CULTURE BUSINESS PARTNERING TOOLKIT',

@@ -1,0 +1,31 @@
+# Ralphy Progress Log
+
+- [✓] 2026-02-06 08:17 - Add IMPACTORA showcase section (dark bg, product screenshots, "Tailored advice & insights")
+- [✓] 2026-02-06 08:21 - Add testimonial quote section (yellow bg, quote marks, "Helped me achieve")
+- [✓] 2026-02-06 08:22 - Add testimonial quote section (yellow bg, quote marks, "Helped me achieve")
+- [✓] 2026-02-06 08:27 - Add "Find out how we can help" contact form section (white bg, inline form)
+- [✓] 2026-02-06 08:31 - Add Instagram section ("Follow us on Instagram" with embedded grid)
+- [✓] 2026-02-06 08:38 - Create `/impactora/+page.svelte` - Impactora SaaS product page
+- [✓] 2026-02-06 08:46 - Create `/business-partnering-impact-program/+page.svelte`
+- [✓] 2026-02-06 08:52 - Create `/amplify-your-impact-program/+page.svelte`
+- [✓] 2026-02-06 08:58 - Create `/evolve-book/+page.svelte` - Book page
+- [✓] 2026-02-06 09:04 - Create `/impactology-live-2020/+page.svelte` - Event archive
+- [✓] 2026-02-06 09:09 - Create `/gallery/+page.svelte` - Photo gallery
+- [✓] 2026-02-06 09:13 - Create `/privacy-policy/+page.svelte`
+- [✓] 2026-02-06 09:17 - Create `/legals1/+page.svelte` - Terms & Conditions
+- [✓] 2026-02-06 09:23 - Create `/procurement-business-partnering/+page.svelte`
+- [✓] 2026-02-06 09:29 - Create `/finance-business-partnering/+page.svelte`
+- [✓] 2026-02-06 09:35 - Create `/it-business-partnering/+page.svelte`
+- [✓] 2026-02-06 09:41 - Create `/hr-business-partnering/+page.svelte`
+- [✓] 2026-02-06 09:45 - Create `/leadership-development-for-bpos/+page.svelte`
+- [✓] 2026-02-06 09:51 - Create `/msp-bp-programs/+page.svelte`
+- [✓] 2026-02-06 09:55 - Create `/leadership-development-program-local-government/+page.svelte`
+- [✓] 2026-02-06 10:01 - Create `/sales-business-development-client-management-program/+page.svelte`
+- [✓] 2026-02-06 10:07 - Create `/marketing-communications-business-partnering-program/+page.svelte`
+- [✓] 2026-02-06 10:13 - Create `/blog/+page.svelte` - Blog listing with post cards
+- [✓] 2026-02-06 10:23 - Create `/blog/[slug]/+page.svelte` - Post template
+- [✓] 2026-02-06 10:35 - Create `/blog/[slug]/+page.ts` - Post loader
+- [✓] 2026-02-06 10:46 - Create `/src/content/posts/` directory structure
+- [✓] 2026-02-06 10:56 - Migrate 37 blog posts to markdown (batch 1: posts 1-12)
+- [✓] 2026-02-06 11:19 - Migrate blog posts batch 2 (posts 13-24)
+- [✓] 2026-02-06 11:28 - Migrate blog posts batch 3 (posts 25-37)

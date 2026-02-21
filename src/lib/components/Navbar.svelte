@@ -132,7 +132,9 @@
 				tabindex="0"
 				title="Account menu"
 			>
-				<div class="w-9 h-9 bg-primary/10 text-primary rounded-xl flex items-center justify-center text-sm font-semibold">
+				<div
+					class="w-9 h-9 bg-primary/10 text-primary rounded-xl flex items-center justify-center text-sm font-semibold"
+				>
 					U
 				</div>
 			</button>

@@ -27,7 +27,9 @@ test.describe('HR Business Partnering Page', () => {
 		});
 
 		test('displays the hero tagline about experts in change', async ({ page }) => {
-			const tagline = page.getByText(/Experts in change.*Builders of trust.*Leaders in collaboration/i);
+			const tagline = page.getByText(
+				/Experts in change.*Builders of trust.*Leaders in collaboration/i
+			);
 			await expect(tagline).toBeVisible();
 		});
 
@@ -91,7 +93,9 @@ test.describe('HR Business Partnering Page', () => {
 		});
 
 		test('mentions HR/People & Culture business partners', async ({ page }) => {
-			const text = page.getByText('HR/People & Culture business partners', { exact: false }).first();
+			const text = page
+				.getByText('HR/People & Culture business partners', { exact: false })
+				.first();
 			await expect(text).toBeVisible();
 		});
 	});
@@ -253,7 +257,10 @@ test.describe('HR Business Partnering Page', () => {
 
 		test('has meta description', async ({ page }) => {
 			const metaDescription = page.locator('meta[name="description"]');
-			await expect(metaDescription).toHaveAttribute('content', /HR.*People.*Culture Business Partnering/i);
+			await expect(metaDescription).toHaveAttribute(
+				'content',
+				/HR.*People.*Culture Business Partnering/i
+			);
 		});
 
 		test('has Open Graph tags', async ({ page }) => {
