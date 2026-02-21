@@ -12,25 +12,39 @@ test.describe('Testimonial Quote Section', () => {
 	});
 
 	test('displays the testimonial quote text', async ({ page }) => {
-		const quote = page.getByText(/helped me achieve breakthrough results/i);
-		await expect(quote).toBeVisible();
-	});
-
-	test('displays the quote attribution', async ({ page }) => {
-		const attribution = page.getByText(/Senior HR Business Partner/i);
-		await expect(attribution).toBeVisible();
-	});
-
-	test('displays decorative quote marks', async ({ page }) => {
 		const section = page.locator('[data-testid="testimonial-section"]');
-		const quoteMarks = section.locator('.quote-marks');
-		await expect(quoteMarks).toHaveCount(2);
+		const card = section.locator('[data-testid="testimonial-card"]');
+		await expect(card).toBeVisible();
+		// First testimonial should be visible by default
+		await expect(card).toContainText('Claire');
 	});
 
-	test('section contains a blockquote element', async ({ page }) => {
+	test('displays the quote attribution with name and title', async ({ page }) => {
+		const card = page.locator('[data-testid="testimonial-card"]');
+		await expect(card.getByText('Claire')).toBeVisible();
+		await expect(card.getByText('Senior Manager')).toBeVisible();
+	});
+
+	test('has decorative quote mark icons via CSS pseudo-elements', async ({ page }) => {
+		const card = page.locator('[data-testid="testimonial-card"]');
+		const before = await card.evaluate((el) => {
+			const style = window.getComputedStyle(el, '::before');
+			return style.backgroundImage;
+		});
+		expect(before).toContain('q_icon_top.png');
+	});
+
+	test('navigation shows current position and total', async ({ page }) => {
 		const section = page.locator('[data-testid="testimonial-section"]');
-		const blockquote = section.locator('blockquote');
-		await expect(blockquote).toBeVisible();
+		await expect(section.getByText('1/5')).toBeVisible();
+	});
+
+	test('navigation arrows cycle through testimonials', async ({ page }) => {
+		const section = page.locator('[data-testid="testimonial-section"]');
+		const nextBtn = section.getByLabel('Next testimonial');
+		await nextBtn.click();
+		await expect(section.getByText('2/5')).toBeVisible();
+		await expect(section.locator('[data-testid="testimonial-card"]')).toContainText('Andrew');
 	});
 
 	test('testimonial section appears after IMPACTORA showcase', async ({ page }) => {

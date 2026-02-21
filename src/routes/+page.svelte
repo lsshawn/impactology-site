@@ -2,6 +2,7 @@
 	import SEO from '$lib/components/SEO.svelte';
 	import Icon from '@iconify/svelte';
 	import InstagramSection from '$lib/components/InstagramSection.svelte';
+	import { onMount, onDestroy } from 'svelte';
 
 	// Contact form state
 	let firstName = $state('');
@@ -81,30 +82,35 @@
 
 	const testimonials = [
 		{
+			shortQuote: 'One-on-one guidance really helped',
 			quote:
 				'I really connected with and appreciated the style and approach. The one-on-one guidance really helped.',
 			name: 'Claire',
 			title: 'Senior Manager'
 		},
 		{
+			shortQuote: 'Helped me stay focused on my leadership priorities',
 			quote:
 				'My goal was to maintain focus on my most important leadership priorities and this program has helped me achieve this.',
 			name: 'Andrew',
 			title: 'General Counsel'
 		},
 		{
+			shortQuote: 'Program helped me in so many ways',
 			quote:
 				'My learnings from this program have helped me in so many ways both personally and professionally.',
 			name: 'Deborah',
 			title: 'HR Director'
 		},
 		{
+			shortQuote: 'Insights that were innovative and pragmatic',
 			quote:
 				'I appreciated the extensive experience from a wide range of sectors to draw upon. The insights shared were innovative and pragmatic.',
 			name: 'Raj',
 			title: 'GM Human Resources'
 		},
 		{
+			shortQuote: 'A truly enriching and transformational experience',
 			quote:
 				'The guidance I have received has been instrumental in helping me to workout my overall vision and strategies for my career and personal goals. This has been a truly enriching and transformational experience.',
 			name: 'Katarina',
@@ -113,14 +119,52 @@
 	];
 
 	let activeTestimonial = $state(0);
+	let slideDirection = $state<'left' | 'right'>('left');
+	let isAnimating = $state(false);
+	let autoSlideTimer: ReturnType<typeof setInterval>;
+
+	function slideTo(index: number, direction: 'left' | 'right') {
+		if (isAnimating) return;
+		slideDirection = direction;
+		isAnimating = true;
+		// After slide-out finishes, swap content and slide in
+		setTimeout(() => {
+			activeTestimonial = index;
+			isAnimating = false;
+		}, 300);
+	}
 
 	function prevTestimonial() {
-		activeTestimonial = (activeTestimonial - 1 + testimonials.length) % testimonials.length;
+		resetAutoSlide();
+		const prev = (activeTestimonial - 1 + testimonials.length) % testimonials.length;
+		slideTo(prev, 'right');
 	}
 
 	function nextTestimonial() {
-		activeTestimonial = (activeTestimonial + 1) % testimonials.length;
+		resetAutoSlide();
+		const next = (activeTestimonial + 1) % testimonials.length;
+		slideTo(next, 'left');
 	}
+
+	function startAutoSlide() {
+		autoSlideTimer = setInterval(() => {
+			const next = (activeTestimonial + 1) % testimonials.length;
+			slideTo(next, 'left');
+		}, 3000);
+	}
+
+	function resetAutoSlide() {
+		clearInterval(autoSlideTimer);
+		startAutoSlide();
+	}
+
+	onMount(() => {
+		startAutoSlide();
+	});
+
+	onDestroy(() => {
+		clearInterval(autoSlideTimer);
+	});
 </script>
 
 <SEO
@@ -424,57 +468,56 @@
 </section>
 
 <!-- Testimonials Section -->
-<section class="section-yellow py-20 md:py-28" data-testid="testimonial-section">
+<section class="py-20 md:py-28 bg-[#fff000]" data-testid="testimonial-section">
 	<div class="container-custom">
-		<h2 class="text-center mb-16">WHAT OUR CLIENTS SAY</h2>
-
-		<!-- Carousel -->
-		<div class="max-w-3xl mx-auto">
-			<div class="bg-base-100 p-10 relative min-h-64">
-				<div class="text-primary/30 mb-4">
-					<Icon icon="ph:quotes-fill" class="text-5xl" />
-				</div>
-				<blockquote>
-					<p class="text-base leading-relaxed mb-6 text-base-content text-lg">
-						"{testimonials[activeTestimonial].quote}"
-					</p>
-					<footer class="font-bold text-sm text-base-content">
-						<cite class="not-italic">
-							{testimonials[activeTestimonial].name},
-							<span class="font-normal opacity-70">{testimonials[activeTestimonial].title}</span>
-						</cite>
-					</footer>
-				</blockquote>
-			</div>
-
-			<!-- Navigation -->
-			<div class="flex items-center justify-center gap-6 mt-8">
-				<button
-					onclick={prevTestimonial}
-					class="btn btn-secondary btn-sm rounded-none w-10 h-10 p-0 flex items-center justify-center"
-					aria-label="Previous testimonial"
+		<!-- Quote block with ::before/::after quote mark icons -->
+		<div class="testimonial-title" data-testid="testimonial-card">
+			<div class="overflow-hidden w-full">
+				<div
+					class="testimonial-slide flex items-center w-full"
+					class:slide-out-left={isAnimating && slideDirection === 'left'}
+					class:slide-out-right={isAnimating && slideDirection === 'right'}
+					class:slide-in-left={!isAnimating && slideDirection === 'right'}
+					class:slide-in-right={!isAnimating && slideDirection === 'left'}
 				>
-					<Icon icon="ph:arrow-left-bold" class="text-lg" />
-				</button>
-				<div class="flex gap-2">
-					{#each testimonials as _, i}
-						<button
-							onclick={() => (activeTestimonial = i)}
-							class="w-3 h-3 rounded-full transition-colors {i === activeTestimonial
-								? 'bg-black'
-								: 'bg-black/30'}"
-							aria-label="Go to testimonial {i + 1}"
-						></button>
-					{/each}
+					<!-- Left: large bold headline with left accent bar -->
+					<div class="pl-4 mr-6 shrink-0 md:w-1/2">
+						<p class="text-2xl md:text-2xl font-black leading-tight text-black">
+							{testimonials[activeTestimonial].shortQuote}
+						</p>
+					</div>
+
+					<!-- Right: full quote + attribution -->
+					<div class="md:w-1/2">
+						<p class="text-sm leading-relaxed text-black mb-4">
+							{testimonials[activeTestimonial].quote}
+						</p>
+						<p class="font-bold text-sm text-black">{testimonials[activeTestimonial].name}</p>
+						<p class="text-sm text-black">{testimonials[activeTestimonial].title}</p>
+					</div>
 				</div>
-				<button
-					onclick={nextTestimonial}
-					class="btn btn-secondary btn-sm rounded-none w-10 h-10 p-0 flex items-center justify-center"
-					aria-label="Next testimonial"
-				>
-					<Icon icon="ph:arrow-right-bold" class="text-lg" />
-				</button>
 			</div>
+		</div>
+
+		<!-- Navigation: ← 3/5 → -->
+		<div class="flex items-center justify-center gap-6 mt-4">
+			<button
+				onclick={prevTestimonial}
+				class="text-black hover:opacity-60 transition-opacity"
+				aria-label="Previous testimonial"
+			>
+				<Icon icon="ph:arrow-left" class="text-xl" />
+			</button>
+			<span class="text-black font-medium tabular-nums">
+				{activeTestimonial + 1}/{testimonials.length}
+			</span>
+			<button
+				onclick={nextTestimonial}
+				class="text-black hover:opacity-60 transition-opacity"
+				aria-label="Next testimonial"
+			>
+				<Icon icon="ph:arrow-right" class="text-xl" />
+			</button>
 		</div>
 	</div>
 </section>
@@ -483,7 +526,7 @@
 <section id="make_impacts" class="py-20 md:py-28 bg-base-100" data-testid="contact-form-section">
 	<div class="container-custom">
 		<div class="max-w-4xl mx-auto">
-			<h2 class="text-center mb-4">FIND OUT HOW WE CAN HELP YOU MAKE AN IMPACT</h2>
+	<h2 class="mb-10 text-5xl lg:text-5xl font-bold text-center">FIND OUT HOW WE CAN HELP YOU MAKE AN IMPACT</h2>
 			<p class="text-center text-lg mb-12 max-w-2xl mx-auto">
 				At Impactology, our focus is on helping companies thrive and grow and individuals to live
 				better, work smarter and be authentic in the way they work with others.
@@ -491,7 +534,7 @@
 
 			<form
 				onsubmit={handleContactSubmit}
-				class="grid grid-cols-1 md:grid-cols-2 gap-6"
+				class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto flex flex-col"
 				data-testid="inline-contact-form"
 			>
 				<label class="form-control w-full">
