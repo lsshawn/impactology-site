@@ -167,12 +167,11 @@
 
 <!-- Hero Section -->
 <section
-	class="section-yellow py-24 md:py-32 bg-cover bg-center relative"
+	class="section-yellow py-24 md:py-8 bg-cover bg-center relative"
 	style="background-image: url('/home_banner1.jpg');"
 >
-	<div class="absolute inset-0 bg-primary/85"></div>
 	<div class="container-custom relative z-10">
-		<div class="max-w-4xl">
+		<div class="max-w-xl">
 			<h2 class="mb-6">MAKE AN IMPACT</h2>
 			<p class="text-2xl md:text-3xl font-bold mb-8">
 				Leadership Development Solutions Designed for Business Partners.
@@ -372,9 +371,7 @@
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
 			{#each capabilities as cap}
 				<div class="text-center">
-					<div
-						class="w-16 h-16 mx-auto mb-4 bg-primary flex items-center justify-center"
-					>
+					<div class="w-16 h-16 mx-auto mb-4 bg-primary flex items-center justify-center">
 						<Icon icon={cap.icon} class="text-3xl text-primary-content" />
 					</div>
 					<h3 class="text-lg mb-3">{cap.title}</h3>
