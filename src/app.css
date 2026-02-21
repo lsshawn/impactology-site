@@ -4,66 +4,46 @@
 @import 'tailwindcss';
 
 @plugin "daisyui" {
-	themes: impactology --default;
-	logs: false;
+  themes: impactology --default;
+  logs: false;
 }
 
-/*
- * ============================================
- * DaisyUI Theme — Impactology Brand Colors
- * ============================================
- * Primary: Bright Yellow (#FFF000)
- * Dark Sections: #3E3E3E
- * Gray Sections: #E3E4E8
- */
+
 @plugin "daisyui/theme" {
-	name: 'impactology';
-	default: true;
-	prefersdark: false;
-	color-scheme: 'light';
-
-	/* Primary - Bright Yellow Brand Color */
-	--color-primary: oklch(0.97 0.17 102); /* #FFF000 yellow */
-	--color-primary-content: oklch(0.2 0 0); /* black text on yellow */
-
-	/* Secondary - Dark Gray for contrast sections */
-	--color-secondary: oklch(0.35 0 0); /* #3E3E3E dark gray */
-	--color-secondary-content: oklch(1 0 0); /* white text on dark */
-
-	/* Accent - Can be used for links or highlights */
-	--color-accent: oklch(0.97 0.17 102); /* same as primary */
-	--color-accent-content: oklch(0.2 0 0);
-
-	/* Neutral - Dark sections, footer */
-	--color-neutral: oklch(0.35 0 0); /* #3E3E3E */
-	--color-neutral-content: oklch(1 0 0); /* white */
-
-	/* Base colors - main backgrounds */
-	--color-base-100: oklch(1 0 0); /* white */
-	--color-base-200: oklch(0.93 0 0); /* #E3E4E8 light gray */
-	--color-base-300: oklch(0.85 0 0); /* borders */
-	--color-base-content: oklch(0.2 0 0); /* black text */
-
-	/* Utility colors */
-	--color-info: oklch(0.7 0.15 230);
-	--color-success: oklch(0.7 0.15 150);
-	--color-warning: oklch(0.8 0.15 80);
-	--color-error: oklch(0.65 0.2 25);
-	--color-info-content: oklch(0.2 0 0);
-	--color-success-content: oklch(0.2 0 0);
-	--color-warning-content: oklch(0.2 0 0);
-	--color-error-content: oklch(1 0 0);
-
-	/* Border radius - WordPress had minimal rounding */
-	--radius-selector: 0;
-	--radius-field: 0;
-	--radius-box: 0;
-	--size-selector: 0;
-	--size-field: 0;
-	--border: 1px;
-	--depth: 0;
-	--noise: 0;
+  name: "impactology";
+  default: true;
+  prefersdark: false;
+  color-scheme: "light";
+  --color-base-100: oklch(100% 0 0);
+  --color-base-200: oklch(98% 0 0);
+  --color-base-300: #e3e4e8;
+  --color-base-content: oklch(21% 0.006 285.885);
+  --color-primary: #faeb00;
+  --color-primary-content: oklch(12% 0.042 264.695);
+  --color-secondary: oklch(0.35 0 0);
+  --color-secondary-content: oklch(1 0 0);
+  --color-accent: #ffd842;
+  --color-accent-content: oklch(38% 0.063 188.416);
+  --color-neutral: oklch(14% 0.005 285.823);
+  --color-neutral-content: oklch(92% 0.004 286.32);
+  --color-info: #5ad4ff;
+  --color-info-content: oklch(29% 0.066 243.157);
+  --color-success: oklch(76% 0.177 163.223);
+  --color-success-content: oklch(37% 0.077 168.94);
+  --color-warning: oklch(82% 0.189 84.429);
+  --color-warning-content: oklch(41% 0.112 45.904);
+  --color-error: oklch(71% 0.194 13.428);
+  --color-error-content: oklch(27% 0.105 12.094);
+  --radius-selector: 2rem;
+  --radius-field: 2rem;
+  --radius-box: 2rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 1;
+  --noise: 0;
 }
+
 
 /*
  * ============================================
@@ -71,19 +51,22 @@
  * ============================================
  */
 :root {
-	/* Typography */
-	--font-body: 'DM Sans', sans-serif;
-	--font-heading: 'Barlow Condensed', sans-serif;
-	--font-size-base: 16px;
-	--line-height-base: 1.5;
+  /* Typography */
+  --font-body: 'DM Sans', sans-serif;
+  --font-heading: 'Barlow Condensed', sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.5;
 
-	/* Layout */
-	--container-max: 1140px;
+  /* Layout */
+  --container-max: 1140px;
 
-	/* Custom section backgrounds */
-	--section-dark: oklch(0.35 0 0); /* #3E3E3E */
-	--section-gray: oklch(0.93 0 0); /* #E3E4E8 */
-	--section-yellow: oklch(0.97 0.17 102); /* #FFF000 */
+  /* Custom section backgrounds */
+  --section-dark: oklch(0.35 0 0);
+  /* #3E3E3E */
+  --section-gray: oklch(0.93 0 0);
+  /* #E3E4E8 */
+  --section-yellow: oklch(0.97 0.17 102);
+  /* #FFF000 */
 }
 
 /*
@@ -92,9 +75,9 @@
  * ============================================
  */
 body {
-	font-family: var(--font-body);
-	font-size: var(--font-size-base);
-	line-height: var(--line-height-base);
+  font-family: var(--font-body);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
 }
 
 h1,
@@ -103,18 +86,18 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: var(--font-heading);
-	font-weight: 700;
-	text-transform: uppercase;
+  font-family: var(--font-heading);
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 h2 {
-	font-size: 88px;
-	line-height: 1;
+  font-size: 88px;
+  line-height: 1;
 }
 
 h3 {
-	font-size: 29px;
+  font-size: 29px;
 }
 
 /*
@@ -123,25 +106,25 @@ h3 {
  * ============================================
  */
 .section-dark {
-	background-color: var(--section-dark);
-	color: var(--color-neutral-content);
+  background-color: var(--section-dark);
+  color: var(--color-neutral-content);
 }
 
 .section-gray {
-	background-color: var(--section-gray);
+  background-color: var(--section-gray);
 }
 
 .section-yellow {
-	background-color: var(--section-yellow);
-	color: var(--color-primary-content);
+  background-color: var(--section-yellow);
+  color: var(--color-primary-content);
 }
 
 .container-custom {
-	max-width: var(--container-max);
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: 1rem;
-	padding-right: 1rem;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 /*
@@ -150,27 +133,27 @@ h3 {
  * ============================================
  */
 .impactora-screenshots {
-	position: relative;
+  position: relative;
 }
 
 .impactora-screenshot-main {
-	position: relative;
-	z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 .impactora-screenshot-secondary {
-	position: absolute;
-	bottom: -2rem;
-	right: -1rem;
-	width: 45%;
-	z-index: 3;
+  position: absolute;
+  bottom: -2rem;
+  right: -1rem;
+  width: 45%;
+  z-index: 3;
 }
 
 @media (min-width: 1024px) {
-	.impactora-screenshot-secondary {
-		bottom: -3rem;
-		right: -2rem;
-	}
+  .impactora-screenshot-secondary {
+    bottom: -3rem;
+    right: -2rem;
+  }
 }
 
 /*
@@ -179,6 +162,6 @@ h3 {
  * ============================================
  */
 .quote-marks {
-	pointer-events: none;
-	user-select: none;
+  pointer-events: none;
+  user-select: none;
 }

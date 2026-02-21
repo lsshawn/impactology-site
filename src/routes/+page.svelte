@@ -162,10 +162,7 @@
 			<p class="text-2xl md:text-3xl font-bold mb-8">
 				Leadership Development Solutions Designed for Business Partners.
 			</p>
-			<a
-				href="#make_impacts"
-				class="btn btn-secondary btn-lg uppercase font-bold rounded-none mb-6 inline-block"
-			>
+			<a href="#make_impacts" class="btn btn-secondary btn-lg uppercase font-bold mb-6">
 				BOOK YOUR FREE 60-MINUTE STRATEGY SESSION
 			</a>
 			<p class="text-base max-w-2xl">
@@ -179,9 +176,9 @@
 
 <!-- What is Impactology -->
 <section class="py-20 bg-base-100">
-	<div class="container-custom text-center max-w-4xl mx-auto">
+	<div class="text-center max-w-4xl mx-auto">
 		<h2 class="mb-8">WHAT IS IMPACTOLOGY?</h2>
-		<div class="prose prose-lg mx-auto">
+		<div class="prose prose-lg mx-auto max-w-xl">
 			<p class="text-lg">
 				In short, we aim to disrupt conventional thinking. We connect people in ways that spark new
 				ideas and help them achieve their goals faster.
@@ -197,7 +194,7 @@
 
 <!-- Three Programs -->
 <section class="section-dark py-20">
-	<div class="container-custom">
+	<div class="">
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 			<!-- Impactora -->
 			<div class="text-center">
@@ -262,12 +259,7 @@
 		<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
 			{#each clientPhotos as photo}
 				<div class="overflow-hidden">
-					<img
-						src={photo}
-						alt="Client workshop"
-						class="w-full h-48 object-cover"
-						loading="lazy"
-					/>
+					<img src={photo} alt="Client workshop" class="w-full h-48 object-cover" loading="lazy" />
 				</div>
 			{/each}
 		</div>
