@@ -408,12 +408,18 @@
 </section>
 
 <!-- Impactora Promo Section -->
-<section
-	class="min-h-[60vh] flex items-center bg-cover bg-right bg-no-repeat relative"
+<div
+	class="hero min-h-[80vh]"
 	style="background-image: url('/impactora-promo-banner.png');"
 >
-	<div class="w-full relative z-10 py-20 md:py-28 px-4 md:px-[calc((100%-var(--container-max))/2+1rem)]">
-		<div class="max-w-xl">
+	<div class="hero-content flex-col lg:flex-row-reverse w-full max-w-7xl gap-8 lg:gap-16">
+		<img
+			src="/impactora-promo-banner.png"
+			alt=""
+			aria-hidden="true"
+			class="max-w-xs md:max-w-sm lg:max-w-md hidden lg:block opacity-0 pointer-events-none"
+		/>
+		<div>
 			<img src="/impactora-logo.png" alt="Impactora" class="h-12 md:h-14 w-auto mb-8" />
 			<h2 class="text-4xl md:text-6xl font-bold uppercase leading-tight mb-2 text-white">
 				TAILORED ADVICE &amp; INSIGHTS
@@ -435,7 +441,7 @@
 			</a>
 		</div>
 	</div>
-</section>
+</div>
 
 <!-- Testimonials Section -->
 <section class="py-20 md:py-28 bg-[#fff000]" data-testid="testimonial-section">
@@ -616,4 +622,4 @@
 </section>
 
 <!-- Instagram Section -->
-<InstagramSection instagramHandle="impactologyaust" />
+<InstagramSection instagramHandle="impactora-app" />
