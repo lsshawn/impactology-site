@@ -36,15 +36,6 @@
 		}
 	}
 
-	const clientPhotos = [
-		'/client-photo-1.jpg',
-		'/client-photo-2.jpg',
-		'/client-photo-3.jpg',
-		'/client-photo-4.jpg',
-		'/client-photo-5.jpg',
-		'/client-photo-6.jpg'
-	];
-
 	const clientLogos1 = [
 		'/client-moss.jpeg',
 		'/client-otto.png',
@@ -78,6 +69,72 @@
 		'/client-13.png',
 		'/client-14.png'
 	];
+
+	const testimonials = [
+		{
+			quote:
+				'I really connected with and appreciated the style and approach. The one-on-one guidance really helped.',
+			name: 'Claire',
+			title: 'Senior Manager'
+		},
+		{
+			quote:
+				'My goal was to maintain focus on my most important leadership priorities and this program has helped me achieve this.',
+			name: 'Andrew',
+			title: 'General Counsel'
+		},
+		{
+			quote:
+				'My learnings from this program have helped me in so many ways both personally and professionally.',
+			name: 'Deborah',
+			title: 'HR Director'
+		},
+		{
+			quote:
+				'I appreciated the extensive experience from a wide range of sectors to draw upon. The insights shared were innovative and pragmatic.',
+			name: 'Raj',
+			title: 'GM Human Resources'
+		},
+		{
+			quote:
+				'The guidance I have received has been instrumental in helping me to workout my overall vision and strategies for my career and personal goals. This has been a truly enriching and transformational experience.',
+			name: 'Katarina',
+			title: 'Marketing Specialist'
+		}
+	];
+
+	const capabilities = [
+		{
+			icon: 'ph:handshake-fill',
+			title: 'Stakeholder Management',
+			description:
+				'Build and sustain trusted relationships with key stakeholders to influence outcomes and drive collaboration across the business.'
+		},
+		{
+			icon: 'ph:chart-line-up-fill',
+			title: 'Commercial Acumen',
+			description:
+				'Understand the financial and commercial drivers of the business to make informed decisions and deliver measurable value.'
+		},
+		{
+			icon: 'ph:lightning-fill',
+			title: 'Change Leadership',
+			description:
+				'Lead and manage change effectively, helping teams navigate uncertainty and adopt new ways of working.'
+		},
+		{
+			icon: 'ph:brain-fill',
+			title: 'Strategic Thinking',
+			description:
+				'Think beyond day-to-day operations to identify opportunities, anticipate challenges, and align with long-term business goals.'
+		},
+		{
+			icon: 'ph:chat-circle-text-fill',
+			title: 'Communication & Influence',
+			description:
+				'Communicate with clarity and purpose, using influence skills to shape decisions and build alignment across diverse teams.'
+		}
+	];
 </script>
 
 <SEO
@@ -93,18 +150,28 @@
 		'@type': 'Organization',
 		name: 'Impactology',
 		url: 'https://impactology.com.au/',
-		logo: '/logo.png',
+		logo: 'https://impactology.com.au/logo.png',
+		description:
+			"Whether you're looking to sustainably grow your business, upskill your team, or pursue a new opportunity, we have a solution or program to arm you.",
 		sameAs: [
 			'https://www.facebook.com/ImpactologyAust/',
 			'https://www.youtube.com/channel/UC2c5m2Io0INs-PnShJUaHQA',
 			'https://au.linkedin.com/company/impactology'
-		]
+		],
+		areaServed: {
+			'@type': 'Country',
+			name: 'AU'
+		}
 	}}
 />
 
 <!-- Hero Section -->
-<section class="section-yellow py-24 md:py-32">
-	<div class="container-custom">
+<section
+	class="section-yellow py-24 md:py-32 bg-cover bg-center relative"
+	style="background-image: url('/home_banner1.jpg');"
+>
+	<div class="absolute inset-0 bg-primary/85"></div>
+	<div class="container-custom relative z-10">
 		<div class="max-w-4xl">
 			<h2 class="mb-6">MAKE AN IMPACT</h2>
 			<p class="text-2xl md:text-3xl font-bold mb-8">
@@ -203,127 +270,6 @@
 	</div>
 </section>
 
-<!-- IMPACTORA Showcase Section -->
-<section class="section-dark py-20 md:py-28">
-	<div class="container-custom">
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-			<!-- Content -->
-			<div class="order-2 lg:order-1">
-				<div class="flex items-center gap-3 mb-6">
-					<img src="/icon1.png" alt="IMPACTORA" class="w-12 h-12" />
-					<span class="text-primary font-bold text-lg tracking-wider">IMPACTORA</span>
-				</div>
-				<h2 class="text-4xl md:text-5xl lg:text-6xl mb-6">TAILORED ADVICE & INSIGHTS</h2>
-				<p class="text-lg mb-8 opacity-90 leading-relaxed">
-					IMPACTORA delivers personalised guidance exactly when you need it. Our intelligent
-					platform analyses your unique situation and provides actionable recommendations to help
-					managers and teams navigate workplace challenges with confidence.
-				</p>
-				<ul class="space-y-4 mb-10">
-					<li class="flex items-start gap-3">
-						<Icon icon="ph:check-circle-fill" class="text-primary text-xl mt-0.5 shrink-0" />
-						<span>Instant, contextual advice for real-world workplace scenarios</span>
-					</li>
-					<li class="flex items-start gap-3">
-						<Icon icon="ph:check-circle-fill" class="text-primary text-xl mt-0.5 shrink-0" />
-						<span>Data-driven insights to support better decision-making</span>
-					</li>
-					<li class="flex items-start gap-3">
-						<Icon icon="ph:check-circle-fill" class="text-primary text-xl mt-0.5 shrink-0" />
-						<span>Available 24/7 to empower your team in critical moments</span>
-					</li>
-				</ul>
-				<a
-					href="/impactora"
-					class="btn btn-primary btn-lg uppercase font-bold rounded-none inline-flex items-center gap-2"
-				>
-					EXPLORE IMPACTORA
-					<Icon icon="ph:arrow-right-bold" class="text-lg" />
-				</a>
-			</div>
-
-			<!-- Product Screenshots -->
-			<div class="order-1 lg:order-2 relative">
-				<div class="impactora-screenshots">
-					<!-- Main screenshot -->
-					<div class="impactora-screenshot-main">
-						<img
-							src="/impactora-dashboard.png"
-							alt="IMPACTORA Dashboard - Personalised insights and recommendations"
-							class="w-full h-auto rounded-sm shadow-2xl"
-							loading="lazy"
-							onerror={(e) => {
-								const img = e.currentTarget as HTMLImageElement;
-								img.src = '/icon1.png';
-								img.classList.add('p-12', 'bg-neutral', 'opacity-50');
-							}}
-						/>
-					</div>
-					<!-- Secondary screenshot (overlapping) -->
-					<div class="impactora-screenshot-secondary">
-						<img
-							src="/impactora-mobile.png"
-							alt="IMPACTORA Mobile - Access insights on the go"
-							class="w-full h-auto rounded-sm shadow-xl"
-							loading="lazy"
-							onerror={(e) => {
-								(e.currentTarget as HTMLImageElement).style.display = 'none';
-							}}
-						/>
-					</div>
-				</div>
-				<!-- Decorative element -->
-				<div class="absolute -bottom-4 -left-4 w-24 h-24 bg-primary opacity-20 -z-10"></div>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- Testimonial Quote Section -->
-<section class="section-yellow py-20 md:py-28" data-testid="testimonial-section">
-	<div class="container-custom">
-		<div class="max-w-4xl mx-auto text-center relative">
-			<!-- Decorative Quote Marks -->
-			<div class="quote-marks absolute -top-8 left-0 md:left-8 text-base-content/10">
-				<Icon icon="ph:quotes-fill" class="text-8xl md:text-9xl" />
-			</div>
-
-			<!-- Quote Content -->
-			<blockquote class="relative z-10">
-				<p class="text-2xl md:text-3xl lg:text-4xl font-bold leading-relaxed mb-8">
-					Impactology helped me achieve breakthrough results with my team. Their approach
-					transformed how we collaborate and drive business outcomes.
-				</p>
-				<footer class="text-lg md:text-xl">
-					<cite class="not-italic font-semibold">— Senior HR Business Partner</cite>
-				</footer>
-			</blockquote>
-
-			<!-- Decorative Quote Marks (closing) -->
-			<div class="quote-marks absolute -bottom-8 right-0 md:right-8 text-base-content/10">
-				<Icon icon="ph:quotes-fill" class="text-8xl md:text-9xl rotate-180" />
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- Meet Our Clients Carousel -->
-<section class="py-20 bg-base-100">
-	<div class="container-custom">
-		<h2 class="text-center mb-12">MEET OUR CLIENTS</h2>
-		<div class="carousel w-full space-x-4 overflow-x-auto">
-			{#each clientPhotos as photo, i}
-				<div class="carousel-item">
-					<img src={photo} alt="Client {i + 1}" class="w-80 h-auto object-cover" />
-				</div>
-			{/each}
-		</div>
-	</div>
-</section>
-
-<!-- Instagram Section -->
-<InstagramSection instagramHandle="impactologyaust" />
-
 <!-- Client Logos -->
 <section class="section-gray py-16">
 	<div class="container-custom">
@@ -357,6 +303,108 @@
 			{#each moreLogos as logo}
 				<div class="flex items-center justify-center p-2">
 					<img src={logo} alt="Client logo" class="max-h-12 w-auto object-contain" />
+				</div>
+			{/each}
+		</div>
+	</div>
+</section>
+
+<!-- EVOLVE Book Section -->
+<section class="py-20 md:py-28 bg-base-100">
+	<div class="container-custom">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+			<!-- Book Cover -->
+			<div class="flex justify-center lg:justify-end">
+				<img
+					src="/evolve-book-cover.png"
+					alt="EVOLVE - The Business Partnering Playbook"
+					class="max-w-xs md:max-w-sm w-full h-auto drop-shadow-2xl"
+					loading="lazy"
+				/>
+			</div>
+
+			<!-- Book Description -->
+			<div>
+				<h2 class="mb-6">THE BUSINESS PARTNERING PLAYBOOK</h2>
+				<div class="prose prose-lg">
+					<p class="text-lg leading-relaxed">
+						Finally, a book that provides realistic and targeted advice to Business Partners!
+						Business Partners hold a vital role as trusted confidants with deep technical expertise,
+						and their impact is evident across all business functions.
+					</p>
+					<p class="text-lg leading-relaxed">
+						Initially tasked with providing advice, they are now true collaborating partners,
+						ideally placed to lead and manage change in the changing world of work and business. Yet
+						as the Business role has changed, there has been no pathway to develop the competencies
+						essential for their success. Until now.
+					</p>
+					<p class="text-lg leading-relaxed">
+						If you are a current or aspiring Business Partner – HR, Finance, Procurement, IT, Risk,
+						Audit, Compliance, Legal, Marketing – this is the book for you. EVOLVE shows you how to
+						navigate service models and systems, build your commercial acumen and deliver value to
+						your organisation.
+					</p>
+				</div>
+				<a
+					href="/evolve-book"
+					class="btn btn-primary btn-lg uppercase font-bold rounded-none mt-8 inline-flex items-center gap-2"
+				>
+					FIND OUT MORE
+					<Icon icon="ph:arrow-right-bold" class="text-lg" />
+				</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- 5 Core Capabilities Section -->
+<section class="section-dark py-20 md:py-28">
+	<div class="container-custom">
+		<div class="text-center max-w-3xl mx-auto mb-16">
+			<h2 class="mb-6">5 CORE CAPABILITIES EVERY BUSINESS PARTNER MUST HAVE</h2>
+			<p class="text-lg opacity-90 leading-relaxed">
+				The Business Partner role has evolved. Now more than ever, we need Business Partners with
+				the behavioural attributes and commercial acumen to elevate the client's experience and
+				drive superior business value.
+			</p>
+		</div>
+
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+			{#each capabilities as cap}
+				<div class="text-center">
+					<div
+						class="w-16 h-16 mx-auto mb-4 bg-primary flex items-center justify-center"
+					>
+						<Icon icon={cap.icon} class="text-3xl text-primary-content" />
+					</div>
+					<h3 class="text-lg mb-3">{cap.title}</h3>
+					<p class="text-sm opacity-80 leading-relaxed">{cap.description}</p>
+				</div>
+			{/each}
+		</div>
+	</div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="section-yellow py-20 md:py-28" data-testid="testimonial-section">
+	<div class="container-custom">
+		<h2 class="text-center mb-16">WHAT OUR CLIENTS SAY</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			{#each testimonials as testimonial}
+				<div class="bg-base-100 p-8 relative">
+					<div class="text-primary/30 mb-4">
+						<Icon icon="ph:quotes-fill" class="text-5xl" />
+					</div>
+					<blockquote>
+						<p class="text-base leading-relaxed mb-6 text-base-content">
+							"{testimonial.quote}"
+						</p>
+						<footer class="font-bold text-sm text-base-content">
+							<cite class="not-italic">
+								{testimonial.name}, <span class="font-normal opacity-70">{testimonial.title}</span>
+							</cite>
+						</footer>
+					</blockquote>
 				</div>
 			{/each}
 		</div>
@@ -485,3 +533,6 @@
 		</div>
 	</div>
 </section>
+
+<!-- Instagram Section -->
+<InstagramSection instagramHandle="impactologyaust" />

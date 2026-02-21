@@ -22,3 +22,24 @@ Thumbs.db
 # Vite
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
+
+# stuff added by claude sandbox
+.claude/*
+.bash_profile
+.bashrc
+.zshrc
+.mcp.json
+.profile
+.ripgreprc
+.zprofile
+.gitconfig
+.gitmodules
+.idea
+.vscode
+HEAD
+config
+hooks
+objects
+refs
+
+
