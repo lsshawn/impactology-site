@@ -12,36 +12,39 @@
 	}
 
 	const galleryImages: GalleryImage[] = [
-		{
-			src: '/client-photo-1.jpg',
-			alt: 'Impactology workshop session',
-			caption: 'Team workshop in action'
-		},
-		{
-			src: '/client-photo-2.jpg',
-			alt: 'Business partnering program',
-			caption: 'Collaborative learning experience'
-		},
-		{
-			src: '/client-photo-3.jpg',
-			alt: 'Leadership development session',
-			caption: 'Building leadership skills'
-		},
-		{
-			src: '/client-photo-4.jpg',
-			alt: 'Impact program participants',
-			caption: 'Engaged participants driving change'
-		},
-		{
-			src: '/client-photo-5.jpg',
-			alt: 'Strategic planning workshop',
-			caption: 'Strategic thinking in practice'
-		},
-		{
-			src: '/client-photo-6.jpg',
-			alt: 'Team collaboration activity',
-			caption: 'Teams creating impact together'
-		}
+		{ src: '/gallery-1.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-3.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-4.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-5.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-6.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-7.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-8.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-9.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-10.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-11.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-12.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-13.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-14.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-15.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-16.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-17.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-18.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-19.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-20.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-21.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-22.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-23.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-24.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-25.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-26.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-27.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-28.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-29.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-30.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-31.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-32.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-33.jpg', alt: 'Impactology training session' },
+		{ src: '/gallery-34.jpg', alt: 'Impactology training session' }
 	];
 
 	// URL-based lightbox state
@@ -92,10 +95,10 @@
 <svelte:window onkeydown={handleKeydown} />
 
 <SEO
-	title="Gallery | Impactology"
-	description="Browse photos from Impactology workshops, programs, and events. See our teams in action creating meaningful business impact."
-	ogTitle="Gallery | Impactology"
-	ogDescription="Browse photos from Impactology workshops, programs, and events."
+	title="Impactology Training in Action | Explore Our Gallery"
+	description="Discover how Impactology transforms lives through training. Browse our gallery of real-life sessions, showcasing impactful techniques and success stories."
+	ogTitle="Impactology Training in Action | Explore Our Gallery"
+	ogDescription="Discover how Impactology transforms lives through training. Browse our gallery of real-life sessions, showcasing impactful techniques and success stories."
 	ogImage="/client-photo-1.jpg"
 	ogType="website"
 	canonical="https://impactology.com.au/gallery"
@@ -117,10 +120,7 @@
 <!-- Hero Section -->
 <section class="section-yellow py-20 md:py-28">
 	<div class="container-custom text-center">
-		<h1 class="mb-6">GALLERY</h1>
-		<p class="text-lg md:text-xl max-w-2xl mx-auto">
-			Capturing moments of transformation, collaboration, and impact from our programs and events.
-		</p>
+		<h1>GALLERY</h1>
 	</div>
 </section>
 
@@ -152,14 +152,6 @@
 							<Icon icon="ph:magnifying-glass-plus-bold" class="text-4xl" />
 						</div>
 					</div>
-					<!-- Caption -->
-					{#if image.caption}
-						<div
-							class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-neutral/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-300"
-						>
-							<p class="text-neutral-content text-sm font-medium">{image.caption}</p>
-						</div>
-					{/if}
 				</button>
 			{/each}
 		</div>
@@ -226,13 +218,6 @@
 				alt={currentImage.alt}
 				class="max-w-full max-h-[85vh] object-contain"
 			/>
-			{#if currentImage.caption}
-				<div
-					class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-neutral/80 to-transparent"
-				>
-					<p class="text-neutral-content text-center">{currentImage.caption}</p>
-				</div>
-			{/if}
 		</div>
 
 		<!-- Navigation: Next -->

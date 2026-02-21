@@ -143,10 +143,10 @@
 </script>
 
 <SEO
-	title="Leadership Development Program for Local Government | Impactology"
-	description="Elevate your leadership capabilities with Impactology's Leadership Development Program for Local Government. Build strategic leadership skills for navigating political dynamics, community engagement, and transformational change in the public sector."
-	ogTitle="Leadership Development Program for Local Government | Impactology"
-	ogDescription="Elevate your leadership capabilities with Impactology's Leadership Development Program for Local Government. Build strategic leadership skills for navigating political dynamics, community engagement, and transformational change in the public sector."
+	title="Leadership Development Program for Local Government Teams | Impactology"
+	description="Transform your LGA leadership team with our tailored Leadership Development Program. Build trust, foster collaboration, and deliver impactful outcomes."
+	ogTitle="Leadership Development Program for Local Government Teams | Impactology"
+	ogDescription="Transform your LGA leadership team with our tailored Leadership Development Program. Build trust, foster collaboration, and deliver impactful outcomes."
 	ogImage="https://impactology.com.au/icon2.png"
 	ogType="website"
 	canonical="https://impactology.com.au/leadership-development-program-local-government"

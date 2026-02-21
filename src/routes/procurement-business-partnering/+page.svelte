@@ -142,10 +142,10 @@
 </script>
 
 <SEO
-	title="Procurement Business Partnering Program | Impactology"
-	description="The Procurement Business Partnering Program empowers your team with the tools, frameworks, strategies, and mindset to become trusted experts in driving organisational success."
-	ogTitle="Procurement Business Partnering Program | Impactology"
-	ogDescription="Empowering procurement teams with tools, frameworks, strategies, and mindset to become trusted experts in driving organisational success."
+	title="Procurement Business Partner | Impactology"
+	description="Take your procurement strategy to new heights with Impactology's Procurement Business Partner development experience. Boost efficiency and foster sustainable growth."
+	ogTitle="Procurement Business Partner | Impactology"
+	ogDescription="Take your procurement strategy to new heights with Impactology's Procurement Business Partner development experience. Boost efficiency and foster sustainable growth."
 	ogImage="https://impactology.com.au/icon2.png"
 	ogType="website"
 	canonical="https://impactology.com.au/procurement-business-partnering"

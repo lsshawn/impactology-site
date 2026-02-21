@@ -3,7 +3,7 @@
 </script>
 
 <SEO
-	title="Privacy Policy | Impactology"
+	title="Privacy Policy - Impactology"
 	description="This privacy policy applies to the management of your personal information by Impactology Pty. Ltd."
 	canonical="https://impactology.com.au/privacy-policy/"
 />

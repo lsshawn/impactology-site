@@ -144,9 +144,9 @@
 
 <SEO
 	title="Leadership Development for BPOs | Impactology"
-	description="Elevate your leadership capabilities with Impactology's Leadership Development Program for Business Partner Officers. Build strategic leadership skills, executive presence, and the ability to drive change across your organisation."
+	description="Elevate BPO leadership with Impactology's tailored training. Build trust, foster collaboration, and drive client success with proven frameworks and tools."
 	ogTitle="Leadership Development for BPOs | Impactology"
-	ogDescription="Elevate your leadership capabilities with Impactology's Leadership Development Program for Business Partner Officers. Build strategic leadership skills, executive presence, and the ability to drive change across your organisation."
+	ogDescription="Elevate BPO leadership with Impactology's tailored training. Build trust, foster collaboration, and drive client success with proven frameworks and tools."
 	ogImage="https://impactology.com.au/icon2.png"
 	ogType="website"
 	canonical="https://impactology.com.au/leadership-development-for-bpos"

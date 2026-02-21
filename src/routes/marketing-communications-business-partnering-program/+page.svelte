@@ -310,9 +310,9 @@
 </script>
 
 <SEO
-	title="Marketing & Communications Business Partnering Program | Impactology"
+	title="Marketing & Communications Team Business Partnering Program | Impactology"
 	description="Empower marketing and communication teams to become strategic business partners. Drive growth, foster collaboration, and align marketing with organisational goals."
-	ogTitle="Marketing & Communications Business Partnering Program | Impactology"
+	ogTitle="Marketing & Communications Team Business Partnering Program | Impactology"
 	ogDescription="Empower marketing and communication teams to become strategic business partners. Drive growth, foster collaboration, and align marketing with organisational goals."
 	ogImage="https://impactology.com.au/icon2.png"
 	ogType="website"

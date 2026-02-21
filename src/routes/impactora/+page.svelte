@@ -115,10 +115,10 @@
 </script>
 
 <SEO
-	title="IMPACTORA | AI-Powered Workplace Guidance Platform | Impactology"
+	title="Impactora - Impactology | Timely Information & Advice"
 	description="IMPACTORA delivers instant, contextual advice for managers and HR professionals. Navigate workplace challenges with AI-powered insights available 24/7."
-	ogTitle="IMPACTORA | AI-Powered Workplace Guidance Platform"
-	ogDescription="Get real-time guidance for workplace challenges. IMPACTORA provides personalised, data-driven insights to help managers and HR teams make better decisions."
+	ogTitle="Impactora - Impactology | Timely Information & Advice"
+	ogDescription="IMPACTORA delivers instant, contextual advice for managers and HR professionals. Navigate workplace challenges with AI-powered insights available 24/7."
 	ogImage="https://impactology.com.au/icon1.png"
 	ogType="website"
 	canonical="https://impactology.com.au/impactora"

@@ -38,7 +38,28 @@
 <SEO
 	title="Contact | Create an Impact | Impactology"
 	description="Get in touch with Impactology. We're here to help you make an impact."
+	ogTitle="Contact | Create an Impact | Impactology"
+	ogDescription="Get in touch with Impactology. We're here to help you make an impact."
+	ogType="website"
 	canonical="https://impactology.com.au/contact/"
+	jsonLd={{
+		'@context': 'https://schema.org',
+		'@type': 'ContactPage',
+		name: 'Contact Impactology',
+		description: "Get in touch with Impactology. We're here to help you make an impact.",
+		url: 'https://impactology.com.au/contact/',
+		mainEntity: {
+			'@type': 'Organization',
+			name: 'Impactology',
+			url: 'https://impactology.com.au/',
+			email: 'hello@impactology.com.au',
+			sameAs: [
+				'https://www.facebook.com/ImpactologyAust/',
+				'https://www.youtube.com/channel/UC2c5m2Io0INs-PnShJUaHQA',
+				'https://au.linkedin.com/company/impactology'
+			]
+		}
+	}}
 />
 
 <section class="py-20 bg-base-100">
