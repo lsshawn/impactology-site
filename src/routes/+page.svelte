@@ -193,62 +193,75 @@
 </section>
 
 <!-- Three Programs -->
-<section class="section-dark py-20">
-	<div class="">
-		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-			<!-- Impactora -->
-			<div class="text-center">
-				<img src="/icon1.png" alt="Impactora" class="w-20 h-20 mx-auto mb-6" />
-				<h3 class="mb-4">
-					<a href="/impactora" class="hover:text-primary transition-colors">IMPACTORA</a>
-				</h3>
-				<p class="text-sm leading-relaxed">
-					Are you looking for new ways to develop and grow yourself? Are you exploring new ways to
-					empower your team? IMPACTORA is a SaaS platform designed to support you in the moments you
-					need it most. It offers immediate, contextual advice, and insights, ensuring managers and
-					employees resolve issues and make informed decisions in this new world of work.
-				</p>
-			</div>
+<section class="bg-neutral text-neutral-content">
+	<div class="grid grid-cols-1 md:grid-cols-3">
+		<!-- Impactora -->
+		<a
+			href="/impactora"
+			class="block p-10 lg:p-14 border-b md:border-b-0 md:border-r border-white/10 transition-colors group bg-[#212023]"
+		>
+			<img src="/icon1.png" alt="Impactora" class="w-16 h-16 mb-8 brightness-0 invert" />
+			<h3
+				class="text-3xl lg:text-4xl font-black uppercase leading-tight mb-6 group-hover:text-primary transition-colors"
+			>
+				IMPACTORA
+			</h3>
+			<hr class="border-white/30 mb-6" />
+			<p class="text-sm leading-relaxed text-white/70">
+				Are you looking for new ways to develop and grow yourself? Are you exploring new ways to
+				empower your team? IMPACTORA is a SaaS platform designed to support you in the moments you
+				need it most. It offers immediate, contextual advice, and insights, ensuring managers and
+				employees resolve issues and make informed decisions in this new world of work.
+			</p>
+		</a>
 
-			<!-- Business Partnering Impact Program -->
-			<div class="text-center">
-				<img
-					src="/icon2.png"
-					alt="Business Partnering Impact Program"
-					class="w-20 h-20 mx-auto mb-6"
-				/>
-				<h3 class="mb-4">
-					<a
-						href="/business-partnering-impact-program"
-						class="hover:text-primary transition-colors"
-					>
-						BUSINESS PARTNERING IMPACT PROGRAM
-					</a>
-				</h3>
-				<p class="text-sm leading-relaxed">
-					Our Business Partnering Impact Program focuses on building the behavioural attributes and
-					commercial acumen required to make a greater business impact. This experiential and
-					interactive program will equip business partners with the skills to drive positive
-					business outcomes and enhance stakeholder relationships.
-				</p>
-			</div>
+		<!-- Business Partnering Impact Program -->
+		<a
+			href="/business-partnering-impact-program"
+			class="block p-10 lg:p-14 border-b md:border-b-0 md:border-r border-white/10 bg-white/5 transition-colors group bg-[#171719]"
+		>
+			<img
+				src="/icon2.png"
+				alt="Business Partnering Impact Program"
+				class="w-16 h-16 mb-8 brightness-0 invert"
+			/>
+			<h3
+				class="text-3xl lg:text-4xl font-black uppercase leading-tight mb-6 group-hover:text-primary transition-colors"
+			>
+				BUSINESS PARTNERING IMPACT PROGRAM
+			</h3>
+			<hr class="border-white/30 mb-6" />
+			<p class="text-sm leading-relaxed text-white/70">
+				Our Business Partnering Impact Program focuses on building the behavioural attributes and
+				commercial acumen required to make a greater business impact. This experiential and
+				interactive program will equip business partners with the skills to drive positive business
+				outcomes and enhance stakeholder relationships.
+			</p>
+		</a>
 
-			<!-- Amplify Your Impact Program -->
-			<div class="text-center">
-				<img src="/icon3.png" alt="Amplify Your Impact Program" class="w-20 h-20 mx-auto mb-6" />
-				<h3 class="mb-4">
-					<a href="/amplify-your-impact-program" class="hover:text-primary transition-colors">
-						AMPLIFY YOUR IMPACT PROGRAM
-					</a>
-				</h3>
-				<p class="text-sm leading-relaxed">
-					Our AMPLIFY Business Partnering Program is a tailored development experience crafted to
-					equip teams for change, especially under heightened expectations. Building on the Business
-					Partnering IMPACT Program, this six-month experience provides check-in support and a
-					scorecard approach to drive transformation and solidify key learnings.
-				</p>
-			</div>
-		</div>
+		<!-- Amplify Your Impact Program -->
+		<a
+			href="/amplify-your-impact-program"
+			class="block p-10 lg:p-14 transition-colors group bg-[#020204]"
+		>
+			<img
+				src="/icon3.png"
+				alt="Amplify Your Impact Program"
+				class="w-16 h-16 mb-8 brightness-0 invert"
+			/>
+			<h3
+				class="text-3xl lg:text-4xl font-black uppercase leading-tight mb-6 group-hover:text-primary transition-colors"
+			>
+				AMPLIFY YOUR IMPACT PROGRAM
+			</h3>
+			<hr class="border-white/30 mb-6" />
+			<p class="text-sm leading-relaxed text-white/70">
+				Our AMPLIFY Business Partnering Program is a tailored development experience crafted to
+				equip teams for change, especially under heightened expectations. Building on the Business
+				Partnering IMPACT Program, this six-month experience provides check-in support and a
+				scorecard approach to drive transformation and solidify key learnings.
+			</p>
+		</a>
 	</div>
 </section>
 
