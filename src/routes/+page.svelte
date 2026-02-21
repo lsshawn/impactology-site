@@ -158,18 +158,24 @@
 >
 	<div class="container-custom relative z-10">
 		<div class="max-w-xl">
-			<h2 class="mb-6">MAKE AN IMPACT</h2>
+			<h2 class="mb-6 text-5xl lg:text-8xl font-bold">MAKE AN IMPACT</h2>
 			<p class="text-2xl md:text-3xl font-bold mb-8">
 				Leadership Development Solutions Designed for Business Partners.
 			</p>
 			<a href="#make_impacts" class="btn btn-secondary btn-lg uppercase font-bold mb-6">
 				BOOK YOUR FREE 60-MINUTE STRATEGY SESSION
 			</a>
-			<p class="text-base max-w-2xl">
-				This free strategy session will help you uncover what your team needs most.<br />
-				<strong>Your Benefit:</strong> practical next steps you can act on immediately.<br />
-				<strong>No hard sell – pinky promise!</strong>
-			</p>
+      <div class="text-base max-w-2xl text-xl prose prose-lg">
+        <p>
+          This free strategy session will help you uncover what your team needs most.<br />
+        </p>
+        <p>
+          <strong>Your Benefit:</strong> practical next steps you can act on immediately.<br />
+        </p>
+        <p>
+          <strong>No hard sell – pinky promise!</strong>
+        </p>
+			</div>
 		</div>
 	</div>
 </section>
@@ -177,13 +183,13 @@
 <!-- What is Impactology -->
 <section class="py-20 bg-base-100">
 	<div class="text-center max-w-4xl mx-auto">
-		<h2 class="mb-8">WHAT IS IMPACTOLOGY?</h2>
+		<h2 class="mb-6 text-5xl lg:text-7xl font-bold">WHAT IS IMPACTOLOGY?</h2>
 		<div class="prose prose-lg mx-auto max-w-xl">
-			<p class="text-lg">
+			<p>
 				In short, we aim to disrupt conventional thinking. We connect people in ways that spark new
 				ideas and help them achieve their goals faster.
 			</p>
-			<p class="text-lg">
+			<p>
 				Whether you're looking to sustainably grow your business, upskill your team, or pursuing a
 				new opportunity, we have a solution or program to arm you with the knowledge you'll need to
 				make a truly meaningful impact in the work you do.
@@ -202,12 +208,12 @@
 		>
 			<img src="/icon1.png" alt="Impactora" class="w-16 h-16 mb-8 brightness-0 invert" />
 			<h3
-				class="text-3xl lg:text-4xl font-black uppercase leading-tight mb-6 group-hover:text-primary transition-colors"
+				class="text-4xl md:text-5xl font-bold uppercase leading-tight mb-6 max-w-[80%] group-hover:text-primary transition-colors"
 			>
 				IMPACTORA
 			</h3>
-			<hr class="border-white/30 mb-6" />
-			<p class="text-sm leading-relaxed text-white/70">
+			<hr class="border-white/30 border-t-2 mb-6 max-w-[40%]" />
+			<p class="text-base leading-relaxed">
 				Are you looking for new ways to develop and grow yourself? Are you exploring new ways to
 				empower your team? IMPACTORA is a SaaS platform designed to support you in the moments you
 				need it most. It offers immediate, contextual advice, and insights, ensuring managers and
@@ -226,12 +232,12 @@
 				class="w-16 h-16 mb-8 brightness-0 invert"
 			/>
 			<h3
-				class="text-3xl lg:text-4xl font-black uppercase leading-tight mb-6 group-hover:text-primary transition-colors"
+				class="text-4xl lg:text-5xl font-bold uppercase leading-tight mb-6 max-w-[80%] group-hover:text-primary transition-colors"
 			>
 				BUSINESS PARTNERING IMPACT PROGRAM
 			</h3>
-			<hr class="border-white/30 mb-6" />
-			<p class="text-sm leading-relaxed text-white/70">
+			<hr class="border-white border-t-2 mb-6 max-w-[40%]" />
+			<p class="text-base leading-relaxed">
 				Our Business Partnering Impact Program focuses on building the behavioural attributes and
 				commercial acumen required to make a greater business impact. This experiential and
 				interactive program will equip business partners with the skills to drive positive business
@@ -250,12 +256,12 @@
 				class="w-16 h-16 mb-8 brightness-0 invert"
 			/>
 			<h3
-				class="text-3xl lg:text-4xl font-black uppercase leading-tight mb-6 group-hover:text-primary transition-colors"
+				class="text-4xl lg:text-5xl font-bold uppercase leading-tight mb-6 max-w-[60%] group-hover:text-primary transition-colors"
 			>
 				AMPLIFY YOUR IMPACT PROGRAM
 			</h3>
-			<hr class="border-white/30 mb-6" />
-			<p class="text-sm leading-relaxed text-white/70">
+			<hr class="border-white/30 border-t-2 mb-6 max-w-[40%]" />
+			<p class="text-base leading-relaxed">
 				Our AMPLIFY Business Partnering Program is a tailored development experience crafted to
 				equip teams for change, especially under heightened expectations. Building on the Business
 				Partnering IMPACT Program, this six-month experience provides check-in support and a
@@ -267,22 +273,61 @@
 
 <!-- Meet Our Clients -->
 <section class="py-16 bg-base-100">
-	<div class="container-custom">
-		<h2 class="text-center mb-12">MEET OUR CLIENTS</h2>
-		<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-			{#each clientPhotos as photo}
-				<div class="overflow-hidden">
-					<img src={photo} alt="Client workshop" class="w-full h-48 object-cover" loading="lazy" />
+	<h2 class="mb-10 text-5xl lg:text-7xl font-bold text-center">MEET OUR CLIENTS</h2>
+	<div class="relative group/carousel">
+		<!-- Left Arrow -->
+		<button
+			onclick={() => {
+				const el = document.getElementById('clients-carousel');
+				if (el) el.scrollBy({ left: -el.clientWidth * 0.75, behavior: 'smooth' });
+			}}
+			class="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-10 btn btn-secondary btn-circle shadow-lg opacity-0 group-hover/carousel:opacity-100 transition-opacity"
+			aria-label="Scroll left"
+		>
+			<Icon icon="ph:arrow-left-bold" class="text-xl" />
+		</button>
+
+		<div id="clients-carousel" class="carousel carousel-center w-full gap-1 rounded-none">
+			{#each clientPhotos as photo, i}
+				<div id="client-slide-{i}" class="carousel-item">
+					<img
+						src={photo}
+						alt="Client workshop"
+						class="h-64 md:h-96 w-auto object-cover"
+						loading="lazy"
+					/>
 				</div>
 			{/each}
 		</div>
+
+		<!-- Right Arrow -->
+		<button
+			onclick={() => {
+				const el = document.getElementById('clients-carousel');
+				if (el) el.scrollBy({ left: el.clientWidth * 0.75, behavior: 'smooth' });
+			}}
+			class="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-10 btn btn-secondary btn-circle shadow-lg opacity-0 group-hover/carousel:opacity-100 transition-opacity"
+			aria-label="Scroll right"
+		>
+			<Icon icon="ph:arrow-right-bold" class="text-xl" />
+		</button>
+	</div>
+
+	<div class="flex justify-center gap-2 mt-6">
+		{#each clientPhotos as _, i}
+			<a
+				href="#client-slide-{i}"
+				class="btn btn-xs btn-circle btn-ghost border border-base-300"
+				aria-label="Go to slide {i + 1}"
+			></a>
+		{/each}
 	</div>
 </section>
 
 <!-- Client Logos -->
-<section class="section-gray py-16">
+<section class="py-16">
 	<div class="container-custom">
-		<h2 class="text-center mb-12">SOME COMPANIES WE'VE PARTNERED WITH</h2>
+	<h2 class="mb-10 text-5xl lg:text-7xl font-bold text-center">SOME COMPANIES WE'VE PARTNERED WITH</h2>
 
 		<!-- First Row -->
 		<div class="grid grid-cols-2 md:grid-cols-7 gap-8 items-center mb-12">
