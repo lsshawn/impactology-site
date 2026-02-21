@@ -1,10 +1,10 @@
 <script lang="ts">
 	import SEO from '$lib/components/SEO.svelte';
 	import Icon from '@iconify/svelte';
-	import type { BlogPost } from '$lib/data/blog-posts';
 
 	let { data } = $props();
-	let post: BlogPost | null = $derived(data.post);
+	let metadata = $derived(data.metadata);
+	let component = $derived(data.component);
 
 	function formatDate(dateString: string): string {
 		const date = new Date(dateString);
@@ -16,26 +16,26 @@
 	}
 </script>
 
-{#if post}
+{#if metadata && component}
 	<SEO
-		title="{post.title} | Impactology"
-		description={post.excerpt}
-		ogTitle={post.title}
-		ogDescription={post.excerpt}
-		ogImage={post.featuredImage}
+		title="{metadata.title} | Impactology"
+		description={metadata.excerpt}
+		ogTitle={metadata.title}
+		ogDescription={metadata.excerpt}
+		ogImage={metadata.featuredImage}
 		ogType="article"
-		canonical="https://impactology.com.au/blog/{post.slug}"
+		canonical="https://impactology.com.au/blog/{metadata.slug}"
 		jsonLd={{
 			'@context': 'https://schema.org',
 			'@type': 'BlogPosting',
-			headline: post.title,
-			description: post.excerpt,
-			image: post.featuredImage,
-			datePublished: post.date,
-			dateModified: post.date,
+			headline: metadata.title,
+			description: metadata.excerpt,
+			image: metadata.featuredImage,
+			datePublished: metadata.date,
+			dateModified: metadata.date,
 			author: {
 				'@type': 'Person',
-				name: post.author
+				name: metadata.author
 			},
 			publisher: {
 				'@type': 'Organization',
@@ -47,7 +47,7 @@
 			},
 			mainEntityOfPage: {
 				'@type': 'WebPage',
-				'@id': `https://impactology.com.au/blog/${post.slug}`
+				'@id': `https://impactology.com.au/blog/${metadata.slug}`
 			}
 		}}
 	/>
@@ -56,8 +56,8 @@
 	<section class="relative min-h-[50vh] md:min-h-[60vh] flex items-end">
 		<div class="absolute inset-0">
 			<img
-				src={post.featuredImage}
-				alt={post.title}
+				src={metadata.featuredImage}
+				alt={metadata.title}
 				class="w-full h-full object-cover"
 				loading="eager"
 				decoding="async"
@@ -84,13 +84,13 @@
 						<Icon icon="ph:caret-right" class="text-xs" />
 					</li>
 					<li class="text-neutral-content/60 truncate max-w-[200px] md:max-w-none">
-						{post.title}
+						{metadata.title}
 					</li>
 				</ol>
 			</nav>
 
 			<h1 class="text-3xl md:text-5xl lg:text-6xl font-bold text-neutral-content max-w-4xl">
-				{post.title}
+				{metadata.title}
 			</h1>
 		</div>
 	</section>
@@ -105,20 +105,20 @@
 						<div
 							class="bg-primary text-primary-content rounded-full w-12 h-12 flex items-center justify-center"
 						>
-							<span class="text-lg font-bold">{post.author.charAt(0)}</span>
+							<span class="text-lg font-bold">{metadata.author.charAt(0)}</span>
 						</div>
 					</div>
 					<div>
-						<p class="font-bold">{post.author}</p>
-						<time class="text-sm text-base-content/60" datetime={post.date}>
-							{formatDate(post.date)}
+						<p class="font-bold">{metadata.author}</p>
+						<time class="text-sm text-base-content/60" datetime={metadata.date}>
+							{formatDate(metadata.date)}
 						</time>
 					</div>
 				</div>
 
-				<!-- Article Body -->
+				<!-- Article Body (MDsveX rendered markdown) -->
 				<div class="prose prose-lg max-w-none">
-					{@html post.content}
+					<svelte:component this={component} />
 				</div>
 
 				<!-- Share Section -->
@@ -126,7 +126,7 @@
 					<p class="font-bold mb-4 uppercase text-sm">Share this article</p>
 					<div class="flex gap-3">
 						<a
-							href="https://www.linkedin.com/sharing/share-offsite/?url=https://impactology.com.au/blog/{post.slug}"
+							href="https://www.linkedin.com/sharing/share-offsite/?url=https://impactology.com.au/blog/{metadata.slug}"
 							target="_blank"
 							rel="noopener noreferrer"
 							class="btn btn-square btn-outline rounded-none"
@@ -135,8 +135,8 @@
 							<Icon icon="ph:linkedin-logo-bold" class="text-xl" />
 						</a>
 						<a
-							href="https://twitter.com/intent/tweet?url=https://impactology.com.au/blog/{post.slug}&text={encodeURIComponent(
-								post.title
+							href="https://twitter.com/intent/tweet?url=https://impactology.com.au/blog/{metadata.slug}&text={encodeURIComponent(
+								metadata.title
 							)}"
 							target="_blank"
 							rel="noopener noreferrer"
@@ -147,8 +147,8 @@
 						</a>
 						<a
 							href="mailto:?subject={encodeURIComponent(
-								post.title
-							)}&body=Check out this article: https://impactology.com.au/blog/{post.slug}"
+								metadata.title
+							)}&body=Check out this article: https://impactology.com.au/blog/{metadata.slug}"
 							class="btn btn-square btn-outline rounded-none"
 							aria-label="Share via Email"
 						>
