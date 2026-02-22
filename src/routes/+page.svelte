@@ -85,7 +85,6 @@
 			title: 'Marketing Specialist'
 		}
 	];
-
 </script>
 
 <SEO
@@ -127,7 +126,7 @@
 		decoding="async"
 		width="1920"
 		height="1080"
-		class="absolute inset-0 w-full h-full object-cover object-center"
+		class="hidden md:block absolute inset-0 w-full h-full object-cover object-center"
 	/>
 	<div class="container-custom relative z-10">
 		<div class="max-w-xl">
@@ -135,19 +134,23 @@
 			<p class="text-2xl md:text-3xl font-bold mb-8">
 				Leadership Development Solutions Designed for Business Partners.
 			</p>
-			<a href="#make_impacts" class="btn btn-secondary btn-lg uppercase font-bold mb-6">
+			<button
+				onclick={() =>
+					document.getElementById('make_impacts')?.scrollIntoView({ behavior: 'smooth' })}
+				class="btn btn-secondary md:btn-lg uppercase font-bold mb-6 !py-6 md:!py-0"
+			>
 				BOOK YOUR FREE 60-MINUTE STRATEGY SESSION
-			</a>
-      <div class="text-base max-w-2xl text-xl prose prose-lg">
-        <p>
-          This free strategy session will help you uncover what your team needs most.<br />
-        </p>
-        <p>
-          <strong>Your Benefit:</strong> practical next steps you can act on immediately.<br />
-        </p>
-        <p>
-          <strong>No hard sell – pinky promise!</strong>
-        </p>
+			</button>
+			<div class="text-base max-w-2xl text-xl prose prose-lg">
+				<p>
+					This free strategy session will help you uncover what your team needs most.<br />
+				</p>
+				<p>
+					<strong>Your Benefit:</strong> practical next steps you can act on immediately.<br />
+				</p>
+				<p>
+					<strong>No hard sell – pinky promise!</strong>
+				</p>
 			</div>
 		</div>
 	</div>
@@ -179,7 +182,14 @@
 			href="/impactora"
 			class="block p-10 lg:p-14 border-b md:border-b-0 md:border-r border-white/10 transition-colors group bg-[#212023]"
 		>
-			<img src="/icon1.webp" alt="Impactora" width="84" height="84" class="w-16 h-16 mb-8 brightness-0 invert" loading="lazy" />
+			<img
+				src="/icon1.webp"
+				alt="Impactora"
+				width="84"
+				height="84"
+				class="w-16 h-16 mb-8 brightness-0 invert"
+				loading="lazy"
+			/>
 			<h3
 				class="text-4xl md:text-5xl font-bold uppercase leading-tight mb-6 max-w-[80%] group-hover:text-primary transition-colors"
 			>
@@ -202,7 +212,8 @@
 			<img
 				src="/icon2.webp"
 				alt="Business Partnering Impact Program"
-				width="84" height="84"
+				width="84"
+				height="84"
 				class="w-16 h-16 mb-8 brightness-0 invert"
 				loading="lazy"
 			/>
@@ -228,7 +239,8 @@
 			<img
 				src="/icon3.webp"
 				alt="Amplify Your Impact Program"
-				width="84" height="84"
+				width="84"
+				height="84"
 				class="w-16 h-16 mb-8 brightness-0 invert"
 				loading="lazy"
 			/>
@@ -270,7 +282,8 @@
 					<img
 						src={photo}
 						alt="Client workshop"
-						width="640" height="427"
+						width="640"
+						height="427"
 						class="h-64 md:h-96 w-auto object-cover"
 						loading="lazy"
 					/>
@@ -305,13 +318,22 @@
 <!-- Client Logos -->
 <section class="py-16">
 	<div class="container-custom">
-	<h2 class="mb-10 text-5xl lg:text-7xl font-bold text-center">SOME COMPANIES WE'VE PARTNERED WITH</h2>
+		<h2 class="mb-10 text-5xl lg:text-7xl font-bold text-center">
+			SOME COMPANIES WE'VE PARTNERED WITH
+		</h2>
 
 		<!-- First Row -->
 		<div class="grid grid-cols-2 md:grid-cols-7 gap-8 items-center mb-12">
 			{#each clientLogos1 as logo}
 				<div class="flex items-center justify-center p-4">
-					<img src={logo} alt="Client logo" width="200" height="64" class="max-h-16 w-auto object-contain" loading="lazy" />
+					<img
+						src={logo}
+						alt="Client logo"
+						width="200"
+						height="64"
+						class="max-h-16 w-auto object-contain"
+						loading="lazy"
+					/>
 				</div>
 			{/each}
 			<div class="flex items-center justify-center">
@@ -325,7 +347,14 @@
 		<div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center mb-12">
 			{#each clientLogos2 as logo}
 				<div class="flex items-center justify-center p-4">
-					<img src={logo} alt="Client logo" width="200" height="64" class="max-h-16 w-auto object-contain" loading="lazy" />
+					<img
+						src={logo}
+						alt="Client logo"
+						width="200"
+						height="64"
+						class="max-h-16 w-auto object-contain"
+						loading="lazy"
+					/>
 				</div>
 			{/each}
 		</div>
@@ -334,7 +363,14 @@
 		<div class="grid grid-cols-3 md:grid-cols-7 gap-6 items-center">
 			{#each moreLogos as logo}
 				<div class="flex items-center justify-center p-2">
-					<img src={logo} alt="Client logo" width="200" height="48" class="max-h-12 w-auto object-contain" loading="lazy" />
+					<img
+						src={logo}
+						alt="Client logo"
+						width="200"
+						height="48"
+						class="max-h-12 w-auto object-contain"
+						loading="lazy"
+					/>
 				</div>
 			{/each}
 		</div>
@@ -342,21 +378,26 @@
 </section>
 
 <!-- Impactora Promo Section -->
-<div
-	class="hero min-h-[80vh]"
-	style="background-image: url('/impactora-promo-banner.webp');"
->
+<div class="hero min-h-[80vh]" style="background-image: url('/impactora-promo-banner.webp');">
 	<div class="hero-content flex-col lg:flex-row-reverse w-full max-w-7xl gap-8 lg:gap-16">
 		<img
 			src="/impactora-promo-banner.webp"
 			alt=""
 			aria-hidden="true"
-			width="3840" height="1280"
+			width="3840"
+			height="1280"
 			class="max-w-xs md:max-w-sm lg:max-w-md hidden lg:block opacity-0 pointer-events-none"
 			loading="lazy"
 		/>
 		<div>
-			<img src="/impactora-logo.webp" alt="Impactora" width="368" height="84" class="h-12 md:h-14 w-auto mb-8" loading="lazy" />
+			<img
+				src="/impactora-logo.webp"
+				alt="Impactora"
+				width="368"
+				height="84"
+				class="h-12 md:h-14 w-auto mb-8"
+				loading="lazy"
+			/>
 			<h2 class="text-4xl md:text-6xl font-bold uppercase leading-tight mb-2 text-white">
 				TAILORED ADVICE &amp; INSIGHTS
 			</h2>
@@ -390,7 +431,9 @@
 <section id="make_impacts" class="py-20 md:py-28 bg-base-100" data-testid="contact-form-section">
 	<div class="container-custom">
 		<div class="max-w-4xl mx-auto">
-	<h2 class="mb-10 text-5xl lg:text-5xl font-bold text-center">FIND OUT HOW WE CAN HELP YOU MAKE AN IMPACT</h2>
+			<h2 class="mb-10 text-5xl lg:text-5xl font-bold text-center">
+				FIND OUT HOW WE CAN HELP YOU MAKE AN IMPACT
+			</h2>
 			<p class="text-center text-lg mb-12 max-w-2xl mx-auto">
 				At Impactology, our focus is on helping companies thrive and grow and individuals to live
 				better, work smarter and be authentic in the way they work with others.
