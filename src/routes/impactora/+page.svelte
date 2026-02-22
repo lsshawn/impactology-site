@@ -2,12 +2,106 @@
 	import SEO from '$lib/components/SEO.svelte';
 	import Icon from '@iconify/svelte';
 
+	// Rotating text state
+	let currentWordIndex = $state(0);
+	const rotatingWords = ['ANSWERS', 'SUPPORT', 'INSIGHTS'];
+
+	$effect(() => {
+		const interval = setInterval(() => {
+			currentWordIndex = (currentWordIndex + 1) % rotatingWords.length;
+		}, 2500);
+		return () => clearInterval(interval);
+	});
+
+	// Testimonial carousel state
+	let currentTestimonial = $state(0);
+	let slideDirection = $state<'left' | 'right'>('right');
+	let isAnimating = $state(false);
+
+	const testimonials = [
+		{
+			quote:
+				'Impactora provides streamlined insights that narrows down to specific areas',
+			author: 'Janet M'
+		},
+		{
+			quote:
+				'The action pathways based on objectives, it seems like a very powerful tool to drive undecided people to action.',
+			author: 'Charlotte L'
+		},
+		{
+			quote:
+				'The standouts to me are the ability to schedule goals and do reviews. I like the idea that Impactora is allowing me to continually move forward',
+			author: 'Gianni R'
+		},
+		{
+			quote:
+				'At times, an organisation requiring personal development in the form of an online platform can feel mundane and distant. This section allowed a more human element to come through from the platform.',
+			author: 'Lily S'
+		},
+		{
+			quote:
+				"Whether it\u2019s a quick check-in for some advice or a deep dive. Impactora has it all. In a short space of time, it has been my go-to for personal and professional development.",
+			author: 'Chan L'
+		}
+	];
+
+	function nextTestimonial() {
+		if (isAnimating) return;
+		isAnimating = true;
+		slideDirection = 'right';
+		setTimeout(() => {
+			currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+			isAnimating = false;
+		}, 300);
+	}
+
+	function prevTestimonial() {
+		if (isAnimating) return;
+		isAnimating = true;
+		slideDirection = 'left';
+		setTimeout(() => {
+			currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+			isAnimating = false;
+		}, 300);
+	}
+
+	// FAQ accordion state
+	let openFaq = $state<number | null>(0);
+
+	const faqs = [
+		{
+			question: 'What is Impactora?',
+			answer:
+				"Impactora is a SaaS based HR platform which helps solving a critical organization challenge \u2013 helping managers and employees receive tailored HR information and advice. Impactora is the platform where employees access tailored advice and information to resolve issues, access insights, make decisions, and achieve their goals which positively impacts their colleagues and work environment \u2013 imagine a combination of Wikipedia and Google tailored to your personal work context and situation."
+		},
+		{
+			question: 'What is Impactora used for?',
+			answer:
+				"We solve the productivity challenge for employees and HR by providing answers to frequently asked questions for non-contextual information. We solve employee performance challenges by providing the right, tailored information with the right insights at the right time to resolve people issues and improve decision making."
+		},
+		{
+			question: 'Is the Impactora Platform safe and secure?',
+			answer:
+				'Impactora is the trusted Platform where employees feel safe to help them resolve some of the tricky issues, access insights, make decisions, and achieve their goals which positively impacts their colleagues and work environment.'
+		},
+		{
+			question: 'Who is the target audience for Impactora?',
+			answer:
+				'Impactora is designed for mature mid-sized organisations and smaller high growth organisations. Our end users are graduates, early career employees, first-time managers, emerging leaders and newly promoted managers, across all disciplines and job functions.'
+		},
+		{
+			question: 'Which employees can best benefit from Impactora?',
+			answer:
+				"Employees who are stretched in their role and have a lack of time and knowledge on where to seek advice, getting stuck in career, have a fear of failing in their role, looking for a platform to complement existing learning and development programs, and those who have a willingness to embrace new modes of learning."
+		}
+	];
+
 	// Contact form state
 	let firstName = $state('');
 	let lastName = $state('');
 	let email = $state('');
 	let company = $state('');
-	let teamSize = $state('');
 	let message = $state('');
 	let formStatus = $state<'idle' | 'sending' | 'sent' | 'error'>('idle');
 	let errorMessage = $state('');
@@ -24,7 +118,7 @@
 					lastName,
 					email,
 					company,
-					message: `[IMPACTORA Demo Request]\nTeam Size: ${teamSize}\n\n${message}`
+					message: `[IMPACTORA Demo Request]\n\n${message}`
 				})
 			});
 			if (!res.ok) throw new Error('Failed to send');
@@ -33,7 +127,6 @@
 			lastName = '';
 			email = '';
 			company = '';
-			teamSize = '';
 			message = '';
 		} catch {
 			formStatus = 'error';
@@ -41,76 +134,61 @@
 		}
 	}
 
-	const features = [
+	const helpBoxes = [
 		{
-			icon: 'ph:lightning-fill',
-			title: 'INSTANT GUIDANCE',
+			icon: '/impactora-icon-resolve.png',
+			title: 'Resolve\nissues',
 			description:
-				'Get real-time, contextual advice exactly when workplace challenges arise. No waiting for consultants or scheduled sessions.'
+				"Reduced in-person connectivity means we miss out on the valuable 'water cooler' conversation to help us solve problems in a timely manner \u2013 resolve issues, anytime from one platform."
 		},
 		{
-			icon: 'ph:chart-line-up-fill',
-			title: 'DATA-DRIVEN INSIGHTS',
+			icon: '/impactora-icon-insights.png',
+			title: 'Quickly Access\nInsights',
 			description:
-				'Leverage AI-powered analytics to understand team dynamics, identify patterns, and make informed decisions backed by evidence.'
+				'When did work and life get so busy again!? IMPACTORA saves you valuable time by helping you access the insights you need to make more informed decisions and take action sooner.'
 		},
 		{
-			icon: 'ph:clock-fill',
-			title: '24/7 AVAILABILITY',
+			icon: '/impactora-icon-decisions.png',
+			title: 'Make informed\ndecisions',
 			description:
-				'Support your team around the clock. Critical moments dont wait for business hours—neither does IMPACTORA.'
+				"Today\u2019s abundance of choice is often the enemy of action. IMPACTORA allows access to tailored and timely advice, which means you can make more quicker decisions that often create lasting impact."
 		},
 		{
-			icon: 'ph:user-circle-fill',
-			title: 'PERSONALISED EXPERIENCE',
+			icon: '/impactora-icon-goals.png',
+			title: 'Achieve\ngoals',
 			description:
-				'Every recommendation adapts to your role, industry, and specific context. No generic advice—only relevant solutions.'
-		},
-		{
-			icon: 'ph:shield-check-fill',
-			title: 'CONFIDENTIAL & SECURE',
-			description:
-				'Enterprise-grade security ensures sensitive workplace matters stay protected. SOC 2 compliant infrastructure.'
-		},
-		{
-			icon: 'ph:trend-up-fill',
-			title: 'MEASURABLE IMPACT',
-			description:
-				'Track improvements in team performance, resolution times, and decision quality with built-in analytics dashboards.'
+				'Some insights and advice are worth investing more time in. IMPACTORA lets you create goals to fast track your personal growth in the moments that matter most.'
 		}
 	];
 
-	const useCases = [
+	const steps = [
 		{
-			role: 'HR BUSINESS PARTNERS',
-			scenarios: [
-				'Navigate complex employee relations issues',
-				'Guide managers through performance conversations',
-				'Support restructuring and change management'
-			]
+			number: '1.',
+			title: 'Know thy self',
+			description: 'Answer a series of questions and access your personal profile.',
+			icon: 'ph:user'
 		},
 		{
-			role: 'PEOPLE LEADERS',
-			scenarios: [
-				'Handle difficult team dynamics',
-				'Make fair and consistent decisions',
-				'Build high-performing cultures'
-			]
+			number: '2.',
+			title: 'Start exploring',
+			description:
+				'Access insights and advice tailored to your personal profile and organisation.',
+			icon: 'ph:magnifying-glass'
 		},
 		{
-			role: 'FRONTLINE MANAGERS',
-			scenarios: [
-				'Address underperformance constructively',
-				'Resolve team conflicts quickly',
-				'Onboard and develop new team members'
-			]
+			number: '3.',
+			title: 'Take action sooner',
+			description:
+				'Increase your impact on yourself, your colleagues, your team and customers.',
+			icon: 'ph:clock'
+		},
+		{
+			number: '4.',
+			title: 'Access daily insights',
+			description:
+				'Your personalised feed will keep you motivated to achieve your goals.',
+			icon: 'ph:calendar'
 		}
-	];
-
-	const stats = [
-		{ value: '67%', label: 'Faster resolution of workplace issues' },
-		{ value: '89%', label: 'Manager confidence in handling challenges' },
-		{ value: '3.2x', label: 'Return on investment within 12 months' }
 	];
 </script>
 
@@ -142,442 +220,365 @@
 />
 
 <!-- Hero Section -->
-<section class="section-dark py-24 md:py-32 relative overflow-hidden">
-	<!-- Decorative elements -->
-	<div
-		class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-5 rounded-full -translate-y-1/2 translate-x-1/2"
-	></div>
-	<div
-		class="absolute bottom-0 left-0 w-64 h-64 bg-primary opacity-5 rounded-full translate-y-1/2 -translate-x-1/2"
-	></div>
-
+<section class="bg-white py-24 md:py-32 relative overflow-hidden min-h-[70vh] flex items-center">
 	<div class="container-custom relative z-10">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 			<div>
-				<div class="flex items-center gap-3 mb-6">
-					<img src="/icon1.png" alt="IMPACTORA" class="w-14 h-14" />
-					<span class="text-primary font-bold text-xl tracking-wider">IMPACTORA</span>
+				<div class="mb-8">
+					<span
+						class="text-6xl md:text-7xl lg:text-[90px] font-bold leading-none"
+						style="font-family: var(--font-heading);"
+					>
+						FIND
+					</span>
+					<div class="relative h-[70px] md:h-[90px] overflow-hidden">
+						{#each rotatingWords as word, i (word)}
+							<span
+								class="text-6xl md:text-7xl lg:text-[90px] font-bold leading-none absolute left-0 transition-all duration-500"
+								style="font-family: var(--font-heading); color: #5ad4ff; {i === currentWordIndex
+									? 'opacity: 1; transform: translateY(0)'
+									: 'opacity: 0; transform: translateY(100%)'}"
+							>
+								{word}
+							</span>
+						{/each}
+					</div>
 				</div>
-				<h1 class="text-5xl md:text-6xl lg:text-7xl mb-6 leading-none">
-					GUIDANCE IN THE MOMENTS THAT MATTER
-				</h1>
-				<p class="text-xl mb-8 opacity-90 leading-relaxed max-w-xl">
-					IMPACTORA is your AI-powered workplace companion. Get instant, contextual advice to
-					navigate challenges, support your team, and make confident decisions—24/7.
+				<p class="text-xl mb-8 opacity-80 leading-relaxed max-w-xl">
+					Tailored advice and insights for employees and managers.
 				</p>
-				<div class="flex flex-col sm:flex-row gap-4">
-					<a
-						href="#request-demo"
-						class="btn btn-primary btn-lg uppercase font-bold rounded-none inline-flex items-center justify-center gap-2"
-					>
-						REQUEST A DEMO
-						<Icon icon="ph:arrow-right-bold" class="text-lg" />
-					</a>
-					<a
-						href="#how-it-works"
-						class="btn btn-outline border-current text-current btn-lg uppercase font-bold rounded-none hover:bg-primary hover:text-primary-content hover:border-primary"
-					>
-						SEE HOW IT WORKS
-					</a>
-				</div>
+				<a
+					href="#contact-section"
+					class="inline-block bg-black text-white px-10 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-white hover:text-[#5ad4ff] hover:outline hover:outline-2 hover:outline-[#5ad4ff] transition-all"
+				>
+					BOOK A DEMO
+				</a>
 			</div>
 
 			<!-- Product Visual -->
-			<div class="relative">
-				<div class="impactora-screenshots">
-					<div class="impactora-screenshot-main">
-						<img
-							src="/impactora-dashboard.png"
-							alt="IMPACTORA Dashboard"
-							class="w-full h-auto rounded-sm shadow-2xl"
-							loading="eager"
-							onerror={(e) => {
-								const img = e.currentTarget as HTMLImageElement;
-								img.src = '/icon1.png';
-								img.classList.add('p-16', 'bg-neutral', 'opacity-30');
-							}}
-						/>
-					</div>
-					<div class="impactora-screenshot-secondary">
-						<img
-							src="/impactora-mobile.png"
-							alt="IMPACTORA Mobile"
-							class="w-full h-auto rounded-sm shadow-xl"
-							loading="eager"
-							onerror={(e) => {
-								(e.currentTarget as HTMLImageElement).style.display = 'none';
-							}}
-						/>
-					</div>
-				</div>
-				<div class="absolute -bottom-4 -left-4 w-32 h-32 bg-primary opacity-20 -z-10"></div>
+			<div class="relative flex justify-center">
+				<img
+					src="/impactora-promo-banner.png"
+					alt="IMPACTORA App"
+					class="w-full max-w-lg h-auto"
+					loading="eager"
+				/>
 			</div>
 		</div>
 	</div>
 </section>
 
-<!-- Stats Bar -->
-<section class="section-yellow py-12">
+<!-- Tailored Advice & Insights Section -->
+<section class="py-20 md:py-28 bg-base-100">
 	<div class="container-custom">
-		<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-			{#each stats as stat, i (i)}
-				<div>
-					<div
-						class="text-5xl md:text-6xl font-bold mb-2"
-						style="font-family: var(--font-heading);"
+		<div class="max-w-4xl mx-auto text-center">
+			<h2 class="mb-8 text-3xl md:text-4xl">TAILORED ADVICE & INSIGHTS</h2>
+			<p class="text-lg leading-relaxed mb-6">
+				The way we work has changed forever. The emergence of remote and hybrid workplaces has
+				presented great opportunities and benefits for both organisations and their employees,
+				but it's not without its challenges. Most notably is the loss of in-person workplace
+				connection, and along with it the "water cooler" conversations where people shared their
+				experiences and knowledge.
+			</p>
+			<p class="text-lg leading-relaxed">
+				<strong>IMPACTORA</strong> is a SaaS platform designed to bridge that loss of organisational
+				knowledge by providing easy to access and immediate support, advice and insights that are tailored
+				to the individual employee and your business.
+			</p>
+		</div>
+	</div>
+</section>
+
+<!-- Impactora Helps You Section - 4 Dark Gradient Boxes -->
+<section class="py-0">
+	<div class="max-w-[1400px] mx-auto">
+		<h2 class="text-center mb-12 text-3xl md:text-4xl pt-16">IMPACTORA HELPS YOU&hellip;</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+			{#each helpBoxes as box, i (i)}
+				<div
+					class="p-10 text-white"
+					style="background-color: {['#636363', '#4a4a4a', '#363636', '#1a1a1a'][i]};"
+				>
+					<img
+						src={box.icon}
+						alt={box.title.replace('\n', ' ')}
+						class="w-24 h-24 mb-6 object-contain"
+					/>
+					<h3
+						class="text-xl mb-4 whitespace-pre-line"
+						style="color: #5ad4ff;"
 					>
-						{stat.value}
-					</div>
-					<p class="text-sm uppercase tracking-wide font-medium">{stat.label}</p>
+						{box.title}
+					</h3>
+					<p class="text-sm leading-relaxed opacity-90">
+						{box.description}
+					</p>
 				</div>
 			{/each}
 		</div>
 	</div>
 </section>
 
-<!-- Problem/Solution Section -->
+<!-- Timely Information & Advice Section -->
 <section class="py-20 md:py-28 bg-base-100">
 	<div class="container-custom">
-		<div class="max-w-4xl mx-auto text-center mb-16">
-			<h2 class="mb-6">THE CHALLENGE</h2>
-			<p class="text-xl leading-relaxed">
-				Managers face critical workplace moments every day—difficult conversations, team conflicts,
-				policy questions, performance issues. Traditional support is too slow, too expensive, or
-				simply unavailable when you need it most.
+		<div class="max-w-4xl mx-auto text-center">
+			<h2 class="mb-8 text-3xl md:text-4xl">TIMELY INFORMATION & ADVICE</h2>
+			<p class="text-lg leading-relaxed mb-10">
+				We now have access to infinite sources of knowledge, data, and advice. However, it can be
+				difficult to find information specific to your situation and the abundance of choice is
+				often the enemy of action. <strong>IMPACTORA</strong> provides leaders, managers and employees
+				access to tailored advice and insights that will positively impact themselves, their teams,
+				colleagues and customers.
 			</p>
+
+			<!-- Promo Banner Image -->
+			<div class="mb-10">
+				<img
+					src="/impactora-promo-banner.png"
+					alt="IMPACTORA Platform Preview"
+					class="w-full max-w-2xl mx-auto h-auto rounded-sm shadow-lg"
+				/>
+			</div>
+
+			<a
+				href="#contact-section"
+				class="inline-block bg-black text-white px-10 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-white hover:text-[#5ad4ff] hover:outline hover:outline-2 hover:outline-[#5ad4ff] transition-all"
+			>
+				BOOK A DEMO
+			</a>
+		</div>
+	</div>
+</section>
+
+<!-- Feature Showcase - Interactive Boxes -->
+<section class="py-0 overflow-hidden">
+	<div class="grid grid-cols-1 md:grid-cols-2">
+		<!-- Left Column - Team Management -->
+		<div class="bg-[#5ad4ff] p-10 md:p-14 text-black relative min-h-[400px] flex flex-col justify-between">
+			<div>
+				<p class="text-sm uppercase tracking-wider mb-2 opacity-70">Team management advice</p>
+				<h3 class="text-3xl md:text-4xl mb-6 leading-tight" style="font-family: var(--font-heading);">
+					HOW TO IDENTIFY & MANAGE HIGH PERFORMERS?
+				</h3>
+			</div>
+			<img
+				src="/impactora-mask-group.png"
+				alt="Team meeting"
+				class="absolute inset-0 w-full h-full object-cover opacity-20"
+			/>
 		</div>
 
-		<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-			<div class="bg-base-200 p-8">
-				<Icon icon="ph:clock-countdown" class="text-4xl text-primary mb-4" />
-				<h3 class="text-lg mb-3">DELAYED DECISIONS</h3>
-				<p class="text-sm leading-relaxed opacity-80">
-					Waiting days for HR or consultant input while situations escalate and team morale suffers.
-				</p>
+		<!-- Right Column - Personal Development -->
+		<div class="bg-[#00b9d1] p-10 md:p-14 text-white relative min-h-[400px] flex flex-col justify-between">
+			<div>
+				<p class="text-sm uppercase tracking-wider mb-2 opacity-70">Personal development</p>
+				<h3 class="text-3xl md:text-4xl mb-6 leading-tight" style="font-family: var(--font-heading);">
+					DEVELOPING THE RIGHT SKILLS FOR YOUR CAREER
+				</h3>
 			</div>
-			<div class="bg-base-200 p-8">
-				<Icon icon="ph:question" class="text-4xl text-primary mb-4" />
-				<h3 class="text-lg mb-3">INCONSISTENT GUIDANCE</h3>
-				<p class="text-sm leading-relaxed opacity-80">
-					Different advice from different sources leads to confusion and potential compliance risks.
-				</p>
-			</div>
-			<div class="bg-base-200 p-8">
-				<Icon icon="ph:user-minus" class="text-4xl text-primary mb-4" />
-				<h3 class="text-lg mb-3">ISOLATED MANAGERS</h3>
-				<p class="text-sm leading-relaxed opacity-80">
-					Leaders feel alone in handling sensitive issues, lacking confidence to act decisively.
-				</p>
+			<div class="flex gap-6 relative z-10">
+				<div class="flex-1">
+					<div class="text-5xl font-bold mb-2" style="font-family: var(--font-heading);">1</div>
+					<h4 class="text-lg mb-1">Develop your skills</h4>
+				</div>
+				<div class="flex-1">
+					<div class="text-5xl font-bold mb-2" style="font-family: var(--font-heading);">2</div>
+					<h4 class="text-lg mb-1">Shared knowledge</h4>
+				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
 <!-- How It Works Section -->
-<section id="how-it-works" class="section-dark py-20 md:py-28">
-	<div class="container-custom">
-		<h2 class="text-center mb-16">HOW IMPACTORA WORKS</h2>
-
-		<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-			<div class="text-center">
-				<div
-					class="w-20 h-20 mx-auto mb-6 bg-primary text-primary-content flex items-center justify-center"
-				>
-					<span class="text-4xl font-bold" style="font-family: var(--font-heading);">1</span>
-				</div>
-				<h3 class="mb-4">DESCRIBE YOUR SITUATION</h3>
-				<p class="text-sm leading-relaxed opacity-90">
-					Share the workplace challenge youre facing in your own words. Our AI understands context,
-					nuance, and the complexities of real workplace dynamics.
-				</p>
-			</div>
-
-			<div class="text-center">
-				<div
-					class="w-20 h-20 mx-auto mb-6 bg-primary text-primary-content flex items-center justify-center"
-				>
-					<span class="text-4xl font-bold" style="font-family: var(--font-heading);">2</span>
-				</div>
-				<h3 class="mb-4">RECEIVE TAILORED GUIDANCE</h3>
-				<p class="text-sm leading-relaxed opacity-90">
-					Get instant, actionable advice customised to your role, industry, and specific
-					circumstances. No generic templates—only relevant, practical recommendations.
-				</p>
-			</div>
-
-			<div class="text-center">
-				<div
-					class="w-20 h-20 mx-auto mb-6 bg-primary text-primary-content flex items-center justify-center"
-				>
-					<span class="text-4xl font-bold" style="font-family: var(--font-heading);">3</span>
-				</div>
-				<h3 class="mb-4">ACT WITH CONFIDENCE</h3>
-				<p class="text-sm leading-relaxed opacity-90">
-					Move forward with clarity. Follow up for additional support, track outcomes, and
-					continuously improve your leadership capabilities.
-				</p>
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- Features Grid -->
 <section class="py-20 md:py-28 bg-base-100">
 	<div class="container-custom">
-		<div class="text-center mb-16">
-			<h2 class="mb-6">POWERFUL CAPABILITIES</h2>
-			<p class="text-xl max-w-2xl mx-auto">
-				Everything you need to handle workplace challenges with confidence and consistency.
-			</p>
-		</div>
+		<h2 class="text-center mb-16 text-3xl md:text-4xl">HOW IT WORKS</h2>
 
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-			{#each features as feature, i (i)}
-				<div class="group p-8 border border-base-300 hover:border-primary transition-colors">
-					<Icon icon={feature.icon} class="text-4xl text-primary mb-4" />
-					<h3 class="text-lg mb-3">{feature.title}</h3>
-					<p class="text-sm leading-relaxed opacity-80">{feature.description}</p>
-				</div>
-			{/each}
-		</div>
-	</div>
-</section>
-
-<!-- Use Cases Section -->
-<section class="section-gray py-20 md:py-28">
-	<div class="container-custom">
-		<h2 class="text-center mb-16">BUILT FOR YOUR ROLE</h2>
-
-		<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-			{#each useCases as useCase, i (i)}
-				<div class="bg-base-100 p-8 shadow-sm">
-					<h3 class="text-lg mb-6 text-primary">{useCase.role}</h3>
-					<ul class="space-y-4">
-						{#each useCase.scenarios as scenario, j (j)}
-							<li class="flex items-start gap-3">
-								<Icon icon="ph:check-circle-fill" class="text-primary text-lg mt-0.5 shrink-0" />
-								<span class="text-sm">{scenario}</span>
-							</li>
-						{/each}
-					</ul>
-				</div>
-			{/each}
-		</div>
-	</div>
-</section>
-
-<!-- Testimonial Section -->
-<section class="section-yellow py-20 md:py-28">
-	<div class="container-custom">
-		<div class="max-w-4xl mx-auto text-center relative">
-			<div class="quote-marks absolute -top-8 left-0 md:left-8 text-base-content/10">
-				<Icon icon="ph:quotes-fill" class="text-8xl md:text-9xl" />
-			</div>
-
-			<blockquote class="relative z-10">
-				<p class="text-2xl md:text-3xl lg:text-4xl font-bold leading-relaxed mb-8">
-					IMPACTORA has transformed how our managers handle difficult situations. They now have the
-					confidence to act quickly and consistently, knowing they have expert guidance at their
-					fingertips.
-				</p>
-				<footer class="text-lg md:text-xl">
-					<cite class="not-italic font-semibold">— Chief People Officer, ASX 200 Company</cite>
-				</footer>
-			</blockquote>
-
-			<div class="quote-marks absolute -bottom-8 right-0 md:right-8 text-base-content/10">
-				<Icon icon="ph:quotes-fill" class="text-8xl md:text-9xl rotate-180" />
-			</div>
-		</div>
-	</div>
-</section>
-
-<!-- Pricing/CTA Section -->
-<section class="section-dark py-20 md:py-28">
-	<div class="container-custom">
-		<div class="max-w-4xl mx-auto text-center">
-			<h2 class="mb-6">FLEXIBLE PLANS FOR EVERY ORGANISATION</h2>
-			<p class="text-xl mb-12 opacity-90">
-				From emerging startups to enterprise organisations, IMPACTORA scales with your needs.
-				Contact us to discuss pricing tailored to your team size and requirements.
-			</p>
-
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-				<div class="border border-neutral-content/20 p-8">
-					<h3 class="text-lg mb-2">STARTER</h3>
-					<p class="text-sm opacity-80 mb-6">For small teams getting started</p>
-					<ul class="text-sm space-y-3 text-left">
-						<li class="flex items-center gap-2">
-							<Icon icon="ph:check" class="text-primary" />
-							Up to 25 users
-						</li>
-						<li class="flex items-center gap-2">
-							<Icon icon="ph:check" class="text-primary" />
-							Core guidance features
-						</li>
-						<li class="flex items-center gap-2">
-							<Icon icon="ph:check" class="text-primary" />
-							Email support
-						</li>
-					</ul>
-				</div>
-
-				<div class="border-2 border-primary p-8 relative">
-					<div
-						class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-content px-4 py-1 text-xs font-bold uppercase"
-					>
-						Most Popular
+		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+			{#each steps as step, i (i)}
+				<div class="text-center relative">
+					<div class="w-14 h-14 mx-auto mb-4 flex items-center justify-center">
+						<Icon icon={step.icon} class="text-3xl text-black" />
 					</div>
-					<h3 class="text-lg mb-2">PROFESSIONAL</h3>
-					<p class="text-sm opacity-80 mb-6">For growing organisations</p>
-					<ul class="text-sm space-y-3 text-left">
-						<li class="flex items-center gap-2">
-							<Icon icon="ph:check" class="text-primary" />
-							Up to 200 users
-						</li>
-						<li class="flex items-center gap-2">
-							<Icon icon="ph:check" class="text-primary" />
-							Advanced analytics
-						</li>
-						<li class="flex items-center gap-2">
-							<Icon icon="ph:check" class="text-primary" />
-							Priority support
-						</li>
-						<li class="flex items-center gap-2">
-							<Icon icon="ph:check" class="text-primary" />
-							Custom integrations
-						</li>
-					</ul>
+					<div
+						class="text-4xl font-bold mb-2"
+						style="font-family: var(--font-heading);"
+					>
+						{step.number}
+					</div>
+					<h3 class="text-lg mb-3" style="font-family: var(--font-heading);">
+						{step.title.toUpperCase()}
+					</h3>
+					<p class="text-sm leading-relaxed opacity-80">
+						{step.description}
+					</p>
+					<!-- Connector line (visible on lg only, not on last item) -->
+					{#if i < steps.length - 1}
+						<div class="hidden lg:block absolute top-7 -right-4 w-8 h-px bg-base-300"></div>
+					{/if}
 				</div>
+			{/each}
+		</div>
 
-				<div class="border border-neutral-content/20 p-8">
-					<h3 class="text-lg mb-2">ENTERPRISE</h3>
-					<p class="text-sm opacity-80 mb-6">For large organisations</p>
-					<ul class="text-sm space-y-3 text-left">
-						<li class="flex items-center gap-2">
-							<Icon icon="ph:check" class="text-primary" />
-							Unlimited users
-						</li>
-						<li class="flex items-center gap-2">
-							<Icon icon="ph:check" class="text-primary" />
-							Custom AI training
-						</li>
-						<li class="flex items-center gap-2">
-							<Icon icon="ph:check" class="text-primary" />
-							Dedicated success manager
-						</li>
-						<li class="flex items-center gap-2">
-							<Icon icon="ph:check" class="text-primary" />
-							SSO & advanced security
-						</li>
-					</ul>
-				</div>
-			</div>
-
+		<div class="text-center mt-12">
 			<a
-				href="#request-demo"
-				class="btn btn-primary btn-lg uppercase font-bold rounded-none inline-flex items-center gap-2"
+				href="#contact-section"
+				class="inline-block bg-black text-white px-10 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-white hover:text-[#5ad4ff] hover:outline hover:outline-2 hover:outline-[#5ad4ff] transition-all"
 			>
-				GET PRICING DETAILS
-				<Icon icon="ph:arrow-right-bold" class="text-lg" />
+				BOOK A DEMO
 			</a>
 		</div>
 	</div>
 </section>
 
-<!-- Demo Request Form -->
-<section id="request-demo" class="py-20 md:py-28 bg-base-100">
+<!-- Testimonials Section -->
+<section class="section-dark py-20 md:py-28 relative overflow-hidden">
 	<div class="container-custom">
-		<div class="max-w-2xl mx-auto">
+		<div class="max-w-3xl mx-auto text-center relative">
+			<!-- Testimonial Box -->
+			<div class="testimonial-title mx-auto">
+				<div
+					class="testimonial-slide {isAnimating
+						? slideDirection === 'right'
+							? 'slide-out-left'
+							: 'slide-out-right'
+						: slideDirection === 'right'
+							? 'slide-in-right'
+							: 'slide-in-left'}"
+				>
+					<div>
+						<h3
+							class="text-xl md:text-2xl font-bold leading-relaxed"
+							style="font-family: var(--font-heading);"
+						>
+							"{testimonials[currentTestimonial].quote}"
+						</h3>
+						<p class="mt-4 text-sm opacity-80">
+							&ndash; {testimonials[currentTestimonial].author}
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- Navigation -->
+			<div class="flex items-center justify-center gap-6 mt-12">
+				<button
+					onclick={prevTestimonial}
+					class="w-10 h-10 border border-neutral-content/30 flex items-center justify-center hover:bg-primary hover:text-primary-content hover:border-primary transition-colors"
+					aria-label="Previous testimonial"
+				>
+					<Icon icon="ph:caret-left-bold" />
+				</button>
+				<span class="text-sm opacity-70">
+					{currentTestimonial + 1}/{testimonials.length}
+				</span>
+				<button
+					onclick={nextTestimonial}
+					class="w-10 h-10 border border-neutral-content/30 flex items-center justify-center hover:bg-primary hover:text-primary-content hover:border-primary transition-colors"
+					aria-label="Next testimonial"
+				>
+					<Icon icon="ph:caret-right-bold" />
+				</button>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- FAQ Section -->
+<section class="py-20 md:py-28 bg-base-100">
+	<div class="container-custom">
+		<div class="max-w-3xl mx-auto">
+			<h2 class="text-center mb-6 text-3xl md:text-4xl">FREQUENTLY ASKED QUESTIONS</h2>
+			<p class="text-center mb-12 opacity-80">
+				Here are a few of the more common questions we come across. However, if you still can't
+				find what you're looking for, get in touch with us and we'll do our best to provide you
+				with the answers you're after.
+			</p>
+
+			<div class="space-y-3">
+				{#each faqs as faq, i (i)}
+					<div class="border border-base-300 bg-white">
+						<button
+							onclick={() => (openFaq = openFaq === i ? null : i)}
+							class="w-full text-left px-6 py-5 flex items-center justify-between gap-4"
+						>
+							<span class="font-bold text-lg" style="font-family: var(--font-heading);">
+								{faq.question.toUpperCase()}
+							</span>
+							<span
+								class="shrink-0 w-7 h-7 border-2 border-[#5ad4ff] flex items-center justify-center text-[#5ad4ff] transition-transform {openFaq ===
+								i
+									? 'rotate-45'
+									: ''}"
+							>
+								<Icon icon="ph:plus-bold" class="text-sm" />
+							</span>
+						</button>
+						{#if openFaq === i}
+							<div class="px-6 pb-5">
+								<p class="text-sm leading-relaxed opacity-80">{faq.answer}</p>
+							</div>
+						{/if}
+					</div>
+				{/each}
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- Demo Request Form -->
+<section id="contact-section" class="py-20 md:py-28 bg-base-200">
+	<div class="container-custom">
+		<div class="max-w-xl mx-auto">
 			<div class="text-center mb-12">
-				<h2 class="mb-4">REQUEST A DEMO</h2>
-				<p class="text-lg">
-					See IMPACTORA in action. Our team will show you how it can transform the way your
-					organisation handles workplace challenges.
+				<h2 class="mb-4 text-3xl md:text-4xl">REQUEST AN IMPACTORA DEMONSTRATION</h2>
+				<p class="text-lg opacity-80">
+					Simply fill out the form below and an Impactora representative will contact you to
+					book your demonstration.
 				</p>
 			</div>
 
-			<form onsubmit={handleDemoRequest} class="space-y-6">
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-					<label class="form-control w-full">
-						<div class="label">
-							<span class="label-text font-medium">First Name</span>
-						</div>
-						<input
-							type="text"
-							bind:value={firstName}
-							required
-							class="input input-bordered w-full rounded-none"
-							placeholder="Jane"
-						/>
-					</label>
-
-					<label class="form-control w-full">
-						<div class="label">
-							<span class="label-text font-medium">Last Name</span>
-						</div>
-						<input
-							type="text"
-							bind:value={lastName}
-							required
-							class="input input-bordered w-full rounded-none"
-							placeholder="Smith"
-						/>
-					</label>
-				</div>
-
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text font-medium">Work Email</span>
-					</div>
-					<input
-						type="email"
-						bind:value={email}
-						required
-						class="input input-bordered w-full rounded-none"
-						placeholder="jane@company.com"
-					/>
-				</label>
-
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text font-medium">Company</span>
-					</div>
+			<form onsubmit={handleDemoRequest} class="space-y-5">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-5">
 					<input
 						type="text"
-						bind:value={company}
+						bind:value={firstName}
 						required
 						class="input input-bordered w-full rounded-none"
-						placeholder="Your Company Name"
+						placeholder="First Name*"
 					/>
-				</label>
+					<input
+						type="text"
+						bind:value={lastName}
+						required
+						class="input input-bordered w-full rounded-none"
+						placeholder="Last Name*"
+					/>
+				</div>
 
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text font-medium">Team Size</span>
-					</div>
-					<select bind:value={teamSize} required class="select select-bordered w-full rounded-none">
-						<option value="" disabled>Select team size</option>
-						<option value="1-25">1-25 employees</option>
-						<option value="26-100">26-100 employees</option>
-						<option value="101-500">101-500 employees</option>
-						<option value="501-1000">501-1,000 employees</option>
-						<option value="1000+">1,000+ employees</option>
-					</select>
-				</label>
+				<input
+					type="email"
+					bind:value={email}
+					required
+					class="input input-bordered w-full rounded-none"
+					placeholder="Work Email*"
+				/>
 
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text font-medium"
-							>What challenges are you looking to solve? (optional)</span
-						>
-					</div>
-					<textarea
-						bind:value={message}
-						class="textarea textarea-bordered w-full rounded-none h-24"
-						placeholder="Tell us about your current pain points..."
-					></textarea>
-				</label>
+				<input
+					type="text"
+					bind:value={company}
+					required
+					class="input input-bordered w-full rounded-none"
+					placeholder="Company*"
+				/>
+
+				<textarea
+					bind:value={message}
+					class="textarea textarea-bordered w-full rounded-none h-28"
+					placeholder="Message (optional)"
+				></textarea>
 
 				{#if formStatus === 'error'}
 					<div class="alert alert-error rounded-none">
@@ -588,51 +589,23 @@
 				{#if formStatus === 'sent'}
 					<div class="alert alert-success rounded-none">
 						<Icon icon="ph:check-circle" class="text-lg" />
-						<span
-							>Thanks for your interest! We'll be in touch within 24 hours to schedule your demo.</span
-						>
+						<span>Thanks for your interest! We'll be in touch shortly to book your demonstration.</span>
 					</div>
 				{/if}
 
 				<button
 					type="submit"
-					class="btn btn-primary btn-lg uppercase font-bold rounded-none w-full"
+					class="w-full bg-black text-white py-4 font-bold text-sm uppercase tracking-wider hover:bg-[#5ad4ff] transition-colors"
 					disabled={formStatus === 'sending'}
 				>
 					{#if formStatus === 'sending'}
 						<span class="loading loading-spinner loading-sm"></span>
-						Sending Request...
+						Sending...
 					{:else}
-						Request Your Demo
+						SUBMIT
 					{/if}
 				</button>
-
-				<p class="text-xs text-center opacity-70">
-					By submitting this form, you agree to our privacy policy. We'll never share your
-					information with third parties.
-				</p>
 			</form>
-		</div>
-	</div>
-</section>
-
-<!-- Final CTA -->
-<section class="section-yellow py-16">
-	<div class="container-custom text-center">
-		<h2 class="text-3xl md:text-4xl mb-6">READY TO TRANSFORM YOUR WORKPLACE?</h2>
-		<p class="text-lg mb-8 max-w-2xl mx-auto">
-			Join leading organisations already using IMPACTORA to empower their managers and HR teams.
-		</p>
-		<div class="flex flex-col sm:flex-row gap-4 justify-center">
-			<a href="#request-demo" class="btn btn-secondary btn-lg uppercase font-bold rounded-none">
-				GET STARTED TODAY
-			</a>
-			<a
-				href="/contact"
-				class="btn btn-outline border-current text-current btn-lg uppercase font-bold rounded-none hover:bg-secondary hover:text-secondary-content hover:border-secondary"
-			>
-				SPEAK TO OUR TEAM
-			</a>
 		</div>
 	</div>
 </section>
