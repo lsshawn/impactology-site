@@ -12,7 +12,7 @@
 	<div class="container-custom min-h-[84px] flex items-center justify-between">
 		<!-- Logo -->
 		<a href="/" class="flex items-center shrink-0">
-			<img src="/logo.png" alt="Impactology" class="h-[54px] w-auto object-contain" />
+			<img src="/logo.webp" alt="Impactology" width="368" height="84" class="h-[54px] w-auto object-contain" fetchpriority="high" />
 		</a>
 
 		<!-- Desktop Navigation + CTA -->

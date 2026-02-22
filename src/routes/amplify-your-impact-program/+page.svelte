@@ -22,35 +22,35 @@
 
 	const features = [
 		{
-			icon: '/amplify-icon01.png',
+			icon: '/amplify-icon01.webp',
 			title: 'RESEARCH BACKED CONTENT',
 			subtitle: 'Evidence-Based Insights',
 			description:
 				'Program materials are rooted in research and leverages the content from the Business Partnering IMPACT Program ensuring that participants gain reliable, impactful insights that enhance their business partnering personal brand.'
 		},
 		{
-			icon: '/amplify-icon02.png',
+			icon: '/amplify-icon02.webp',
 			title: 'FACE-TO-FACE SESSIONS',
 			subtitle: 'In-Person Deep Dives',
 			description:
 				'Interactive, face-to-face sessions allow participants to engage directly with our expert facilitator and peers, fostering strong connections and active learning.'
 		},
 		{
-			icon: '/amplify-icon03.png',
+			icon: '/amplify-icon03.webp',
 			title: 'LEARNING PARTNERS',
 			subtitle: 'Peer Support Network',
 			description:
 				'Each participant is paired with a learning partner (a fellow participant), promoting accountability, shared insights, and peer encouragement throughout the program.'
 		},
 		{
-			icon: '/amplify-icon04.png',
+			icon: '/amplify-icon04.webp',
 			title: 'GROUP CHECK-IN SESSIONS',
 			subtitle: 'Collaborative Reflection Points',
 			description:
 				'Monthly check-ins bring the group together to review progress, address challenges, and reinforce collective program and team goals.'
 		},
 		{
-			icon: '/amplify-icon05.png',
+			icon: '/amplify-icon05.webp',
 			title: 'MICRO-LEARNING ACTIVITIES',
 			subtitle: 'Bite-Sized Skill Building',
 			description:
@@ -130,7 +130,7 @@
 <!-- Hero Section -->
 <section
 	class="section-yellow py-24 md:py-8 bg-cover bg-center relative"
-	style="background-image: url('/amplify-hero-bg.jpg'); height: 80vh; max-height: 80vh;"
+	style="background-image: url('/amplify-hero-bg.webp'); height: 80vh; max-height: 80vh;"
 >
 	<div class="container-custom relative z-10 flex items-center h-full">
 		<div class="max-w-xl">
@@ -229,7 +229,7 @@
 			{#if learnImg}
 				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
 					<img
-						src="/amplify-person.jpg"
+						src="/amplify-person.webp"
 						alt="Amplify Your Impact Program"
 						class="w-full max-w-md object-contain"
 					/>

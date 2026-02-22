@@ -6,46 +6,46 @@
 	import TestimonialSlider from '$lib/components/TestimonialSlider.svelte';
 
 	const clientPhotos = [
-		'/client-photo-1.jpg',
-		'/client-photo-2.jpg',
-		'/client-photo-3.jpg',
-		'/client-photo-4.jpg',
-		'/client-photo-5.jpg',
-		'/client-photo-6.jpg'
+		'/client-photo-1.webp',
+		'/client-photo-2.webp',
+		'/client-photo-3.webp',
+		'/client-photo-4.webp',
+		'/client-photo-5.webp',
+		'/client-photo-6.webp'
 	];
 
 	const clientLogos1 = [
-		'/client-moss.jpeg',
-		'/client-otto.png',
-		'/client-ot.png',
-		'/client-rba.png',
-		'/client-kh.png',
-		'/client-edgeward.png'
+		'/client-moss.webp',
+		'/client-otto.webp',
+		'/client-ot.webp',
+		'/client-rba.webp',
+		'/client-kh.webp',
+		'/client-edgeward.webp'
 	];
 
 	const clientLogos2 = [
-		'/client-mu.png',
-		'/client-transport.png',
-		'/client-specsavers.png',
-		'/client-msd.png',
-		'/client-lochard.png'
+		'/client-mu.webp',
+		'/client-transport.webp',
+		'/client-specsavers.webp',
+		'/client-msd.webp',
+		'/client-lochard.webp'
 	];
 
 	const moreLogos = [
-		'/client-1.png',
-		'/client-otto.png',
-		'/client-3.png',
-		'/client-4.png',
-		'/client-5.png',
-		'/client-7.png',
-		'/client-6.png',
-		'/client-8.png',
-		'/client-msd.png',
-		'/client-10.png',
-		'/client-11.png',
-		'/client-12.png',
-		'/client-13.png',
-		'/client-14.png'
+		'/client-1.webp',
+		'/client-otto.webp',
+		'/client-3.webp',
+		'/client-4.webp',
+		'/client-5.webp',
+		'/client-7.webp',
+		'/client-6.webp',
+		'/client-8.webp',
+		'/client-msd.webp',
+		'/client-10.webp',
+		'/client-11.webp',
+		'/client-12.webp',
+		'/client-13.webp',
+		'/client-14.webp'
 	];
 
 	const testimonials = [
@@ -96,6 +96,7 @@
 	ogImage="https://impactology.com.au/icon1.png"
 	ogType="website"
 	canonical="https://impactology.com.au/"
+	preloadImage="/home_banner1.webp"
 	jsonLd={{
 		'@context': 'https://schema.org',
 		'@type': 'Organization',
@@ -117,10 +118,17 @@
 />
 
 <!-- Hero Section -->
-<section
-	class="section-yellow py-24 md:py-8 bg-cover bg-center relative"
-	style="background-image: url('/home_banner1.jpg');"
->
+<section class="section-yellow py-24 md:py-8 relative overflow-hidden">
+	<img
+		src="/home_banner1.webp"
+		alt=""
+		aria-hidden="true"
+		fetchpriority="high"
+		decoding="async"
+		width="1920"
+		height="1080"
+		class="absolute inset-0 w-full h-full object-cover object-center"
+	/>
 	<div class="container-custom relative z-10">
 		<div class="max-w-xl">
 			<h2 class="mb-6 text-5xl lg:text-8xl font-bold">MAKE AN IMPACT</h2>
@@ -171,7 +179,7 @@
 			href="/impactora"
 			class="block p-10 lg:p-14 border-b md:border-b-0 md:border-r border-white/10 transition-colors group bg-[#212023]"
 		>
-			<img src="/icon1.png" alt="Impactora" class="w-16 h-16 mb-8 brightness-0 invert" />
+			<img src="/icon1.webp" alt="Impactora" width="84" height="84" class="w-16 h-16 mb-8 brightness-0 invert" loading="lazy" />
 			<h3
 				class="text-4xl md:text-5xl font-bold uppercase leading-tight mb-6 max-w-[80%] group-hover:text-primary transition-colors"
 			>
@@ -192,9 +200,11 @@
 			class="block p-10 lg:p-14 border-b md:border-b-0 md:border-r border-white/10 bg-white/5 transition-colors group bg-[#171719]"
 		>
 			<img
-				src="/icon2.png"
+				src="/icon2.webp"
 				alt="Business Partnering Impact Program"
+				width="84" height="84"
 				class="w-16 h-16 mb-8 brightness-0 invert"
+				loading="lazy"
 			/>
 			<h3
 				class="text-4xl lg:text-5xl font-bold uppercase leading-tight mb-6 max-w-[80%] group-hover:text-primary transition-colors"
@@ -216,9 +226,11 @@
 			class="block p-10 lg:p-14 transition-colors group bg-[#020204]"
 		>
 			<img
-				src="/icon3.png"
+				src="/icon3.webp"
 				alt="Amplify Your Impact Program"
+				width="84" height="84"
 				class="w-16 h-16 mb-8 brightness-0 invert"
+				loading="lazy"
 			/>
 			<h3
 				class="text-4xl lg:text-5xl font-bold uppercase leading-tight mb-6 max-w-[60%] group-hover:text-primary transition-colors"
@@ -258,6 +270,7 @@
 					<img
 						src={photo}
 						alt="Client workshop"
+						width="640" height="427"
 						class="h-64 md:h-96 w-auto object-cover"
 						loading="lazy"
 					/>
@@ -298,7 +311,7 @@
 		<div class="grid grid-cols-2 md:grid-cols-7 gap-8 items-center mb-12">
 			{#each clientLogos1 as logo}
 				<div class="flex items-center justify-center p-4">
-					<img src={logo} alt="Client logo" class="max-h-16 w-auto object-contain" />
+					<img src={logo} alt="Client logo" width="200" height="64" class="max-h-16 w-auto object-contain" loading="lazy" />
 				</div>
 			{/each}
 			<div class="flex items-center justify-center">
@@ -312,7 +325,7 @@
 		<div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center mb-12">
 			{#each clientLogos2 as logo}
 				<div class="flex items-center justify-center p-4">
-					<img src={logo} alt="Client logo" class="max-h-16 w-auto object-contain" />
+					<img src={logo} alt="Client logo" width="200" height="64" class="max-h-16 w-auto object-contain" loading="lazy" />
 				</div>
 			{/each}
 		</div>
@@ -321,7 +334,7 @@
 		<div class="grid grid-cols-3 md:grid-cols-7 gap-6 items-center">
 			{#each moreLogos as logo}
 				<div class="flex items-center justify-center p-2">
-					<img src={logo} alt="Client logo" class="max-h-12 w-auto object-contain" />
+					<img src={logo} alt="Client logo" width="200" height="48" class="max-h-12 w-auto object-contain" loading="lazy" />
 				</div>
 			{/each}
 		</div>
@@ -331,17 +344,19 @@
 <!-- Impactora Promo Section -->
 <div
 	class="hero min-h-[80vh]"
-	style="background-image: url('/impactora-promo-banner.png');"
+	style="background-image: url('/impactora-promo-banner.webp');"
 >
 	<div class="hero-content flex-col lg:flex-row-reverse w-full max-w-7xl gap-8 lg:gap-16">
 		<img
-			src="/impactora-promo-banner.png"
+			src="/impactora-promo-banner.webp"
 			alt=""
 			aria-hidden="true"
+			width="3840" height="1280"
 			class="max-w-xs md:max-w-sm lg:max-w-md hidden lg:block opacity-0 pointer-events-none"
+			loading="lazy"
 		/>
 		<div>
-			<img src="/impactora-logo.png" alt="Impactora" class="h-12 md:h-14 w-auto mb-8" />
+			<img src="/impactora-logo.webp" alt="Impactora" width="368" height="84" class="h-12 md:h-14 w-auto mb-8" loading="lazy" />
 			<h2 class="text-4xl md:text-6xl font-bold uppercase leading-tight mb-2 text-white">
 				TAILORED ADVICE &amp; INSIGHTS
 			</h2>

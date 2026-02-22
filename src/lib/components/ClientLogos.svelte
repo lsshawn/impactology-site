@@ -9,17 +9,17 @@
 	};
 
 	const defaultLogos = [
-		'/client-moss.jpeg',
-		'/client-otto.png',
-		'/client-ot.png',
-		'/client-rba.png',
-		'/client-kh.png',
-		'/client-edgeward.png',
-		'/client-mu.png',
-		'/client-transport.png',
-		'/client-specsavers.png',
-		'/client-msd.png',
-		'/client-lochard.png'
+		'/client-moss.webp',
+		'/client-otto.webp',
+		'/client-ot.webp',
+		'/client-rba.webp',
+		'/client-kh.webp',
+		'/client-edgeward.webp',
+		'/client-mu.webp',
+		'/client-transport.webp',
+		'/client-specsavers.webp',
+		'/client-msd.webp',
+		'/client-lochard.webp'
 	];
 
 	let { logos = defaultLogos, carousel = false, marquee = false, class: className = '' }: Props =

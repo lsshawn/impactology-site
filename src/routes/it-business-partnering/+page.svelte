@@ -127,17 +127,17 @@
 	];
 
 	const clientLogos = [
-		'/client-moss.jpeg',
-		'/client-otto.png',
-		'/client-ot.png',
-		'/client-rba.png',
-		'/client-kh.png',
-		'/client-edgeward.png',
-		'/client-mu.png',
-		'/client-transport.png',
-		'/client-specsavers.png',
-		'/client-msd.png',
-		'/client-lochard.png'
+		'/client-moss.webp',
+		'/client-otto.webp',
+		'/client-ot.webp',
+		'/client-rba.webp',
+		'/client-kh.webp',
+		'/client-edgeward.webp',
+		'/client-mu.webp',
+		'/client-transport.webp',
+		'/client-specsavers.webp',
+		'/client-msd.webp',
+		'/client-lochard.webp'
 	];
 </script>
 
@@ -172,7 +172,7 @@
 	<div class="container-custom relative z-10">
 		<div class="max-w-4xl">
 			<div class="flex items-center gap-3 mb-6">
-				<img src="/icon3.png" alt="IT Business Partnering Program" class="w-14 h-14" />
+				<img src="/icon3.webp" alt="IT Business Partnering Program" class="w-14 h-14" />
 				<span class="text-primary font-bold text-xl tracking-wider">IT PROGRAM</span>
 			</div>
 			<h1 class="text-5xl md:text-6xl lg:text-7xl mb-6 leading-none">

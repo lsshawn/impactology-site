@@ -28,57 +28,57 @@
 	}
 
 	const clientLogos = [
-		'/client-moss.jpeg',
-		'/client-otto.png',
-		'/client-ot.png',
-		'/client-rba.png',
-		'/client-kh.png',
-		'/client-edgeward.png',
-		'/client-mu.png',
-		'/client-transport.png',
-		'/client-specsavers.png',
-		'/client-msd.png',
-		'/client-lochard.png'
+		'/client-moss.webp',
+		'/client-otto.webp',
+		'/client-ot.webp',
+		'/client-rba.webp',
+		'/client-kh.webp',
+		'/client-edgeward.webp',
+		'/client-mu.webp',
+		'/client-transport.webp',
+		'/client-specsavers.webp',
+		'/client-msd.webp',
+		'/client-lochard.webp'
 	];
 
 	const modules = [
 		{
-			icon: '/bpip-icon01.png',
+			icon: '/bpip-icon01.webp',
 			title: 'UNDERSTANDING THE BUSINESS',
 			subtitle: 'Systematic approach to understanding your business model.',
 			description:
 				'We establish a clear definition of what it means to think and act strategically, whilst nurturing a strong commercial mindset. This module covers the broad and inter-related areas of a company business model, and how to use this knowledge to support the business with informed decision making.'
 		},
 		{
-			icon: '/bpip-icon02.png',
+			icon: '/bpip-icon02.webp',
 			title: 'EVOLVING BUSINESS RELATIONSHIPS',
 			subtitle: 'Core capabilities for strategic partnering',
 			description:
 				'This module identifies the roles in business partner relationships, including key internal stakeholders and colleagues. We focus on the importance of building trust, effective communication skills and having presence in the business partnering relationship for optimal impact.'
 		},
 		{
-			icon: '/bpip-icon03.png',
+			icon: '/bpip-icon03.webp',
 			title: 'KNOW YOUR MACRO WORLD',
 			subtitle: 'Understanding external influences to enhance decision-making',
 			description:
 				'Business decisions are influenced by internal and external factors. This module focuses on building a strong "outside-in" view of the world and how macro-environmental factors impact a company\'s direction and how they impact your team\'s decision-making.'
 		},
 		{
-			icon: '/bpip-icon04.png',
+			icon: '/bpip-icon04.webp',
 			title: 'BUSINESS PARTNERING TOOLKIT',
 			subtitle: 'High impact skills for greater effectiveness',
 			description:
 				'In this module, you will be introduced to tools such as the ACDC Contextual Partnering Model and understanding when to navigate between delivering, coaching, advising and partnering. We also cover the power of thought-provoking high impact questions as you expand your knowledge of models and frameworks.'
 		},
 		{
-			icon: '/bpip-icon05.png',
+			icon: '/bpip-icon05.webp',
 			title: 'THE ART OF DATA STORYTELLING',
 			subtitle: 'Build your data and analytics storytelling muscle',
 			description:
 				'Whether you are pitching an idea, communicating a new strategy, or engaging with colleagues, effective storytelling serves an important role in the workplace and any change process. As Business Partners, regardless of discipline, there is immense value in building your confidence using data and analytics to increase your impact and engage with your stakeholders.'
 		},
 		{
-			icon: '/bpip-icon06.png',
+			icon: '/bpip-icon06.webp',
 			title: 'UNDERSTANDING & DELIVERING VALUE',
 			subtitle: 'Key drivers necessary for strategic success',
 			description:
@@ -162,7 +162,7 @@
 <!-- Hero Section -->
 <section
 	class="section-yellow py-24 md:py-8 bg-cover bg-center relative"
-	style="background-image: url('/bpip-hero-bg.jpg'); height: 60vh; max-height: 60vh;"
+	style="background-image: url('/bpip-hero-bg.webp'); height: 60vh; max-height: 60vh;"
 >
 	<div class="container-custom relative z-10 flex items-center h-full">
 		<div class="max-w-xl">
@@ -252,7 +252,7 @@
 			{#if learnImg}
 				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
 					<img
-						src="/bpip-learn.png"
+						src="/bpip-learn.webp"
 						alt="Business Partnering Impact Program learning framework"
 						class="w-full max-w-md object-contain"
 					/>
@@ -360,7 +360,7 @@
 			{#if bookImg}
 				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
 					<img
-						src="/bpip-book-cover.png"
+						src="/bpip-book-cover.webp"
 						alt="The Business Partnering Playbook - EVOLVE"
 						class="w-96 object-contain drop-shadow-2xl"
 					/>

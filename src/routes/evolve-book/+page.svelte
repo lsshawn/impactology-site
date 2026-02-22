@@ -4,12 +4,12 @@
 	import { resolve } from '$app/paths';
 
 	const clientLogos = [
-		{ src: '/client-3.png', alt: '' },
-		{ src: '/client-14.png', alt: '' },
-		{ src: '/client-mu.png', alt: '' },
-		{ src: '/client-11.png', alt: '' },
-		{ src: '/client-rea.png', alt: '' },
-		{ src: '/client-6.png', alt: '' }
+		{ src: '/client-3.webp', alt: '' },
+		{ src: '/client-14.webp', alt: '' },
+		{ src: '/client-mu.webp', alt: '' },
+		{ src: '/client-11.webp', alt: '' },
+		{ src: '/client-rea.webp', alt: '' },
+		{ src: '/client-6.webp', alt: '' }
 	];
 
 	const whyEvolvePoints = [
@@ -121,7 +121,7 @@
 			</div>
 
 			<div class="flex justify-center lg:justify-end">
-				<img src="/evolve-3d-cover.png" alt="" class="w-full max-w-xl" loading="eager" />
+				<img src="/evolve-3d-cover.webp" alt="" class="w-full max-w-xl" loading="eager" />
 			</div>
 		</div>
 	</div>
@@ -160,7 +160,7 @@
 
 			<div class="flex justify-center lg:justify-end">
 				<img
-					src="/evolve-team-photo.jpg"
+					src="/evolve-team-photo.webp"
 					alt="Management Team"
 					class="w-full max-w-md shadow-lg"
 					loading="lazy"
@@ -175,7 +175,7 @@
 	<div class="container-custom">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 			<div class="flex justify-center lg:justify-start">
-				<img src="/evolve-photo-1.jpg" alt="" class="w-full max-w-md shadow-lg" loading="lazy" />
+				<img src="/evolve-photo-1.webp" alt="" class="w-full max-w-md shadow-lg" loading="lazy" />
 			</div>
 
 			<div class="prose prose-lg max-w-none">
@@ -200,7 +200,7 @@
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 			<!-- Left: book cover -->
 			<div class="flex justify-center lg:justify-start">
-				<img src="/evolve-3d-cover.png" alt="" class="w-full max-w-lg" loading="lazy" />
+				<img src="/evolve-3d-cover.webp" alt="" class="w-full max-w-lg" loading="lazy" />
 			</div>
 
 			<!-- Right: order form -->
@@ -460,7 +460,7 @@
 				rel="noopener noreferrer"
 				class="flex items-center justify-center"
 			>
-				<img src="/amazon-usa.png" alt="Buy on Amazon USA" class="w-full max-w-[140px] h-auto" />
+				<img src="/amazon-usa.webp" alt="Buy on Amazon USA" class="w-full max-w-[140px] h-auto" />
 			</a>
 
 			<!-- Amazon UK -->
@@ -470,7 +470,7 @@
 				rel="noopener noreferrer"
 				class="flex items-center justify-center"
 			>
-				<img src="/amazon-uk.png" alt="Buy on Amazon UK" class="w-full max-w-[140px] h-auto" />
+				<img src="/amazon-uk.webp" alt="Buy on Amazon UK" class="w-full max-w-[140px] h-auto" />
 			</a>
 
 			<!-- Amazon Kindle -->
@@ -481,7 +481,7 @@
 				class="flex items-center justify-center"
 			>
 				<img
-					src="/amazon-kindle.png"
+					src="/amazon-kindle.webp"
 					alt="Buy on Amazon Kindle"
 					class="w-full max-w-[140px] h-auto"
 				/>
@@ -490,7 +490,7 @@
 			<!-- Apple iBooks (no link on live site) -->
 			<div class="flex items-center justify-center">
 				<img
-					src="/ibooks-button.png"
+					src="/ibooks-button.webp"
 					alt="Available on Apple Books"
 					class="w-full max-w-[140px] h-auto"
 				/>
@@ -504,7 +504,7 @@
 				class="flex items-center justify-center"
 			>
 				<img
-					src="/google-play-books.png"
+					src="/google-play-books.webp"
 					alt="Get it on Google Play Books"
 					class="w-full max-w-[140px] h-auto"
 				/>

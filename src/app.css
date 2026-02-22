@@ -1,6 +1,3 @@
-/* Font imports must be first */
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700;900&family=Barlow+Condensed:wght@400;500;600;700;800;900&display=swap');
-
 @import 'tailwindcss';
 
 @plugin "daisyui" {
@@ -164,7 +161,7 @@ h6 {
   left: -15px;
   width: 120px;
   height: 90px;
-  background-image: url(/q_icon_top.png);
+  background-image: url(/q_icon_top.webp);
   background-repeat: no-repeat;
   background-size: contain;
   z-index: 1;
@@ -178,7 +175,7 @@ h6 {
   right: -15px;
   width: 120px;
   height: 90px;
-  background-image: url(/q_icon_bottom.png);
+  background-image: url(/q_icon_bottom.webp);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: right bottom;

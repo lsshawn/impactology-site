@@ -28,17 +28,17 @@
 	}
 
 	const clientLogos = [
-		'/client-moss.jpeg',
-		'/client-otto.png',
-		'/client-ot.png',
-		'/client-rba.png',
-		'/client-kh.png',
-		'/client-edgeward.png',
-		'/client-mu.png',
-		'/client-transport.png',
-		'/client-specsavers.png',
-		'/client-msd.png',
-		'/client-lochard.png'
+		'/client-moss.webp',
+		'/client-otto.webp',
+		'/client-ot.webp',
+		'/client-rba.webp',
+		'/client-kh.webp',
+		'/client-edgeward.webp',
+		'/client-mu.webp',
+		'/client-transport.webp',
+		'/client-specsavers.webp',
+		'/client-msd.webp',
+		'/client-lochard.webp'
 	];
 
 	// Per-block reveal states
@@ -77,7 +77,7 @@
 <!-- Hero Section -->
 <section
 	class="section-dark py-28 md:py-36 relative overflow-hidden bg-cover bg-center"
-	style="background-image: url('/programs-hero-bg.png');"
+	style="background-image: url('/programs-hero-bg.webp');"
 >
 	<div class="absolute inset-0 bg-neutral/80"></div>
 	{#if heroVisible}
@@ -109,7 +109,7 @@
 			{#if bpipImg}
 				<div class="flex justify-center" transition:fly={{ x: -30, duration: 600 }}>
 					<img
-						src="/programs-bpip.jpg"
+						src="/programs-bpip.webp"
 						alt="Business Partnering IMPACT Program"
 						class="w-64 h-64 object-contain"
 					/>
@@ -124,7 +124,7 @@
 						Designed for all business partners who are ready to make an impact.
 					</p>
 					<a href="/business-partnering-impact-program">
-						<img src="/programs-know-more.png" alt="Know More" class="h-12 w-auto" />
+						<img src="/programs-know-more.webp" alt="Know More" class="h-12 w-auto" />
 					</a>
 				</div>
 			{/if}
@@ -152,14 +152,14 @@
 						designed to prepare your Business Partners for change and drive transformation.
 					</p>
 					<a href="/amplify-your-impact-program">
-						<img src="/programs-know-more.png" alt="Know More" class="h-12 w-auto" />
+						<img src="/programs-know-more.webp" alt="Know More" class="h-12 w-auto" />
 					</a>
 				</div>
 			{/if}
 			{#if amplifyImg}
 				<div class="flex justify-center" transition:fly={{ x: 30, duration: 600 }}>
 					<img
-						src="/programs-amplify.jpg"
+						src="/programs-amplify.webp"
 						alt="AMPLIFY Your Impact Program"
 						class="w-64 h-64 object-contain"
 					/>

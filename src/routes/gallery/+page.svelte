@@ -12,39 +12,39 @@
 	}
 
 	const galleryImages: GalleryImage[] = [
-		{ src: '/gallery-1.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-3.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-4.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-5.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-6.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-7.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-8.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-9.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-10.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-11.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-12.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-13.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-14.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-15.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-16.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-17.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-18.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-19.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-20.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-21.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-22.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-23.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-24.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-25.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-26.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-27.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-28.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-29.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-30.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-31.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-32.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-33.jpg', alt: 'Impactology training session' },
-		{ src: '/gallery-34.jpg', alt: 'Impactology training session' }
+		{ src: '/gallery-1.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-3.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-4.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-5.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-6.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-7.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-8.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-9.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-10.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-11.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-12.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-13.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-14.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-15.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-16.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-17.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-18.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-19.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-20.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-21.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-22.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-23.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-24.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-25.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-26.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-27.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-28.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-29.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-30.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-31.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-32.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-33.webp', alt: 'Impactology training session' },
+		{ src: '/gallery-34.webp', alt: 'Impactology training session' }
 	];
 
 	// URL-based lightbox state
@@ -99,7 +99,7 @@
 	description="Discover how Impactology transforms lives through training. Browse our gallery of real-life sessions, showcasing impactful techniques and success stories."
 	ogTitle="Impactology Training in Action | Explore Our Gallery"
 	ogDescription="Discover how Impactology transforms lives through training. Browse our gallery of real-life sessions, showcasing impactful techniques and success stories."
-	ogImage="/client-photo-1.jpg"
+	ogImage="/client-photo-1.webp"
 	ogType="website"
 	canonical="https://impactology.com.au/gallery"
 	jsonLd={{

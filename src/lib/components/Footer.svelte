@@ -34,7 +34,7 @@
 		<div class="container-custom">
 			<div class="flex flex-col items-center gap-6">
 				<div class="px-6 py-2">
-					<img src="/logo.png" alt="Impactology" class="h-12 w-auto" />
+					<img src="/logo.webp" alt="Impactology" width="368" height="84" class="h-12 w-auto" loading="lazy" />
 				</div>
 				<div class="flex gap-4">
 					<a

@@ -10,6 +10,7 @@
 		noindex?: boolean;
 		jsonLd?: object;
 		twitterCard?: string;
+		preloadImage?: string;
 	}
 
 	let {
@@ -22,7 +23,8 @@
 		canonical,
 		noindex = false,
 		jsonLd,
-		twitterCard = 'summary_large_image'
+		twitterCard = 'summary_large_image',
+		preloadImage
 	}: Props = $props();
 
 	let siteName = 'Impactology';
@@ -45,6 +47,9 @@
 	<meta name="twitter:card" content={twitterCard} />
 	{#if noindex}
 		<meta name="robots" content="noindex, nofollow" />
+	{/if}
+	{#if preloadImage}
+		<link rel="preload" as="image" href={preloadImage} />
 	{/if}
 	{#if jsonLd}
 		{@html `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`}

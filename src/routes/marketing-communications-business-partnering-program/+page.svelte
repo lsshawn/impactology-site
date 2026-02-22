@@ -295,17 +295,17 @@
 	];
 
 	const clientLogos = [
-		'/client-moss.jpeg',
-		'/client-otto.png',
-		'/client-ot.png',
-		'/client-rba.png',
-		'/client-kh.png',
-		'/client-edgeward.png',
-		'/client-mu.png',
-		'/client-transport.png',
-		'/client-specsavers.png',
-		'/client-msd.png',
-		'/client-lochard.png'
+		'/client-moss.webp',
+		'/client-otto.webp',
+		'/client-ot.webp',
+		'/client-rba.webp',
+		'/client-kh.webp',
+		'/client-edgeward.webp',
+		'/client-mu.webp',
+		'/client-transport.webp',
+		'/client-specsavers.webp',
+		'/client-msd.webp',
+		'/client-lochard.webp'
 	];
 </script>
 
@@ -341,7 +341,7 @@
 		<div class="max-w-4xl">
 			<div class="flex items-center gap-3 mb-6">
 				<img
-					src="/icon2.png"
+					src="/icon2.webp"
 					alt="Marketing Communications Business Partnering Program"
 					class="w-14 h-14"
 				/>

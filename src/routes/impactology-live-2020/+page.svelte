@@ -7,174 +7,222 @@
 			name: 'Dimitra Manis',
 			country: 'US',
 			title: 'Chief People Officer, S&P Global',
-			photo: '/speaker-dimitra.jpg'
+			photo: '/speaker-dimitra.webp'
 		},
 		{
 			name: 'Mark Reading',
 			country: 'AUS',
 			title: 'Head of Foundation, Atlassian',
-			photo: '/speaker-mark-reading.jpg'
+			photo: '/speaker-mark-reading.webp'
 		},
 		{
 			name: 'Peter Shankman',
 			country: 'US',
 			title: "5x Best Selling Author, Entrepreneur, Host of 'Faster Than Normal' Podcast",
-			photo: '/speaker-peter-shankman.jpg'
+			photo: '/speaker-peter-shankman.webp'
 		}
 	];
 
-	const talks = [
+	const talks: { name: string; title: string; videoId: string; impactLabel?: string; impact?: string }[] = [
 		{
 			name: 'Stella Kasadigli',
 			title: 'Co-Founder Women On Top, Writer',
-			videoId: 'dnDffwwthyE'
+			videoId: 'dnDffwwthyE',
+			impactLabel: 'What Impact Means to Me',
+			impact: 'Impact to me is like watching paint dry – you think nothing is changing, until you eventually see you\'ve got a picture on the wall and a room where anybody has the chance to make something joyful and new.'
 		},
 		{
 			name: 'Rana Hussain',
 			title: 'Diversity & Inclusion Consultant, Writer, and Broadcaster',
-			videoId: 'E9SHENWJaz0'
+			videoId: 'E9SHENWJaz0',
+			impactLabel: 'What Impact Means to Me',
+			impact: 'When you encounter something or someone that diverts you off the course you were on. However big or small the diversion, you are changed. We all have the ability to have an impact and the power of this is profound. Whether we choose to use that ability and how we use it is the true test.'
 		},
 		{
 			name: 'Justin Robinson',
 			title: 'Writer, Director, Filmmaker',
-			videoId: 'r1kuY7PAEjk'
+			videoId: 'r1kuY7PAEjk',
+			impactLabel: 'What Impact Means to Me',
+			impact: 'To make an impact, at least for me, is to connect with a fellow heart. My life as a filmmaker is partly an attempt to understand humanity, along with sharing what I\'ve understood so far.'
 		},
 		{
 			name: 'Radek Sali',
-			title: 'Executive Chairman and Founder, Light Warrior Group, previous CEO of Swisse Wellness',
-			videoId: 'VHEMJoLiChs'
+			title: 'Executive Chairman and Founder, Light Warrior Group, previous CEO of Swisse Wellness.',
+			videoId: 'VHEMJoLiChs',
+			impactLabel: 'What Impact Means to Me',
+			impact: 'Impact to me is like watching paint dry – you think nothing is changing, until you eventually see you\'ve got a picture on the wall and a room where anybody has the chance to make something joyful and new.'
 		},
 		{
 			name: 'Mark LeBusque',
 			title: 'Founder & Director marklebusque.com',
-			videoId: 'pKqlXj0tB9k'
+			videoId: 'pKqlXj0tB9k',
+			impactLabel: 'What Impact Means to Me',
+			impact: 'Impact means challenging people to reimagine how human work could be. We don\'t learn to be human out of a textbook.'
 		},
 		{
 			name: 'Sue Brierley',
 			title: 'Author of Lioness, and Mother of Saroo Brierley, The Boy Known as Lion',
-			videoId: 'M7Y3dQZBDG0'
+			videoId: 'M7Y3dQZBDG0',
+			impactLabel: 'What Impact Means to Me',
+			impact: 'I consider myself part of a bigger global family, particularly in relation to the other women on this planet…I\'d like to think my sisters in life, would look after children that have no parents and they would look after their sisters children they cannot themselves. I\'m hoping my sisters globally, will step up (with me) and do this better.'
 		},
 		{
 			name: "Lisa O'Neill",
-			title: 'Motivational Leadership Expert & CEO, Thought Leaders Business School',
-			videoId: 'L9h8-1j8LLA'
+			title: "Motivational Leadership Expert, Lisa O'Neill & CEO, Thought Leaders Business School",
+			videoId: 'L9h8-1j8LLA',
+			impactLabel: 'What Impact Means to Me'
 		},
 		{
 			name: 'Peter Shankman',
-			title:
-				'Dad, 5x Best Selling Author Futurist, Keynoter, Pod Host #1 ADHD Podcast "Faster Than Normal"',
-			videoId: 'sUxE8Qwf2Bo'
+			title: 'Dad, 5x Best Selling Author Futurist, Keynoter, Pod Host #1 ADHD Podcast "Faster Than Normal"',
+			videoId: 'sUxE8Qwf2Bo',
+			impactLabel: 'What Impact Mean to Me',
+			impact: 'Knowing the five keywords to hold a consumer\'s attention. Understanding how to create content that your audience simply must share. Knowing how to get your audience to do your PR, sales, and marketing for you!'
 		},
 		{
 			name: 'Bassam Aramin & Rami Elhanan',
 			title: 'Parents Circle Families Forum, Bereaved Fathers',
-			videoId: 'OW3tar2qzPc'
+			videoId: 'OW3tar2qzPc',
+			impactLabel: 'What Impact Means to Us'
 		},
 		{
 			name: 'Nick Bracks',
 			title: 'Mental Health Advocate & Actor',
-			videoId: 'LE0piZd1-HM'
+			videoId: 'LE0piZd1-HM',
+			impactLabel: 'What Impact Means to Me',
+			impact: 'Doing things daily to improve the lives of others. It is the small daily things that might help those around us. We can all make an impact.'
 		},
 		{
 			name: 'Jeremy Andrulis',
 			title: 'CEO, Third Idea',
-			videoId: 'r1r9-iTeXGU'
+			videoId: 'r1r9-iTeXGU',
+			impactLabel: 'What Impact Means to Me',
+			impact: 'Individuals are typically judged by the totality of the decisions they make – but the lasting impact of decisions is often not the actual decision, it is \'how\' the decision was made. A meaningful decision making experience focuses on how decisions are made AND gaining the commitment of people.'
 		},
 		{
 			name: 'Harry Koras',
 			title: 'Great Human',
-			videoId: 'K5I2kZ0uxwc'
+			videoId: 'K5I2kZ0uxwc',
+			impactLabel: 'What Impact Means to Me',
+			impact: 'An opportunity to tune into positivity and receive amazing information to grant you the courage to put yourself back together again and keep moving forward!'
 		},
 		{
 			name: 'Dr. Raman Attri',
 			title: 'Performance Scientist, XpertX Research Forum',
-			videoId: 'NqRMTRhJ4O8'
+			videoId: 'NqRMTRhJ4O8',
+			impactLabel: 'What Impact Means to Me',
+			impact: 'The impact is to spark renewed clarity among people – clarity about themselves, their ideas, their strengths, their limitations, their choices and their paths in the world of chaos, uncertainty and noise. Once people have that clarity, they ignite a new chain of ideas and inspire more difference makers.'
 		},
 		{
 			name: 'Peter Parthimos',
 			title: 'Founder & CEO – Futsal Oz',
-			videoId: 'V_FiUsxTFKc'
+			videoId: 'V_FiUsxTFKc',
+			impactLabel: 'What Impact Means to Me'
 		},
 		{
 			name: 'Duy Huynh & Marie McLeod',
 			title: 'Writer/Director, and Positive Psychology Therapist',
-			videoId: '-_H4mZwWRrg'
+			videoId: '-_H4mZwWRrg',
+			impact: 'What Impact Mean to Me (Duy Huynh): As a refugee, my earliest memories of life was upheaval, violence and trauma at sea. As I watch those I care about struggle, I\'ve always been optimistic that there is a way through the darkness, to learn about what makes us resilient and to find the secret formula to happiness. | What Impact Means to Me (Marie McLeod): Impact is my \'Ikigai\', my reason for being. It gets me up each day with a spring in my step, making my life whole. To impact those who struggle, is a gift – the more I give, the more I get. I\'m pact full, when I\'m impactful.'
 		},
 		{
 			name: 'Paul Harrison',
 			title: 'Partner + Digital Marketing Advisor, Zib Digital',
-			videoId: 'SsGIm8B9aAQ'
+			videoId: 'SsGIm8B9aAQ',
+			impactLabel: 'What Impact Means to Me'
 		},
 		{
 			name: 'Col Fink',
 			title: 'Engagement Expert',
-			videoId: 'prG4cQ5RqBY'
+			videoId: 'prG4cQ5RqBY',
+			impactLabel: 'What Impact Mean to Me',
+			impact: 'One person can make a mark, but it takes a tribe to create real impact. The best way to create massive positive change in the world is to create places and spaces where other people thrive. Engagement is the ultimate impact multiplier.'
 		},
 		{
 			name: 'Richenda Vermeulen',
 			title: 'Founder and CEO, Ntegrity',
-			videoId: 'f0iQIPzyp0E'
+			videoId: 'f0iQIPzyp0E',
+			impactLabel: 'What Impact Means to Me',
+			impact: 'Impact isn\'t a measure, it\'s a way of operating in the world to make it better. Your people, your office, your profits…even your marketing have the potential to create change.'
 		},
 		{
 			name: 'Mark Goodie',
 			title: 'CEO – Merri Outreach Support Service Ltd.',
-			videoId: 'szNi5zqm2WI'
+			videoId: 'szNi5zqm2WI',
+			impactLabel: 'What Impact Means to Me',
+			impact: 'Treat all people equally by ensuring they feel welcomed, connected, involved, secure and supported.'
 		},
 		{
 			name: 'Kirsten Forgione',
 			title: 'Director & Psychologist, Myndly',
-			videoId: 'qpq4cr0FQHM'
+			videoId: 'qpq4cr0FQHM',
+			impactLabel: 'What Impact Means To Me',
+			impact: 'The definition of impact, as stated in the English dictionary, is "coming into forcible contact with an object", and "having marked effect or influence". And whilst this definition, in my view, captures the essence of impact – that is, to effect or influence – I believe it overlooks two important ideas, that capture what impact means to me. Specifically, that; a small gesture can also have marked effect or influence. And that having an impact on someone, means effecting or influencing them to think, feel or do something differently (or in a way they had not thought of before).'
 		},
 		{
 			name: 'Harpreet Ghumman',
-			title: 'Learning & Organization Development Leader, D&I Strategist, Executive Coach',
-			videoId: '_2q9eDVUXPA'
+			title: 'Learning & Organization Development Leader, D&I Strategist, Executive coach',
+			videoId: '_2q9eDVUXPA',
+			impactLabel: 'What Impact Means to Me',
+			impact: 'Free flowing waves touching each other, causing numerous reflections to build up – leaving one in a better space than before at mind, body and soul level that triggers an action that can or cannot be measured. And paving the way for others to soak in the waves & reflect.'
 		},
 		{
 			name: 'Ruby Lee',
 			title: 'Intuitive Business Coach',
-			videoId: 'u--OQQAohIY'
+			videoId: 'u--OQQAohIY',
+			impactLabel: 'What Impact Means to Me',
+			impact: 'To make an impact I believe you need to be living your values and your purpose work. For me, I feel I make the biggest impact when I truly connect with people, when I feel free to create, and when I am having fun in my business.'
 		},
 		{
 			name: 'Joshua Ross',
 			title: 'Co-CEO, Humanitix',
-			videoId: 'gcs5ahD43d0'
+			videoId: 'gcs5ahD43d0',
+			impactLabel: 'What Impact Means to Me',
+			impact: 'For me impact is a change in the world\'s trajectory, at any level, for the better of the human condition or natural environment. I think the greatest and rarest impact is when one creates a shift in the moral landscape. History is an evolution of morality over time, what we do today (hopefully) will look terrible in 500 years.'
 		},
 		{
 			name: 'Rosie Thomas',
 			title: 'CEO & Co-founder, Project Rockit',
-			videoId: 'C47WZsagw6Y'
+			videoId: 'C47WZsagw6Y',
+			impactLabel: 'What Impact Means to Me'
 		},
 		{
 			name: 'Dimitra Manis',
 			title: 'Chief People Officer, S&P Global',
-			videoId: '37-iTS0CbOI'
+			videoId: '37-iTS0CbOI',
+			impactLabel: 'What Impact Means to Me'
 		},
 		{
 			name: 'Mark Reading',
 			title: 'Head of Foundation at Atlassian',
-			videoId: '9k9gAGmuOw4'
+			videoId: '9k9gAGmuOw4',
+			impactLabel: 'What Impact Means to Me',
+			impact: 'The Atlassian Foundation focuses on two strategic goals: 1. Education – helping to educate millions of disadvantaged youth, preparing them for the workforce of the future; and 2. Pledge 1% – helping to bring out the best of business by growing the Pledge 1% movement.'
 		},
 		{
 			name: 'Nataly Kogan',
 			title: 'Founder of Happier, Inc. and Author of Happier Now',
-			videoId: 'NrBHCNdBrn0'
+			videoId: 'NrBHCNdBrn0',
+			impactLabel: 'What Impact Means to Me'
 		},
 		{
 			name: 'Tasos Katsaounis',
 			title: 'Founder/CEO, Bread Man Baking Co.',
-			videoId: 'o6TgVLED8Qc'
+			videoId: 'o6TgVLED8Qc',
+			impactLabel: 'What Impact Means to Me'
 		},
 		{
 			name: 'Roula Christie',
-			title:
-				"Radio Host 'The Roula and Ryan Show' 104.1KRBE | 'Weekends With Roula' – syndicated nationwide in the US",
-			videoId: '_HRR1X7xL8E'
+			title: "Radio Host 'The Roula and Ryan Show' 104.1KRBE | 'Weekends With Roula' – syndicated nationwide in the US.",
+			videoId: '_HRR1X7xL8E',
+			impactLabel: 'What Impact Means to Me',
+			impact: 'I really do love what I do every morning. I absolutely relate to the struggle of life through the listeners\' eyes. Knowing that I help wake people up and get them through their day with smiles on their faces is such a humbling and rewarding feeling. I am all about Family and helping people feel like a part of one. It seems like every day on the radio I meet someone new who moves me, surprises me, and challenges me.'
 		},
 		{
 			name: 'Bassam Aramin & Rami Elhanan',
 			title: 'Parents Circle Families Forum, Bereaved Fathers',
-			videoId: 'kspQVR9JNvo'
+			videoId: 'kspQVR9JNvo',
+			impactLabel: 'What Impact Means to Us'
 		}
 	];
 
@@ -301,7 +349,7 @@
 <!-- Title Banner -->
 <section
 	class="section-yellow py-16 min-h-[60vh] hero"
-	style="background-image: url('/geometric-pattern.jpg'); background-size: cover; background-position: center; background-blend-mode: multiply;"
+	style="background-image: url('/geometric-pattern.webp'); background-size: cover; background-position: center; background-blend-mode: multiply;"
 >
 	<div class="container-custom text-center">
 		<h2 class="text-4xl md:text-6xl mb-8 font-bold">IMPACTOLOGY LIVE 2020</h2>
@@ -337,9 +385,7 @@
 		<h2 class="text-center mb-16 font-bold text-3xl md:text-6xl">IMPACTOLOGY LIVE 2020 TALKS</h2>
 		<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
 			{#each talks as talk}
-				<div class="flex flex-col gap-4">
-					<h3 class="text-xl font-bold normal-case">{talk.name}</h3>
-					<p class="text-sm text-base-content/70">{talk.title}</p>
+				<div class="flex flex-col gap-3">
 					<div class="aspect-video w-full">
 						<iframe
 							src="https://www.youtube-nocookie.com/embed/{talk.videoId}"
@@ -351,6 +397,11 @@
 							loading="lazy"
 						></iframe>
 					</div>
+					<h3 class="text-xl font-bold normal-case mt-1">{talk.name}</h3>
+					<p class="text-sm text-base-content/70">{talk.title}</p>
+					{#if talk.impactLabel && talk.impact}
+						<p class="text-sm"><strong>{talk.impactLabel}:</strong> "{talk.impact}"</p>
+					{/if}
 				</div>
 			{/each}
 		</div>

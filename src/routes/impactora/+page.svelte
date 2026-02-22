@@ -124,25 +124,25 @@
 
 	const helpBoxes = [
 		{
-			icon: '/impactora-icon-resolve.png',
+			icon: '/impactora-icon-resolve.webp',
 			title: 'Resolve\nissues',
 			description:
 				"Reduced in-person connectivity means we miss out on the valuable 'water cooler' conversation to help us solve problems in a timely manner \u2013 resolve issues, anytime from one platform."
 		},
 		{
-			icon: '/impactora-icon-insights.png',
+			icon: '/impactora-icon-insights.webp',
 			title: 'Quickly Access\nInsights',
 			description:
 				'When did work and life get so busy again!? IMPACTORA saves you valuable time by helping you access the insights you need to make more informed decisions and take action sooner.'
 		},
 		{
-			icon: '/impactora-icon-decisions.png',
+			icon: '/impactora-icon-decisions.webp',
 			title: 'Make informed\ndecisions',
 			description:
 				"Today\u2019s abundance of choice is often the enemy of action. IMPACTORA allows access to tailored and timely advice, which means you can make more quicker decisions that often create lasting impact."
 		},
 		{
-			icon: '/impactora-icon-goals.png',
+			icon: '/impactora-icon-goals.webp',
 			title: 'Achieve\ngoals',
 			description:
 				'Some insights and advice are worth investing more time in. IMPACTORA lets you create goals to fast track your personal growth in the moments that matter most.'
@@ -278,13 +278,13 @@
 				<div class="relative flex justify-center" transition:fly={{ x: 30, duration: 700 }}>
 					<div class="impactora-screenshots w-full max-w-lg">
 						<img
-							src="/impactora-screenshot-1.png"
+							src="/impactora-screenshot-1.webp"
 							alt="IMPACTORA App Dashboard"
 							class="impactora-screenshot-main w-full h-auto"
 							loading="eager"
 						/>
 						<img
-							src="/impactora-screenshot-2.png"
+							src="/impactora-screenshot-2.webp"
 							alt="IMPACTORA App Detail"
 							class="impactora-screenshot-secondary"
 							loading="eager"
@@ -396,7 +396,7 @@
 					<!-- Promo Banner Image -->
 					<div class="mb-10">
 						<img
-							src="/impactora-promo-banner.png"
+							src="/impactora-promo-banner.webp"
 							alt="IMPACTORA Platform Preview"
 							class="w-full max-w-2xl mx-auto h-auto rounded-sm shadow-lg"
 						/>
@@ -436,7 +436,7 @@
 					</h3>
 				</div>
 				<img
-					src="/impactora-mask-group.png"
+					src="/impactora-mask-group.webp"
 					alt="Team meeting"
 					class="absolute inset-0 w-full h-full object-cover opacity-20"
 				/>
