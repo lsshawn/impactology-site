@@ -63,26 +63,26 @@
 	<div class="testimonial-title" data-testid="testimonial-card">
 		<div class="overflow-hidden w-full">
 			<div
-				class="testimonial-slide flex items-center w-full"
+				class="testimonial-slide flex flex-col md:flex-row items-start md:items-center w-full"
 				class:slide-out-left={isAnimating && slideDirection === 'left'}
 				class:slide-out-right={isAnimating && slideDirection === 'right'}
 				class:slide-in-left={!isAnimating && slideDirection === 'right'}
 				class:slide-in-right={!isAnimating && slideDirection === 'left'}
 			>
 				<!-- Left: large bold headline -->
-				<div class="pl-4 mr-6 shrink-0 md:w-1/2">
-					<p class="text-2xl font-black leading-tight text-black">
+				<div class="shrink-0 w-full md:w-1/2 md:pl-4 md:mr-6 mb-4 md:mb-0">
+					<p class="text-xl md:text-2xl font-black leading-tight text-black">
 						{testimonials[activeTestimonial].shortQuote}
 					</p>
 				</div>
 
 				<!-- Right: full quote + attribution -->
-				<div class="md:w-1/2">
-					<p class="text-sm leading-relaxed text-black mb-4">
+				<div class="w-full md:w-1/2">
+					<p class="text-xs md:text-sm leading-relaxed text-black mb-3">
 						{testimonials[activeTestimonial].quote}
 					</p>
-					<p class="font-bold text-sm text-black">{testimonials[activeTestimonial].name}</p>
-					<p class="text-sm text-black">{testimonials[activeTestimonial].title}</p>
+					<p class="font-bold text-xs md:text-sm text-black">{testimonials[activeTestimonial].name}</p>
+					<p class="text-xs md:text-sm text-black">{testimonials[activeTestimonial].title}</p>
 				</div>
 			</div>
 		</div>

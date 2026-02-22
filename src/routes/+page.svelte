@@ -378,7 +378,7 @@
 </section>
 
 <!-- Impactora Promo Section -->
-<div class="hero min-h-[80vh]" style="background-image: url('/impactora-promo-banner.webp');">
+<div class="hero min-h-[80vh] md:bg-[image:url('/impactora-promo-banner.webp')] bg-neutral">
 	<div class="hero-content flex-col lg:flex-row-reverse w-full max-w-7xl gap-8 lg:gap-16">
 		<img
 			src="/impactora-promo-banner.webp"
@@ -389,13 +389,13 @@
 			class="max-w-xs md:max-w-sm lg:max-w-md hidden lg:block opacity-0 pointer-events-none"
 			loading="lazy"
 		/>
-		<div>
+		<div class="text-center md:text-left">
 			<img
 				src="/impactora-logo.webp"
 				alt="Impactora"
 				width="368"
 				height="84"
-				class="h-12 md:h-14 w-auto mb-8"
+				class="h-12 md:h-14 w-auto mb-8 mx-auto md:mx-0"
 				loading="lazy"
 			/>
 			<h2 class="text-4xl md:text-6xl font-bold uppercase leading-tight mb-2 text-white">
@@ -404,7 +404,7 @@
 			<h2 class="text-4xl md:text-6xl font-bold uppercase leading-tight mb-8">
 				FOR EMPLOYEES &amp; MANAGERS
 			</h2>
-			<p class="text-base leading-relaxed mb-8 max-w-lg">
+			<p class="text-base leading-relaxed mb-8 max-w-lg mx-auto md:mx-0">
 				<strong>IMPACTORA</strong> is a SaaS platform designed to bridge the loss of organisational knowledge
 				that we are all experiencing with today's remote and hybrid working environments. It provides
 				easy to access and immediate support, advice, and insights that are tailored to the individual
