@@ -4,7 +4,7 @@ title: "Navigating Change: The 5 Skills You Need To Build Your Resilience and Ad
 slug: 5-skills-you-need-to-build-your-resilience-and-adaptability
 excerpt: "Master change with these 5 essential skills to build resilience and adaptability as a People & Culture Business Partner. Navigate challenges and thrive in your role."
 date: "2024-06-25"
-featuredImage: "https://impactology.com.au/wp-content/uploads/2024/06/business-people-using-tablet-cafe-1_1262-1380.jpg"
+featuredImage: "/blog/5-skills-you-need-to-build-your-resilience-and-adaptability.webp"
 author: "George Liberopoulos"
 ---
 

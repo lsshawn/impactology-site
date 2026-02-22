@@ -4,7 +4,7 @@ title: "Embracing Imposter Syndrome: The Seven Strategies Leading To A Path Of A
 slug: embracing-imposter-syndrome-hr-leadership
 excerpt: "Imposter syndrome often plagues even the most competent HR professionals, casting doubts on their achievements and capabilities. However, embracing this mindset can spark personal growth and authentic leadership within HR business partnering services."
 date: "2024-11-21"
-featuredImage: "https://impactology.com.au/wp-content/uploads/2024/11/Embracing-Imposter-Syndrome.jpg"
+featuredImage: "/blog/embracing-imposter-syndrome-hr-leadership.webp"
 author: "George Liberopoulos"
 ---
 

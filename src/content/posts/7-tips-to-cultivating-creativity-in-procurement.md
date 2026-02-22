@@ -4,7 +4,7 @@ title: "Embracing Business Partnering Innovation: The Seven Tips To Cultivating 
 slug: 7-tips-to-cultivating-creativity-in-procurement
 excerpt: "Given today's business landscape, fostering innovation within procurement teams is no longer just advantageous—it's essential. As organisations strive to stay competitive, the role of creative problem-solving and strategic partnerships becomes paramount."
 date: "2024-08-27"
-featuredImage: "https://impactology.com.au/wp-content/uploads/2024/08/Business-Partnering-Innovation.jpg"
+featuredImage: "/blog/7-tips-to-cultivating-creativity-in-procurement.webp"
 author: "George Liberopoulos"
 ---
 

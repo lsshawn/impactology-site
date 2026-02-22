@@ -4,7 +4,7 @@ title: "Mastering the Art of Negotiation: The Top 5 Personal Growth Strategies f
 slug: the-top-5-personal-growth-strategies-for-it-business-partners
 excerpt: "IT business partners are no longer just tech troubleshooters—they're strategic influencers tasked with bridging the gap between IT and broader business opportunities. Among the many skills IT business partners need, negotiation is a critical competency that can drive meaningful outcomes for both IT and the organisation."
 date: "2025-02-19"
-featuredImage: "https://impactology.com.au/wp-content/uploads/Mastering-the-Art-of-Negotiation-The-Top-5-Personal-Growth-Strategies-for-IT-Business-Partners.jpg"
+featuredImage: "/blog/the-top-5-personal-growth-strategies-for-it-business-partners.webp"
 author: "George Liberopoulos"
 ---
 

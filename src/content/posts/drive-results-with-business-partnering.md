@@ -4,7 +4,7 @@ title: "5 Reminders to Effective Business Partnering That Drive Results"
 slug: drive-results-with-business-partnering
 excerpt: "Great teams aren't built in isolation. The best-performing organisations know that collaboration between departments is what transforms strategy into action and challenges into progress. But effective business partnering isn't just about sharing information or attending cross-functional meetings."
 date: "2025-10-28"
-featuredImage: "https://impactology.com.au/wp-content/uploads/5-Reminders-to-Effective-Business-Partnering-That-Drive-Results-768x511.jpg"
+featuredImage: "/blog/drive-results-with-business-partnering.webp"
 author: "George Liberopoulos"
 ---
 

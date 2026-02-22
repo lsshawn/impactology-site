@@ -1,131 +1,27 @@
 <script lang="ts">
 	import SEO from '$lib/components/SEO.svelte';
-	import Icon from '@iconify/svelte';
-	import { resolve } from '$app/paths';
+	import ClientLogos from '$lib/components/ClientLogos.svelte';
+	import ContactForm from '$lib/components/ContactForm.svelte';
+	import TestimonialSlider from '$lib/components/TestimonialSlider.svelte';
+	import { fly } from 'svelte/transition';
 
-	// Contact form state
-	let firstName = $state('');
-	let lastName = $state('');
-	let email = $state('');
-	let company = $state('');
-	let phone = $state('');
-	let message = $state('');
-	let formStatus = $state<'idle' | 'sending' | 'sent' | 'error'>('idle');
-	let errorMessage = $state('');
-
-	async function handleInterestSubmit(e: SubmitEvent) {
-		e.preventDefault();
-		formStatus = 'sending';
-		try {
-			const res = await fetch('/api/contact', {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({
-					firstName,
-					lastName,
-					email,
-					company,
-					phone,
-					message: `[Leadership Development Program for Local Government Interest]\n\n${message}`
-				})
-			});
-			if (!res.ok) throw new Error('Failed to send');
-			formStatus = 'sent';
-			firstName = '';
-			lastName = '';
-			email = '';
-			company = '';
-			phone = '';
-			message = '';
-		} catch {
-			formStatus = 'error';
-			errorMessage = 'Something went wrong. Please try again.';
+	function trigger(node: HTMLElement, stateSetter: (v: boolean) => void) {
+		let observer: IntersectionObserver;
+		function startObserving() {
+			observer = new IntersectionObserver(
+				([entry]) => {
+					if (entry.isIntersecting) {
+						stateSetter(true);
+						observer.disconnect();
+					}
+				},
+				{ threshold: 0.15 }
+			);
+			observer.observe(node);
 		}
+		startObserving();
+		return { destroy: () => observer?.disconnect() };
 	}
-
-	const learningOutcomes = [
-		'Develop adaptive leadership capabilities to navigate complex community needs and political dynamics.',
-		'Build trust and credibility with elected officials, community stakeholders, and cross-functional teams.',
-		'Master strategic decision-making frameworks suited to the unique constraints of public sector environments.',
-		'Strengthen your ability to lead transformational change while maintaining public accountability.'
-	];
-
-	const modules = [
-		{
-			title: 'LEADING IN THE PUBLIC SECTOR',
-			subtitle: 'Understanding the unique leadership context of local government.',
-			description:
-				'This foundational module explores the distinctive challenges of leadership in local government. We examine the balance between political accountability and operational excellence, the role of public trust, and how to navigate the complex stakeholder landscape unique to councils and municipalities. You will develop a clear understanding of your leadership identity within this context.'
-		},
-		{
-			title: 'COMMUNITY-CENTRED LEADERSHIP',
-			subtitle: 'Placing community outcomes at the heart of decision-making.',
-			description:
-				'Local government leaders must balance competing community interests while delivering equitable outcomes. This module focuses on developing a community-centred leadership approach, understanding diverse stakeholder needs, and making decisions that serve the public interest. You will learn frameworks for engaging authentically with your community.'
-		},
-		{
-			title: 'NAVIGATING POLITICAL DYNAMICS',
-			subtitle: 'Building effective relationships with elected officials.',
-			description:
-				'The relationship between council officers and elected officials is fundamental to effective local government. This module equips you with skills to navigate political dynamics professionally, provide fearless advice, and maintain productive relationships across the political spectrum while preserving operational independence.'
-		},
-		{
-			title: 'LEADING TRANSFORMATIONAL CHANGE',
-			subtitle: 'Driving sustainable improvement in public services.',
-			description:
-				'Local governments face increasing pressure to transform service delivery while managing constrained resources. This module provides frameworks for leading change in complex public sector environments, managing stakeholder expectations, and building organisational capability for continuous improvement.'
-		},
-		{
-			title: 'STRATEGIC COLLABORATION & PARTNERSHIPS',
-			subtitle: 'Leveraging networks for community impact.',
-			description:
-				'Effective local government leadership extends beyond organisational boundaries. This module focuses on building strategic partnerships with other councils, state agencies, community organisations, and the private sector. You will develop skills in collaborative leadership and creating shared value for your community.'
-		},
-		{
-			title: 'RESILIENT LEADERSHIP',
-			subtitle: 'Sustaining performance through challenge and uncertainty.',
-			description:
-				'Local government leaders face unique pressures including public scrutiny, resource constraints, and crisis management. This module builds your capacity for resilient leadership, managing stress, maintaining wellbeing, and sustaining high performance over the long term while serving your community.'
-		}
-	];
-
-	const testimonials = [
-		{
-			quote:
-				'This program gave me the frameworks and confidence to lead more effectively within the unique context of local government. Highly recommended for any council leader.',
-			title: 'Frameworks and confidence',
-			author: 'Sarah',
-			role: 'Director of Community Services'
-		},
-		{
-			quote:
-				'The module on navigating political dynamics was invaluable. I now have much stronger relationships with our elected officials.',
-			title: 'Invaluable insights',
-			author: 'Michael',
-			role: 'General Manager Operations'
-		},
-		{
-			quote:
-				'Practical, relevant, and immediately applicable to the challenges we face in local government. This is leadership development that understands our sector.',
-			title: 'Understands our sector',
-			author: 'Jennifer',
-			role: 'Executive Manager People & Culture'
-		},
-		{
-			quote:
-				'The community-centred leadership approach has transformed how I think about stakeholder engagement. Our community consultation outcomes have improved significantly.',
-			title: 'Transformed my approach',
-			author: 'David',
-			role: 'Director Strategic Planning'
-		},
-		{
-			quote:
-				'Finally, a leadership program designed for the realities of public sector leadership. The insights on leading change were exactly what I needed.',
-			title: 'Designed for public sector',
-			author: 'Amanda',
-			role: 'Chief Financial Officer'
-		}
-	];
 
 	const clientLogos = [
 		'/client-moss.webp',
@@ -140,6 +36,100 @@
 		'/client-msd.webp',
 		'/client-lochard.webp'
 	];
+
+	const modules = [
+		{
+			icon: '/bpip-icon01.webp',
+			title: 'KNOW YOUR ORGANISATION',
+			subtitle: 'How council leaders can effectively align with broader local government goals.',
+			description:
+				"This module introduces a structured approach to understanding and supporting your council's objectives and business model. It fosters a strategic mindset, helping leaders and teams identify how to support local government priorities best while considering the community's diverse needs. Participants will gain tools to better understand how the council delivers value to the community and interconnected business model components that make it all possible."
+		},
+		{
+			icon: '/bpip-icon02.webp',
+			title: 'KNOW YOUR STAKEHOLDERS',
+			subtitle: 'Trust is the foundation of successful governance.',
+			description:
+				'Building and nurturing relationships with internal teams, external stakeholders, and community groups is essential for local government effectiveness. This module emphasises developing trust, enhancing communication, and creating strong connections with all key stakeholders.'
+		},
+		{
+			icon: '/bpip-icon03.webp',
+			title: 'KNOW YOUR COMMUNITY AND ENVIRONMENT',
+			subtitle: 'Understanding community needs strengthens decision-making.',
+			description:
+				"Community priorities and external influences significantly impact local government decisions. This module develops an 'outside-in' perspective, enabling leaders to consider societal, economic, and environmental factors. With this understanding, council teams can make informed decisions that align with their communities' long-term needs."
+		},
+		{
+			icon: '/bpip-icon04.webp',
+			title: 'LEADERSHIP TOOLKIT FOR COUNCILS',
+			subtitle: 'Enhancing stakeholder engagement with practical tools.',
+			description:
+				'Participants will learn about the ACDC Contextual Partnering Model, which adapts to a local government context. This model helps leaders tailor their business partnering approach to maximise impact while building a solid reputation as reliable, strategic advisors.'
+		},
+		{
+			icon: '/bpip-icon05.webp',
+			title: 'LEARN DATA STORYTELLING',
+			subtitle: 'A critical skill for effective communication and advocacy.',
+			description:
+				"Storytelling enhances leaders' ability to present data and ideas in compelling ways. This module equips council teams to use storytelling to engage stakeholders, communicate a more cohesive story using data, and foster collaboration across departments and community groups."
+		},
+		{
+			icon: '/bpip-icon06.webp',
+			title: 'KNOW THE VALUE YOU DELIVER',
+			subtitle: "Measure and communicate your team's impact.",
+			description:
+				'Measuring the outcomes of local government initiatives is vital to demonstrating value to stakeholders. This module introduces a high-impact framework for evaluating and articulating the value delivered by council leaders and their teams, ensuring efforts are recognised and aligned with community expectations.'
+		}
+	];
+
+	const testimonials = [
+		{
+			shortQuote: 'Guidance really helped',
+			quote:
+				'I really connected with and appreciated the style and approach. The one-on-one guidance really helped.',
+			name: 'Claire',
+			title: 'Senior Manager'
+		},
+		{
+			shortQuote: 'Helped me achieve',
+			quote:
+				'My goal was to maintain focus on my most important leadership priorities and this program has helped me achieve this.',
+			name: 'Andrew',
+			title: 'General Counsel'
+		},
+		{
+			shortQuote: 'Program helped me in so many ways',
+			quote:
+				'My learnings from this program have helped me in so many ways both personally and professionally.',
+			name: 'Deborah',
+			title: 'HR Director'
+		},
+		{
+			shortQuote: 'Insights were innovative and pragmatic',
+			quote:
+				'I appreciated the extensive experience from a wide range of sectors to draw upon. The insights shared were innovative and pragmatic.',
+			name: 'Raj',
+			title: 'GM Human Resources'
+		},
+		{
+			shortQuote: 'Truly enriching and transformational experience',
+			quote:
+				'The guidance I have received has been instrumental in helping me to workout my overall vision and strategies for my career and personal goals. This has been a truly enriching and transformational experience.',
+			name: 'Katarina',
+			title: 'Marketing Specialist'
+		}
+	];
+
+	let learnImg = $state(false);
+	let learnText = $state(false);
+	let clientsHeading = $state(false);
+	let clientsLogos = $state(false);
+	let modulesHeading = $state(false);
+	let modulesGrid = $state(false);
+	let bookImg = $state(false);
+	let bookText = $state(false);
+	let registerHeading = $state(false);
+	let registerForm = $state(false);
 </script>
 
 <SEO
@@ -165,408 +155,251 @@
 />
 
 <!-- Hero Section -->
-<section class="section-dark py-24 md:py-32 relative overflow-hidden">
-	<div
-		class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-5 rounded-full -translate-y-1/2 translate-x-1/2"
-	></div>
-
-	<div class="container-custom relative z-10">
-		<div class="max-w-4xl">
-			<div class="flex items-center gap-3 mb-6">
-				<img src="/icon2.webp" alt="Leadership Development Program" class="w-14 h-14" />
-				<span class="text-primary font-bold text-xl tracking-wider">LOCAL GOVERNMENT PROGRAM</span>
-			</div>
-			<h1 class="text-5xl md:text-6xl lg:text-7xl mb-6 leading-none">
-				LEADERSHIP DEVELOPMENT PROGRAM FOR LOCAL GOVERNMENT
+<section
+	class="section-yellow py-24 md:py-8 bg-cover bg-center relative"
+	style="background-image: url('/bpip-hero-bg.webp'); height: 60vh; max-height: 60vh;"
+>
+	<div class="container-custom relative z-10 flex items-center h-full">
+		<div class="max-w-xl">
+			<h1 class="mb-6 text-5xl lg:text-6xl font-bold text-black">
+				Leadership Development Program for Local Government
 			</h1>
-			<p class="text-xl mb-8 opacity-90 leading-relaxed max-w-3xl">
+			<p class="text-lg font-bold mb-8 text-black max-w-lg">
 				Community leaders. Public servants. Change makers.
 			</p>
-			<p class="text-lg mb-8 opacity-80 leading-relaxed max-w-3xl">
-				Local government leaders operate in one of the most complex environments in the public
-				sector — balancing community expectations, political dynamics, and operational excellence.
-				This program develops the leadership capabilities essential for thriving in this unique
-				context.
-			</p>
-			<a
-				href="#register-interest"
-				class="btn btn-primary btn-lg uppercase font-bold rounded-none inline-flex items-center gap-2"
-			>
+			<a href="#register-interest" class="btn btn-secondary btn-lg uppercase font-bold mb-6">
 				BOOK YOUR FREE 60-MINUTE STRATEGY SESSION
-				<Icon icon="ph:arrow-right-bold" class="text-lg" />
 			</a>
+			<div class="text-base max-w-xl prose prose-lg">
+				<p>This free strategy session will help you uncover what your team needs most.</p>
+				<p><strong>Your Benefit:</strong> practical next steps you can act on immediately.</p>
+				<p><strong>No hard sell – pinky promise!</strong></p>
+			</div>
 		</div>
 	</div>
 </section>
 
-<!-- Program Introduction -->
-<section class="py-20 md:py-28 bg-base-100">
+<!-- What You'll Learn -->
+<section
+	class="py-20 md:py-28 bg-base-100"
+	use:trigger={(v) => {
+		learnImg = v;
+		setTimeout(() => (learnText = v), 150);
+	}}
+>
 	<div class="container-custom">
-		<div class="max-w-4xl mx-auto">
-			<p class="text-xl leading-relaxed mb-6">
-				Step into your potential as a local government leader and amplify your impact across your
-				council and community. This program is designed for executives and managers who are ready to
-				lead with greater confidence, influence, and strategic clarity.
-			</p>
-			<div class="bg-base-200 p-8 mb-8">
-				<p class="text-lg font-bold mb-4">Your Benefit:</p>
-				<p class="text-lg leading-relaxed">
-					Practical leadership frameworks tailored to the unique challenges of local government.
-					Real conversations about the pressures you face. No generic public sector training here.
-				</p>
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+			<div>
+				{#if learnText}
+					<div in:fly={{ x: -30, duration: 600 }}>
+						<h2 class="text-4xl md:text-5xl font-bold mb-8">WHAT YOU'LL LEARN</h2>
+						<p class="text-lg leading-relaxed mb-6 opacity-80">
+							Local government leaders operate in one of the most complex environments in the public
+							sector — balancing community expectations, political dynamics, and operational
+							excellence. This program develops the leadership capabilities essential for thriving in
+							this unique context.
+						</p>
+						<p class="text-lg leading-relaxed mb-6 opacity-80">
+							The Leadership Development Program for Local Government is designed to empower your
+							team with the tools, frameworks and mindset to become trusted experts in driving
+							community outcomes.
+						</p>
+						<p class="text-lg font-medium mb-4">
+							The learning objectives of the Leadership Development Program for Local Government
+							include:
+						</p>
+						<ul class="space-y-3 mb-8">
+							<li class="flex items-start gap-3">
+								<span class="text-primary mt-1 shrink-0">●</span>
+								<span class="opacity-80"
+									>Equip themselves with the necessary skills to meet the expectations of key
+									internal and external stakeholders</span
+								>
+							</li>
+							<li class="flex items-start gap-3">
+								<span class="text-primary mt-1 shrink-0">●</span>
+								<span class="opacity-80"
+									>Establish a solid foundation of trust with their team, stakeholders and other
+									functions</span
+								>
+							</li>
+							<li class="flex items-start gap-3">
+								<span class="text-primary mt-1 shrink-0">●</span>
+								<span class="opacity-80"
+									>Establish themselves as a consistent and trusted strategic advisor</span
+								>
+							</li>
+							<li class="flex items-start gap-3">
+								<span class="text-primary mt-1 shrink-0">●</span>
+								<span class="opacity-80"
+									>Build their business acumen to complement their leadership proficiency</span
+								>
+							</li>
+						</ul>
+						<p class="text-base leading-relaxed opacity-70">
+							This program features a face-to-face component, and micro-learning activities and
+							check-in process to help embed the Program learnings.
+						</p>
+					</div>
+				{/if}
 			</div>
-			<p class="text-lg leading-relaxed mb-6">
-				The Leadership Development Program for Local Government is designed for council executives,
-				directors, managers, and emerging leaders who want to strengthen their leadership
-				capabilities and increase their strategic impact within the public sector.
-			</p>
-			<p class="text-lg leading-relaxed">
-				Whether you're leading a directorate, managing complex community projects, or preparing for
-				your next senior role, this program provides the skills, frameworks, and confidence you need
-				to succeed in local government.
-			</p>
-		</div>
-	</div>
-</section>
-
-<!-- What Makes This Program Unique -->
-<section class="section-yellow py-20 md:py-28">
-	<div class="container-custom">
-		<h2 class="text-center mb-12">WHAT MAKES THIS LEADERSHIP PROGRAM UNIQUE?</h2>
-		<div class="max-w-4xl mx-auto">
-			<p class="text-xl leading-relaxed mb-8">
-				We understand that local government leaders face distinctive challenges. You navigate
-				political relationships, serve diverse communities, and must deliver outcomes within unique
-				accountability frameworks. Our program is built around these realities:
-			</p>
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-				<div class="bg-base-100/10 p-6 text-center">
-					<Icon icon="ph:buildings-fill" class="text-4xl mb-4 mx-auto" />
-					<p class="text-lg font-bold">Lead with public purpose</p>
+			{#if learnImg}
+				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
+					<img
+						src="/bpip-learn.webp"
+						alt="Leadership Development for Local Government learning framework"
+						class="w-full max-w-md object-contain"
+					/>
 				</div>
-				<div class="bg-base-100/10 p-6 text-center">
-					<Icon icon="ph:users-three-fill" class="text-4xl mb-4 mx-auto" />
-					<p class="text-lg font-bold">Serve diverse communities</p>
-				</div>
-				<div class="bg-base-100/10 p-6 text-center">
-					<Icon icon="ph:scales-fill" class="text-4xl mb-4 mx-auto" />
-					<p class="text-lg font-bold">Navigate political dynamics</p>
-				</div>
-			</div>
-			<p class="text-lg leading-relaxed mb-6">
-				This isn't generic leadership training. Every module is tailored to the specific context of
-				local government — the challenges you face, the stakeholders you serve, and the outcomes
-				your community expects.
-			</p>
-			<p class="text-lg leading-relaxed">
-				We combine proven leadership frameworks with practical application in the public sector
-				context, ensuring you leave each session with actionable strategies you can implement
-				immediately in your council.
-			</p>
+			{/if}
 		</div>
 	</div>
 </section>
 
 <!-- Client Logos -->
-<section class="section-gray py-16">
-	<div class="container-custom">
-		<h2 class="text-center mb-12">SOME ORGANISATIONS WE'VE PARTNERED WITH</h2>
-		<div class="grid grid-cols-3 md:grid-cols-6 gap-8 items-center">
-			{#each clientLogos as logo, i (i)}
-				<div class="flex items-center justify-center p-4">
-					<img src={logo} alt="Client logo" class="max-h-14 w-auto object-contain" />
-				</div>
-			{/each}
-		</div>
-	</div>
-</section>
-
-<!-- The Leadership Imperative -->
-<section class="py-20 md:py-28 bg-base-100">
-	<div class="container-custom">
-		<h2 class="text-center mb-12">THE LEADERSHIP IMPERATIVE FOR LOCAL GOVERNMENT</h2>
-		<div class="max-w-4xl mx-auto">
-			<p class="text-xl leading-relaxed mb-6">
-				The expectations placed on local government leaders have never been higher. Communities
-				demand responsive, innovative services. Elected officials require trusted advisors who can
-				navigate complexity. And the pace of change requires
-				<strong>adaptive, resilient leadership</strong> at every level.
-			</p>
-			<p class="text-lg leading-relaxed mb-6 opacity-80">
-				An <strong>effective local government leader</strong> doesn't just manage operations — they inspire
-				their teams, build community trust, and drive meaningful change while maintaining the highest
-				standards of public accountability.
-			</p>
-			<p class="text-lg leading-relaxed opacity-80">
-				Our <strong>Leadership Development Program for Local Government</strong> is designed to accelerate
-				this transformation, equipping you with the leadership capabilities essential for success in today's
-				demanding public sector environment.
-			</p>
-		</div>
-	</div>
-</section>
-
-<!-- Learning Outcomes -->
-<section class="section-dark py-20 md:py-28">
-	<div class="container-custom">
-		<h2 class="text-center mb-6">WHAT YOU'LL LEARN</h2>
-		<p class="text-xl text-center mb-12 opacity-90">
-			The learning objectives of the Leadership Development Program for Local Government include:
-		</p>
-		<div class="max-w-4xl mx-auto">
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-				{#each learningOutcomes as outcome, i (i)}
-					<div class="flex items-start gap-4 border border-neutral-content/20 p-6">
-						<Icon icon="ph:check-circle-fill" class="text-2xl mt-0.5 shrink-0 text-primary" />
-						<span class="text-lg">{outcome}</span>
-					</div>
-				{/each}
+<section class="py-16">
+	<div
+		class="container-custom"
+		use:trigger={(v) => {
+			clientsHeading = v;
+			setTimeout(() => (clientsLogos = v), 200);
+		}}
+	>
+		{#if clientsHeading}
+			<h2
+				class="text-4xl md:text-5xl font-bold text-center mb-12"
+				in:fly={{ y: 30, duration: 600 }}
+			>
+				SOME COMPANIES WE'VE PARTNERED WITH
+			</h2>
+		{/if}
+		{#if clientsLogos}
+			<div in:fly={{ y: 20, duration: 600 }}>
+				<ClientLogos logos={clientLogos} marquee={true} />
 			</div>
-		</div>
+		{/if}
 	</div>
 </section>
 
 <!-- Core Modules -->
-<section class="section-yellow py-20 md:py-28">
+<section
+	class="py-20 md:py-28 bg-[#212023]"
+	use:trigger={(v) => {
+		modulesHeading = v;
+		setTimeout(() => (modulesGrid = v), 150);
+	}}
+>
 	<div class="container-custom">
-		<h2 class="text-center mb-16">CORE PROGRAM MODULES</h2>
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-			{#each modules as module, i (i)}
-				<div class="bg-base-100/10 p-8 hover:bg-base-100/20 transition-colors">
-					<div class="flex items-start gap-4 mb-4">
-						<div class="w-12 h-12 bg-base-100 flex items-center justify-center shrink-0">
-							<span class="text-xl font-bold" style="font-family: var(--font-heading);"
-								>{i + 1}</span
-							>
+		{#if modulesHeading}
+			<h2
+				class="text-5xl lg:text-7xl font-bold text-center mb-16 text-base-100"
+				in:fly={{ y: 30, duration: 600 }}
+			>
+				CORE PROGRAM MODULES
+			</h2>
+		{/if}
+		{#if modulesGrid}
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-8" in:fly={{ y: 30, duration: 600 }}>
+				{#each modules as module, i (i)}
+					<div class="border border-neutral-content/20 p-8 hover:border-primary transition-colors">
+						<div class="mb-6">
+							<img src={module.icon} alt={module.title} class="w-16 h-16 object-contain mb-4" />
+							<h3 class="text-2xl text-primary font-bold mb-1">{module.title}</h3>
+							<p class="text-sm text-white mb-3">{module.subtitle}</p>
 						</div>
-						<div>
-							<h3 class="text-xl mb-1">{module.title}</h3>
-							<p class="text-sm opacity-80">{module.subtitle}</p>
-						</div>
+						<p class="text-sm leading-relaxed opacity-90 text-base-100">{module.description}</p>
 					</div>
-					<p class="text-sm leading-relaxed opacity-90">{module.description}</p>
-				</div>
-			{/each}
-		</div>
+				{/each}
+			</div>
+		{/if}
 	</div>
 </section>
 
 <!-- The Book Section -->
-<section class="py-20 md:py-28 bg-base-100">
+<section
+	class="py-20 md:py-28 bg-base-300"
+	use:trigger={(v) => {
+		bookImg = v;
+		setTimeout(() => (bookText = v), 150);
+	}}
+>
 	<div class="container-custom">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-			<div>
-				<p class="text-primary font-bold text-xl tracking-wider mb-4">EVOLVE</p>
-				<h2 class="mb-6">THE BUSINESS PARTNERING PLAYBOOK</h2>
-				<p class="text-xl font-bold mb-6">
-					Finally, a book that provides realistic and targeted advice to Business Partners!
-				</p>
-				<p class="text-lg leading-relaxed mb-6 opacity-80">
-					Business Partners hold a vital role as trusted confidants with deep technical expertise,
-					and their impact is evident across all business functions. Initially tasked with providing
-					advice, they are now true collaborating partners, ideally placed to lead and manage change
-					in the changing world of work and business.
-				</p>
-				<p class="text-lg leading-relaxed mb-6 opacity-80">
-					Yet as the Business Partner role has changed, there has been no pathway to develop the
-					competencies essential for their success. Until now.
-				</p>
-				<p class="text-lg leading-relaxed mb-8">
-					If you are a current or aspiring Business Partner — HR, Finance, Procurement, IT, Risk,
-					Audit, Compliance, Legal, Marketing — this is the book for you.
-				</p>
-				<div class="bg-primary p-6 mb-6">
+			{#if bookText}
+				<div in:fly={{ x: -30, duration: 600 }}>
+					<h2 class="text-4xl md:text-5xl font-bold mb-6">THE BUSINESS PARTNERING PLAYBOOK</h2>
+					<p class="text-xl font-bold mb-6">
+						Finally, a book that provides realistic and targeted advice to Business Partners!
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Business Partners hold a vital role as trusted confidants with deep technical expertise,
+						and their impact is evident across all business functions. Initially tasked with providing
+						advice, they are now true collaborating partners, ideally placed to lead and manage change
+						in the changing world of work and business.
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Yet as the Business Partner role has changed, there has been no pathway to develop the
+						competencies essential for their success. Until now.
+					</p>
+					<p class="text-lg leading-relaxed mb-8 opacity-80">
+						If you are a current or aspiring Business Partner — HR, Finance, Procurement, IT, Risk,
+						Audit, Compliance, Legal, Marketing — this is the book for you.
+					</p>
 					<p class="text-lg font-bold">
-						EVOLVE shows you how to navigate service models and systems, build your commercial
-						acumen and deliver value to your organisation.
+						EVOLVE shows you how to navigate service models and systems, build your commercial acumen
+						and deliver value to your organisation.
 					</p>
 				</div>
-				<a
-					href={resolve('/evolve-book')}
-					class="btn btn-primary btn-lg uppercase font-bold rounded-none inline-flex items-center gap-2"
-				>
-					BUY NOW
-					<Icon icon="ph:arrow-right-bold" class="text-lg" />
-				</a>
-			</div>
-			<div class="flex justify-center">
-				<div class="relative">
-					<div class="w-80 h-96 bg-base-200 flex items-center justify-center">
-						<Icon icon="ph:book-open" class="text-8xl opacity-30" />
-					</div>
-					<div class="absolute -bottom-4 -right-4 w-20 h-20 bg-primary -z-10"></div>
+			{/if}
+			{#if bookImg}
+				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
+					<img
+						src="/bpip-book-cover.webp"
+						alt="The Business Partnering Playbook - EVOLVE"
+						class="w-96 object-contain drop-shadow-2xl"
+					/>
 				</div>
-			</div>
+			{/if}
 		</div>
 	</div>
 </section>
 
 <!-- Testimonials -->
-<section class="section-gray py-20 md:py-28">
+<section class="bg-[#fff000] py-20 md:py-28">
 	<div class="container-custom">
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-			{#each testimonials.slice(0, 3) as testimonial, i (i)}
-				<div class="bg-base-100 p-8 relative">
-					<div class="absolute top-4 left-4 opacity-10">
-						<Icon icon="ph:quotes-fill" class="text-4xl" />
-					</div>
-					<h3 class="text-lg mb-4 relative z-10">{testimonial.title}</h3>
-					<p class="text-base leading-relaxed relative z-10 mb-4">"{testimonial.quote}"</p>
-					<div class="border-t border-base-300 pt-4">
-						<p class="font-bold">{testimonial.author}</p>
-						<p class="text-sm opacity-70">{testimonial.role}</p>
-					</div>
-				</div>
-			{/each}
-		</div>
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 max-w-4xl mx-auto">
-			{#each testimonials.slice(3) as testimonial, i (i)}
-				<div class="bg-base-100 p-8 relative">
-					<div class="absolute top-4 left-4 opacity-10">
-						<Icon icon="ph:quotes-fill" class="text-4xl" />
-					</div>
-					<h3 class="text-lg mb-4 relative z-10">{testimonial.title}</h3>
-					<p class="text-base leading-relaxed relative z-10 mb-4">"{testimonial.quote}"</p>
-					<div class="border-t border-base-300 pt-4">
-						<p class="font-bold">{testimonial.author}</p>
-						<p class="text-sm opacity-70">{testimonial.role}</p>
-					</div>
-				</div>
-			{/each}
-		</div>
+		<TestimonialSlider {testimonials} />
 	</div>
 </section>
 
 <!-- Register Interest Form -->
-<section id="register-interest" class="py-20 md:py-28 bg-base-100">
+<section
+	id="register-interest"
+	class="section-dark py-20 md:py-28"
+	use:trigger={(v) => {
+		registerHeading = v;
+		setTimeout(() => (registerForm = v), 150);
+	}}
+>
 	<div class="container-custom">
-		<div class="max-w-2xl mx-auto">
-			<div class="text-center mb-12">
-				<h2 class="mb-4">REGISTER YOUR INTEREST</h2>
-				<p class="text-lg">
-					We want to disrupt everyday thinking, spark new ideas and create new ways to interact that
-					will support you to truly have an impact. If you're ready to elevate your leadership
-					capabilities in local government, register your interest by filling out the form below.
-				</p>
-			</div>
-
-			<form onsubmit={handleInterestSubmit} class="space-y-6" data-testid="interest-form">
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-					<label class="form-control w-full">
-						<div class="label">
-							<span class="label-text font-medium">First Name</span>
-						</div>
-						<input
-							type="text"
-							bind:value={firstName}
-							required
-							class="input input-bordered w-full rounded-none"
-							placeholder="John"
-						/>
-					</label>
-
-					<label class="form-control w-full">
-						<div class="label">
-							<span class="label-text font-medium">Last Name</span>
-						</div>
-						<input
-							type="text"
-							bind:value={lastName}
-							required
-							class="input input-bordered w-full rounded-none"
-							placeholder="Smith"
-						/>
-					</label>
+		<div class="max-w-3xl mx-auto">
+			{#if registerHeading}
+				<div class="text-center mb-12" in:fly={{ y: 30, duration: 600 }}>
+					<h2 class="text-5xl lg:text-7xl font-bold text-white mb-6">REGISTER YOUR INTEREST</h2>
+					<p class="text-lg text-white opacity-80">
+						We want to disrupt everyday thinking, spark new ideas and create new ways to interact
+						that will support you to truly have an impact. If you're ready to elevate your leadership
+						capabilities in local government, register your interest by filling out the form below.
+					</p>
 				</div>
-
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text font-medium">Email</span>
-					</div>
-					<input
-						type="email"
-						bind:value={email}
-						required
-						class="input input-bordered w-full rounded-none"
-						placeholder="john@council.gov.au"
+			{/if}
+			{#if registerForm}
+				<div in:fly={{ y: 30, duration: 600 }}>
+					<ContactForm
+						prefix="[Leadership Development Program for Local Government Interest]"
+						class="bg-neutral/50 p-8 md:p-12"
 					/>
-				</label>
-
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text font-medium">Phone (optional)</span>
-					</div>
-					<input
-						type="tel"
-						bind:value={phone}
-						class="input input-bordered w-full rounded-none"
-						placeholder="+61 400 000 000"
-					/>
-				</label>
-
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text font-medium">Council / Organisation</span>
-					</div>
-					<input
-						type="text"
-						bind:value={company}
-						required
-						class="input input-bordered w-full rounded-none"
-						placeholder="Your Council or Organisation Name"
-					/>
-				</label>
-
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text font-medium">Message (optional)</span>
-					</div>
-					<textarea
-						bind:value={message}
-						class="textarea textarea-bordered w-full rounded-none h-24"
-						placeholder="Tell us about your leadership development goals..."
-					></textarea>
-				</label>
-
-				{#if formStatus === 'error'}
-					<div class="alert alert-error rounded-none">
-						<Icon icon="ph:warning-circle" class="text-lg" />
-						<span>{errorMessage}</span>
-					</div>
-				{/if}
-				{#if formStatus === 'sent'}
-					<div class="alert alert-success rounded-none">
-						<Icon icon="ph:check-circle" class="text-lg" />
-						<span>Thanks for your interest! We'll be in touch within 24 hours.</span>
-					</div>
-				{/if}
-
-				<button
-					type="submit"
-					class="btn btn-primary btn-lg uppercase font-bold rounded-none w-full"
-					disabled={formStatus === 'sending'}
-				>
-					{#if formStatus === 'sending'}
-						<span class="loading loading-spinner loading-sm"></span>
-						Sending...
-					{:else}
-						Submit Your Interest
-					{/if}
-				</button>
-			</form>
+				</div>
+			{/if}
 		</div>
-	</div>
-</section>
-
-<!-- Stay in the Loop -->
-<section class="section-dark py-16">
-	<div class="container-custom text-center">
-		<h2 class="text-3xl md:text-4xl mb-6">STAY IN THE LOOP</h2>
-		<p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">
-			Receive news and information on upcoming events
-		</p>
-		<a href={resolve('/contact')} class="btn btn-primary btn-lg uppercase font-bold rounded-none">
-			CONTACT US
-		</a>
 	</div>
 </section>

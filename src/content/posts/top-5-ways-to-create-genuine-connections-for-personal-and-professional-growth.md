@@ -4,7 +4,7 @@ title: "Authentic Networking for Finance Business Partnering: The Top 5 Ways To 
 slug: top-5-ways-to-create-genuine-connections-for-personal-and-professional-growth
 excerpt: "Forming authentic connections is crucial for personal and professional growth in today's competitive business world. This is especially true in Finance Business Partnering, where strong relationships can lead to improved collaboration, enhanced performance, and greater job satisfaction."
 date: "2024-10-04"
-featuredImage: "https://impactology.com.au/wp-content/uploads/2024/10/Authentic-Networking-for-Finance-Business-Partnering.jpg"
+featuredImage: "/blog/top-5-ways-to-create-genuine-connections-for-personal-and-professional-growth.webp"
 author: "George Liberopoulos"
 ---
 

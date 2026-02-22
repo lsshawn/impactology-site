@@ -4,7 +4,7 @@ title: "From Burnout to Brilliance: Empowering BPO Teams Through Leadership Deve
 slug: transform-bpo-teams-leadership-business-partnering
 excerpt: "The business process outsourcing (BPO) industry is known for its fast-paced, high-pressure environment. Large teams often manage cross-functional tasks and represent clients on the front lines, so the stakes are high. The need to meet client expectations, adapt to changing demands, and handle large volumes of work can lead to employee burnout."
 date: "2025-03-25"
-featuredImage: "https://impactology.com.au/wp-content/uploads/BPO-Leadership-Development-768x511.jpg"
+featuredImage: "/blog/transform-bpo-teams-leadership-business-partnering.webp"
 author: "George Liberopoulos"
 ---
 

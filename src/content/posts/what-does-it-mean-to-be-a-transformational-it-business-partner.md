@@ -4,7 +4,7 @@ title: "What Does It Mean to Be a Transformational IT Business Partner?"
 slug: what-does-it-mean-to-be-a-transformational-it-business-partner
 excerpt: "A transactional IT business partner operates in a reactive capacity, fulfilling immediate needs, troubleshooting issues, and focusing on short-term deliverables. While this role is important, it often limits the IT function to being seen as a cost centre rather than a value driver."
 date: "2025-02-11"
-featuredImage: "https://impactology.com.au/wp-content/uploads/What-Does-It-Mean-to-Be-a-Transformational-IT-Business-Partner-1-1.webp"
+featuredImage: "/blog/what-does-it-mean-to-be-a-transformational-it-business-partner.webp"
 author: "George Liberopoulos"
 ---
 

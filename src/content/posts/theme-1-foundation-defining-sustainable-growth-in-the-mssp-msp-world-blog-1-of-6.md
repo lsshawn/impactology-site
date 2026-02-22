@@ -4,7 +4,7 @@ title: "Theme 1. Foundation. Defining Sustainable Growth in the MSSP/MSP World (
 slug: theme-1-foundation-defining-sustainable-growth-in-the-mssp-msp-world-blog-1-of-6
 excerpt: "Sustainable growth in a fast-paced, service-driven sector like MSPs requires a deliberate focus on aligning employee learning and development with business objectives."
 date: "2024-11-20"
-featuredImage: "https://impactology.com.au/wp-content/uploads/2024/11/Defining-Sustainable-Growth-in-the-MSSPMSP-World.jpg"
+featuredImage: "/blog/theme-1-foundation-defining-sustainable-growth-in-the-mssp-msp-world-blog-1-of-6.webp"
 author: "George Liberopoulos"
 ---
 

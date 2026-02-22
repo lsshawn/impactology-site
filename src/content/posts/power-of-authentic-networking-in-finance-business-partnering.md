@@ -4,7 +4,7 @@ title: "The Power of Authentic Networking in Finance Business Partnering: Strate
 slug: power-of-authentic-networking-in-finance-business-partnering
 excerpt: "Discover the power of authentic networking in finance business partnering. Learn strategies for success, build meaningful connections, and enhance your career."
 date: "2024-06-05"
-featuredImage: "https://impactology.com.au/wp-content/uploads/2024/06/agreement-urban-handshake-cooperation-support_1134-702.jpg"
+featuredImage: "/blog/power-of-authentic-networking-in-finance-business-partnering.webp"
 author: "George Liberopoulos"
 ---
 

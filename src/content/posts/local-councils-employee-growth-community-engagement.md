@@ -4,7 +4,7 @@ title: "Three Strategies Local Councils (LGAs) Can Drive Employee Growth and Enh
 slug: local-councils-employee-growth-community-engagement
 excerpt: "Local councils (LGAs) face increasing pressure to do more with less. Tight budgets, growing community expectations, and evolving societal and technological challenges demand innovative solutions. Limited resources might seem like a roadblock to employee growth and community engagement, but they can also be an opportunity to rethink and refine how councils invest in their most valuable asset: their people."
 date: "2025-02-24"
-featuredImage: "https://impactology.com.au/wp-content/uploads/Three-Strategies-Local-Councils-LGAs-Can-Drive-Employee-Growth-1.jpg"
+featuredImage: "/blog/local-councils-employee-growth-community-engagement.webp"
 author: "George Liberopoulos"
 ---
 

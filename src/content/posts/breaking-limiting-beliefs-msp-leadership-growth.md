@@ -4,7 +4,7 @@ title: "Breaking Limiting Beliefs in MSP Leadership: Unlocking Growth and Client
 slug: breaking-limiting-beliefs-msp-leadership-growth
 excerpt: "For Managed Service Providers (MSPs), growth is both an opportunity and a challenge. Rapid expansion, increasing client demands, and ever-changing technology landscapes require leaders and teams to operate at their full potential. However, many MSPs are held back—not by external market conditions, but by internal limiting beliefs that stifle innovation, hinder collaboration, and prevent significant leaps in growth."
 date: "2025-02-11"
-featuredImage: "https://impactology.com.au/wp-content/uploads/Breaking-Limiting-Beliefs-in-MSP-Leadership-2.webp"
+featuredImage: "/blog/breaking-limiting-beliefs-msp-leadership-growth.webp"
 author: "George Liberopoulos"
 ---
 

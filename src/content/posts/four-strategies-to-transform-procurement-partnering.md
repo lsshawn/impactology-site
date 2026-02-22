@@ -4,7 +4,7 @@ title: "Four Strategies to Transform Your Business Partnering Approach in Procur
 slug: four-strategies-to-transform-procurement-partnering
 excerpt: "Procurement teams play a critical role beyond cost savings and supplier negotiations. Leading procurement departments in large and enterprise-sized organisations are evolving from a purely transactional function to a strategic partner that drives innovation, sustainability, and long-term value creation."
 date: "2025-01-06"
-featuredImage: "https://impactology.com.au/wp-content/uploads/2025/01/From-Transactional-to-Strategic-Transform-Your-Procurement.jpg"
+featuredImage: "/blog/four-strategies-to-transform-procurement-partnering.webp"
 author: "George Liberopoulos"
 ---
 

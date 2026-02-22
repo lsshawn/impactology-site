@@ -4,7 +4,7 @@ title: "Employee Growth for Managed Service Providers (MSPs): A Strategic Path t
 slug: employee-growth-for-managed-service-providers-msps-a-strategic-path-to-success
 excerpt: "For forward-thinking MSP CEOs and founders, navigating rapid growth while maintaining a cohesive and thriving company culture can feel like walking a tightrope. As your Managed Service Provider scales, the challenges of retaining top talent, fostering leadership, and aligning employee development with business goals become ever more critical."
 date: "2024-12-23"
-featuredImage: "https://impactology.com.au/wp-content/uploads/2024/12/IMG-20241114-WA0018-1.jpg"
+featuredImage: "/blog/employee-growth-for-managed-service-providers-msps-a-strategic-path-to-success.webp"
 author: "George Liberopoulos"
 ---
 

@@ -4,7 +4,7 @@ title: "The Top 7 Mindset Shifts for Finance Business Partners: Cultivating a Gr
 slug: top-5-mindset-shifts-for-finance-business-partners
 excerpt: "In the dynamic landscape of business finance within organisations, the role of finance business partners (FBPs) is pivotal. These partners are not merely fiscal managers but integral to fostering relationships across business units, influencing strategic decisions, and driving organisational growth."
 date: "2024-07-23"
-featuredImage: "https://impactology.com.au/wp-content/uploads/2024/07/Business-Partnership.jpg"
+featuredImage: "/blog/top-5-mindset-shifts-for-finance-business-partners.webp"
 author: "George Liberopoulos"
 ---
 

@@ -4,7 +4,7 @@ title: "Mindful Decision-Making: Five Tips To Enhancing Your Business Partnering
 slug: five-tips-to-enhancing-your-business-partnering-judgment-and-intuition-in-procurement
 excerpt: "Effective procurement is more than just sourcing and purchasing; it's about making informed, intuitive decisions that benefit the entire organisation. Business partnering within procurement is critical in this process, focusing on collaboration and strategic thinking to enhance overall performance."
 date: "2024-10-16"
-featuredImage: "https://impactology.com.au/wp-content/uploads/2024/10/2-man-shaking-hands.jpg"
+featuredImage: "/blog/five-tips-to-enhancing-your-business-partnering-judgment-and-intuition-in-procurement.webp"
 author: "George Liberopoulos"
 ---
 

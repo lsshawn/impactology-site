@@ -4,7 +4,7 @@ title: "The Journey Within: The Top 4 Tips to Enhance Self-Awareness for People 
 slug: top-4-tips-to-enhance-self-awareness-for-people-culture-business-partners
 excerpt: "Self-awareness is a cornerstone of effective leadership and essential for People & Culture Business Partners. Understanding oneself paves the way for better relationships, improved decision-making, and enhanced professional growth."
 date: "2024-09-26"
-featuredImage: "https://impactology.com.au/wp-content/uploads/2024/09/two-businessmen-shaking-hands-while-meeting-lobby.jpg"
+featuredImage: "/blog/top-4-tips-to-enhance-self-awareness-for-people-culture-business-partners.webp"
 author: "George Liberopoulos"
 ---
 

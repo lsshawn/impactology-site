@@ -4,7 +4,7 @@ title: "Four Tips to Overcome the Challenges of Employee Growth in Local Governm
 slug: tips-to-overcome-local-government-employee-growth-challenges
 excerpt: "Local government faces a unique challenge: fostering employee growth while ensuring that the workforce is deeply connected to and responsive to community needs. With tight budgets, diverse stakeholder expectations, and increasing demands for innovation, leaders must strike a balance between internal development and external impact."
 date: "2025-03-12"
-featuredImage: "https://impactology.com.au/wp-content/uploads/Four-Tips-to-Overcome-the-Challenges-of-Employee-Growth-in-Local-Government-1.jpg"
+featuredImage: "/blog/tips-to-overcome-local-government-employee-growth-challenges.webp"
 author: "George Liberopoulos"
 ---
 

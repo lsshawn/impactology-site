@@ -4,7 +4,7 @@ title: "How to Be a Better Finance Business Partner: Seven Essential Tips for Su
 slug: how-to-be-a-better-finance-business-partner
 excerpt: "Unlock your potential as a finance business partner with these seven essential tips. Enhance your skills, build strong relationships, and drive business success."
 date: "2024-06-11"
-featuredImage: "https://impactology.com.au/wp-content/uploads/2024/06/agreement-urban-handshake-cooperation-support_1134-702-1.avif"
+featuredImage: "/blog/how-to-be-a-better-finance-business-partner.webp"
 author: "George Liberopoulos"
 ---
 

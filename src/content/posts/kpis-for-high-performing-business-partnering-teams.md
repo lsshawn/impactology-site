@@ -4,7 +4,7 @@ title: "Key Performance Indicators for Team Leaders: Essential Metrics for Busin
 slug: kpis-for-high-performing-business-partnering-teams
 excerpt: "This has been one of our most-read articles among team leaders and business partners, and for good reason. If you're leading a team or driving strategic partnerships, you already know that measuring progress matters. Key Performance Indicators, or KPIs, are crucial tools to guide a team leader."
 date: "2025-07-03"
-featuredImage: "https://impactology.com.au/wp-content/uploads/Key-Performance-Indicators-for-Team-Leaders-768x511.jpg"
+featuredImage: "/blog/kpis-for-high-performing-business-partnering-teams.webp"
 author: "George Liberopoulos"
 ---
 

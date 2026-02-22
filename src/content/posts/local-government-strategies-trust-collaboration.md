@@ -4,7 +4,7 @@ title: "The 3 Strategies for Local Government Leaders to Drive Collaboration, Bu
 slug: local-government-strategies-trust-collaboration
 excerpt: "Local government leaders face a unique and demanding challenge: delivering exceptional services to their communities while managing diverse teams, tight budgets, and complex stakeholder relationships. Success in this environment requires a workforce that is not only skilled but also collaborative."
 date: "2025-04-22"
-featuredImage: "https://impactology.com.au/wp-content/uploads/Local-Government-Strategies-768x511.jpg"
+featuredImage: "/blog/local-government-strategies-trust-collaboration.webp"
 author: "George Liberopoulos"
 ---
 

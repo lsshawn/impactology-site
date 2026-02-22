@@ -4,7 +4,7 @@ title: "Building Effective Business Partner Relationships: A Practical Guide"
 slug: build-effective-business-partner-relationships
 excerpt: "Across finance, HR, IT, procurement, and operations, the role of professionals has expanded well beyond support functions. They're being called on to become trusted business partners, helping to guide decisions, align resources, and influence the direction of the business."
 date: "2025-11-04"
-featuredImage: "https://impactology.com.au/wp-content/uploads/Building-Effective-Business-Partner-Relationships-A-Practical-Guide-768x511.jpg"
+featuredImage: "/blog/build-effective-business-partner-relationships.webp"
 author: "George Liberopoulos"
 ---
 

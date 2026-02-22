@@ -4,7 +4,7 @@ title: "Driving Operational Excellence: How BPO Leaders Can Build High-Performin
 slug: high-performing-cross-functional-bpo-teams
 excerpt: "For many large enterprise businesses worldwide, Business Process Outsourcing (BPO), operational excellence is the backbone of success. BPO leaders are tasked with delivering seamless service, maintaining efficiency, and exceeding client expectations\u2014all while managing large, diverse, and often geographically dispersed teams."
 date: "2025-04-08"
-featuredImage: "https://impactology.com.au/wp-content/uploads/BPO-Cross-Functional-Teams-768x511.jpg"
+featuredImage: "/blog/high-performing-cross-functional-bpo-teams.webp"
 author: "George Liberopoulos"
 ---
 

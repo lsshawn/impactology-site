@@ -4,7 +4,7 @@ title: "Balancing Ambition and Well-being: Five Finance Business Partner Strateg
 slug: balancing-ambition-and-well-being-five-finance-business-partner-strategies-for-personal-growth
 excerpt: "In the ever-evolving finance landscape, professionals are increasingly seeking strategies to enhance their career growth and maintain a healthy balance between their personal and professional lives. Training for finance business partners has emerged as a critical tool in cultivating a workforce that is both ambitious and well-prepared to handle the pressures of the finance industry."
 date: "2024-11-08"
-featuredImage: "https://impactology.com.au/wp-content/uploads/2024/11/Balancing-Ambition-and-Well-being.jpg"
+featuredImage: "/blog/balancing-ambition-and-well-being-five-finance-business-partner-strategies-for-personal-growth.webp"
 author: "George Liberopoulos"
 ---
 

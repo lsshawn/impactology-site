@@ -4,7 +4,7 @@ title: "Mindful Communication: The Top 4 Interpersonal Skills for People & Cultu
 slug: top-4-interpersonal-skills-for-people-and-culture-business-partners-to-grow-and-thrive
 excerpt: "Discover the top 4 interpersonal skills for People & Culture Business Partners. Learn mindful communication techniques to grow, thrive, and enhance workplace harmony."
 date: "2024-06-18"
-featuredImage: "https://impactology.com.au/wp-content/uploads/2024/06/two-businessmen-shaking-hands-while-meeting-lobby_158595-5259.avif"
+featuredImage: "/blog/top-4-interpersonal-skills-for-people-and-culture-business-partners-to-grow-and-thrive.webp"
 author: "George Liberopoulos"
 ---
 

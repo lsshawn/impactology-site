@@ -4,7 +4,7 @@ title: "The Rise of the IT Business Partner: Bridging Tech, Strategy and Advice"
 slug: rise-of-the-it-business-partners
 excerpt: "Technology has always been the growth engine room of modern business. But the expectations placed on IT teams have shifted dramatically. No longer is it enough to \"keep the systems running in the background\". Today, organisations want IT leaders who can sit at the planning and strategy table."
 date: "2025-10-31"
-featuredImage: "https://impactology.com.au/wp-content/uploads/The-Rise-of-the-IT-Business-Partner-768x511.jpg"
+featuredImage: "/blog/rise-of-the-it-business-partners.webp"
 author: "George Liberopoulos"
 ---
 

@@ -4,7 +4,7 @@ title: "Growing Leadership Potential in Finance Business Partnering: Strategies 
 slug: growing-leadership-potential-in-finance-business-partnering
 excerpt: "Discover success strategies for finance business partnering. Cultivate leadership potential in finance roles with proven techniques."
 date: "2024-05-15"
-featuredImage: "https://impactology.com.au/wp-content/uploads/2024/05/futuristic-business-scene-with-ultra-modern-ambiance_23-2151003788.avif"
+featuredImage: "/blog/growing-leadership-potential-in-finance-business-partnering.webp"
 author: "George Liberopoulos"
 ---
 

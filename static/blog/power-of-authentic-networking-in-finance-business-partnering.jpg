@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta name="google-site-verification" content="29ERP-hE8vETzaH6026MBl1dSOAvuCdMztBfwa9fa1U" />	
+<meta charset="UTF-8">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://impactology.com.au/xmlrpc.php">
+<script>
+	document.addEventListener("DOMContentLoaded", function () {
+    let recaptchaScript = document.querySelector('script[src*="https://www.google.com/recaptcha/api.js"]');
+    if (recaptchaScript) {
+        recaptchaScript.remove();
+        console.log("reCAPTCHA script removed.");
+    }
+});
+
+	</script>
+	<script>
+	if (typeof grecaptcha !== "undefined" && grecaptcha !== null) {
+    grecaptcha.render = function () { console.log("reCAPTCHA blocked!"); };
+    grecaptcha.execute = function () { console.log("reCAPTCHA execution stopped!"); };
+} else {
+    console.log("reCAPTCHA is not loaded, no action needed.");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    let recaptchaDiv = document.querySelector(".g-recaptcha");
+    if (recaptchaDiv) {
+        recaptchaDiv.remove();
+        console.log("Removed reCAPTCHA div.");
+    }
+});
+
+
+	</script>
+<script>
+// Remove reCAPTCHA script from the page
+const recaptchaScript = document.querySelector('script[src*="recaptcha/api.js"]');
+if (recaptchaScript) {
+  recaptchaScript.parentElement.removeChild(recaptchaScript);
+}
+
+// Remove the reCAPTCHA button or widget (if using v2)
+const recaptchaButton = document.querySelector('.g-recaptcha');
+if (recaptchaButton) {
+  recaptchaButton.parentElement.removeChild(recaptchaButton);
+}
+
+// If you have any form event listeners related to reCAPTCHA, remove them
+document.getElementById("myForm").removeEventListener("submit", handleReCaptchaSubmit);
+
+// Reset any existing reCAPTCHA widget
+if (typeof grecaptcha !== "undefined") {
+  grecaptcha.reset(); // If there's any active reCAPTCHA, reset it
+}
+
+</script>
+
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "spk3ncwo48");
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Corporation",
+  "name": "Impactology",
+  "url": "https://impactology.com.au/",
+  "logo": "https://impactology.com.au/wp-content/uploads/2020/09/Impactology-logo-2.png",
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "",
+    "contactType": "",
+    "areaServed": "AU"
+  },
+  "sameAs": [
+    "https://www.facebook.com/ImpactologyAust/",
+    "https://www.youtube.com/channel/UC2c5m2Io0INs-PnShJUaHQA",
+    "https://au.linkedin.com/company/impactology"
+  ]
+}
+</script>	
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name='robots' content='noindex, follow' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v26.9 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Page not found - Impactology</title>
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:title" content="Page not found - Impactology" />
+	<meta property="og:site_name" content="Impactology" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://impactology.com.au/#website","url":"https://impactology.com.au/","name":"Impactology","description":"You Can Create an Impact","publisher":{"@id":"https://impactology.com.au/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://impactology.com.au/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"en-US"},{"@type":"Organization","@id":"https://impactology.com.au/#organization","name":"Impactology","url":"https://impactology.com.au/","logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://impactology.com.au/#/schema/logo/image/","url":"https://impactology.com.au/wp-content/uploads/2020/09/cropped-Impactology-Menu-logo-2.png","contentUrl":"https://impactology.com.au/wp-content/uploads/2020/09/cropped-Impactology-Menu-logo-2.png","width":125,"height":31,"caption":"Impactology"},"image":{"@id":"https://impactology.com.au/#/schema/logo/image/"}}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//cdn.jsdelivr.net' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Impactology &raquo; Feed" href="https://impactology.com.au/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Impactology &raquo; Comments Feed" href="https://impactology.com.au/comments/feed/" />
+<style id='wp-img-auto-sizes-contain-inline-css' type='text/css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='sbi_styles-css' href='https://impactology.com.au/wp-content/plugins/instagram-feed-pro/css/sbi-styles.min.css?ver=6.9.0' type='text/css' media='all' />
+<link rel='stylesheet' id='fluentform-elementor-widget-css' href='https://impactology.com.au/wp-content/plugins/fluentform/assets/css/fluent-forms-elementor-widget.css?ver=6.1.17' type='text/css' media='all' />
+<link rel='stylesheet' id='premium-addons-css' href='https://impactology.com.au/wp-content/plugins/premium-addons-for-elementor/assets/frontend/min-css/premium-addons.min.css?ver=4.11.69' type='text/css' media='all' />
+<style id='wp-emoji-styles-inline-css' type='text/css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel='stylesheet' id='wp-block-library-css' href='https://impactology.com.au/wp-includes/css/dist/block-library/style.min.css?ver=6.9.1' type='text/css' media='all' />
+<style id='classic-theme-styles-inline-css' type='text/css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id='global-styles-inline-css' type='text/css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-term-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-term-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+/*# sourceURL=woocommerce-inline-inline-css */
+</style>
+<link rel='stylesheet' id='font-awesome-css' href='https://impactology.com.au/wp-content/plugins/elementor/assets/lib/font-awesome/css/font-awesome.min.css?ver=4.7.0' type='text/css' media='all' />
+<link rel='stylesheet' id='meltony-theme-style-css' href='https://impactology.com.au/wp-content/themes/meltony/style.css?ver=1.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='meltony-theme-main-style-css' href='https://impactology.com.au/wp-content/themes/meltony/theme.css?ver=1.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='swiper-css' href='https://impactology.com.au/wp-content/plugins/elementor/assets/lib/swiper/v8/css/swiper.min.css?ver=8.4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='blog-layouts-module-css' href='https://impactology.com.au/wp-content/themes/meltony/inc/modules/blog-layouts/assets/css/blog-layouts-module.css?ver=1.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='meltony-woocommerce-style-css' href='https://impactology.com.au/wp-content/themes/meltony/inc/modules/woo/assets/css/woo-module.css?ver=1.0.1' type='text/css' media='all' />
+<link rel='stylesheet' id='cx-google-fonts-meltony-css' href='//fonts.googleapis.com/css?family=DM+Sans%3A400%2C500%2C300%2C700%2C900&#038;subset=latin&#038;ver=6.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://impactology.com.au/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.35.4' type='text/css' media='all' />
+<style id='elementor-frontend-inline-css' type='text/css'>
+.elementor-kit-604{--e-global-color-primary:#000000;--e-global-color-secondary:#000000;--e-global-color-text:#000000;--e-global-color-accent:#61CE70;--e-global-color-7540549:#4054B2;--e-global-color-2061e3ec:#23A455;--e-global-color-1e2e161d:#000;--e-global-color-33b450d5:#FFF;--e-global-color-632cab8d:#F66941;--e-global-typography-primary-font-family:"Merriweather Sans";--e-global-typography-primary-font-weight:600;--e-global-typography-secondary-font-family:"Montserrat Alternates";--e-global-typography-secondary-font-weight:400;--e-global-typography-text-font-family:"Roboto";--e-global-typography-text-font-weight:400;--e-global-typography-accent-font-family:"Roboto";--e-global-typography-accent-font-weight:500;}.elementor-kit-604 e-page-transition{background-color:#FFBC7D;}.elementor-section.elementor-section-boxed > .elementor-container{max-width:1140px;}.e-con{--container-max-width:1140px;}.elementor-widget:not(:last-child){margin-block-end:20px;}.elementor-element{--widgets-spacing:20px 20px;--widgets-spacing-row:20px;--widgets-spacing-column:20px;}{}h1.entry-title{display:var(--page-title-display);}@media(max-width:1024px){.elementor-section.elementor-section-boxed > .elementor-container{max-width:1024px;}.e-con{--container-max-width:1024px;}}@media(max-width:767px){.elementor-section.elementor-section-boxed > .elementor-container{max-width:767px;}.e-con{--container-max-width:767px;}}
+.elementor-3596 .elementor-element.elementor-element-35505457 > .elementor-container > .elementor-column > .elementor-widget-wrap{align-content:center;align-items:center;}.elementor-3596 .elementor-element.elementor-element-35505457:not(.elementor-motion-effects-element-type-background), .elementor-3596 .elementor-element.elementor-element-35505457 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#ffffff;}.elementor-3596 .elementor-element.elementor-element-35505457 > .elementor-container{min-height:100px;}.elementor-3596 .elementor-element.elementor-element-35505457{box-shadow:0px 0px 24px 0px rgba(0,0,0,0.15);transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;}.elementor-3596 .elementor-element.elementor-element-35505457 > .elementor-background-overlay{transition:background 0.3s, border-radius 0.3s, opacity 0.3s;}.elementor-widget-image .widget-image-caption{color:var( --e-global-color-text );font-family:var( --e-global-typography-text-font-family ), Sans-serif;font-weight:var( --e-global-typography-text-font-weight );line-height:var( --e-global-typography-text-line-height );}.elementor-widget-nav-menu .elementor-nav-menu .elementor-item{font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-weight:var( --e-global-typography-primary-font-weight );line-height:var( --e-global-typography-primary-line-height );}.elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item{color:var( --e-global-color-text );fill:var( --e-global-color-text );}.elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item:hover,
+					.elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item.elementor-item-active,
+					.elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item.highlighted,
+					.elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item:focus{color:var( --e-global-color-accent );fill:var( --e-global-color-accent );}.elementor-widget-nav-menu .elementor-nav-menu--main:not(.e--pointer-framed) .elementor-item:before,
+					.elementor-widget-nav-menu .elementor-nav-menu--main:not(.e--pointer-framed) .elementor-item:after{background-color:var( --e-global-color-accent );}.elementor-widget-nav-menu .e--pointer-framed .elementor-item:before,
+					.elementor-widget-nav-menu .e--pointer-framed .elementor-item:after{border-color:var( --e-global-color-accent );}.elementor-widget-nav-menu{--e-nav-menu-divider-color:var( --e-global-color-text );}.elementor-widget-nav-menu .elementor-nav-menu--dropdown .elementor-item, .elementor-widget-nav-menu .elementor-nav-menu--dropdown  .elementor-sub-item{font-family:var( --e-global-typography-accent-font-family ), Sans-serif;font-weight:var( --e-global-typography-accent-font-weight );}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-menu-toggle{margin-left:auto;background-color:rgba(0,0,0,0);border-width:0px;border-radius:0px;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu .elementor-item{font-size:13px;font-weight:400;text-transform:uppercase;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--main .elementor-item{color:#000000;fill:#000000;padding-left:2px;padding-right:2px;padding-top:40px;padding-bottom:40px;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--main .elementor-item:hover,
+					.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--main .elementor-item.elementor-item-active,
+					.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--main .elementor-item.highlighted,
+					.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--main .elementor-item:focus{color:#000000;fill:#000000;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--main:not(.e--pointer-framed) .elementor-item:before,
+					.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--main:not(.e--pointer-framed) .elementor-item:after{background-color:#FFF000;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .e--pointer-framed .elementor-item:before,
+					.elementor-3596 .elementor-element.elementor-element-5cd5efcf .e--pointer-framed .elementor-item:after{border-color:#FFF000;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .e--pointer-framed .elementor-item:before{border-width:2px;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .e--pointer-framed.e--animation-draw .elementor-item:before{border-width:0 0 2px 2px;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .e--pointer-framed.e--animation-draw .elementor-item:after{border-width:2px 2px 0 0;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .e--pointer-framed.e--animation-corners .elementor-item:before{border-width:2px 0 0 2px;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .e--pointer-framed.e--animation-corners .elementor-item:after{border-width:0 2px 2px 0;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .e--pointer-underline .elementor-item:after,
+					 .elementor-3596 .elementor-element.elementor-element-5cd5efcf .e--pointer-overline .elementor-item:before,
+					 .elementor-3596 .elementor-element.elementor-element-5cd5efcf .e--pointer-double-line .elementor-item:before,
+					 .elementor-3596 .elementor-element.elementor-element-5cd5efcf .e--pointer-double-line .elementor-item:after{height:2px;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--dropdown a, .elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-menu-toggle{color:#000000;fill:#000000;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--dropdown{background-color:#FFFFFF;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--dropdown a:hover,
+					.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--dropdown a:focus,
+					.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--dropdown a.elementor-item-active,
+					.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--dropdown a.highlighted,
+					.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-menu-toggle:hover,
+					.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-menu-toggle:focus{color:#000000;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--dropdown a:hover,
+					.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--dropdown a:focus,
+					.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--dropdown a.elementor-item-active,
+					.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--dropdown a.highlighted{background-color:#ededed;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--dropdown .elementor-item, .elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--dropdown  .elementor-sub-item{font-size:15px;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf div.elementor-menu-toggle{color:#000000;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf div.elementor-menu-toggle svg{fill:#000000;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf div.elementor-menu-toggle:hover, .elementor-3596 .elementor-element.elementor-element-5cd5efcf div.elementor-menu-toggle:focus{color:#00ce1b;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf div.elementor-menu-toggle:hover svg, .elementor-3596 .elementor-element.elementor-element-5cd5efcf div.elementor-menu-toggle:focus svg{fill:#00ce1b;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf{--nav-menu-icon-size:30px;}.elementor-widget-button .elementor-button{background-color:var( --e-global-color-accent );font-family:var( --e-global-typography-accent-font-family ), Sans-serif;font-weight:var( --e-global-typography-accent-font-weight );line-height:var( --e-global-typography-accent-line-height );}.elementor-3596 .elementor-element.elementor-element-6f2e2470 .elementor-button{background-color:#FFF000;font-size:14px;font-weight:600;text-transform:uppercase;line-height:30px;letter-spacing:1.4px;text-shadow:0px 0px 10px rgba(0,0,0,0.3);fill:#000000;color:#000000;box-shadow:0px 0px 27px 0px rgba(0,0,0,0.12);border-radius:100px 100px 100px 100px;}.elementor-theme-builder-content-area{height:400px;}.elementor-location-header:before, .elementor-location-footer:before{content:"";display:table;clear:both;}@media(max-width:1024px){.elementor-3596 .elementor-element.elementor-element-35505457{padding:20px 20px 20px 20px;}.elementor-widget-image .widget-image-caption{line-height:var( --e-global-typography-text-line-height );}.elementor-widget-nav-menu .elementor-nav-menu .elementor-item{line-height:var( --e-global-typography-primary-line-height );}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu .elementor-item{font-size:13px;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--main .elementor-item{padding-left:14px;padding-right:14px;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf{--e-nav-menu-horizontal-menu-item-margin:calc( 0px / 2 );}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--main:not(.elementor-nav-menu--layout-horizontal) .elementor-nav-menu > li:not(:last-child){margin-bottom:0px;}.elementor-widget-button .elementor-button{line-height:var( --e-global-typography-accent-line-height );}}@media(max-width:767px){.elementor-3596 .elementor-element.elementor-element-35505457{padding:20px 20px 20px 20px;}.elementor-3596 .elementor-element.elementor-element-5c40f2e6{width:50%;}.elementor-3596 .elementor-element.elementor-element-5c40f2e6 > .elementor-element-populated{margin:0px 0px 0px 0px;--e-column-margin-right:0px;--e-column-margin-left:0px;}.elementor-widget-image .widget-image-caption{line-height:var( --e-global-typography-text-line-height );}.elementor-3596 .elementor-element.elementor-element-15dfc602{width:50%;}.elementor-3596 .elementor-element.elementor-element-15dfc602 > .elementor-element-populated{margin:0px 0px 0px 0px;--e-column-margin-right:0px;--e-column-margin-left:0px;}.elementor-widget-nav-menu .elementor-nav-menu .elementor-item{line-height:var( --e-global-typography-primary-line-height );}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--dropdown a{padding-top:12px;padding-bottom:12px;}.elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu--main > .elementor-nav-menu > li > .elementor-nav-menu--dropdown, .elementor-3596 .elementor-element.elementor-element-5cd5efcf .elementor-nav-menu__container.elementor-nav-menu--dropdown{margin-top:20px !important;}.elementor-3596 .elementor-element.elementor-element-202e4e7d{width:50%;}.elementor-widget-button .elementor-button{line-height:var( --e-global-typography-accent-line-height );}}@media(min-width:768px){.elementor-3596 .elementor-element.elementor-element-5c40f2e6{width:21%;}.elementor-3596 .elementor-element.elementor-element-15dfc602{width:64%;}.elementor-3596 .elementor-element.elementor-element-202e4e7d{width:14.846%;}}@media(max-width:1024px) and (min-width:768px){.elementor-3596 .elementor-element.elementor-element-5c40f2e6{width:20%;}.elementor-3596 .elementor-element.elementor-element-15dfc602{width:60%;}.elementor-3596 .elementor-element.elementor-element-202e4e7d{width:20%;}}
+.elementor-3618 .elementor-element.elementor-element-d36269f > .elementor-container > .elementor-column > .elementor-widget-wrap{align-content:center;align-items:center;}.elementor-3618 .elementor-element.elementor-element-d36269f:not(.elementor-motion-effects-element-type-background), .elementor-3618 .elementor-element.elementor-element-d36269f > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#3E3E3E;}.elementor-3618 .elementor-element.elementor-element-d36269f{transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;}.elementor-3618 .elementor-element.elementor-element-d36269f > .elementor-background-overlay{transition:background 0.3s, border-radius 0.3s, opacity 0.3s;}.elementor-bc-flex-widget .elementor-3618 .elementor-element.elementor-element-c173e86.elementor-column .elementor-widget-wrap{align-items:center;}.elementor-3618 .elementor-element.elementor-element-c173e86.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated{align-content:center;align-items:center;}.elementor-3618 .elementor-element.elementor-element-c173e86 > .elementor-element-populated{padding:0px 15px 0px 15px;}.elementor-widget-heading .elementor-heading-title{font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-weight:var( --e-global-typography-primary-font-weight );line-height:var( --e-global-typography-primary-line-height );color:var( --e-global-color-primary );}.elementor-3618 .elementor-element.elementor-element-0bd7dc3 > .elementor-widget-container{padding:0px 1px 0px 0px;}.elementor-3618 .elementor-element.elementor-element-0bd7dc3 .elementor-heading-title{font-family:"Merriweather Sans", Sans-serif;font-weight:600;color:#FFFFFF;}.elementor-widget-text-editor{font-family:var( --e-global-typography-text-font-family ), Sans-serif;font-weight:var( --e-global-typography-text-font-weight );line-height:var( --e-global-typography-text-line-height );color:var( --e-global-color-text );}.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:var( --e-global-color-primary );}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap, .elementor-widget-text-editor.elementor-drop-cap-view-default .elementor-drop-cap{color:var( --e-global-color-primary );border-color:var( --e-global-color-primary );}.elementor-3618 .elementor-element.elementor-element-2c443fc > .elementor-widget-container{padding:5px 0px 0px 0px;}.elementor-3618 .elementor-element.elementor-element-2c443fc{font-family:"Roboto", Sans-serif;font-size:14px;font-weight:400;color:#FFFFFF;}.elementor-bc-flex-widget .elementor-3618 .elementor-element.elementor-element-792d42b.elementor-column .elementor-widget-wrap{align-items:center;}.elementor-3618 .elementor-element.elementor-element-792d42b.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated{align-content:center;align-items:center;}.elementor-3618 .elementor-element.elementor-element-792d42b > .elementor-element-populated{padding:0px 0px 0px 0px;}.elementor-3618 .elementor-element.elementor-element-5431336 > .elementor-container > .elementor-column > .elementor-widget-wrap{align-content:center;align-items:center;}.elementor-3618 .elementor-element.elementor-element-5431336:not(.elementor-motion-effects-element-type-background), .elementor-3618 .elementor-element.elementor-element-5431336 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#E3E4E8;}.elementor-3618 .elementor-element.elementor-element-5431336{transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;}.elementor-3618 .elementor-element.elementor-element-5431336 > .elementor-background-overlay{transition:background 0.3s, border-radius 0.3s, opacity 0.3s;}.elementor-bc-flex-widget .elementor-3618 .elementor-element.elementor-element-1fa39a30.elementor-column .elementor-widget-wrap{align-items:center;}.elementor-3618 .elementor-element.elementor-element-1fa39a30.elementor-column.elementor-element[data-element_type="column"] > .elementor-widget-wrap.elementor-element-populated{align-content:center;align-items:center;}.elementor-3618 .elementor-element.elementor-element-1fa39a30 > .elementor-element-populated{padding:0px 0px 0px 0px;}.elementor-3618 .elementor-element.elementor-element-eeedb44 .elementor-repeater-item-56eb594.elementor-social-icon{background-color:#000000;}.elementor-3618 .elementor-element.elementor-element-eeedb44{--grid-template-columns:repeat(0, auto);--icon-size:23px;--grid-column-gap:11px;--grid-row-gap:0px;}.elementor-3618 .elementor-element.elementor-element-eeedb44 .elementor-widget-container{text-align:center;}.elementor-3618 .elementor-element.elementor-element-eeedb44 .elementor-social-icon{background-color:#000000;--icon-padding:0.4em;}.elementor-widget-nav-menu .elementor-nav-menu .elementor-item{font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-weight:var( --e-global-typography-primary-font-weight );line-height:var( --e-global-typography-primary-line-height );}.elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item{color:var( --e-global-color-text );fill:var( --e-global-color-text );}.elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item:hover,
+					.elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item.elementor-item-active,
+					.elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item.highlighted,
+					.elementor-widget-nav-menu .elementor-nav-menu--main .elementor-item:focus{color:var( --e-global-color-accent );fill:var( --e-global-color-accent );}.elementor-widget-nav-menu .elementor-nav-menu--main:not(.e--pointer-framed) .elementor-item:before,
+					.elementor-widget-nav-menu .elementor-nav-menu--main:not(.e--pointer-framed) .elementor-item:after{background-color:var( --e-global-color-accent );}.elementor-widget-nav-menu .e--pointer-framed .elementor-item:before,
+					.elementor-widget-nav-menu .e--pointer-framed .elementor-item:after{border-color:var( --e-global-color-accent );}.elementor-widget-nav-menu{--e-nav-menu-divider-color:var( --e-global-color-text );}.elementor-widget-nav-menu .elementor-nav-menu--dropdown .elementor-item, .elementor-widget-nav-menu .elementor-nav-menu--dropdown  .elementor-sub-item{font-family:var( --e-global-typography-accent-font-family ), Sans-serif;font-weight:var( --e-global-typography-accent-font-weight );}.elementor-3618 .elementor-element.elementor-element-586202c > .elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 0px 0px 0px;}.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu .elementor-item{font-size:13px;font-weight:400;text-transform:uppercase;}.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu--main .elementor-item{color:#000000;fill:#000000;padding-left:2px;padding-right:2px;padding-top:40px;padding-bottom:40px;}.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu--main .elementor-item:hover,
+					.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu--main .elementor-item.elementor-item-active,
+					.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu--main .elementor-item.highlighted,
+					.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu--main .elementor-item:focus{color:#000000;fill:#000000;}.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu--dropdown a, .elementor-3618 .elementor-element.elementor-element-586202c .elementor-menu-toggle{color:#000000;fill:#000000;}.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu--dropdown{background-color:#FFFFFF;}.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu--dropdown a:hover,
+					.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu--dropdown a:focus,
+					.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu--dropdown a.elementor-item-active,
+					.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu--dropdown a.highlighted,
+					.elementor-3618 .elementor-element.elementor-element-586202c .elementor-menu-toggle:hover,
+					.elementor-3618 .elementor-element.elementor-element-586202c .elementor-menu-toggle:focus{color:#000000;}.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu--dropdown a:hover,
+					.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu--dropdown a:focus,
+					.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu--dropdown a.elementor-item-active,
+					.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu--dropdown a.highlighted{background-color:#ededed;}.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu--dropdown .elementor-item, .elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu--dropdown  .elementor-sub-item{font-size:15px;}.elementor-3618 .elementor-element.elementor-element-329ca9a > .elementor-widget-container{margin:-25px 0px 0px 0px;padding:0px 0px 0px 0px;}.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu .elementor-item{font-size:13px;font-weight:400;text-transform:uppercase;}.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu--main .elementor-item{color:#000000;fill:#000000;padding-left:2px;padding-right:2px;padding-top:40px;padding-bottom:40px;}.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu--main .elementor-item:hover,
+					.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu--main .elementor-item.elementor-item-active,
+					.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu--main .elementor-item.highlighted,
+					.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu--main .elementor-item:focus{color:#000000;fill:#000000;}.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu--dropdown a, .elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-menu-toggle{color:#000000;fill:#000000;}.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu--dropdown{background-color:#FFFFFF;}.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu--dropdown a:hover,
+					.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu--dropdown a:focus,
+					.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu--dropdown a.elementor-item-active,
+					.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu--dropdown a.highlighted,
+					.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-menu-toggle:hover,
+					.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-menu-toggle:focus{color:#000000;}.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu--dropdown a:hover,
+					.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu--dropdown a:focus,
+					.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu--dropdown a.elementor-item-active,
+					.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu--dropdown a.highlighted{background-color:#ededed;}.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu--dropdown .elementor-item, .elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu--dropdown  .elementor-sub-item{font-size:15px;}.elementor-3618 .elementor-element.elementor-element-608d724d:not(.elementor-motion-effects-element-type-background), .elementor-3618 .elementor-element.elementor-element-608d724d > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-color:#E3E4E8;}.elementor-3618 .elementor-element.elementor-element-608d724d{transition:background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;padding:0px 0px 0px 0px;}.elementor-3618 .elementor-element.elementor-element-608d724d > .elementor-background-overlay{transition:background 0.3s, border-radius 0.3s, opacity 0.3s;}.elementor-3618 .elementor-element.elementor-element-372f8324 > .elementor-element-populated{padding:0px 0px 0px 0px;}.elementor-3618 .elementor-element.elementor-element-64195193 > .elementor-widget-container{margin:0px 0px 0px 0px;padding:0px 15px 0px 15px;}.elementor-3618 .elementor-element.elementor-element-64195193{text-align:center;font-family:"Roboto", Sans-serif;font-size:14px;font-weight:400;color:#403F3F;}.elementor-theme-builder-content-area{height:400px;}.elementor-location-header:before, .elementor-location-footer:before{content:"";display:table;clear:both;}@media(max-width:1024px){.elementor-widget-heading .elementor-heading-title{line-height:var( --e-global-typography-primary-line-height );}.elementor-widget-text-editor{line-height:var( --e-global-typography-text-line-height );}.elementor-3618 .elementor-element.elementor-element-5431336{padding:30px 25px 30px 25px;}.elementor-widget-nav-menu .elementor-nav-menu .elementor-item{line-height:var( --e-global-typography-primary-line-height );}.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu .elementor-item{font-size:13px;}.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu--main .elementor-item{padding-left:14px;padding-right:14px;}.elementor-3618 .elementor-element.elementor-element-586202c{--e-nav-menu-horizontal-menu-item-margin:calc( 0px / 2 );}.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu--main:not(.elementor-nav-menu--layout-horizontal) .elementor-nav-menu > li:not(:last-child){margin-bottom:0px;}.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu .elementor-item{font-size:13px;}.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu--main .elementor-item{padding-left:14px;padding-right:14px;}.elementor-3618 .elementor-element.elementor-element-329ca9a{--e-nav-menu-horizontal-menu-item-margin:calc( 0px / 2 );}.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu--main:not(.elementor-nav-menu--layout-horizontal) .elementor-nav-menu > li:not(:last-child){margin-bottom:0px;}}@media(max-width:767px){.elementor-widget-heading .elementor-heading-title{line-height:var( --e-global-typography-primary-line-height );}.elementor-widget-text-editor{line-height:var( --e-global-typography-text-line-height );}.elementor-3618 .elementor-element.elementor-element-5431336{padding:30px 20px 30px 20px;}.elementor-widget-nav-menu .elementor-nav-menu .elementor-item{line-height:var( --e-global-typography-primary-line-height );}.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu--dropdown a{padding-top:12px;padding-bottom:12px;}.elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu--main > .elementor-nav-menu > li > .elementor-nav-menu--dropdown, .elementor-3618 .elementor-element.elementor-element-586202c .elementor-nav-menu__container.elementor-nav-menu--dropdown{margin-top:20px !important;}.elementor-3618 .elementor-element.elementor-element-329ca9a > .elementor-widget-container{margin:0px 0px 0px 0px;}.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu--dropdown a{padding-top:12px;padding-bottom:12px;}.elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu--main > .elementor-nav-menu > li > .elementor-nav-menu--dropdown, .elementor-3618 .elementor-element.elementor-element-329ca9a .elementor-nav-menu__container.elementor-nav-menu--dropdown{margin-top:20px !important;}}/* Start custom CSS for section, class: .elementor-element-d36269f */#footer-gaps .elementor-column-gap-extended {
+    max-width: 1120px !important;
+}/* End custom CSS */
+/*# sourceURL=elementor-frontend-inline-css */
+</style>
+<link rel='stylesheet' id='widget-image-css' href='https://impactology.com.au/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.35.4' type='text/css' media='all' />
+<link rel='stylesheet' id='widget-nav-menu-css' href='https://impactology.com.au/wp-content/plugins/elementor-pro/assets/css/widget-nav-menu.min.css?ver=3.33.1' type='text/css' media='all' />
+<link rel='stylesheet' id='e-sticky-css' href='https://impactology.com.au/wp-content/plugins/elementor-pro/assets/css/modules/sticky.min.css?ver=3.33.1' type='text/css' media='all' />
+<link rel='stylesheet' id='widget-heading-css' href='https://impactology.com.au/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=3.35.4' type='text/css' media='all' />
+<link rel='stylesheet' id='widget-social-icons-css' href='https://impactology.com.au/wp-content/plugins/elementor/assets/css/widget-social-icons.min.css?ver=3.35.4' type='text/css' media='all' />
+<link rel='stylesheet' id='e-apple-webkit-css' href='https://impactology.com.au/wp-content/plugins/elementor/assets/css/conditionals/apple-webkit.min.css?ver=3.35.4' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-css' href='https://impactology.com.au/wp-content/plugins/elementor/assets/lib/eicons/css/elementor-icons.min.css?ver=5.47.0' type='text/css' media='all' />
+<link rel='stylesheet' id='sbistyles-css' href='https://impactology.com.au/wp-content/plugins/instagram-feed-pro/css/sbi-styles.min.css?ver=6.9.0' type='text/css' media='all' />
+<link rel='stylesheet' id='dashicons-css' href='https://impactology.com.au/wp-includes/css/dashicons.min.css?ver=6.9.1' type='text/css' media='all' />
+<link rel='stylesheet' id='eael-general-css' href='https://impactology.com.au/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/css/view/general.min.css?ver=6.5.11' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-merriweathersans-css' href='https://impactology.com.au/wp-content/uploads/elementor/google-fonts/css/merriweathersans.css?ver=1742303332' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-montserratalternates-css' href='https://impactology.com.au/wp-content/uploads/elementor/google-fonts/css/montserratalternates.css?ver=1742303343' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-roboto-css' href='https://impactology.com.au/wp-content/uploads/elementor/google-fonts/css/roboto.css?ver=1742303363' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-shared-0-css' href='https://impactology.com.au/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-solid-css' href='https://impactology.com.au/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3' type='text/css' media='all' />
+<link rel='stylesheet' id='elementor-icons-fa-brands-css' href='https://impactology.com.au/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3' type='text/css' media='all' />
+<script type="text/javascript" src="https://impactology.com.au/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script type="text/javascript" src="https://impactology.com.au/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="https://impactology.com.au/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.10.5.1" id="wc-jquery-blockui-js" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="wc-add-to-cart-js-extra">
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https://impactology.com.au","is_cart":"","cart_redirect_after_add":"no"};
+//# sourceURL=wc-add-to-cart-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://impactology.com.au/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=10.5.1" id="wc-add-to-cart-js" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://impactology.com.au/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.10.5.1" id="wc-js-cookie-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" id="woocommerce-js-extra">
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_password_show":"Show password","i18n_password_hide":"Hide password"};
+//# sourceURL=woocommerce-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://impactology.com.au/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=10.5.1" id="woocommerce-js" defer="defer" data-wp-strategy="defer"></script>
+<script type="text/javascript" src="https://impactology.com.au/wp-content/plugins/js_composer/assets/js/vendors/woocommerce-add-to-cart.js?ver=7.2" id="vc_woocommerce-add-to-cart-js-js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js?ver=6.9.1" id="swiperjs-js"></script>
+<script></script><link rel="https://api.w.org/" href="https://impactology.com.au/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://impactology.com.au/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9.1" />
+<meta name="generator" content="WooCommerce 10.5.1" />
+<style id="essential-blocks-global-styles">
+            :root {
+                --eb-global-primary-color: #101828;
+--eb-global-secondary-color: #475467;
+--eb-global-tertiary-color: #98A2B3;
+--eb-global-text-color: #475467;
+--eb-global-heading-color: #1D2939;
+--eb-global-link-color: #444CE7;
+--eb-global-background-color: #F9FAFB;
+--eb-global-button-text-color: #FFFFFF;
+--eb-global-button-background-color: #101828;
+--eb-gradient-primary-color: linear-gradient(90deg, hsla(259, 84%, 78%, 1) 0%, hsla(206, 67%, 75%, 1) 100%);
+--eb-gradient-secondary-color: linear-gradient(90deg, hsla(18, 76%, 85%, 1) 0%, hsla(203, 69%, 84%, 1) 100%);
+--eb-gradient-tertiary-color: linear-gradient(90deg, hsla(248, 21%, 15%, 1) 0%, hsla(250, 14%, 61%, 1) 100%);
+--eb-gradient-background-color: linear-gradient(90deg, rgb(250, 250, 250) 0%, rgb(233, 233, 233) 49%, rgb(244, 243, 243) 100%);
+
+                --eb-tablet-breakpoint: 1024px;
+--eb-mobile-breakpoint: 767px;
+
+            }
+            
+            
+        </style>	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<meta name="generator" content="Elementor 3.35.4; features: additional_custom_breakpoints; settings: css_print_method-internal, google_font-enabled, font_display-auto">
+<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress."/>
+<link rel="icon" href="https://impactology.com.au/wp-content/uploads/2020/03/cropped-fav-100x100.png" sizes="32x32" />
+<link rel="icon" href="https://impactology.com.au/wp-content/uploads/2020/03/cropped-fav-230x230.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://impactology.com.au/wp-content/uploads/2020/03/cropped-fav-230x230.png" />
+<meta name="msapplication-TileImage" content="https://impactology.com.au/wp-content/uploads/2020/03/cropped-fav-300x300.png" />
+		<style type="text/css" id="wp-custom-css">
+			.text-font-same {
+    margin-left: 20px;
+}
+.text-font-same li {
+    color: #403F3F !important;
+    font-family: "acumin-pro" !important;
+    line-height: 28px !important;
+    margin-bottom: 10px;
+    font-weight: 500!important;
+}
+
+header.elementor-sticky.elementor-top-section {
+    z-index: 9999 !important;
+}
+
+.elementor-message.elementor-message-success {
+    font-size: 22px;
+    text-align: center;
+    color: green;
+}
+li {
+    font-family: "acumin-pro-condensed", sans-serif !important;
+    font-family: "acumin-pro" !important;
+    font-weight: 400 !important;
+}
+
+.wpcf7-form input::placeholder, .wpcf7-form textarea::placeholder {
+    opacity: 1 !important;
+    color: #111 !important;
+}
+
+
+@media screen and (max-width:767px){
+    footer .elementor-nav-menu--layout-horizontal {
+    display: block;
+}
+
+footer .elementor-nav-menu--layout-horizontal ul li a {
+    text-transform: none !important;
+}
+}
+
+body.page-id-5028 .hero-section {
+    height: auto !important;
+    padding-top: 60px !important;
+    padding-bottom: 110px !important;
+}		</style>
+		<noscript><style> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript><noscript><style id="rocket-lazyload-nojs-css">.rll-youtube-player, [data-lazy-src]{display:none !important;}</style></noscript>	<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-178252167-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-178252167-1');
+</script>
+
+	
+</head>
+
+<body class="error404 wp-custom-logo wp-theme-meltony theme-meltony woocommerce-no-js hfeed top-panel-invisible layout-fullwidth blog-default woocommerce-active wpb-js-composer js-comp-ver-7.2 vc_responsive elementor-default elementor-kit-604">
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content">Skip to content</a>
+	<header id="masthead" class="site-header ">
+	    				<header data-elementor-type="header" data-elementor-id="3596" class="elementor elementor-3596 elementor-location-header" data-elementor-post-type="elementor_library">
+					<header class="elementor-section elementor-top-section elementor-element elementor-element-35505457 elementor-section-content-middle elementor-section-height-min-height elementor-section-boxed elementor-section-height-default elementor-section-items-middle" data-id="35505457" data-element_type="section" data-e-type="section" id="1" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;,&quot;tablet&quot;,&quot;mobile&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0,&quot;sticky_anchor_link_offset&quot;:0}">
+						<div class="elementor-container elementor-column-gap-narrow">
+					<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-5c40f2e6" data-id="5c40f2e6" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-666cec8 elementor-widget elementor-widget-image" data-id="666cec8" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="https://impactology.com.au">
+							<img width="368" height="84" src="https://impactology.com.au/wp-content/uploads/2020/09/Impactology-logo-2.png" class="attachment-large size-large wp-image-3607" alt="" srcset="https://impactology.com.au/wp-content/uploads/2020/09/Impactology-logo-2.png 368w, https://impactology.com.au/wp-content/uploads/2020/09/Impactology-logo-2-300x68.png 300w" sizes="(max-width: 368px) 100vw, 368px" />								</a>
+															</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-15dfc602" data-id="15dfc602" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-5cd5efcf elementor-nav-menu__align-end elementor-nav-menu--stretch elementor-nav-menu__text-align-center elementor-nav-menu--dropdown-tablet elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="5cd5efcf" data-element_type="widget" data-e-type="widget" data-settings="{&quot;full_width&quot;:&quot;stretch&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-angle-down\&quot; aria-hidden=\&quot;true\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;layout&quot;:&quot;horizontal&quot;,&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-underline e--animation-grow">
+				<ul id="menu-1-5cd5efcf" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5165"><a href="https://impactology.com.au/impactora/" class="elementor-item">Impactora</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4575"><a href="https://impactology.com.au/programs/" class="elementor-item">Programs</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4576"><a href="https://impactology.com.au/business-partnering-impact-program/" class="elementor-sub-item">Business Partnering Impact Program</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4588"><a href="https://impactology.com.au/amplify-your-impact-program/" class="elementor-sub-item">Amplify Your Impact Program</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4645"><a href="https://impactology.com.au/resources/" class="elementor-item">Resources</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5270"><a href="https://impactology.com.au/evolve-book/" class="elementor-sub-item">Evolve Book</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4595"><a href="https://impactology.com.au/impactology-live-2020/" class="elementor-sub-item">Impactology Live 2020</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4646"><a href="https://impactology.com.au/blog/" class="elementor-sub-item">Content</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4589"><a href="https://impactology.com.au/about/" class="elementor-item">About</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4590"><a href="https://impactology.com.au/contact/" class="elementor-item">Contact</a></li>
+</ul>			</nav>
+					<div class="elementor-menu-toggle" role="button" tabindex="0" aria-label="Menu Toggle" aria-expanded="false">
+			<i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--open eicon-menu-bar"></i><i aria-hidden="true" role="presentation" class="elementor-menu-toggle__icon--close eicon-close"></i>		</div>
+					<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-5cd5efcf" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5165"><a href="https://impactology.com.au/impactora/" class="elementor-item" tabindex="-1">Impactora</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4575"><a href="https://impactology.com.au/programs/" class="elementor-item" tabindex="-1">Programs</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4576"><a href="https://impactology.com.au/business-partnering-impact-program/" class="elementor-sub-item" tabindex="-1">Business Partnering Impact Program</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4588"><a href="https://impactology.com.au/amplify-your-impact-program/" class="elementor-sub-item" tabindex="-1">Amplify Your Impact Program</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4645"><a href="https://impactology.com.au/resources/" class="elementor-item" tabindex="-1">Resources</a>
+<ul class="sub-menu elementor-nav-menu--dropdown">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5270"><a href="https://impactology.com.au/evolve-book/" class="elementor-sub-item" tabindex="-1">Evolve Book</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4595"><a href="https://impactology.com.au/impactology-live-2020/" class="elementor-sub-item" tabindex="-1">Impactology Live 2020</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4646"><a href="https://impactology.com.au/blog/" class="elementor-sub-item" tabindex="-1">Content</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4589"><a href="https://impactology.com.au/about/" class="elementor-item" tabindex="-1">About</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4590"><a href="https://impactology.com.au/contact/" class="elementor-item" tabindex="-1">Contact</a></li>
+</ul>			</nav>
+						</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-202e4e7d" data-id="202e4e7d" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-6f2e2470 elementor-align-center elementor-tablet-align-right elementor-hidden-phone elementor-widget elementor-widget-button" data-id="6f2e2470" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-xs" href="https://impactology.com.au/contact/" target="_blank">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">GET IN TOUCH</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</header>
+				</header>
+			</header><!-- #masthead -->
+		<div id="content" class="site-content ">
+
+	<div class="site-content__wrap container">
+		<div class="row">
+
+			
+			<div id="primary" class="col-xs-12">
+
+				
+				<main id="main" class="site-main">
+
+					
+<section class="error-404 not-found">
+	<header class="page-header">
+		<h1 class="page-title">Oops! That page can&rsquo;t be found.</h1>
+	</header><!-- .page-header -->
+
+	<div class="page-content">
+		<p>It looks like nothing was found at this location. Maybe try one of the links below or a search?</p>
+
+		<form role="search" method="get" class="search-form" action="https://impactology.com.au/">
+	<label>
+		<span class="screen-reader-text">Search for:</span>
+		<input type="search" class="search-form__field" placeholder="Enter keyword search" value="" name="s">
+	</label>
+	<button type="submit" class="search-form__submit btn btn-primary"><i class="fa fa-search" aria-hidden="true"></i></button>
+</form>
+	</div><!-- .page-content -->
+</section><!-- .error-404 -->
+
+				</main><!-- #main -->
+
+				
+			</div><!-- #primary -->
+
+			
+		</div>
+	</div>
+
+	
+	</div><!-- #content -->
+
+	<footer id="colophon" class="site-footer ">
+				<footer data-elementor-type="footer" data-elementor-id="3618" class="elementor elementor-3618 elementor-location-footer" data-elementor-post-type="elementor_library">
+					<section class="elementor-section elementor-top-section elementor-element elementor-element-d36269f elementor-section-content-middle pt-40 pb-30 footer_first_sections elementor-section-full_width elementor-section-stretched elementor-section-height-default elementor-section-height-default" data-id="d36269f" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+						<div class="elementor-container elementor-column-gap-extended">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-c173e86 stay_footer" data-id="c173e86" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-0bd7dc3 footer_titils  elementor-widget elementor-widget-heading" data-id="0bd7dc3" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">STAY IN THE LOOP</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-2c443fc elementor-widget elementor-widget-text-editor" data-id="2c443fc" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Receive news and information on upcoming events</p>								</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-792d42b signup_footer" data-id="792d42b" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-fbac155 elementor-widget elementor-widget-text-editor" data-id="fbac155" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p><script>(function() {
+	window.mc4wp = window.mc4wp || {
+		listeners: [],
+		forms: {
+			on: function(evt, cb) {
+				window.mc4wp.listeners.push(
+					{
+						event   : evt,
+						callback: cb
+					}
+				);
+			}
+		}
+	}
+})();
+</script><!-- Mailchimp for WordPress v4.11.1 - https://wordpress.org/plugins/mailchimp-for-wp/ --><form id="mc4wp-form-1" class="mc4wp-form mc4wp-form-4658" method="post" data-id="4658" data-name="Stay in the loop" ><div class="mc4wp-form-fields"><p>
+	<label>
+		<input type="email" name="email" placeholder="Email address" required />
+</label>
+</p>
+
+<p>
+	<input type="submit" value="Sign up" />
+</p></div><label style="display: none !important;">Leave this field empty if you&#8217;re human: <input type="text" name="_mc4wp_honeypot" value="" tabindex="-1" autocomplete="off" /></label><input type="hidden" name="_mc4wp_timestamp" value="1771753622" /><input type="hidden" name="_mc4wp_form_id" value="4658" /><input type="hidden" name="_mc4wp_form_element_id" value="mc4wp-form-1" /><div class="mc4wp-response"></div></form><!-- / Mailchimp for WordPress Plugin --></p>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-5431336 elementor-section-content-middle pt-60 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="5431336" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-no">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-1fa39a30" data-id="1fa39a30" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-70b63cbe elementor-widget elementor-widget-text-editor" data-id="70b63cbe" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<div class="footer_wraps">
+<div class="footer_logo_wraps"><a href="/home/"><img class="alignnone size-medium wp-image-26" src="/wp-content/uploads/2021/08/footer_logo.png" alt="" width="210" height="40" /></a></div>
+
+</div>								</div>
+				</div>
+				<div class="elementor-element elementor-element-eeedb44 elementor-shape-circle elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="eeedb44" data-element_type="widget" data-e-type="widget" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-social-icons-wrapper elementor-grid" role="list">
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-56eb594" href="https://www.facebook.com/ImpactologyAust/" target="_blank">
+						<span class="elementor-screen-only">Facebook</span>
+						<i aria-hidden="true" class="fab fa-facebook"></i>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-03297d1" href="https://au.linkedin.com/company/impactology" target="_blank">
+						<span class="elementor-screen-only">Linkedin</span>
+						<i aria-hidden="true" class="fab fa-linkedin"></i>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-youtube elementor-repeater-item-c89a617" href="https://www.youtube.com/channel/UC2c5m2Io0INs-PnShJUaHQA" target="_blank">
+						<span class="elementor-screen-only">Youtube</span>
+						<i aria-hidden="true" class="fab fa-youtube"></i>					</a>
+				</span>
+					</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-586202c elementor-nav-menu__align-center elementor-nav-menu--dropdown-none elementor-widget elementor-widget-nav-menu" data-id="586202c" data-element_type="widget" data-e-type="widget" data-settings="{&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-angle-down\&quot; aria-hidden=\&quot;true\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;layout&quot;:&quot;horizontal&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
+				<ul id="menu-1-586202c" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-5757"><a href="https://impactology.com.au/" class="elementor-item">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5759"><a href="https://impactology.com.au/about/" class="elementor-item">About</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5760"><a href="https://impactology.com.au/blog/" class="elementor-item">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6889"><a href="https://impactology.com.au/gallery/" class="elementor-item">Gallery</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-5758"><a rel="privacy-policy" href="https://impactology.com.au/privacy-policy/" class="elementor-item">Privacy Policy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5761"><a href="https://impactology.com.au/contact/" class="elementor-item">Contact</a></li>
+</ul>			</nav>
+						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-586202c" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-5757"><a href="https://impactology.com.au/" class="elementor-item" tabindex="-1">Home</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5759"><a href="https://impactology.com.au/about/" class="elementor-item" tabindex="-1">About</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5760"><a href="https://impactology.com.au/blog/" class="elementor-item" tabindex="-1">Blog</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6889"><a href="https://impactology.com.au/gallery/" class="elementor-item" tabindex="-1">Gallery</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-5758"><a rel="privacy-policy" href="https://impactology.com.au/privacy-policy/" class="elementor-item" tabindex="-1">Privacy Policy</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-5761"><a href="https://impactology.com.au/contact/" class="elementor-item" tabindex="-1">Contact</a></li>
+</ul>			</nav>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-329ca9a elementor-nav-menu__align-center elementor-nav-menu--dropdown-none elementor-widget elementor-widget-nav-menu" data-id="329ca9a" data-element_type="widget" data-e-type="widget" data-settings="{&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-angle-down\&quot; aria-hidden=\&quot;true\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;layout&quot;:&quot;horizontal&quot;}" data-widget_type="nav-menu.default">
+				<div class="elementor-widget-container">
+								<nav aria-label="Menu" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-horizontal e--pointer-none">
+				<ul id="menu-1-329ca9a" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6538"><a href="https://impactology.com.au/procurement-business-partnering/" class="elementor-item">Procurement Business Partnering </a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6536"><a href="https://impactology.com.au/finance-business-partnering/" class="elementor-item">Finance Business Partnering</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6535"><a href="https://impactology.com.au/it-business-partnering/" class="elementor-item">IT Business Partnering</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6537"><a href="https://impactology.com.au/hr-business-partnering/" class="elementor-item">HR Business Partnering</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6817"><a href="https://impactology.com.au/leadership-development-for-bpos/" class="elementor-item">Leadership Development for BPOS</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6823"><a href="https://impactology.com.au/msp-bp-programs/" class="elementor-item">MSP MSSP Leadership Development Program</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6907"><a href="https://impactology.com.au/leadership-development-program-local-government/" class="elementor-item">Leadership Development Program Local Government</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6924"><a href="https://impactology.com.au/sales-business-development-client-management-program/" class="elementor-item">Sales Business Development Client Management Program</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6945"><a href="https://impactology.com.au/marketing-communications-business-partnering-program/" class="elementor-item">Marketing Communications Business Partnering Program</a></li>
+</ul>			</nav>
+						<nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
+				<ul id="menu-2-329ca9a" class="elementor-nav-menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6538"><a href="https://impactology.com.au/procurement-business-partnering/" class="elementor-item" tabindex="-1">Procurement Business Partnering </a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6536"><a href="https://impactology.com.au/finance-business-partnering/" class="elementor-item" tabindex="-1">Finance Business Partnering</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6535"><a href="https://impactology.com.au/it-business-partnering/" class="elementor-item" tabindex="-1">IT Business Partnering</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6537"><a href="https://impactology.com.au/hr-business-partnering/" class="elementor-item" tabindex="-1">HR Business Partnering</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6817"><a href="https://impactology.com.au/leadership-development-for-bpos/" class="elementor-item" tabindex="-1">Leadership Development for BPOS</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6823"><a href="https://impactology.com.au/msp-bp-programs/" class="elementor-item" tabindex="-1">MSP MSSP Leadership Development Program</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6907"><a href="https://impactology.com.au/leadership-development-program-local-government/" class="elementor-item" tabindex="-1">Leadership Development Program Local Government</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6924"><a href="https://impactology.com.au/sales-business-development-client-management-program/" class="elementor-item" tabindex="-1">Sales Business Development Client Management Program</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-6945"><a href="https://impactology.com.au/marketing-communications-business-partnering-program/" class="elementor-item" tabindex="-1">Marketing Communications Business Partnering Program</a></li>
+</ul>			</nav>
+						</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-608d724d pb-60 pt-40  footere_sections elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="608d724d" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-372f8324" data-id="372f8324" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-64195193 elementor-widget elementor-widget-text-editor" data-id="64195193" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>©Impactology 2025. All rights reserved. <a href="https://impactology.com.au/privacy-policy/">Privacy Policy</a> | <a href="/legals1/">Legals</a> | <a href="https://impactology.com.au/legals1/">Terms and Conditions</a></p>								</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</footer>
+			</footer><!-- #colophon -->
+
+</div><!-- #page -->
+
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/meltony/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script>(function() {function maybePrefixUrlField () {
+  const value = this.value.trim()
+  if (value !== '' && value.indexOf('http') !== 0) {
+    this.value = 'http://' + value
+  }
+}
+
+const urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]')
+for (let j = 0; j < urlFields.length; j++) {
+  urlFields[j].addEventListener('blur', maybePrefixUrlField)
+}
+})();</script><!-- Custom Feeds for Instagram JS -->
+<script type="text/javascript">
+var sbiajaxurl = "https://impactology.com.au/wp-admin/admin-ajax.php";
+
+</script>
+			<script>
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+				<script type='text/javascript'>
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<link rel='stylesheet' id='wc-blocks-style-css' href='https://impactology.com.au/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-10.5.1' type='text/css' media='all' />
+<script type="text/javascript" id="essential-blocks-blocks-localize-js-extra">
+/* <![CDATA[ */
+var eb_conditional_localize = [];
+var EssentialBlocksLocalize = {"eb_plugins_url":"https://impactology.com.au/wp-content/plugins/essential-blocks/","image_url":"https://impactology.com.au/wp-content/plugins/essential-blocks/assets/images","eb_wp_version":"6.9","eb_version":"6.0.3","eb_admin_url":"https://impactology.com.au/wp-admin/","rest_rootURL":"https://impactology.com.au/wp-json/","ajax_url":"https://impactology.com.au/wp-admin/admin-ajax.php","nft_nonce":"a822339b75","post_grid_pagination_nonce":"c71afc5802","placeholder_image":"https://impactology.com.au/wp-content/plugins/essential-blocks/assets/images/placeholder.png","is_pro_active":"false","upgrade_pro_url":"https://essential-blocks.com/upgrade","responsiveBreakpoints":{"tablet":1024,"mobile":767},"wp_timezone":"Australia/Melbourne","gmt_offset":"11","wc_currency_symbol":"$"};
+//# sourceURL=essential-blocks-blocks-localize-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://impactology.com.au/wp-content/plugins/essential-blocks/assets/js/eb-blocks-localize.js?ver=31d6cfe0d16ae931b73c" id="essential-blocks-blocks-localize-js"></script>
+<script type="text/javascript" id="fluentform-elementor-js-extra">
+/* <![CDATA[ */
+var fluentformElementor = {"adminUrl":"https://impactology.com.au/wp-admin/admin.php"};
+//# sourceURL=fluentform-elementor-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://impactology.com.au/wp-content/plugins/fluentform/assets/js/fluent-forms-elementor-widget.js?ver=6.1.17" id="fluentform-elementor-js"></script>
+<script type="text/javascript" id="rocket-browser-checker-js-after">
+/* <![CDATA[ */
+"use strict";var _createClass=function(){function defineProperties(target,props){for(var i=0;i<props.length;i++){var descriptor=props[i];descriptor.enumerable=descriptor.enumerable||!1,descriptor.configurable=!0,"value"in descriptor&&(descriptor.writable=!0),Object.defineProperty(target,descriptor.key,descriptor)}}return function(Constructor,protoProps,staticProps){return protoProps&&defineProperties(Constructor.prototype,protoProps),staticProps&&defineProperties(Constructor,staticProps),Constructor}}();function _classCallCheck(instance,Constructor){if(!(instance instanceof Constructor))throw new TypeError("Cannot call a class as a function")}var RocketBrowserCompatibilityChecker=function(){function RocketBrowserCompatibilityChecker(options){_classCallCheck(this,RocketBrowserCompatibilityChecker),this.passiveSupported=!1,this._checkPassiveOption(this),this.options=!!this.passiveSupported&&options}return _createClass(RocketBrowserCompatibilityChecker,[{key:"_checkPassiveOption",value:function(self){try{var options={get passive(){return!(self.passiveSupported=!0)}};window.addEventListener("test",null,options),window.removeEventListener("test",null,options)}catch(err){self.passiveSupported=!1}}},{key:"initRequestIdleCallback",value:function(){!1 in window&&(window.requestIdleCallback=function(cb){var start=Date.now();return setTimeout(function(){cb({didTimeout:!1,timeRemaining:function(){return Math.max(0,50-(Date.now()-start))}})},1)}),!1 in window&&(window.cancelIdleCallback=function(id){return clearTimeout(id)})}},{key:"isDataSaverModeOn",value:function(){return"connection"in navigator&&!0===navigator.connection.saveData}},{key:"supportsLinkPrefetch",value:function(){var elem=document.createElement("link");return elem.relList&&elem.relList.supports&&elem.relList.supports("prefetch")&&window.IntersectionObserver&&"isIntersecting"in IntersectionObserverEntry.prototype}},{key:"isSlowConnection",value:function(){return"connection"in navigator&&"effectiveType"in navigator.connection&&("2g"===navigator.connection.effectiveType||"slow-2g"===navigator.connection.effectiveType)}}]),RocketBrowserCompatibilityChecker}();
+//# sourceURL=rocket-browser-checker-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-extra">
+/* <![CDATA[ */
+var RocketPreloadLinksConfig = {"excludeUris":"/(?:.+/)?feed(?:/(?:.+/?)?)?$|/(?:.+/)?embed/|/(index.php/)?(.*)wp-json(/.*|$)|/refer/|/go/|/recommend/|/recommends/","usesTrailingSlash":"1","imageExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php","fileExt":"jpg|jpeg|gif|png|tiff|bmp|webp|avif|pdf|doc|docx|xls|xlsx|php|html|htm","siteUrl":"https://impactology.com.au","onHoverDelay":"100","rateThrottle":"3"};
+//# sourceURL=rocket-preload-links-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" id="rocket-preload-links-js-after">
+/* <![CDATA[ */
+(function() {
+"use strict";var r="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},e=function(){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}return function(e,t,n){return t&&i(e.prototype,t),n&&i(e,n),e}}();function i(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}var t=function(){function n(e,t){i(this,n),this.browser=e,this.config=t,this.options=this.browser.options,this.prefetched=new Set,this.eventTime=null,this.threshold=1111,this.numOnHover=0}return e(n,[{key:"init",value:function(){!this.browser.supportsLinkPrefetch()||this.browser.isDataSaverModeOn()||this.browser.isSlowConnection()||(this.regex={excludeUris:RegExp(this.config.excludeUris,"i"),images:RegExp(".("+this.config.imageExt+")$","i"),fileExt:RegExp(".("+this.config.fileExt+")$","i")},this._initListeners(this))}},{key:"_initListeners",value:function(e){-1<this.config.onHoverDelay&&document.addEventListener("mouseover",e.listener.bind(e),e.listenerOptions),document.addEventListener("mousedown",e.listener.bind(e),e.listenerOptions),document.addEventListener("touchstart",e.listener.bind(e),e.listenerOptions)}},{key:"listener",value:function(e){var t=e.target.closest("a"),n=this._prepareUrl(t);if(null!==n)switch(e.type){case"mousedown":case"touchstart":this._addPrefetchLink(n);break;case"mouseover":this._earlyPrefetch(t,n,"mouseout")}}},{key:"_earlyPrefetch",value:function(t,e,n){var i=this,r=setTimeout(function(){if(r=null,0===i.numOnHover)setTimeout(function(){return i.numOnHover=0},1e3);else if(i.numOnHover>i.config.rateThrottle)return;i.numOnHover++,i._addPrefetchLink(e)},this.config.onHoverDelay);t.addEventListener(n,function e(){t.removeEventListener(n,e,{passive:!0}),null!==r&&(clearTimeout(r),r=null)},{passive:!0})}},{key:"_addPrefetchLink",value:function(i){return this.prefetched.add(i.href),new Promise(function(e,t){var n=document.createElement("link");n.rel="prefetch",n.href=i.href,n.onload=e,n.onerror=t,document.head.appendChild(n)}).catch(function(){})}},{key:"_prepareUrl",value:function(e){if(null===e||"object"!==(void 0===e?"undefined":r(e))||!1 in e||-1===["http:","https:"].indexOf(e.protocol))return null;var t=e.href.substring(0,this.config.siteUrl.length),n=this._getPathname(e.href,t),i={original:e.href,protocol:e.protocol,origin:t,pathname:n,href:t+n};return this._isLinkOk(i)?i:null}},{key:"_getPathname",value:function(e,t){var n=t?e.substring(this.config.siteUrl.length):e;return n.startsWith("/")||(n="/"+n),this._shouldAddTrailingSlash(n)?n+"/":n}},{key:"_shouldAddTrailingSlash",value:function(e){return this.config.usesTrailingSlash&&!e.endsWith("/")&&!this.regex.fileExt.test(e)}},{key:"_isLinkOk",value:function(e){return null!==e&&"object"===(void 0===e?"undefined":r(e))&&(!this.prefetched.has(e.href)&&e.origin===this.config.siteUrl&&-1===e.href.indexOf("?")&&-1===e.href.indexOf("#")&&!this.regex.excludeUris.test(e.href)&&!this.regex.images.test(e.href))}}],[{key:"run",value:function(){"undefined"!=typeof RocketPreloadLinksConfig&&new n(new RocketBrowserCompatibilityChecker({capture:!0,passive:!0}),RocketPreloadLinksConfig).init()}}]),n}();t.run();
+}());
+
+//# sourceURL=rocket-preload-links-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://impactology.com.au/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.35.4" id="elementor-webpack-runtime-js"></script>
+<script type="text/javascript" src="https://impactology.com.au/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.35.4" id="elementor-frontend-modules-js"></script>
+<script type="text/javascript" src="https://impactology.com.au/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script type="text/javascript" id="elementor-frontend-js-extra">
+/* <![CDATA[ */
+var PremiumSettings = {"ajaxurl":"https://impactology.com.au/wp-admin/admin-ajax.php","nonce":"138283f903"};
+var EAELImageMaskingConfig = {"svg_dir_url":"https://impactology.com.au/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/img/image-masking/svg-shapes/"};
+//# sourceURL=elementor-frontend-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" id="elementor-frontend-js-before">
+/* <![CDATA[ */
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Share on Facebook","shareOnTwitter":"Share on Twitter","pinIt":"Pin it","download":"Download","downloadImage":"Download image","fullscreen":"Fullscreen","zoom":"Zoom","share":"Share","playVideo":"Play Video","previous":"Previous","next":"Next","close":"Close","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},
+"hasCustomBreakpoints":false},"version":"3.35.4","is_static":false,"experimentalFeatures":{"additional_custom_breakpoints":true,"theme_builder_v2":true,"home_screen":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"cloud-library":true,"e_opt_in_v4_page":true,"e_components":true,"e_interactions":true,"e_editor_one":true,"import-export-customization":true,"e_pro_variables":true},"urls":{"assets":"https:\/\/impactology.com.au\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/impactology.com.au\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/impactology.com.au\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"7894743c88"},"swiperClass":"swiper","settings":{"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","woocommerce_notices_elements":[]},"post":{"id":0,"title":"Page not found - Impactology","excerpt":""}};
+//# sourceURL=elementor-frontend-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://impactology.com.au/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.35.4" id="elementor-frontend-js"></script>
+<script type="text/javascript" src="https://impactology.com.au/wp-content/plugins/elementor-pro/assets/lib/smartmenus/jquery.smartmenus.min.js?ver=1.2.1" id="smartmenus-js"></script>
+<script type="text/javascript" src="https://impactology.com.au/wp-content/plugins/elementor-pro/assets/lib/sticky/jquery.sticky.min.js?ver=3.33.1" id="e-sticky-js"></script>
+<script type="text/javascript" src="https://impactology.com.au/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=10.5.1" id="sourcebuster-js-js"></script>
+<script type="text/javascript" id="wc-order-attribution-js-extra">
+/* <![CDATA[ */
+var wc_order_attribution = {"params":{"lifetime":1.0000000000000000818030539140313095458623138256371021270751953125e-5,"session":30,"base64":false,"ajaxurl":"https://impactology.com.au/wp-admin/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":true},"fields":{"source_type":"current.typ","referrer":"current_add.rf","utm_campaign":"current.cmp","utm_source":"current.src","utm_medium":"current.mdm","utm_content":"current.cnt","utm_id":"current.id","utm_term":"current.trm","utm_source_platform":"current.plt","utm_creative_format":"current.fmt","utm_marketing_tactic":"current.tct","session_entry":"current_add.ep","session_start_time":"current_add.fd","session_pages":"session.pgs","session_count":"udata.vst","user_agent":"udata.uag"}};
+//# sourceURL=wc-order-attribution-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://impactology.com.au/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=10.5.1" id="wc-order-attribution-js"></script>
+<script type="text/javascript" id="eael-general-js-extra">
+/* <![CDATA[ */
+var localize = {"ajaxurl":"https://impactology.com.au/wp-admin/admin-ajax.php","nonce":"075432e8df","i18n":{"added":"Added ","compare":"Compare","loading":"Loading..."},"eael_translate_text":{"required_text":"is a required field","invalid_text":"Invalid","billing_text":"Billing","shipping_text":"Shipping","fg_mfp_counter_text":"of"},"page_permalink":"https://impactology.com.au/build-effective-business-partner-relationships/","cart_redirectition":"no","cart_page_url":"https://impactology.com.au","el_breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Laptop","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Widescreen","value":2400,"default_value":2400,"direction":"min","is_enabled":false}}};
+//# sourceURL=eael-general-js-extra
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://impactology.com.au/wp-content/plugins/essential-addons-for-elementor-lite/assets/front-end/js/view/general.min.js?ver=6.5.11" id="eael-general-js"></script>
+<script type="text/javascript" defer src="https://impactology.com.au/wp-content/plugins/mailchimp-for-wp/assets/js/forms.js?ver=4.11.1" id="mc4wp-forms-api-js"></script>
+<script type="text/javascript" src="https://impactology.com.au/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.33.1" id="elementor-pro-webpack-runtime-js"></script>
+<script type="text/javascript" src="https://impactology.com.au/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script type="text/javascript" src="https://impactology.com.au/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script type="text/javascript" id="wp-i18n-js-after">
+/* <![CDATA[ */
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+/* ]]> */
+</script>
+<script type="text/javascript" id="elementor-pro-frontend-js-before">
+/* <![CDATA[ */
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/impactology.com.au\/wp-admin\/admin-ajax.php","nonce":"06d5ec6d3f","urls":{"assets":"https:\/\/impactology.com.au\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/impactology.com.au\/wp-json\/"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":false},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},
+"woocommerce":{"menu_cart":{"cart_page_url":"https:\/\/impactology.com.au","checkout_page_url":"https:\/\/impactology.com.au","fragments_nonce":"e7f18802dd"}},
+"facebook_sdk":{"lang":"en_US","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/impactology.com.au\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+//# sourceURL=elementor-pro-frontend-js-before
+/* ]]> */
+</script>
+<script type="text/javascript" src="https://impactology.com.au/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.33.1" id="elementor-pro-frontend-js"></script>
+<script type="text/javascript" src="https://impactology.com.au/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.33.1" id="pro-elements-handlers-js"></script>
+<script></script><script>window.lazyLoadOptions=[{elements_selector:"img[data-lazy-src],.rocket-lazyload,iframe[data-lazy-src]",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,callback_loaded:function(element){if(element.tagName==="IFRAME"&&element.dataset.rocketLazyload=="fitvidscompatible"){if(element.classList.contains("lazyloaded")){if(typeof window.jQuery!="undefined"){if(jQuery.fn.fitVids){jQuery(element).parent().fitVids()}}}}}},{elements_selector:".rocket-lazyload",data_src:"lazy-src",data_srcset:"lazy-srcset",data_sizes:"lazy-sizes",class_loading:"lazyloading",class_loaded:"lazyloaded",threshold:300,}];window.addEventListener('LazyLoad::Initialized',function(e){var lazyLoadInstance=e.detail.instance;if(window.MutationObserver){var observer=new MutationObserver(function(mutations){var image_count=0;var iframe_count=0;var rocketlazy_count=0;mutations.forEach(function(mutation){for(var i=0;i<mutation.addedNodes.length;i++){if(typeof mutation.addedNodes[i].getElementsByTagName!=='function'){continue}
+if(typeof mutation.addedNodes[i].getElementsByClassName!=='function'){continue}
+images=mutation.addedNodes[i].getElementsByTagName('img');is_image=mutation.addedNodes[i].tagName=="IMG";iframes=mutation.addedNodes[i].getElementsByTagName('iframe');is_iframe=mutation.addedNodes[i].tagName=="IFRAME";rocket_lazy=mutation.addedNodes[i].getElementsByClassName('rocket-lazyload');image_count+=images.length;iframe_count+=iframes.length;rocketlazy_count+=rocket_lazy.length;if(is_image){image_count+=1}
+if(is_iframe){iframe_count+=1}}});if(image_count>0||iframe_count>0||rocketlazy_count>0){lazyLoadInstance.update()}});var b=document.getElementsByTagName("body")[0];var config={childList:!0,subtree:!0};observer.observe(b,config)}},!1)</script><script data-no-minify="1" async src="https://impactology.com.au/wp-content/plugins/wp-rocket/assets/js/lazyload/17.8.3/lazyload.min.js"></script>
+<link rel='stylesheet' id='owl-carousel-css'  href='https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css' type='text/css' media='all' />
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+<script>
+jQuery(document).ready(function() {
+jQuery(".testimonials")
+  .on("initialized.owl.carousel changed.owl.carousel", function(e) {
+    if (!e.namespace) {
+      return;
+    }
+    jQuery(".slide-count").text(
+      e.relatedTarget.relative(e.item.index) + 1 + "/" + e.item.count
+    );
+  })
+  .owlCarousel({
+    items: 1,
+    loop: true,
+    nav: true,
+    dots: false,
+    autoplay: true,
+	autoplaySpeed: 3000
+  });
+
+});
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+<script>
+jQuery(document).ready(function() {
+var $counter = jQuery('.slide-count1');
+var $slider = jQuery('.testimonials1');
+
+$slider.on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
+    var i = (currentSlide ? currentSlide : 0) + 1;
+    $counter.text(i + '/' + slick.slideCount);
+});
+
+$slider.slick({
+  infinite: true,
+	dots: false,
+	arrows: true,
+	autoplay: true,
+	autoplaySpeed: 3000,
+// 	fade: true,
+// 	fadeSpeed: 1000
+});
+});
+</script>
+
+<!-- popups start -->
+<div class="custom-popup bill-gates-pop">
+  <div class="inner-main-class">
+    <div class="close-icon">X</div>
+    <div class="heading"></div>
+    <div class="content"></div>
+  </div>
+</div>
+</div>
+
+<div class="custom-popup richard-pop">
+  <div class="inner-main-class">
+    <div class="close-icon">X</div>
+    <div class="heading"></div>
+    <div class="content"></div>
+  </div>
+</div>
+</div>
+
+<div class="custom-popup number-one-pop">
+  <div class="inner-main-class">
+    <div class="close-icon">X</div>
+    <div class="heading"></div>
+    <div class="content"></div>
+  </div>
+</div>
+</div>
+
+<div class="custom-popup number-two-pop">
+  <div class="inner-main-class">
+    <div class="close-icon">X</div>
+    <div class="heading"></div>
+    <div class="content"></div>
+  </div>
+</div>
+</div>
+
+<div class="custom-popup video-one-pop">
+  <div class="inner-main-class">
+    <div class="close-icon">X</div>
+    <video width="auto" height="300" controls>
+      <source src="" type="video/mp4">
+    </video>
+  </div>
+</div>
+</div>
+<div class="custom-popup video-two-pop">
+  <div class="inner-main-class">
+    <div class="close-icon">X</div>
+    <video width="auto" height="300" controls>
+      <source src="" type="video/mp4">
+    </video>
+  </div>
+</div>
+</div>
+<!-- popups end -->
+
+
+<script type="text/javascript">
+  // Testimonial js start
+
+  jQuery(document).ready(function() {
+    var swiper = new Swiper('.custom-testimonial', {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  });
+  // Testimonial js end
+
+  // popup start js start
+
+  jQuery('document').ready(function() {
+
+    jQuery(".bill-gates").click(function(e) {
+      e.preventDefault();
+      jQuery(".bill-gates-pop").show();
+    });
+    jQuery(".richard").click(function(e) {
+      e.preventDefault();
+      jQuery(".richard-pop").show();
+    });
+    jQuery(".number-one").click(function(e) {
+      e.preventDefault();
+      jQuery(".number-one-pop").show();
+    });
+    jQuery(".number-two").click(function(e) {
+      e.preventDefault();
+      jQuery(".number-two-pop").show();
+    });
+    jQuery(".video-one").click(function(e) {
+      e.preventDefault();
+      jQuery(".video-one-pop").show();
+    });
+    jQuery(".video-two").click(function(e) {
+      e.preventDefault();
+      jQuery(".video-two-pop").show();
+    });
+
+
+
+    jQuery(".close-icon").click(function() {
+      jQuery(".custom-popup").hide();
+    });
+
+
+    jQuery(".comman-btn-class").click(function() {
+      jQuery(".page-id-5026").addClass("overlay-class");
+    });
+    jQuery(".close-icon").click(function() {
+      jQuery(".page-id-5026").removeClass("overlay-class");
+    });
+
+
+    // jQuery('.bill-gates').on( "click", function(e) {
+    //     e.preventDefault();
+    //     jQuery('#bill-gates-id').modal('show');
+    // });
+
+    // jQuery('.richard').on( "click", function(e) {
+    //     e.preventDefault();
+    //     jQuery('#richard-id').modal('show');
+    // });
+
+    // jQuery('.number-one').on( "click", function(e) {
+    //         e.preventDefault();
+    //         jQuery('#number-one-id').modal('show');
+    //     });
+
+    // jQuery('.number-two').on( "click", function(e) {
+    //         e.preventDefault();
+    //         jQuery('#number-two-id').modal('show');
+    //     });
+    // jQuery('.video-two').on( "click", function(e) {
+    //         e.preventDefault();
+    //         jQuery('#video-two-id').modal('show');
+    //     });
+    // jQuery('.video-one').on( "click", function(e) {
+    //         e.preventDefault();
+    //         jQuery('#video-on-id').modal('show');
+    // });
+
+
+  });
+
+jQuery(".close-icon").click(function(event){
+    jQuery('.custom-popup  video').trigger('pause');
+});
+  // popup js end
+
+
+
+  // audio js start
+
+  jQuery("#play-icon").click(function() {
+    jQuery("#play-icon").toggleClass("button-pause-class");
+  });
+
+
+
+  /** Implementation of the presentation of the audio player */
+
+  const playIconContainer = document.getElementById('play-icon');
+  const audioPlayerContainer = document.getElementById('audio-player-container');
+  const seekSlider = document.getElementById('seek-slider');
+  const volumeSlider = document.getElementById('volume-slider');
+  const muteIconContainer = document.getElementById('mute-icon');
+  let playState = 'play';
+  let muteState = 'unmute';
+
+  playIconContainer.addEventListener('click', () => {
+    if (playState === 'play') {
+      audio.play();
+      requestAnimationFrame(whilePlaying);
+      playState = 'pause';
+    } else {
+      audio.pause();
+      cancelAnimationFrame(raf);
+      playState = 'play';
+    }
+  });
+
+
+  const showRangeProgress = (rangeInput) => {
+    if (rangeInput === seekSlider) audioPlayerContainer.style.setProperty('--seek-before-width', rangeInput.value / rangeInput.max * 100 + '%');
+    else audioPlayerContainer.style.setProperty('--volume-before-width', rangeInput.value / rangeInput.max * 100 + '%');
+  }
+
+  seekSlider.addEventListener('input', (e) => {
+    showRangeProgress(e.target);
+  });
+  volumeSlider.addEventListener('input', (e) => {
+    showRangeProgress(e.target);
+  });
+
+
+
+
+
+  /** Implementation of the functionality of the audio player */
+
+  const audio = document.querySelector('#audio-player-container audio');
+  const durationContainer = document.getElementById('duration');
+  const currentTimeContainer = document.getElementById('current-time');
+  const outputContainer = document.getElementById('volume-output');
+  let raf = null;
+
+  const calculateTime = (secs) => {
+    const minutes = Math.floor(secs / 60);
+    const seconds = Math.floor(secs % 60);
+    const returnedSeconds = seconds < 10 ? `0${seconds}` : `${seconds}`;
+    return `${minutes}:${returnedSeconds}`;
+  }
+
+  const displayDuration = () => {
+    durationContainer.textContent = calculateTime(audio.duration);
+  }
+
+  const setSliderMax = () => {
+    seekSlider.max = Math.floor(audio.duration);
+  }
+
+  const displayBufferedAmount = () => {
+    const bufferedAmount = Math.floor(audio.buffered.end(audio.buffered.length - 1));
+    audioPlayerContainer.style.setProperty('--buffered-width', `${(bufferedAmount / seekSlider.max) * 100}%`);
+  }
+
+  const whilePlaying = () => {
+    seekSlider.value = Math.floor(audio.currentTime);
+    currentTimeContainer.textContent = calculateTime(seekSlider.value);
+    audioPlayerContainer.style.setProperty('--seek-before-width', `${seekSlider.value / seekSlider.max * 100}%`);
+    raf = requestAnimationFrame(whilePlaying);
+  }
+
+  if (audio.readyState > 0) {
+    displayDuration();
+    setSliderMax();
+    displayBufferedAmount();
+  } else {
+    audio.addEventListener('loadedmetadata', () => {
+      displayDuration();
+      setSliderMax();
+      displayBufferedAmount();
+    });
+  }
+
+  audio.addEventListener('progress', displayBufferedAmount);
+
+  seekSlider.addEventListener('input', () => {
+    currentTimeContainer.textContent = calculateTime(seekSlider.value);
+    if (!audio.paused) {
+      cancelAnimationFrame(raf);
+    }
+  });
+
+  seekSlider.addEventListener('change', () => {
+    audio.currentTime = seekSlider.value;
+    if (!audio.paused) {
+      requestAnimationFrame(whilePlaying);
+    }
+  });
+
+
+  // -------------------------------------
+
+
+
+  jQuery("#play-icon1").click(function() {
+    jQuery("#play-icon1").toggleClass("button-pause-class");
+  });
+
+  /** Implementation of the presentation of the audio player */
+
+  const playIconContainer1 = document.getElementById('play-icon1');
+  const audioPlayerContainer1 = document.getElementById('audio-player-container1');
+  const seekSlider1 = document.getElementById('seek-slider1');
+  const volumeSlider1 = document.getElementById('volume-slider1');
+  const muteIconContainer1 = document.getElementById('mute-icon1');
+  let playState1 = 'play';
+  let muteState1 = 'unmute';
+
+  playIconContainer1.addEventListener('click', () => {
+    if (playState1 === 'play') {
+      audio1.play();
+      requestAnimationFrame(whilePlaying1);
+      playState1 = 'pause';
+    } else {
+      audio1.pause();
+      cancelAnimationFrame(raf1);
+      playState1 = 'play';
+    }
+  });
+
+  const showRangeProgress1 = (rangeInput1) => {
+    if (rangeInput1 === seekSlider1) audioPlayerContainer1.style.setProperty('--seek-before-width', rangeInput1.value / rangeInput1.max * 100 + '%');
+    else audioPlayerContainer1.style.setProperty('--volume-before-width', rangeInput1.value / rangeInput1.max * 100 + '%');
+  }
+
+  seekSlider1.addEventListener('input', (e) => {
+    showRangeProgress1(e.target);
+  });
+  volumeSlider1.addEventListener('input', (e) => {
+    showRangeProgress1(e.target);
+  });
+
+  const audio1 = document.querySelector('#audio-player-container1 audio');
+  const durationContainer1 = document.getElementById('duration1');
+  const currentTimeContainer1 = document.getElementById('current-time1');
+  const outputContainer1 = document.getElementById('volume-output1');
+  let raf1 = null;
+
+  const calculateTime1 = (secs1) => {
+    const minutes1 = Math.floor(secs1 / 60);
+    const seconds1 = Math.floor(secs1 % 60);
+    const returnedSeconds1 = seconds1 < 10 ? `0${seconds1}` : `${seconds1}`;
+    return `${minutes1}:${returnedSeconds1}`;
+  }
+
+  const displayDuration1 = () => {
+    durationContainer1.textContent = calculateTime1(audio1.duration);
+  }
+
+  const setSliderMax1 = () => {
+    seekSlider1.max = Math.floor(audio1.duration);
+  }
+
+  const displayBufferedAmount1 = () => {
+    const bufferedAmount1 = Math.floor(audio1.buffered.end(audio1.buffered.length - 1));
+    audioPlayerContainer1.style.setProperty('--buffered-width', `${(bufferedAmount1 / seekSlider1.max) * 100}%`);
+  }
+
+  const whilePlaying1 = () => {
+    seekSlider1.value = Math.floor(audio1.currentTime);
+    currentTimeContainer1.textContent = calculateTime1(seekSlider1.value);
+    audioPlayerContainer1.style.setProperty('--seek-before-width', `${seekSlider1.value / seekSlider1.max * 100}%`);
+    raf1 = requestAnimationFrame(whilePlaying1);
+  }
+
+  if (audio1.readyState > 0) {
+    displayDuration1();
+    setSliderMax1();
+    displayBufferedAmount1();
+  } else {
+    audio1.addEventListener('loadedmetadata', () => {
+      displayDuration1();
+      setSliderMax1();
+      displayBufferedAmount1();
+    });
+  }
+
+  audio1.addEventListener('progress', displayBufferedAmount1);
+
+  seekSlider1.addEventListener('input', () => {
+    currentTimeContainer1.textContent = calculateTime1(seekSlider1.value);
+    if (!audio1.paused) {
+      cancelAnimationFrame(raf1);
+    }
+  });
+
+  seekSlider1.addEventListener('change', () => {
+    audio1.currentTime = seekSlider1.value;
+    if (!audio1.paused) {
+      requestAnimationFrame(whilePlaying1);
+    }
+  });
+
+  // audio js end
+
+  // smooth scroll start
+
+  jQuery(document).ready(function() {
+    jQuery(".common-buttons a").on('click', function(event) {
+      if (this.hash !== "") {
+        // event.preventDefault();
+        var hash = this.hash;
+        jQuery('html, body').animate({
+          scrollTop: jQuery(hash).offset().top - 100
+        }, 500, function() {
+          window.location.hash = hash;
+        });
+      }
+    });
+  });
+
+  // smooth scroll end
+
+
+  // Home Page cf7 Form validation start
+
+
+  jQuery(document).ready(function() {
+
+    jQuery.validator.addMethod(
+      "email_extend",
+      function(value, element) {
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(value)) {
+          return true;
+        } else {
+          return false;
+        }
+      },
+      "Email are not valid email address"
+    );
+
+    jQuery.validator.addMethod(
+      "lettersonly",
+      function(value, element) {
+        return this.optional(element) || /^[a-z\s]+$/i.test(value);
+      },
+      "Only alphabets are allowed"
+    );
+
+    jQuery('.validate_form').on('click', function() {
+      var form = jQuery(this).parents('.wpcf7-form');
+      var form_id = jQuery(form).find('input[type=hidden][name=_wpcf7]').val();
+
+      validate_form(form, form_id);
+
+      if (!form.valid()) {
+        return;
+      } else {
+        jQuery(form).find('input[type="submit"]').trigger('click');
+      }
+    });
+
+    function validate_form(form, form_id) {
+
+      if (form_id == 8) {
+        jQuery(form).validate({
+          normalizer: function(value) {
+            return jQuery.trim(value);
+          },
+          rules: {
+            'fname': {
+              required: true,
+              lettersonly: true,
+              maxlength: 25
+            },
+            'lname': {
+              required: true,
+              lettersonly: true,
+              maxlength: 25
+            },
+            'email': {
+              required: true,
+              email_extend: true
+            },
+            'phone': {
+              required: true,
+              number: true,
+              maxlength: 13,
+              minlength: 7
+            }
+          },
+          messages: {
+            'fname': {
+              required: "First name is required"
+            },
+            'lname': {
+              required: "Last name is required"
+            },
+            'email': {
+              required: "Email address is required"
+            },
+            'phone': {
+              required: "Phone is required",
+              number: "Not valid phone number",
+              maxlength: "Phone number maximum 13 digits.",
+              minlength: "Phone number minimum 7 digits."
+            },
+          },
+          errorElement: 'span',
+          errorClass: 'wpcf7-not-valid-tip'
+        });
+      }
+
+    }
+
+    /* Start Second form validation on home page */
+    jQuery('.validate_signup_form').on('click', function() {
+      var form = jQuery(this).parents('.wpcf7-form');
+      var form_id = jQuery(form).find('input[type=hidden][name=_wpcf7]').val();
+
+      validate_signup_form(form, form_id);
+
+      if (!form.valid()) {
+        return;
+      } else {
+        jQuery(form).find('input[type="submit"]').trigger('click');
+      }
+    });
+
+    function validate_signup_form(form, form_id) {
+
+      if (form_id == 105) {
+        jQuery(form).validate({
+          normalizer: function(value) {
+            return jQuery.trim(value);
+          },
+          rules: {
+            'email-803': {
+              required: true,
+              email_extend: true
+            },
+          },
+          messages: {
+            'email-803': {
+              required: "Email address is required"
+            },
+          },
+          errorElement: 'span',
+          errorClass: 'wpcf7-not-valid-tip'
+        });
+      }
+
+    }
+    /* End Second form validation on home page */
+
+  });
+</script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js?ver=5.8.3' id='sage/jquery.validate.min.js-js'></script>
+</body>
+</html>

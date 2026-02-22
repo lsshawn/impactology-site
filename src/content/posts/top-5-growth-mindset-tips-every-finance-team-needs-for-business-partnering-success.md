@@ -4,7 +4,7 @@ title: "Top 5 Growth Mindset Tips Every Finance Team Needs for Business Partneri
 slug: top-5-growth-mindset-tips-every-finance-team-needs-for-business-partnering-success
 excerpt: "Today's finance professionals are no longer just stewards of data. They are navigators of business performance, strategic advisors, and culture builders. But excelling in this broader role isn't simply about gaining new technical skills, it's about how we think."
 date: "2025-05-15"
-featuredImage: "https://impactology.com.au/wp-content/uploads/Growth-Mindset-Tips-Finance-Team-768x511.jpg"
+featuredImage: "/blog/top-5-growth-mindset-tips-every-finance-team-needs-for-business-partnering-success.webp"
 author: "George Liberopoulos"
 ---
 

@@ -4,7 +4,7 @@ title: "Adapting to Change: Building Agile and Client-Centric BPO Teams in a Rap
 slug: agile-client-centric-bpo-teams
 excerpt: "The Business Process Outsourcing (BPO) industry is constantly changing. Shifting client demands, disruptive technologies, and evolving market trends are the norm, not the exception. For BPO leaders, this creates a dual challenge: staying agile while delivering consistent, high-quality service."
 date: "2025-07-15"
-featuredImage: "https://impactology.com.au/wp-content/uploads/Building-Agile-and-Client-Centric-BPO-Teams-768x511.jpg"
+featuredImage: "/blog/agile-client-centric-bpo-teams.webp"
 author: "George Liberopoulos"
 ---
 

@@ -1,47 +1,40 @@
 <script lang="ts">
 	import SEO from '$lib/components/SEO.svelte';
-	import Icon from '@iconify/svelte';
-	import { resolve } from '$app/paths';
+	import ClientLogos from '$lib/components/ClientLogos.svelte';
+	import ContactForm from '$lib/components/ContactForm.svelte';
+	import { fly } from 'svelte/transition';
 
-	// Contact form state
-	let firstName = $state('');
-	let lastName = $state('');
-	let email = $state('');
-	let company = $state('');
-	let phone = $state('');
-	let message = $state('');
-	let formStatus = $state<'idle' | 'sending' | 'sent' | 'error'>('idle');
-	let errorMessage = $state('');
-
-	async function handleInterestSubmit(e: SubmitEvent) {
-		e.preventDefault();
-		formStatus = 'sending';
-		try {
-			const res = await fetch('/api/contact', {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({
-					firstName,
-					lastName,
-					email,
-					company,
-					phone,
-					message: `[Sales, BD & Client Management Business Partnering IMPACT Program Interest]\n\n${message}`
-				})
-			});
-			if (!res.ok) throw new Error('Failed to send');
-			formStatus = 'sent';
-			firstName = '';
-			lastName = '';
-			email = '';
-			company = '';
-			phone = '';
-			message = '';
-		} catch {
-			formStatus = 'error';
-			errorMessage = 'Something went wrong. Please try again.';
+	function trigger(node: HTMLElement, stateSetter: (v: boolean) => void) {
+		let observer: IntersectionObserver;
+		function startObserving() {
+			observer = new IntersectionObserver(
+				([entry]) => {
+					if (entry.isIntersecting) {
+						stateSetter(true);
+						observer.disconnect();
+					}
+				},
+				{ threshold: 0.15 }
+			);
+			observer.observe(node);
 		}
+		startObserving();
+		return { destroy: () => observer?.disconnect() };
 	}
+
+	const clientLogos = [
+		'/client-moss.webp',
+		'/client-otto.webp',
+		'/client-ot.webp',
+		'/client-rba.webp',
+		'/client-kh.webp',
+		'/client-edgeward.webp',
+		'/client-mu.webp',
+		'/client-transport.webp',
+		'/client-specsavers.webp',
+		'/client-msd.webp',
+		'/client-lochard.webp'
+	];
 
 	const challenges = [
 		{
@@ -198,57 +191,21 @@
 		}
 	];
 
-	const testimonials = [
-		{
-			quote:
-				'I really connected with and appreciated the style and approach. The one-on-one guidance really helped.',
-			title: 'Guidance really helped',
-			author: 'Claire',
-			role: 'Senior Manager'
-		},
-		{
-			quote:
-				'My goal was to maintain focus on my most important leadership priorities and this program has helped me achieve this.',
-			title: 'Helped me achieve',
-			author: 'Andrew',
-			role: 'General Counsel'
-		},
-		{
-			quote:
-				'My learnings from this program have helped me in so many ways both personally and professionally.',
-			title: 'Program helped me in so many ways',
-			author: 'Deborah',
-			role: 'HR Director'
-		},
-		{
-			quote:
-				'I appreciated the extensive experience from a wide range of sectors to draw upon. The insights shared were innovative and pragmatic.',
-			title: 'Insights were innovative and pragmatic',
-			author: 'Raj',
-			role: 'GM Human Resources'
-		},
-		{
-			quote:
-				'The guidance I have received has been instrumental in helping me to workout my overall vision and strategies for my career and personal goals. This has been a truly enriching and transformational experience.',
-			title: 'Truly enriching and transformational experience',
-			author: 'Katarina',
-			role: 'Marketing Specialist'
-		}
-	];
-
-	const clientLogos = [
-		'/client-moss.webp',
-		'/client-otto.webp',
-		'/client-ot.webp',
-		'/client-rba.webp',
-		'/client-kh.webp',
-		'/client-edgeward.webp',
-		'/client-mu.webp',
-		'/client-transport.webp',
-		'/client-specsavers.webp',
-		'/client-msd.webp',
-		'/client-lochard.webp'
-	];
+	let introText = $state(false);
+	let clientsHeading = $state(false);
+	let clientsLogos = $state(false);
+	let challengesHeading = $state(false);
+	let challengesGrid = $state(false);
+	let highlightsHeading = $state(false);
+	let highlightsGrid = $state(false);
+	let whoHeading = $state(false);
+	let whoGrid = $state(false);
+	let benefitsHeading = $state(false);
+	let benefitsGrid = $state(false);
+	let whyHeading = $state(false);
+	let whyGrid = $state(false);
+	let registerHeading = $state(false);
+	let registerForm = $state(false);
 </script>
 
 <SEO
@@ -274,256 +231,267 @@
 />
 
 <!-- Hero Section -->
-<section class="section-dark py-24 md:py-32 relative overflow-hidden">
-	<div
-		class="absolute top-0 right-0 w-96 h-96 bg-primary opacity-5 rounded-full -translate-y-1/2 translate-x-1/2"
-	></div>
-
-	<div class="container-custom relative z-10">
-		<div class="max-w-4xl">
-			<div class="flex items-center gap-3 mb-6">
-				<img src="/icon2.webp" alt="Sales Business Partnering Program" class="w-14 h-14" />
-				<span class="text-primary font-bold text-xl tracking-wider">SALES PROGRAM</span>
-			</div>
-			<h1 class="text-5xl md:text-6xl lg:text-7xl mb-6 leading-none">
-				SALES, BUSINESS DEVELOPMENT & CLIENT MANAGEMENT BUSINESS PARTNERING IMPACT PROGRAM
+<section
+	class="section-yellow py-24 md:py-8 bg-cover bg-center relative"
+	style="background-image: url('/bpip-hero-bg.webp'); height: 60vh; max-height: 60vh;"
+>
+	<div class="container-custom relative z-10 flex items-center h-full">
+		<div class="max-w-xl">
+			<h1 class="mb-6 text-5xl lg:text-6xl font-bold text-black">
+				Sales, Business Development & Client Management Business Partnering Impact Program
 			</h1>
-			<p class="text-xl mb-8 opacity-90 leading-relaxed max-w-3xl">
-				Revenue drivers. Client advocates. Strategic partners.
+			<p class="text-lg font-bold mb-8 text-black max-w-lg">
+				Transform Your Sales, BD & Client Management Teams into Strategic Business Partners
 			</p>
-			<p class="text-lg mb-8 opacity-80 leading-relaxed max-w-3xl">
-				Sales, Business Development (BD), and Client Management teams are the lifeblood of any
-				growing organisation. This program equips sales leaders and client servicing teams with the
-				skills and strategies to become true business partners, enabling them to drive revenue,
-				build client trust, and align seamlessly with broader organisational objectives.
-			</p>
-			<a
-				href="#register-interest"
-				class="btn btn-primary btn-lg uppercase font-bold rounded-none inline-flex items-center gap-2"
-			>
+			<a href="#register-interest" class="btn btn-secondary btn-lg uppercase font-bold mb-6">
 				BOOK YOUR FREE 60-MINUTE STRATEGY SESSION
-				<Icon icon="ph:arrow-right-bold" class="text-lg" />
 			</a>
+			<div class="text-base max-w-xl prose prose-lg">
+				<p>This free strategy session will help you uncover what your team needs most.</p>
+				<p><strong>Your Benefit:</strong> practical next steps you can act on immediately.</p>
+				<p><strong>No hard sell – pinky promise!</strong></p>
+			</div>
 		</div>
 	</div>
 </section>
 
-<!-- Free Strategy Session -->
-<section class="py-20 md:py-28 bg-base-100">
+<!-- Intro Section -->
+<section
+	class="py-20 md:py-28 bg-base-100"
+	use:trigger={(v) => {
+		introText = v;
+	}}
+>
 	<div class="container-custom">
 		<div class="max-w-4xl mx-auto">
-			<p class="text-xl leading-relaxed mb-6">
-				This free strategy session will help you uncover what your team needs most.
-			</p>
-			<div class="bg-base-200 p-8 mb-8">
-				<p class="text-lg font-bold mb-4">Your Benefit:</p>
-				<p class="text-lg leading-relaxed">
-					Practical next steps you can act on immediately. No hard sell - pinky promise!
-				</p>
-			</div>
-			<h2 class="text-3xl mb-6">
-				Transform Your Sales, BD & Client Management Teams into Strategic Business Partners
-			</h2>
-			<p class="text-lg leading-relaxed mb-6">
-				In the complex environments of small to medium enterprises and large enterprise-level
-				businesses, sales teams often face challenges that hinder their ability to deliver
-				consistent growth, align with strategic goals, and maximise client satisfaction.
-			</p>
-			<p class="text-lg leading-relaxed">
-				The Sales, BD & Client Management Business Partnering IMPACT Program by Impactology is
-				specifically designed to address these challenges. It equips sales leaders and client
-				servicing teams with the skills and strategies to become true business partners.
-			</p>
+			{#if introText}
+				<div in:fly={{ y: 30, duration: 600 }}>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Sales, Business Development (BD), and Client Management teams are the lifeblood of any
+						growing organisation. Yet, in the complex environments of small to medium enterprises and
+						large enterprise-level businesses, these teams often face challenges that hinder their
+						ability to deliver consistent growth, align with strategic goals, and maximise client
+						satisfaction.
+					</p>
+					<p class="text-lg leading-relaxed opacity-80">
+						The Sales, BD & Client Management Business Partnering IMPACT Program by Impactology is
+						specifically designed to address these challenges. It equips sales leaders and client
+						servicing teams with the skills and strategies to become true business partners, enabling
+						them to drive revenue, build client trust, and align seamlessly with broader
+						organisational objectives.
+					</p>
+				</div>
+			{/if}
 		</div>
 	</div>
 </section>
 
 <!-- Client Logos -->
-<section class="section-gray py-16">
-	<div class="container-custom">
-		<h2 class="text-center mb-12">SOME COMPANIES WE'VE PARTNERED WITH</h2>
-		<div class="grid grid-cols-3 md:grid-cols-6 gap-8 items-center">
-			{#each clientLogos as logo, i (i)}
-				<div class="flex items-center justify-center p-4">
-					<img src={logo} alt="Client logo" class="max-h-14 w-auto object-contain" />
-				</div>
-			{/each}
-		</div>
+<section class="py-16">
+	<div
+		class="container-custom"
+		use:trigger={(v) => {
+			clientsHeading = v;
+			setTimeout(() => (clientsLogos = v), 200);
+		}}
+	>
+		{#if clientsHeading}
+			<h2
+				class="text-4xl md:text-5xl font-bold text-center mb-12"
+				in:fly={{ y: 30, duration: 600 }}
+			>
+				SOME COMPANIES WE'VE PARTNERED WITH
+			</h2>
+		{/if}
+		{#if clientsLogos}
+			<div in:fly={{ y: 20, duration: 600 }}>
+				<ClientLogos logos={clientLogos} marquee={true} />
+			</div>
+		{/if}
 	</div>
 </section>
 
-<!-- Why Choose Section -->
-<section class="section-yellow py-20 md:py-28">
+<!-- Why Choose — Challenges & Solutions -->
+<section
+	class="py-20 md:py-28 bg-[#212023]"
+	use:trigger={(v) => {
+		challengesHeading = v;
+		setTimeout(() => (challengesGrid = v), 150);
+	}}
+>
 	<div class="container-custom">
-		<h2 class="text-center mb-6">
-			WHY CHOOSE THE SALES, BD & CLIENT MANAGEMENT BUSINESS PARTNERING IMPACT PROGRAM?
-		</h2>
-		<p class="text-xl text-center mb-12 max-w-3xl mx-auto">
-			Addressing Common Challenges Faced by Sales and BD Teams
-		</p>
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-			{#each challenges as challenge, i (i)}
-				<div class="bg-base-100/10 p-8 hover:bg-base-100/20 transition-colors">
-					<div class="flex items-start gap-4 mb-4">
-						<div class="w-12 h-12 bg-base-100 flex items-center justify-center shrink-0">
-							<span class="text-xl font-bold" style="font-family: var(--font-heading);"
-								>{i + 1}</span
-							>
-						</div>
-						<h3 class="text-xl">{challenge.title}</h3>
-					</div>
-					<div class="mb-4">
-						<p class="text-sm font-bold mb-2">The Challenge:</p>
-						<p class="text-sm leading-relaxed opacity-90">{challenge.challenge}</p>
-					</div>
-					<div>
-						<p class="text-sm font-bold mb-2">Our Solution:</p>
-						<p class="text-sm leading-relaxed opacity-90">{challenge.solution}</p>
-					</div>
-				</div>
-			{/each}
-		</div>
-	</div>
-</section>
-
-<!-- The Book Section -->
-<section class="py-20 md:py-28 bg-base-100">
-	<div class="container-custom">
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-			<div>
-				<p class="text-primary font-bold text-xl tracking-wider mb-4">EVOLVE</p>
-				<h2 class="mb-6">THE BUSINESS PARTNERING PLAYBOOK</h2>
-				<p class="text-xl font-bold mb-6">
-					Finally, a book that provides realistic and targeted advice to Business Partners!
+		{#if challengesHeading}
+			<div class="text-center mb-6" in:fly={{ y: 30, duration: 600 }}>
+				<h2 class="text-4xl md:text-5xl font-bold text-base-100 mb-4">
+					WHY CHOOSE THE SALES, BD & CLIENT MANAGEMENT BUSINESS PARTNERING IMPACT PROGRAM?
+				</h2>
+				<p class="text-lg text-base-100 opacity-80">
+					Addressing Common Challenges Faced by Sales and BD Teams
 				</p>
-				<p class="text-lg leading-relaxed mb-6 opacity-80">
-					Business Partners hold a vital role as trusted confidants with deep technical expertise,
-					and their impact is evident across all business functions. Initially tasked with providing
-					advice, they are now true collaborating partners, ideally placed to lead and manage change
-					in the changing world of work and business.
-				</p>
-				<p class="text-lg leading-relaxed mb-6 opacity-80">
-					Yet as the Business Partner role has changed, there has been no pathway to develop the
-					competencies essential for their success. Until now.
-				</p>
-				<p class="text-lg leading-relaxed mb-8">
-					If you are a current or aspiring Business Partner - HR, Finance, Procurement, IT, Risk,
-					Audit, Compliance, Legal, Marketing - this is the book for you.
-				</p>
-				<div class="bg-primary p-6 mb-6">
-					<p class="text-lg font-bold">
-						EVOLVE shows you how to navigate service models and systems, build your commercial
-						acumen and deliver value to your organisation.
-					</p>
-				</div>
-				<a
-					href={resolve('/evolve-book')}
-					class="btn btn-primary btn-lg uppercase font-bold rounded-none inline-flex items-center gap-2"
-				>
-					BUY NOW
-					<Icon icon="ph:arrow-right-bold" class="text-lg" />
-				</a>
 			</div>
-			<div class="flex justify-center">
-				<div class="relative">
-					<div class="w-80 h-96 bg-base-200 flex items-center justify-center">
-						<Icon icon="ph:book-open" class="text-8xl opacity-30" />
+		{/if}
+		{#if challengesGrid}
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12" in:fly={{ y: 30, duration: 600 }}>
+				{#each challenges as challenge, i (i)}
+					<div class="border border-neutral-content/20 p-8 hover:border-primary transition-colors">
+						<h3 class="text-xl text-primary font-bold mb-4">{challenge.title}</h3>
+						<p class="text-sm font-bold text-white mb-1">The Challenge:</p>
+						<p class="text-sm leading-relaxed opacity-80 text-base-100 mb-4">{challenge.challenge}</p>
+						<p class="text-sm font-bold text-white mb-1">Our Solution:</p>
+						<p class="text-sm leading-relaxed opacity-80 text-base-100">{challenge.solution}</p>
 					</div>
-					<div class="absolute -bottom-4 -right-4 w-20 h-20 bg-primary -z-10"></div>
-				</div>
+				{/each}
 			</div>
-		</div>
+		{/if}
 	</div>
 </section>
 
 <!-- Program Highlights -->
-<section class="section-dark py-20 md:py-28">
+<section
+	class="py-20 md:py-28 bg-base-300"
+	use:trigger={(v) => {
+		highlightsHeading = v;
+		setTimeout(() => (highlightsGrid = v), 150);
+	}}
+>
 	<div class="container-custom">
-		<h2 class="text-center mb-16">PROGRAM HIGHLIGHTS</h2>
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-			{#each programHighlights as highlight, i (i)}
-				<div class="border border-neutral-content/20 p-8">
-					<h3 class="text-xl mb-6 text-primary">{highlight.title}</h3>
-					{#each highlight.items as item}
-						<div class="mb-4 last:mb-0">
-							<p class="font-bold mb-2">{item.subtitle}:</p>
-							<p class="text-sm opacity-80 leading-relaxed">{item.description}</p>
-						</div>
-					{/each}
-				</div>
-			{/each}
-		</div>
+		{#if highlightsHeading}
+			<h2
+				class="text-4xl md:text-5xl font-bold text-center mb-16"
+				in:fly={{ y: 30, duration: 600 }}
+			>
+				PROGRAM HIGHLIGHTS
+			</h2>
+		{/if}
+		{#if highlightsGrid}
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8" in:fly={{ y: 30, duration: 600 }}>
+				{#each programHighlights as highlight, i (i)}
+					<div class="border border-base-content/20 p-8">
+						<h3 class="text-xl font-bold mb-6 text-primary">{highlight.title}</h3>
+						{#each highlight.items as item}
+							<div class="mb-4 last:mb-0">
+								<p class="font-bold mb-1">{item.subtitle}:</p>
+								<p class="text-sm opacity-80 leading-relaxed">{item.description}</p>
+							</div>
+						{/each}
+					</div>
+				{/each}
+			</div>
+		{/if}
 	</div>
 </section>
 
 <!-- Who Should Attend -->
-<section class="py-20 md:py-28 bg-base-100">
+<section
+	class="py-20 md:py-28 bg-base-100"
+	use:trigger={(v) => {
+		whoHeading = v;
+		setTimeout(() => (whoGrid = v), 150);
+	}}
+>
 	<div class="container-custom">
-		<h2 class="text-center mb-12">WHO SHOULD ATTEND?</h2>
-		<div class="max-w-4xl mx-auto">
-			<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+		{#if whoHeading}
+			<h2
+				class="text-4xl md:text-5xl font-bold text-center mb-12"
+				in:fly={{ y: 30, duration: 600 }}
+			>
+				WHO SHOULD ATTEND?
+			</h2>
+		{/if}
+		{#if whoGrid}
+			<div
+				class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto"
+				in:fly={{ y: 30, duration: 600 }}
+			>
 				{#each whoShouldAttend as role, i (i)}
 					<div class="bg-base-200 p-4 text-center">
 						<p class="font-medium">{role}</p>
 					</div>
 				{/each}
 			</div>
-		</div>
+		{/if}
 	</div>
 </section>
 
 <!-- Program Benefits -->
-<section class="section-yellow py-20 md:py-28">
+<section
+	class="bg-[#fff000] py-20 md:py-28"
+	use:trigger={(v) => {
+		benefitsHeading = v;
+		setTimeout(() => (benefitsGrid = v), 150);
+	}}
+>
 	<div class="container-custom">
-		<h2 class="text-center mb-16">PROGRAM BENEFITS</h2>
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-			<div>
-				<h3 class="text-2xl mb-8 text-center">For Your Team</h3>
-				<div class="space-y-6">
-					{#each teamBenefits as benefit}
-						<div class="flex items-start gap-4 bg-base-100/10 p-6">
-							<Icon icon="ph:check-circle-fill" class="text-2xl mt-0.5 shrink-0" />
-							<div>
-								<p class="font-bold mb-1">{benefit.title}:</p>
-								<p class="text-sm opacity-90">{benefit.description}</p>
+		{#if benefitsHeading}
+			<h2
+				class="text-4xl md:text-5xl font-bold text-center mb-16"
+				in:fly={{ y: 30, duration: 600 }}
+			>
+				PROGRAM BENEFITS
+			</h2>
+		{/if}
+		{#if benefitsGrid}
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12" in:fly={{ y: 30, duration: 600 }}>
+				<div>
+					<h3 class="text-2xl font-bold mb-8 text-center">For Your Team</h3>
+					<div class="space-y-4">
+						{#each teamBenefits as benefit}
+							<div class="flex items-start gap-4 bg-black/10 p-6">
+								<span class="text-black mt-1 shrink-0 text-xl">●</span>
+								<div>
+									<p class="font-bold mb-1">{benefit.title}:</p>
+									<p class="text-sm opacity-90">{benefit.description}</p>
+								</div>
 							</div>
-						</div>
-					{/each}
+						{/each}
+					</div>
+				</div>
+				<div>
+					<h3 class="text-2xl font-bold mb-8 text-center">For Your Organisation</h3>
+					<div class="space-y-4">
+						{#each orgBenefits as benefit}
+							<div class="flex items-start gap-4 bg-black/10 p-6">
+								<span class="text-black mt-1 shrink-0 text-xl">●</span>
+								<div>
+									<p class="font-bold mb-1">{benefit.title}:</p>
+									<p class="text-sm opacity-90">{benefit.description}</p>
+								</div>
+							</div>
+						{/each}
+					</div>
 				</div>
 			</div>
-			<div>
-				<h3 class="text-2xl mb-8 text-center">For Your Organisation</h3>
-				<div class="space-y-6">
-					{#each orgBenefits as benefit}
-						<div class="flex items-start gap-4 bg-base-100/10 p-6">
-							<Icon icon="ph:check-circle-fill" class="text-2xl mt-0.5 shrink-0" />
-							<div>
-								<p class="font-bold mb-1">{benefit.title}:</p>
-								<p class="text-sm opacity-90">{benefit.description}</p>
-							</div>
-						</div>
-					{/each}
-				</div>
-			</div>
-		</div>
+		{/if}
 	</div>
 </section>
 
 <!-- Why Impactology -->
-<section class="py-20 md:py-28 bg-base-100">
+<section
+	class="py-20 md:py-28 bg-base-100"
+	use:trigger={(v) => {
+		whyHeading = v;
+		setTimeout(() => (whyGrid = v), 150);
+	}}
+>
 	<div class="container-custom">
-		<h2 class="text-center mb-6">WHY IMPACTOLOGY?</h2>
-		<p class="text-xl text-center mb-12 max-w-3xl mx-auto">
-			At Impactology, we understand the unique challenges that sales, BD, and client management
-			teams face in small to medium and large organisations. Our tailored programs are designed to
-			address these pain points and deliver actionable solutions that drive real change.
-		</p>
-		<div class="max-w-4xl mx-auto">
-			<h3 class="text-2xl mb-8 text-center">What Makes Us Different?</h3>
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+		{#if whyHeading}
+			<div class="text-center mb-12" in:fly={{ y: 30, duration: 600 }}>
+				<h2 class="text-4xl md:text-5xl font-bold mb-6">WHY IMPACTOLOGY?</h2>
+				<p class="text-lg max-w-3xl mx-auto opacity-80">
+					At Impactology, we understand the unique challenges that sales, BD, and client management
+					teams face in small to medium and large organisations. Our tailored programs are designed
+					to address these pain points and deliver actionable solutions that drive real change.
+				</p>
+			</div>
+		{/if}
+		{#if whyGrid}
+			<div
+				class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto"
+				in:fly={{ y: 30, duration: 600 }}
+			>
 				{#each whyDifferent as item}
 					<div class="flex items-start gap-4 border border-base-300 p-6">
-						<Icon icon="ph:star-fill" class="text-2xl mt-0.5 shrink-0 text-primary" />
+						<span class="text-primary mt-1 shrink-0 text-xl">★</span>
 						<div>
 							<p class="font-bold mb-1">{item.title}:</p>
 							<p class="text-sm opacity-80">{item.description}</p>
@@ -531,188 +499,39 @@
 					</div>
 				{/each}
 			</div>
-		</div>
-	</div>
-</section>
-
-<!-- Testimonials -->
-<section class="section-gray py-20 md:py-28">
-	<div class="container-custom">
-		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-			{#each testimonials.slice(0, 3) as testimonial, i (i)}
-				<div class="bg-base-100 p-8 relative">
-					<div class="absolute top-4 left-4 opacity-10">
-						<Icon icon="ph:quotes-fill" class="text-4xl" />
-					</div>
-					<h3 class="text-lg mb-4 relative z-10">{testimonial.title}</h3>
-					<p class="text-base leading-relaxed relative z-10 mb-4">"{testimonial.quote}"</p>
-					<div class="border-t border-base-300 pt-4">
-						<p class="font-bold">{testimonial.author}</p>
-						<p class="text-sm opacity-70">{testimonial.role}</p>
-					</div>
-				</div>
-			{/each}
-		</div>
-		<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 max-w-4xl mx-auto">
-			{#each testimonials.slice(3) as testimonial, i (i)}
-				<div class="bg-base-100 p-8 relative">
-					<div class="absolute top-4 left-4 opacity-10">
-						<Icon icon="ph:quotes-fill" class="text-4xl" />
-					</div>
-					<h3 class="text-lg mb-4 relative z-10">{testimonial.title}</h3>
-					<p class="text-base leading-relaxed relative z-10 mb-4">"{testimonial.quote}"</p>
-					<div class="border-t border-base-300 pt-4">
-						<p class="font-bold">{testimonial.author}</p>
-						<p class="text-sm opacity-70">{testimonial.role}</p>
-					</div>
-				</div>
-			{/each}
-		</div>
-	</div>
-</section>
-
-<!-- Take the First Step -->
-<section class="section-dark py-16">
-	<div class="container-custom text-center">
-		<h2 class="text-3xl md:text-4xl mb-6">TAKE THE FIRST STEP TOWARD SUSTAINABLE GROWTH</h2>
-		<p class="text-lg mb-8 max-w-3xl mx-auto opacity-90">
-			Empower your sales, BD, and client management teams to overcome bottlenecks, drive revenue,
-			and build long-term client relationships. The Sales, BD & Client Management Business
-			Partnering IMPACT Program is your pathway to creating high-performing teams that thrive in
-			today's competitive environment.
-		</p>
+		{/if}
 	</div>
 </section>
 
 <!-- Register Interest Form -->
-<section id="register-interest" class="py-20 md:py-28 bg-base-100">
+<section
+	id="register-interest"
+	class="section-dark py-20 md:py-28"
+	use:trigger={(v) => {
+		registerHeading = v;
+		setTimeout(() => (registerForm = v), 150);
+	}}
+>
 	<div class="container-custom">
-		<div class="max-w-2xl mx-auto">
-			<div class="text-center mb-12">
-				<h2 class="mb-4">REGISTER YOUR INTEREST TODAY</h2>
-				<p class="text-lg">
-					Ready to amplify your sales leadership and team performance? Contact us to learn more
-					about how our program can help your organisation achieve its goals.
-				</p>
-			</div>
-
-			<form onsubmit={handleInterestSubmit} class="space-y-6" data-testid="interest-form">
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-					<label class="form-control w-full">
-						<div class="label">
-							<span class="label-text font-medium">First Name</span>
-						</div>
-						<input
-							type="text"
-							bind:value={firstName}
-							required
-							class="input input-bordered w-full rounded-none"
-							placeholder="John"
-						/>
-					</label>
-
-					<label class="form-control w-full">
-						<div class="label">
-							<span class="label-text font-medium">Last Name</span>
-						</div>
-						<input
-							type="text"
-							bind:value={lastName}
-							required
-							class="input input-bordered w-full rounded-none"
-							placeholder="Smith"
-						/>
-					</label>
+		<div class="max-w-3xl mx-auto">
+			{#if registerHeading}
+				<div class="text-center mb-12" in:fly={{ y: 30, duration: 600 }}>
+					<h2 class="text-5xl lg:text-7xl font-bold text-white mb-6">REGISTER YOUR INTEREST</h2>
+					<p class="text-lg text-white opacity-80">
+						Ready to amplify your sales leadership and team performance? Contact us to learn more
+						about how our program can help your organisation achieve its goals. Fill out the form
+						below to get started.
+					</p>
 				</div>
-
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text font-medium">Email</span>
-					</div>
-					<input
-						type="email"
-						bind:value={email}
-						required
-						class="input input-bordered w-full rounded-none"
-						placeholder="john@company.com"
+			{/if}
+			{#if registerForm}
+				<div in:fly={{ y: 30, duration: 600 }}>
+					<ContactForm
+						prefix="[Sales, BD & Client Management Business Partnering IMPACT Program Interest]"
+						class="bg-neutral/50 p-8 md:p-12"
 					/>
-				</label>
-
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text font-medium">Phone (optional)</span>
-					</div>
-					<input
-						type="tel"
-						bind:value={phone}
-						class="input input-bordered w-full rounded-none"
-						placeholder="+61 400 000 000"
-					/>
-				</label>
-
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text font-medium">Company</span>
-					</div>
-					<input
-						type="text"
-						bind:value={company}
-						required
-						class="input input-bordered w-full rounded-none"
-						placeholder="Your Company Name"
-					/>
-				</label>
-
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text font-medium">Message (optional)</span>
-					</div>
-					<textarea
-						bind:value={message}
-						class="textarea textarea-bordered w-full rounded-none h-24"
-						placeholder="Tell us about your team and goals..."
-					></textarea>
-				</label>
-
-				{#if formStatus === 'error'}
-					<div class="alert alert-error rounded-none">
-						<Icon icon="ph:warning-circle" class="text-lg" />
-						<span>{errorMessage}</span>
-					</div>
-				{/if}
-				{#if formStatus === 'sent'}
-					<div class="alert alert-success rounded-none">
-						<Icon icon="ph:check-circle" class="text-lg" />
-						<span>Thanks for your interest! We'll be in touch within 24 hours.</span>
-					</div>
-				{/if}
-
-				<button
-					type="submit"
-					class="btn btn-primary btn-lg uppercase font-bold rounded-none w-full"
-					disabled={formStatus === 'sending'}
-				>
-					{#if formStatus === 'sending'}
-						<span class="loading loading-spinner loading-sm"></span>
-						Sending...
-					{:else}
-						Submit Your Interest
-					{/if}
-				</button>
-			</form>
+				</div>
+			{/if}
 		</div>
-	</div>
-</section>
-
-<!-- Stay in the Loop -->
-<section class="section-dark py-16">
-	<div class="container-custom text-center">
-		<h2 class="text-3xl md:text-4xl mb-6">STAY IN THE LOOP</h2>
-		<p class="text-lg mb-8 max-w-2xl mx-auto opacity-90">
-			Receive news and information on upcoming events
-		</p>
-		<a href={resolve('/contact')} class="btn btn-primary btn-lg uppercase font-bold rounded-none">
-			CONTACT US
-		</a>
 	</div>
 </section>
