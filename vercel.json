@@ -2,7 +2,7 @@
 	"$schema": "https://openapi.vercel.sh/vercel.json",
 	"headers": [
 		{
-			"source": "/(.*\\.webp)",
+			"source": "/:path*.webp",
 			"headers": [
 				{
 					"key": "Cache-Control",
@@ -11,7 +11,7 @@
 			]
 		},
 		{
-			"source": "/(.*\\.(png|jpg|jpeg|gif|ico|svg))",
+			"source": "/:path*.(png|jpg|jpeg|gif|ico|svg)",
 			"headers": [
 				{
 					"key": "Cache-Control",
@@ -20,7 +20,7 @@
 			]
 		},
 		{
-			"source": "/(.*\\.(woff|woff2|ttf|otf|eot))",
+			"source": "/:path*.(woff|woff2|ttf|otf|eot)",
 			"headers": [
 				{
 					"key": "Cache-Control",
@@ -29,7 +29,7 @@
 			]
 		},
 		{
-			"source": "/(.*\\.(js|css))",
+			"source": "/:path*.(js|css)",
 			"headers": [
 				{
 					"key": "Cache-Control",
