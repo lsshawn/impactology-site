@@ -1,34 +1,7 @@
-# Ignore everything at the root except what we need
-/*
-!/apps/frontend
-!/packages/db
-!/package.json
-!/pnpm-lock.yaml
-!/pnpm-workspace.yaml
-!/.npmrc
-
-# Ignore other apps
-/apps/backend
-
-# Node modules (will be installed fresh)
 node_modules
-**/node_modules
-
-# Build outputs
-.turbo
-dist
-build
 .svelte-kit
-
-# Environment files
+build
 .env
 .env.*
 !.env.example
-
-# IDE
-.vscode
-.idea
-*.swp
-*.swo
-*~
 .DS_Store
