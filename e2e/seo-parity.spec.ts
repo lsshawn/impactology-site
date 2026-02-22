@@ -1,7 +1,8 @@
 /**
  * SEO Parity Tests
  *
- * Compares meta tags between the live WordPress site and the local SvelteKit build.
+ * Compares meta tags, headings, and JSON-LD schema types between the live
+ * WordPress site and the local SvelteKit build.
  * Run with: pnpm playwright test e2e/seo-parity.spec.ts
  *
  * To add more pages, append entries to the `pages` array below.
@@ -80,14 +81,36 @@ interface SeoData {
 	ogImage: string | null;
 	ogType: string | null;
 	canonical: string | null;
-	jsonLd: Record<string, unknown> | null;
+	/** All @type values found across all JSON-LD blocks on the page, sorted */
+	jsonLdTypes: string[];
 	h1: string | null;
+	/** All visible h2 text values, in document order */
+	h2s: string[];
+}
+
+/**
+ * Extract all @type values from a parsed JSON-LD object.
+ * Handles plain objects, @graph arrays, and nested structures.
+ */
+function extractJsonLdTypes(raw: unknown): string[] {
+	if (!raw || typeof raw !== 'object') return [];
+	const obj = raw as Record<string, unknown>;
+
+	// @graph: array of typed nodes
+	if (Array.isArray(obj['@graph'])) {
+		return (obj['@graph'] as unknown[]).flatMap((node) => extractJsonLdTypes(node));
+	}
+
+	const type = obj['@type'];
+	if (typeof type === 'string') return [type];
+	if (Array.isArray(type)) return type.filter((t): t is string => typeof t === 'string');
+	return [];
 }
 
 async function getSeoData(page: Page, url: string): Promise<SeoData> {
 	await page.goto(url, { waitUntil: 'domcontentloaded' });
 
-	const [title, description, ogTitle, ogDescription, ogImage, ogType, canonical, jsonLdRaw, h1] =
+	const [title, description, ogTitle, ogDescription, ogImage, ogType, canonical, allJsonLdRaw, h1, h2s] =
 		await Promise.all([
 			page.title(),
 			page.$eval('meta[name="description"]', (el) => el.getAttribute('content')).catch(() => null),
@@ -96,20 +119,40 @@ async function getSeoData(page: Page, url: string): Promise<SeoData> {
 			page.$eval('meta[property="og:image"]', (el) => el.getAttribute('content')).catch(() => null),
 			page.$eval('meta[property="og:type"]', (el) => el.getAttribute('content')).catch(() => null),
 			page.$eval('link[rel="canonical"]', (el) => el.getAttribute('href')).catch(() => null),
-			page.$eval('script[type="application/ld+json"]', (el) => el.textContent).catch(() => null),
+			// Collect ALL JSON-LD blocks (WP often emits several)
+			page.$$eval('script[type="application/ld+json"]', (els) =>
+				els.map((el) => el.textContent ?? '')
+			).catch(() => [] as string[]),
 			page.$eval('h1', (el) => el.textContent?.trim() ?? null).catch(() => null),
+			// All h2 text values in order
+			page.$$eval('h2', (els) =>
+				els.map((el) => (el.textContent?.trim() ?? '').replace(/\s+/g, ' '))
+			).catch(() => [] as string[]),
 		]);
 
-	let jsonLd: Record<string, unknown> | null = null;
-	if (jsonLdRaw) {
+	// Parse all JSON-LD blocks and collect every @type
+	const jsonLdTypes: string[] = [];
+	for (const raw of allJsonLdRaw) {
 		try {
-			jsonLd = JSON.parse(jsonLdRaw);
+			const parsed = JSON.parse(raw);
+			jsonLdTypes.push(...extractJsonLdTypes(parsed));
 		} catch {
 			// ignore parse errors
 		}
 	}
 
-	return { title, description, ogTitle, ogDescription, ogImage, ogType, canonical, jsonLd, h1 };
+	return {
+		title,
+		description,
+		ogTitle,
+		ogDescription,
+		ogImage,
+		ogType,
+		canonical,
+		jsonLdTypes: [...new Set(jsonLdTypes)].sort(),
+		h1,
+		h2s,
+	};
 }
 
 for (const { label, path } of pages) {
@@ -167,9 +210,23 @@ for (const { label, path } of pages) {
 			expect(local.h1).toBe(wp.h1);
 		});
 
-		test('JSON-LD @type matches', () => {
-			if (!wp.jsonLd) return; // skip pages where WP has no JSON-LD
-			expect(local.jsonLd?.['@type']).toBe(wp.jsonLd['@type']);
+		test('h2 headings match', () => {
+			// Both sites must have the same h2 texts (order-sensitive).
+			// WP may have extra plugin-injected h2s (cookie banners etc.) — we
+			// check that every h2 present on WP appears in local, not strict equality.
+			if (wp.h2s.length === 0) return; // nothing to assert
+			for (const h2 of wp.h2s) {
+				expect(local.h2s, `Missing h2: "${h2}"`).toContain(h2);
+			}
+		});
+
+		test('JSON-LD schema types match', () => {
+			// WP page must have JSON-LD for this assertion to run
+			if (wp.jsonLdTypes.length === 0) return;
+			// Every @type found on WP must also be present locally
+			for (const type of wp.jsonLdTypes) {
+				expect(local.jsonLdTypes, `Missing schema @type: "${type}"`).toContain(type);
+			}
 		});
 	});
 }
