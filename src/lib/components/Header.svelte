@@ -40,6 +40,12 @@
 						class="absolute top-full right-0 hidden group-hover:block bg-base-100 shadow-lg w-96 p-2 z-50"
 					>
 						<li>
+							<a href="/programs" class="text-sm font-bold">
+								All Programs
+							</a>
+						</li>
+						<li class="border-t border-base-200 my-1"></li>
+						<li>
 							<a href="/business-partnering-impact-program" class="text-sm">
 								Business Partnering Impact Program
 							</a>
@@ -98,6 +104,9 @@
 					<details>
 						<summary>Programs</summary>
 						<ul class="pl-4">
+							<li>
+								<a href="/programs" onclick={toggleMenu} class="font-bold">All Programs</a>
+							</li>
 							<li>
 								<a href="/business-partnering-impact-program" onclick={toggleMenu}>
 									Business Partnering Impact Program

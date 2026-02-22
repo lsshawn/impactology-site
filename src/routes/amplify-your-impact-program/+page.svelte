@@ -1,6 +1,7 @@
 <script lang="ts">
 	import SEO from '$lib/components/SEO.svelte';
 	import Icon from '@iconify/svelte';
+	import ClientLogos from '$lib/components/ClientLogos.svelte';
 
 	// Contact form state
 	let firstName = $state('');
@@ -255,13 +256,7 @@
 <section class="section-gray py-16">
 	<div class="container-custom">
 		<h2 class="text-center mb-12">SOME COMPANIES WE'VE PARTNERED WITH</h2>
-		<div class="grid grid-cols-3 md:grid-cols-6 gap-8 items-center">
-			{#each clientLogos as logo, i (i)}
-				<div class="flex items-center justify-center p-4">
-					<img src={logo} alt="Client logo" class="max-h-14 w-auto object-contain" />
-				</div>
-			{/each}
-		</div>
+		<ClientLogos logos={clientLogos} />
 	</div>
 </section>
 
