@@ -42,7 +42,7 @@
 <!-- Hero Section -->
 <section
 	class="py-20 md:py-28 bg-cover bg-center relative"
-	style="background-image: url('https://impactology.com.au/wp-content/uploads/2020/08/study_cover-1.jpg');"
+	style="background-image: url('/about-hero-bg.webp');"
 >
 	<div class="absolute inset-0 bg-black/80"></div>
 	<div class="container-custom relative z-10">
@@ -119,7 +119,7 @@
 			</div>
 			<div>
 				<img
-					src="https://impactology.com.au/wp-content/uploads/2020/09/man-2-sparks-photo-1531574688974-2386ec946fe5.jpg"
+					src="/about-what.webp"
 					alt="what it means to create an impact"
 					class="w-full h-80 object-cover"
 				/>
@@ -134,7 +134,7 @@
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 			<div>
 				<img
-					src="https://impactology.com.au/wp-content/uploads/2020/09/Group-of-females-photo-1491438590914-bc09fcaaf77a.jpg"
+					src="/about-who.webp"
 					alt="community of impactologists"
 					class="w-full h-80 object-cover"
 				/>
@@ -211,7 +211,7 @@
 			</div>
 			<div>
 				<img
-					src="https://impactology.com.au/wp-content/uploads/2020/09/lego-rocket-photo-1527694747350-2d483ffcff28.jpg"
+					src="/about-how.webp"
 					alt="how we create impact"
 					class="w-full h-80 object-cover"
 				/>
@@ -226,7 +226,7 @@
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 			<div>
 				<img
-					src="https://impactology.com.au/wp-content/uploads/2020/09/women-with-binoculars-photo-1515598379512-b60132823a9d.jpg"
+					src="/about-why.webp"
 					alt="why does impact matter"
 					class="w-full h-80 object-cover"
 				/>
