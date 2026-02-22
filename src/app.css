@@ -64,8 +64,7 @@
   /* #3E3E3E */
   --section-gray: oklch(0.93 0 0);
   /* #E3E4E8 */
-  --section-yellow: oklch(0.97 0.17 102);
-  /* #FFF000 */
+  --section-yellow: #faeb00;
 }
 
 /*
@@ -85,7 +84,6 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  text-transform: uppercase;
 }
 
 /*

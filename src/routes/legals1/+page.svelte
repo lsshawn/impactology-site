@@ -30,9 +30,6 @@
 					<div class="mb-8">
 						<img src="/logo.png" alt="Impactology" class="h-10 w-auto" />
 					</div>
-					<p class="text-gray-400 text-sm mb-10 leading-relaxed">
-						Frameworks and leadership development for global business partnering teams.
-					</p>
 
 					<div class="space-y-3">
 						<a
@@ -65,23 +62,6 @@
 								class="text-gray-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-lg"
 							/>
 						</a>
-
-						<a
-							href="/legals1/ethics"
-							class="group flex items-center justify-between p-4 rounded-xl hover:bg-[#fffde6] transition-colors"
-						>
-							<div class="flex items-center gap-3">
-								<Icon
-									icon="mdi:shield-check-outline"
-									class="text-gray-400 group-hover:text-primary text-lg"
-								/>
-								<span class="text-sm font-medium">Ethics Charter</span>
-							</div>
-							<Icon
-								icon="mdi:arrow-top-right"
-								class="text-gray-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-lg"
-							/>
-						</a>
 					</div>
 				</div>
 
@@ -90,11 +70,8 @@
 					class="border border-base-300 rounded-2xl p-8 md:p-10 bg-white hover:shadow-lg hover:border-gray-300 transition-all duration-300"
 				>
 					<div class="mb-8">
-						<img src="/impactora-logo.png" alt="Impactora" class="h-10 w-auto" />
+						<img src="/impactora-logo.webp" alt="Impactora" class="h-10 w-auto" />
 					</div>
-					<p class="text-gray-400 text-sm mb-10 leading-relaxed">
-						Integrated business partnership and leadership management platform.
-					</p>
 
 					<div class="space-y-3">
 						<a
@@ -118,23 +95,6 @@
 							<div class="flex items-center gap-3">
 								<Icon icon="mdi:file-sign" class="text-gray-400 group-hover:text-info text-lg" />
 								<span class="text-sm font-medium">End User License Agreement</span>
-							</div>
-							<Icon
-								icon="mdi:arrow-top-right"
-								class="text-gray-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform text-lg"
-							/>
-						</a>
-
-						<a
-							href="/legals1/security"
-							class="group flex items-center justify-between p-4 rounded-xl hover:bg-[#eefbff] transition-colors"
-						>
-							<div class="flex items-center gap-3">
-								<Icon
-									icon="mdi:shield-star-outline"
-									class="text-gray-400 group-hover:text-info text-lg"
-								/>
-								<span class="text-sm font-medium">Security Standards</span>
 							</div>
 							<Icon
 								icon="mdi:arrow-top-right"

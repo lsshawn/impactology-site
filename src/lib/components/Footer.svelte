@@ -142,7 +142,7 @@
 					<a href="/privacy-policy" class="hover:text-primary transition-colors">Privacy Policy</a>
 					|
 					<a href="/legals1" class="hover:text-primary transition-colors">Legals</a> |
-					<a href="/terms" class="hover:text-primary transition-colors">Terms and Conditions</a>
+					<a href="/legals1" class="hover:text-primary transition-colors">Terms and Conditions</a>
 				</p>
 			</div>
 		</div>

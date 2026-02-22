@@ -118,8 +118,8 @@
 />
 
 <!-- Hero Section -->
-<section class="section-yellow py-20 md:py-28">
-	<div class="container-custom text-center">
+<section class="pt-12">
+	<div class="text-center font-bold text-2xl md:text-6xl">
 		<h1>GALLERY</h1>
 	</div>
 </section>
