@@ -4,6 +4,7 @@
 	type Props = {
 		logos?: string[];
 		carousel?: boolean;
+		marquee?: boolean;
 		class?: string;
 	};
 
@@ -21,10 +22,27 @@
 		'/client-lochard.png'
 	];
 
-	let { logos = defaultLogos, carousel = false, class: className = '' }: Props = $props();
+	let { logos = defaultLogos, carousel = false, marquee = false, class: className = '' }: Props =
+		$props();
 </script>
 
-{#if carousel}
+{#if marquee}
+	<!-- Infinite sushi-train marquee: right → left, seamless loop, no snap -->
+	<div class="overflow-hidden {className}" style="mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%); -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);">
+		<div class="marquee-track flex items-center gap-16 py-4" style="width: max-content;">
+			<!-- Two identical sets so the loop is seamless -->
+			{#each [logos, logos] as set}
+				<div class="flex items-center gap-16 shrink-0" aria-hidden={set === logos ? undefined : 'true'}>
+					{#each set as logo}
+						<div class="flex items-center justify-center shrink-0">
+							<img src={logo} alt="Client logo" class="max-h-14 w-auto object-contain" loading="lazy" />
+						</div>
+					{/each}
+				</div>
+			{/each}
+		</div>
+	</div>
+{:else if carousel}
 	<div class="relative group/carousel {className}">
 		<!-- Left Arrow -->
 		<button
@@ -43,7 +61,7 @@
 			class="flex overflow-x-auto scroll-smooth gap-8 items-center py-6 px-4"
 			style="scrollbar-width: none;"
 		>
-			{#each logos as logo, i}
+			{#each logos as logo}
 				<div class="flex items-center justify-center shrink-0 px-4">
 					<img src={logo} alt="Client logo" class="max-h-14 w-auto object-contain" loading="lazy" />
 				</div>
@@ -71,3 +89,24 @@
 		{/each}
 	</div>
 {/if}
+
+<style>
+	.marquee-track {
+		animation: marquee 30s linear infinite;
+		/* pause on hover */
+	}
+
+	.marquee-track:hover {
+		animation-play-state: paused;
+	}
+
+	@keyframes marquee {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			/* Shift exactly one full set width — since both sets are equal, this is 50% of the track */
+			transform: translateX(-50%);
+		}
+	}
+</style>
