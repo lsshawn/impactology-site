@@ -3,7 +3,7 @@
 	import Icon from '@iconify/svelte';
 	import InstagramSection from '$lib/components/InstagramSection.svelte';
 	import ContactForm from '$lib/components/ContactForm.svelte';
-	import { onMount, onDestroy } from 'svelte';
+	import TestimonialSlider from '$lib/components/TestimonialSlider.svelte';
 
 	const clientPhotos = [
 		'/client-photo-1.jpg',
@@ -86,53 +86,6 @@
 		}
 	];
 
-	let activeTestimonial = $state(0);
-	let slideDirection = $state<'left' | 'right'>('left');
-	let isAnimating = $state(false);
-	let autoSlideTimer: ReturnType<typeof setInterval>;
-
-	function slideTo(index: number, direction: 'left' | 'right') {
-		if (isAnimating) return;
-		slideDirection = direction;
-		isAnimating = true;
-		// After slide-out finishes, swap content and slide in
-		setTimeout(() => {
-			activeTestimonial = index;
-			isAnimating = false;
-		}, 300);
-	}
-
-	function prevTestimonial() {
-		resetAutoSlide();
-		const prev = (activeTestimonial - 1 + testimonials.length) % testimonials.length;
-		slideTo(prev, 'right');
-	}
-
-	function nextTestimonial() {
-		resetAutoSlide();
-		const next = (activeTestimonial + 1) % testimonials.length;
-		slideTo(next, 'left');
-	}
-
-	function startAutoSlide() {
-		autoSlideTimer = setInterval(() => {
-			const next = (activeTestimonial + 1) % testimonials.length;
-			slideTo(next, 'left');
-		}, 3000);
-	}
-
-	function resetAutoSlide() {
-		clearInterval(autoSlideTimer);
-		startAutoSlide();
-	}
-
-	onMount(() => {
-		startAutoSlide();
-	});
-
-	onDestroy(() => {
-		clearInterval(autoSlideTimer);
-	});
 </script>
 
 <SEO
@@ -412,57 +365,9 @@
 </div>
 
 <!-- Testimonials Section -->
-<section class="py-20 md:py-28 bg-[#fff000]" data-testid="testimonial-section">
+<section class="py-20 md:py-28 bg-[#fff000]">
 	<div class="container-custom">
-		<!-- Quote block with ::before/::after quote mark icons -->
-		<div class="testimonial-title" data-testid="testimonial-card">
-			<div class="overflow-hidden w-full">
-				<div
-					class="testimonial-slide flex items-center w-full"
-					class:slide-out-left={isAnimating && slideDirection === 'left'}
-					class:slide-out-right={isAnimating && slideDirection === 'right'}
-					class:slide-in-left={!isAnimating && slideDirection === 'right'}
-					class:slide-in-right={!isAnimating && slideDirection === 'left'}
-				>
-					<!-- Left: large bold headline with left accent bar -->
-					<div class="pl-4 mr-6 shrink-0 md:w-1/2">
-						<p class="text-2xl md:text-2xl font-black leading-tight text-black">
-							{testimonials[activeTestimonial].shortQuote}
-						</p>
-					</div>
-
-					<!-- Right: full quote + attribution -->
-					<div class="md:w-1/2">
-						<p class="text-sm leading-relaxed text-black mb-4">
-							{testimonials[activeTestimonial].quote}
-						</p>
-						<p class="font-bold text-sm text-black">{testimonials[activeTestimonial].name}</p>
-						<p class="text-sm text-black">{testimonials[activeTestimonial].title}</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<!-- Navigation: ← 3/5 → -->
-		<div class="flex items-center justify-center gap-6 mt-4">
-			<button
-				onclick={prevTestimonial}
-				class="text-black hover:opacity-60 transition-opacity"
-				aria-label="Previous testimonial"
-			>
-				<Icon icon="ph:arrow-left" class="text-xl" />
-			</button>
-			<span class="text-black font-medium tabular-nums">
-				{activeTestimonial + 1}/{testimonials.length}
-			</span>
-			<button
-				onclick={nextTestimonial}
-				class="text-black hover:opacity-60 transition-opacity"
-				aria-label="Next testimonial"
-			>
-				<Icon icon="ph:arrow-right" class="text-xl" />
-			</button>
-		</div>
+		<TestimonialSlider {testimonials} />
 	</div>
 </section>
 

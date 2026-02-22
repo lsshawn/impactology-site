@@ -81,7 +81,10 @@
 >
 	<div class="absolute inset-0 bg-neutral/80"></div>
 	{#if heroVisible}
-		<div class="container-custom relative z-10 text-center" transition:fly={{ y: 30, duration: 700 }}>
+		<div
+			class="container-custom relative z-10 text-center"
+			transition:fly={{ y: 30, duration: 700 }}
+		>
 			<h1 class="text-5xl md:text-6xl lg:text-6xl mb-6 leading-none text-neutral-content font-bold">
 				BUSINESS PARTNERING DEVELOPMENT Programs
 			</h1>
@@ -145,8 +148,8 @@
 						AMPLIFY YOUR IMPACT PROGRAM
 					</h2>
 					<p class="text-lg leading-relaxed mb-8 opacity-80 text-white">
-						A follow-up to the Business Partnering IMPACT Program, this Program Experience is designed
-						to prepare your Business Partners for change and drive transformation.
+						A follow-up to the Business Partnering IMPACT Program, this Program Experience is
+						designed to prepare your Business Partners for change and drive transformation.
 					</p>
 					<a href="/amplify-your-impact-program">
 						<img src="/programs-know-more.png" alt="Know More" class="h-12 w-auto" />
@@ -208,9 +211,12 @@
 				>
 					CONNECT WITH US
 				</h2>
-				<p class="text-center text-lg mb-12 opacity-80 text-white" transition:fly={{ y: 20, duration: 600, delay: 100 }}>
-					Ready to create an impact path for your team? <br /> Let's talk about which program is right for
-					you.
+				<p
+					class="text-center text-lg mb-12 opacity-80 text-white"
+					transition:fly={{ y: 20, duration: 600, delay: 100 }}
+				>
+					Ready to create an impact path for your team? <br /> Let's talk about which program is right
+					for you.
 				</p>
 			{/if}
 			{#if connectForm}
