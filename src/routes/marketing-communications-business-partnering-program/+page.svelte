@@ -135,12 +135,76 @@
 		}
 	];
 
+	const whoShouldAttend = [
+		'Marketing Department Leaders',
+		'Marketing and Communications Managers',
+		'Marketing and Communications Teams'
+	];
+
+	const teamBenefits = [
+		{
+			title: 'Increased Influence',
+			description: 'Become strategic partners who contribute meaningfully to business decisions.'
+		},
+		{
+			title: 'Enhanced Skills',
+			description: 'Develop competencies in leadership, communication, and strategic thinking.'
+		},
+		{
+			title: 'Greater Alignment',
+			description: 'Work cohesively with other departments to drive organisational success.'
+		}
+	];
+
+	const orgBenefits = [
+		{
+			title: 'Improved Performance',
+			description: 'Align marketing initiatives with business goals to enhance overall performance.'
+		},
+		{
+			title: 'Stronger Collaboration',
+			description: 'Benefit from integrated strategies that leverage cross-departmental strengths.'
+		},
+		{
+			title: 'Increased ROI',
+			description: 'Maximise the impact of marketing spend through targeted, strategic efforts.'
+		}
+	];
+
+	const whyDifferent = [
+		{
+			title: 'Tailored Solutions',
+			description:
+				'Customised training that addresses your specific organisational needs and challenges.'
+		},
+		{
+			title: 'Experienced Facilitators',
+			description:
+				'Learn from industry experts with a proven marketing leadership and business partnering track record.'
+		},
+		{
+			title: 'Actionable Frameworks',
+			description:
+				'Gain practical tools and methodologies that can be immediately applied in the work you do.'
+		},
+		{
+			title: 'Sustainable Results',
+			description: 'Achieve long-term improvements in team performance and organisational impact.'
+		}
+	];
+
 	let introImg = $state(false);
 	let introText = $state(false);
 	let ctaImg = $state(false);
 	let ctaText = $state(false);
 	let modulesHeading = $state(false);
 	let modulesGrid = $state(false);
+	let whoHeading = $state(false);
+	let whoGrid = $state(false);
+	let benefitsHeading = $state(false);
+	let benefitsGrid = $state(false);
+	let whyHeading = $state(false);
+	let whyGrid = $state(false);
 </script>
 
 <SEO
@@ -361,6 +425,129 @@
 								</li>
 							{/each}
 						</ul>
+					</div>
+				{/each}
+			</div>
+		{/if}
+	</div>
+</section>
+
+<!-- Who Should Attend -->
+<section
+	class="py-20 md:py-28 bg-base-100"
+	use:trigger={(v) => {
+		whoHeading = v;
+		setTimeout(() => (whoGrid = v), 150);
+	}}
+>
+
+	<div class="container-custom">
+		{#if whoHeading}
+			<h2
+				class="text-4xl md:text-5xl font-bold text-center mb-12"
+				in:fly={{ y: 30, duration: 600 }}
+			>
+				WHO SHOULD ATTEND?
+			</h2>
+		{/if}
+		{#if whoGrid}
+			<div
+				class="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto"
+				in:fly={{ y: 30, duration: 600 }}
+			>
+				{#each whoShouldAttend as role, i (i)}
+					<div class="bg-base-200 px-6 py-4 text-center">
+						<p class="font-medium">{role}</p>
+					</div>
+				{/each}
+			</div>
+		{/if}
+	</div>
+</section>
+
+<!-- Program Benefits -->
+<section
+	class="bg-[#fff000] py-20 md:py-28"
+	use:trigger={(v) => {
+		benefitsHeading = v;
+		setTimeout(() => (benefitsGrid = v), 150);
+	}}
+>
+	<div class="container-custom">
+		{#if benefitsHeading}
+			<h2
+				class="text-4xl md:text-5xl font-bold text-center mb-16"
+				in:fly={{ y: 30, duration: 600 }}
+			>
+				PROGRAM BENEFITS
+			</h2>
+		{/if}
+		{#if benefitsGrid}
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12" in:fly={{ y: 30, duration: 600 }}>
+				<div>
+					<h3 class="text-2xl font-bold mb-8 text-center">For Your Team</h3>
+					<div class="space-y-4">
+						{#each teamBenefits as benefit}
+							<div class="flex items-start gap-4 bg-black/10 p-6">
+								<span class="text-black mt-1 shrink-0 text-xl">●</span>
+								<div>
+									<p class="font-bold mb-1">{benefit.title}:</p>
+									<p class="text-sm opacity-90">{benefit.description}</p>
+								</div>
+							</div>
+						{/each}
+					</div>
+				</div>
+				<div>
+					<h3 class="text-2xl font-bold mb-8 text-center">For Your Organisation</h3>
+					<div class="space-y-4">
+						{#each orgBenefits as benefit}
+							<div class="flex items-start gap-4 bg-black/10 p-6">
+								<span class="text-black mt-1 shrink-0 text-xl">●</span>
+								<div>
+									<p class="font-bold mb-1">{benefit.title}:</p>
+									<p class="text-sm opacity-90">{benefit.description}</p>
+								</div>
+							</div>
+						{/each}
+					</div>
+				</div>
+			</div>
+		{/if}
+	</div>
+</section>
+
+<!-- Why Impactology -->
+<section
+	class="py-20 md:py-28 bg-base-100"
+	use:trigger={(v) => {
+		whyHeading = v;
+		setTimeout(() => (whyGrid = v), 150);
+	}}
+>
+	<div class="container-custom">
+		{#if whyHeading}
+			<div class="text-center mb-12" in:fly={{ y: 30, duration: 600 }}>
+				<h2 class="text-4xl md:text-5xl font-bold mb-6">WHY IMPACTOLOGY?</h2>
+				<p class="text-lg max-w-3xl mx-auto opacity-80">
+					At Impactology, we specialise in transforming teams into strategic business partners. Our
+					expertise lies in understanding the unique challenges marketing and communication
+					departments face in large organisations.
+				</p>
+			</div>
+		{/if}
+		{#if whyGrid}
+			<div
+				class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto"
+				in:fly={{ y: 30, duration: 600 }}
+			>
+				{#each whyDifferent as item}
+					<div class="flex items-start gap-4 border border-base-300 p-6">
+						<span class="text-primary mt-1 shrink-0 text-xl">★</span>
+						<div>
+							<p class="font-bold mb-1">{item.title}:</p>
+							<p class="text-sm opacity-80">{item.description}</p>
+						</div>
 					</div>
 				{/each}
 			</div>
