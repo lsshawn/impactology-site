@@ -1,8 +1,9 @@
 <script lang="ts">
 	import SEO from '$lib/components/SEO.svelte';
-	import ClientLogos from '$lib/components/ClientLogos.svelte';
-	import ContactForm from '$lib/components/ContactForm.svelte';
 	import TestimonialSlider from '$lib/components/TestimonialSlider.svelte';
+	import EvolveBookSection from '$lib/components/EvolveBookSection.svelte';
+	import ClientLogosSection from '$lib/components/ClientLogosSection.svelte';
+	import RegisterInterestSection from '$lib/components/RegisterInterestSection.svelte';
 	import { fly } from 'svelte/transition';
 
 	function trigger(node: HTMLElement, stateSetter: (v: boolean) => void) {
@@ -22,20 +23,6 @@
 		startObserving();
 		return { destroy: () => observer?.disconnect() };
 	}
-
-	const clientLogos = [
-		'/client-moss.webp',
-		'/client-otto.webp',
-		'/client-ot.webp',
-		'/client-rba.webp',
-		'/client-kh.webp',
-		'/client-edgeward.webp',
-		'/client-mu.webp',
-		'/client-transport.webp',
-		'/client-specsavers.webp',
-		'/client-msd.webp',
-		'/client-lochard.webp'
-	];
 
 	const modules = [
 		{
@@ -120,16 +107,12 @@
 		}
 	];
 
-	let learnImg = $state(false);
-	let learnText = $state(false);
-	let clientsHeading = $state(false);
-	let clientsLogos = $state(false);
+	let introImg = $state(false);
+	let introText = $state(false);
+	let ctaImg = $state(false);
+	let ctaText = $state(false);
 	let modulesHeading = $state(false);
 	let modulesGrid = $state(false);
-	let bookImg = $state(false);
-	let bookText = $state(false);
-	let registerHeading = $state(false);
-	let registerForm = $state(false);
 </script>
 
 <SEO
@@ -164,9 +147,6 @@
 			<h1 class="mb-6 text-5xl lg:text-6xl font-bold text-black">
 				Procurement Business Partnering Program
 			</h1>
-			<p class="text-lg font-bold mb-8 text-black max-w-lg">
-				Builders of trust. Experts in change. Champions in collaboration.
-			</p>
 			<a href="#register-interest" class="btn btn-secondary btn-lg uppercase font-bold mb-6">
 				BOOK YOUR FREE 60-MINUTE STRATEGY SESSION
 			</a>
@@ -179,74 +159,62 @@
 	</div>
 </section>
 
-<!-- What You'll Learn -->
+<!-- Program Intro Section -->
 <section
 	class="py-20 md:py-28 bg-base-100"
 	use:trigger={(v) => {
-		learnImg = v;
-		setTimeout(() => (learnText = v), 150);
+		introImg = v;
+		setTimeout(() => (introText = v), 150);
 	}}
 >
 	<div class="container-custom">
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-			<div>
-				{#if learnText}
-					<div in:fly={{ x: -30, duration: 600 }}>
-						<h2 class="text-4xl md:text-5xl font-bold mb-8">WHAT YOU'LL LEARN</h2>
-						<p class="text-lg leading-relaxed mb-6 opacity-80">
-							Enhancing the maturity of your procurement operations and building sustainable
-							relationships with key stakeholders starts with trust: trust in each other and in the
-							team's capabilities.
-						</p>
-						<p class="text-lg leading-relaxed mb-6 opacity-80">
-							Our dedication to establishing the core principles of business partnering with all our
-							participants: understanding yourself, understanding your business, understanding your
-							stakeholders.
-						</p>
-						<p class="text-lg font-medium mb-4">
-							Upon finishing the Procurement Business Partnering Training, participants will be able
-							to:
-						</p>
-						<ul class="space-y-3 mb-8">
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80"
-									>Equip themselves with the necessary skills to meet the expectations of key
-									internal and external stakeholders</span
-								>
-							</li>
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80"
-									>Establish a solid foundation of trust with their team, stakeholders and other
-									functions</span
-								>
-							</li>
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80"
-									>Establish themselves as a consistent and trusted strategic advisor</span
-								>
-							</li>
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80"
-									>Build their business acumen to complement their technical proficiency</span
-								>
-							</li>
-						</ul>
-						<p class="text-base leading-relaxed opacity-70">
-							This program features a face-to-face component, and micro-learning activities and
-							check-in process to help embed the Program learnings.
-						</p>
-					</div>
-				{/if}
-			</div>
-			{#if learnImg}
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+			{#if introText}
+				<div in:fly={{ x: -30, duration: 600 }}>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Take the first step towards building a trusted and high-performing procurement team –
+						take your business partnering to the next level.
+					</p>
+					<p class="text-xl font-bold mb-6 opacity-90">
+						Builders of trust. Experts in change. Champions in collaboration.
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Enhancing the maturity of your procurement operations and building sustainable
+						relationships with key stakeholders starts with trust: trust in each other and in the
+						team's capabilities. Getting the basics right makes it easier to build proactive
+						supplier relationships. The Procurement Business Partnering Program empowers your team
+						with the tools, frameworks, strategies, and mindset to become trusted experts in driving
+						organisational success.
+					</p>
+					<p class="text-lg font-bold mb-4">
+						What makes this Procurement Business Partnering Program unique?
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Firstly, we specialise in developing procurement business partners. It's what we do and
+						what we do well. Our dedication to establishing the core principles of business
+						partnering with all our participants sets us apart: Understanding yourself;
+						Understanding your business; Understanding your stakeholders.
+					</p>
+					<p class="text-lg leading-relaxed mb-8 opacity-80">
+						We achieve this through research-backed frameworks and tools, real-world insights, and
+						meaningful conversations that emphasise building trust across the team. Above all, we
+						prioritize taking action to achieve positive results.
+					</p>
+					<p class="text-lg leading-relaxed mb-8 opacity-80">
+						So if your team requires a <strong>capability boost</strong>, if you're tasked with
+						driving change across the business, or if you're leading a new team of Procurement
+						Business Partners – then we'd like to hear from you.
+					</p>
+					<a href="#register-interest" class="btn btn-primary btn-lg uppercase font-bold">
+						Register your interest
+					</a>
+				</div>
+			{/if}
+			{#if introImg}
 				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
 					<img
-						src="/bpip-learn.webp"
-						alt="Procurement Business Partnering learning framework"
+						src="/bpip-intro.webp"
+						alt="Procurement Business Partnering Program"
 						class="w-full max-w-md object-contain"
 					/>
 				</div>
@@ -255,28 +223,92 @@
 	</div>
 </section>
 
-<!-- Client Logos -->
-<section class="py-16">
-	<div
-		class="container-custom"
-		use:trigger={(v) => {
-			clientsHeading = v;
-			setTimeout(() => (clientsLogos = v), 200);
-		}}
-	>
-		{#if clientsHeading}
-			<h2
-				class="text-4xl md:text-5xl font-bold text-center mb-12"
-				in:fly={{ y: 30, duration: 600 }}
-			>
-				SOME COMPANIES WE'VE PARTNERED WITH
-			</h2>
-		{/if}
-		{#if clientsLogos}
-			<div in:fly={{ y: 20, duration: 600 }}>
-				<ClientLogos logos={clientLogos} marquee={true} />
-			</div>
-		{/if}
+<ClientLogosSection />
+
+<!-- Call to Action for Procurement Teams -->
+<section
+	class="py-20 md:py-28 bg-base-100"
+	use:trigger={(v) => {
+		ctaImg = v;
+		setTimeout(() => (ctaText = v), 150);
+	}}
+>
+	<div class="container-custom">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+			{#if ctaText}
+				<div in:fly={{ x: -30, duration: 600 }}>
+					<h2 class="text-4xl md:text-5xl font-bold mb-6">
+						THE CALL TO ACTION FOR PROCUREMENT TEAMS!
+					</h2>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						In today's dynamic corporate environment, businesses face increasing industry
+						disruption, market uncertainties, competition, risk, and rapid innovation. For any team
+						of
+						<strong>procurement business partners</strong>, these considerations bring an increased
+						responsibility for driving and owning business outcomes. This call to action for any
+						effective procurement team forms a key part helping drive change across any organisation
+						and helping achieve core strategic goals.
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Our <strong>Procurement Business Partnering training</strong> is tailored to develop a
+						high-functioning and trusted group of <strong>procurement business partners</strong>,
+						amplifying their business acumen, differentiating their capabilities and giving them an
+						edge in the marketplace. Aimed at procurement managers and their teams, this course is
+						suitable for all levels of experience.
+					</p>
+					<p class="text-lg font-medium mb-4">
+						Upon finishing the Procurement Business Partnering Training, participants will be able
+						to:
+					</p>
+					<ul class="space-y-3 mb-8">
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								>Equip themselves with the necessary skills to meet the expectations of key internal
+								and external stakeholders.</span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								>Establish a solid foundation of trust with their team, stakeholders and other
+								functions.</span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								>Establish themselves as a consistent and trusted strategic advisor.</span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								>Build their business acumen to complement their technical proficiency.</span
+							>
+						</li>
+					</ul>
+					<p class="text-base leading-relaxed opacity-70 mb-8">
+						This <strong><a href="/programs">business partnering development program</a></strong> features
+						a face-to-face component, and micro-learning activities and check-in process to help embed
+						the Program learnings. The program aims to enhance service delivery standards with key stakeholders,
+						and build a greater depth of relationship with external vendors and suppliers.
+					</p>
+					<a href="#register-interest" class="btn btn-primary btn-lg uppercase font-bold">
+						CONNECT WITH US
+					</a>
+				</div>
+			{/if}
+			{#if ctaImg}
+				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
+					<img
+						src="/bpip-cta.webp"
+						alt="The Call to Action for Procurement Teams"
+						class="w-full max-w-md object-contain"
+					/>
+				</div>
+			{/if}
+		</div>
 	</div>
 </section>
 
@@ -314,54 +346,7 @@
 	</div>
 </section>
 
-<!-- The Book Section -->
-<section
-	class="py-20 md:py-28 bg-base-300"
-	use:trigger={(v) => {
-		bookImg = v;
-		setTimeout(() => (bookText = v), 150);
-	}}
->
-	<div class="container-custom">
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-			{#if bookText}
-				<div in:fly={{ x: -30, duration: 600 }}>
-					<h2 class="text-4xl md:text-5xl font-bold mb-6">THE BUSINESS PARTNERING PLAYBOOK</h2>
-					<p class="text-xl font-bold mb-6">
-						Finally, a book that provides realistic and targeted advice to Business Partners!
-					</p>
-					<p class="text-lg leading-relaxed mb-6 opacity-80">
-						Business Partners hold a vital role as trusted confidants with deep technical expertise,
-						and their impact is evident across all business functions. Initially tasked with providing
-						advice, they are now true collaborating partners, ideally placed to lead and manage change
-						in the changing world of work and business.
-					</p>
-					<p class="text-lg leading-relaxed mb-6 opacity-80">
-						Yet as the Business Partner role has changed, there has been no pathway to develop the
-						competencies essential for their success. Until now.
-					</p>
-					<p class="text-lg leading-relaxed mb-8 opacity-80">
-						If you are a current or aspiring Business Partner — HR, Finance, Procurement, IT, Risk,
-						Audit, Compliance, Legal, Marketing — this is the book for you.
-					</p>
-					<p class="text-lg font-bold">
-						EVOLVE shows you how to navigate service models and systems, build your commercial acumen
-						and deliver value to your organisation.
-					</p>
-				</div>
-			{/if}
-			{#if bookImg}
-				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
-					<img
-						src="/bpip-book-cover.webp"
-						alt="The Business Partnering Playbook - EVOLVE"
-						class="w-96 object-contain drop-shadow-2xl"
-					/>
-				</div>
-			{/if}
-		</div>
-	</div>
-</section>
+<EvolveBookSection />
 
 <!-- Testimonials -->
 <section class="bg-[#fff000] py-20 md:py-28">
@@ -370,36 +355,4 @@
 	</div>
 </section>
 
-<!-- Register Interest Form -->
-<section
-	id="register-interest"
-	class="section-dark py-20 md:py-28"
-	use:trigger={(v) => {
-		registerHeading = v;
-		setTimeout(() => (registerForm = v), 150);
-	}}
->
-	<div class="container-custom">
-		<div class="max-w-3xl mx-auto">
-			{#if registerHeading}
-				<div class="text-center mb-12" in:fly={{ y: 30, duration: 600 }}>
-					<h2 class="text-5xl lg:text-7xl font-bold text-white mb-6">REGISTER YOUR INTEREST</h2>
-					<p class="text-lg text-white opacity-80">
-						We want to disrupt everyday thinking, spark new ideas and create new ways to interact
-						that will support you to truly have an impact. If you're ready to increase your impact as
-						a Business Partner, register your interest to join our Business Partnering Impact Program
-						by filling out the form below.
-					</p>
-				</div>
-			{/if}
-			{#if registerForm}
-				<div in:fly={{ y: 30, duration: 600 }}>
-					<ContactForm
-						prefix="[Procurement Business Partnering Program Interest]"
-						class="bg-neutral/50 p-8 md:p-12"
-					/>
-				</div>
-			{/if}
-		</div>
-	</div>
-</section>
+<RegisterInterestSection prefix="[Procurement Business Partnering Program Interest]" />

@@ -4,6 +4,7 @@
 	import ContactForm from '$lib/components/ContactForm.svelte';
 	import TestimonialSlider from '$lib/components/TestimonialSlider.svelte';
 	import { fly } from 'svelte/transition';
+	import EvolveBookSection from '$lib/components/EvolveBookSection.svelte';
 
 	function trigger(node: HTMLElement, stateSetter: (v: boolean) => void) {
 		let observer: IntersectionObserver;
@@ -126,8 +127,6 @@
 	let clientsLogos = $state(false);
 	let modulesHeading = $state(false);
 	let modulesGrid = $state(false);
-	let bookImg = $state(false);
-	let bookText = $state(false);
 	let registerHeading = $state(false);
 	let registerForm = $state(false);
 </script>
@@ -315,54 +314,7 @@
 	</div>
 </section>
 
-<!-- The Book Section -->
-<section
-	class="py-20 md:py-28 bg-base-300"
-	use:trigger={(v) => {
-		bookImg = v;
-		setTimeout(() => (bookText = v), 150);
-	}}
->
-	<div class="container-custom">
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-			{#if bookText}
-				<div in:fly={{ x: -30, duration: 600 }}>
-					<h2 class="text-4xl md:text-5xl font-bold mb-6">THE BUSINESS PARTNERING PLAYBOOK</h2>
-					<p class="text-xl font-bold mb-6">
-						Finally, a book that provides realistic and targeted advice to Business Partners!
-					</p>
-					<p class="text-lg leading-relaxed mb-6 opacity-80">
-						Business Partners hold a vital role as trusted confidants with deep technical expertise,
-						and their impact is evident across all business functions. Initially tasked with providing
-						advice, they are now true collaborating partners, ideally placed to lead and manage change
-						in the changing world of work and business.
-					</p>
-					<p class="text-lg leading-relaxed mb-6 opacity-80">
-						Yet as the Business Partner role has changed, there has been no pathway to develop the
-						competencies essential for their success. Until now.
-					</p>
-					<p class="text-lg leading-relaxed mb-8 opacity-80">
-						If you are a current or aspiring Business Partner — HR, Finance, Procurement, IT, Risk,
-						Audit, Compliance, Legal, Marketing — this is the book for you.
-					</p>
-					<p class="text-lg font-bold">
-						EVOLVE shows you how to navigate service models and systems, build your commercial acumen
-						and deliver value to your organisation.
-					</p>
-				</div>
-			{/if}
-			{#if bookImg}
-				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
-					<img
-						src="/bpip-book-cover.webp"
-						alt="The Business Partnering Playbook - EVOLVE"
-						class="w-96 object-contain drop-shadow-2xl"
-					/>
-				</div>
-			{/if}
-		</div>
-	</div>
-</section>
+<EvolveBookSection />
 
 <!-- Testimonials -->
 <section class="bg-[#fff000] py-20 md:py-28">
