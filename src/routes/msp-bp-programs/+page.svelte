@@ -1,10 +1,10 @@
 <script lang="ts">
 	import SEO from '$lib/components/SEO.svelte';
-	import ClientLogos from '$lib/components/ClientLogos.svelte';
-	import ContactForm from '$lib/components/ContactForm.svelte';
 	import TestimonialSlider from '$lib/components/TestimonialSlider.svelte';
-	import { fly } from 'svelte/transition';
 	import EvolveBookSection from '$lib/components/EvolveBookSection.svelte';
+	import ClientLogosSection from '$lib/components/ClientLogosSection.svelte';
+	import RegisterInterestSection from '$lib/components/RegisterInterestSection.svelte';
+	import { fly } from 'svelte/transition';
 
 	function trigger(node: HTMLElement, stateSetter: (v: boolean) => void) {
 		let observer: IntersectionObserver;
@@ -23,20 +23,6 @@
 		startObserving();
 		return { destroy: () => observer?.disconnect() };
 	}
-
-	const clientLogos = [
-		'/client-moss.webp',
-		'/client-otto.webp',
-		'/client-ot.webp',
-		'/client-rba.webp',
-		'/client-kh.webp',
-		'/client-edgeward.webp',
-		'/client-mu.webp',
-		'/client-transport.webp',
-		'/client-specsavers.webp',
-		'/client-msd.webp',
-		'/client-lochard.webp'
-	];
 
 	const modules = [
 		{
@@ -121,14 +107,14 @@
 		}
 	];
 
-	let learnImg = $state(false);
-	let learnText = $state(false);
-	let clientsHeading = $state(false);
-	let clientsLogos = $state(false);
+	let introImg = $state(false);
+	let introText = $state(false);
+	let uniqueImg = $state(false);
+	let uniqueText = $state(false);
 	let modulesHeading = $state(false);
 	let modulesGrid = $state(false);
-	let registerHeading = $state(false);
-	let registerForm = $state(false);
+	let ctaImg = $state(false);
+	let ctaText = $state(false);
 </script>
 
 <SEO
@@ -163,9 +149,6 @@
 			<h1 class="mb-6 text-5xl lg:text-6xl font-bold text-black">
 				Managed Service Provider (MSP/MSSP) Employee Development Program
 			</h1>
-			<p class="text-lg font-bold mb-8 text-black max-w-lg">
-				Empower your team. Drive sustainable growth.
-			</p>
 			<a href="#register-interest" class="btn btn-secondary btn-lg uppercase font-bold mb-6">
 				BOOK YOUR FREE 60-MINUTE STRATEGY SESSION
 			</a>
@@ -178,74 +161,46 @@
 	</div>
 </section>
 
-<!-- What You'll Learn -->
+<!-- Program Intro Section -->
 <section
 	class="py-20 md:py-28 bg-base-100"
 	use:trigger={(v) => {
-		learnImg = v;
-		setTimeout(() => (learnText = v), 150);
+		introImg = v;
+		setTimeout(() => (introText = v), 150);
 	}}
 >
 	<div class="container-custom">
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-			<div>
-				{#if learnText}
-					<div in:fly={{ x: -30, duration: 600 }}>
-						<h2 class="text-4xl md:text-5xl font-bold mb-8">WHAT YOU'LL LEARN</h2>
-						<p class="text-lg leading-relaxed mb-6 opacity-80">
-							In the dynamic world of MSPs/MSSPs, growth is both an opportunity and a challenge.
-							While increasing MRR and scaling rapidly can be empowering, unchecked growth often puts
-							undue pressure on the very teams driving your success. Sustainable growth begins with
-							prioritising employee development.
-						</p>
-						<p class="text-lg leading-relaxed mb-6 opacity-80">
-							Our focus is on establishing the core fundamentals of business partnering to drive
-							sustainable growth through high-performing teams: know yourself, know your business,
-							know your colleagues, know your clients.
-						</p>
-						<p class="text-lg font-medium mb-4">
-							Upon finishing the MSP/MSSP Employee Development Program, participants will be able to:
-						</p>
-						<ul class="space-y-3 mb-8">
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80"
-									>Equip themselves with the necessary behavioural attributes to meet the expectations
-									of key internal and external stakeholders, vendors and partners</span
-								>
-							</li>
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80"
-									>Establish a solid foundation of trust with their team, core stakeholders and other
-									functions</span
-								>
-							</li>
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80"
-									>Develop a personal brand – known as a consistent and trusted strategic advisor</span
-								>
-							</li>
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80"
-									>Build their business acumen to complement their technical proficiency</span
-								>
-							</li>
-						</ul>
-						<p class="text-base leading-relaxed opacity-70">
-							This program features a face-to-face component, and micro-learning activities and
-							check-in process to help embed the Program learnings.
-						</p>
-					</div>
-				{/if}
-			</div>
-			{#if learnImg}
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+			{#if introText}
+				<div in:fly={{ x: -30, duration: 600 }}>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Take the first step towards building a trusted and high-performing MSP/MSSP team –
+						amplify your business partnering impact to the next level.
+					</p>
+					<p class="text-xl font-bold mb-6 opacity-90">
+						Empower your team. Drive sustainable growth.
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						In the dynamic world of MSPs/MSSPs, growth is both an opportunity and a challenge. While
+						increasing MRR and scaling rapidly can be empowering, unchecked growth often puts undue
+						pressure on the very teams driving your success. Sustainable growth begins with
+						prioritising employee development.
+					</p>
+					<p class="text-lg leading-relaxed mb-8 opacity-80">
+						Our focus is on establishing the core fundamentals of business partnering to drive
+						sustainable growth through high-performing teams: know yourself, know your business, know
+						your colleagues, know your clients.
+					</p>
+					<a href="#register-interest" class="btn btn-primary btn-lg uppercase font-bold">
+						Register your interest
+					</a>
+				</div>
+			{/if}
+			{#if introImg}
 				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
 					<img
-						src="/bpip-learn.webp"
-						alt="MSP/MSSP Employee Development Program learning framework"
+						src="/bpip-intro.webp"
+						alt="MSP/MSSP Employee Development Program"
 						class="w-full max-w-md object-contain"
 					/>
 				</div>
@@ -254,30 +209,57 @@
 	</div>
 </section>
 
-<!-- Client Logos -->
-<section class="py-16">
-	<div
-		class="container-custom"
-		use:trigger={(v) => {
-			clientsHeading = v;
-			setTimeout(() => (clientsLogos = v), 200);
-		}}
-	>
-		{#if clientsHeading}
-			<h2
-				class="text-4xl md:text-5xl font-bold text-center mb-12"
-				in:fly={{ y: 30, duration: 600 }}
-			>
-				SOME COMPANIES WE'VE PARTNERED WITH
-			</h2>
-		{/if}
-		{#if clientsLogos}
-			<div in:fly={{ y: 20, duration: 600 }}>
-				<ClientLogos logos={clientLogos} marquee={true} />
-			</div>
-		{/if}
+<ClientLogosSection />
+
+<!-- What Makes This Program Unique -->
+<section
+	class="py-20 md:py-28 bg-base-100"
+	use:trigger={(v) => {
+		uniqueImg = v;
+		setTimeout(() => (uniqueText = v), 150);
+	}}
+>
+	<div class="container-custom">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+			{#if uniqueText}
+				<div in:fly={{ x: -30, duration: 600 }}>
+					<h2 class="text-4xl md:text-5xl font-bold mb-6">
+						What makes this MSP/MSSP Employee Development Program unique?
+					</h2>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Firstly, we specialise in developing business partners. It's what we do, it's what we
+						are passionate about and what we do well. It's our dedication to establishing the core
+						fundamentals of business partnering with all our participants: Know yourself. Know your
+						business. Know your stakeholders.
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						We deliver content through a combination of research-driven tools and frameworks,
+						real-world insights, and meaningful conversations that emphasise building trust across
+						the team and organisation.
+					</p>
+					<p class="text-lg leading-relaxed mb-8 opacity-80">
+						Above all, we prioritise taking action. Doing something different to get a positive
+						result for your business and clients.
+					</p>
+					<a href="#register-interest" class="btn btn-primary btn-lg uppercase font-bold">
+						Register your interest
+					</a>
+				</div>
+			{/if}
+			{#if uniqueImg}
+				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
+					<img
+						src="/bpip-cta.webp"
+						alt="MSP/MSSP Employee Development Program unique"
+						class="w-full max-w-md object-contain"
+					/>
+				</div>
+			{/if}
+		</div>
 	</div>
 </section>
+
+<EvolveBookSection />
 
 <!-- Core Modules -->
 <section
@@ -313,7 +295,86 @@
 	</div>
 </section>
 
-<EvolveBookSection />
+<!-- Call to Action for MSP/MSSP Teams -->
+<section
+	class="py-20 md:py-28 bg-base-100"
+	use:trigger={(v) => {
+		ctaImg = v;
+		setTimeout(() => (ctaText = v), 150);
+	}}
+>
+	<div class="container-custom">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+			{#if ctaText}
+				<div in:fly={{ x: -30, duration: 600 }}>
+					<h2 class="text-4xl md:text-5xl font-bold mb-6">
+						THE CALL TO ACTION FOR MSP/MSSP TEAMS!
+					</h2>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						In today's dynamic environment, businesses face increasing industry disruption, market
+						uncertainties, risk, and rapid innovation. For any team of <strong
+							>MSP/MSSP business partners</strong
+						>, these considerations bring an increased responsibility for driving and owning business
+						outcomes. This call to action serves as a vital pillar in managing change across any
+						organisation and staying relevant in the face of fast-changing industry and technology
+						market trends.
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Our <strong>MSP/MSSP Employee Development Program</strong> is tailored to develop a high-performing
+						and trusted group of employees, amplifying their business acumen, differentiating their capabilities
+						and giving them an edge in the marketplace. Aimed at MSP/MSSP managers and their teams, this
+						course is suitable for all backgrounds.
+					</p>
+					<p class="text-lg font-medium mb-4">
+						Upon finishing the MSP/MSSP Employee Development Program, participants will be able to:
+					</p>
+					<ul class="space-y-3 mb-8">
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								>Equip themselves with the necessary behavioural attributes to meet the expectations
+								of key internal and external stakeholders, vendors and partners.</span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								>Establish a solid foundation of trust with their team, core stakeholders and other
+								functions.</span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								>Develop a personal brand – known as a consistent and trusted strategic advisor.</span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								>Build their business acumen to complement their technical proficiency.</span
+							>
+						</li>
+					</ul>
+					<p class="text-base leading-relaxed opacity-70 mb-8">
+						This program features a face-to-face component, and micro-learning activities and
+						check-in process to help embed the Program learnings.
+					</p>
+					<a href="/evolve-book" class="btn btn-primary btn-lg uppercase font-bold">BUY NOW</a>
+				</div>
+			{/if}
+			{#if ctaImg}
+				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
+					<img
+						src="/bpip-book-cover.webp"
+						alt="The Business Partnering Playbook - EVOLVE"
+						class="w-96 object-contain drop-shadow-2xl"
+					/>
+				</div>
+			{/if}
+		</div>
+	</div>
+</section>
 
 <!-- Testimonials -->
 <section class="bg-[#fff000] py-20 md:py-28">
@@ -322,34 +383,7 @@
 	</div>
 </section>
 
-<!-- Register Interest Form -->
-<section
-	id="register-interest"
-	class="section-dark py-20 md:py-28"
-	use:trigger={(v) => {
-		registerHeading = v;
-		setTimeout(() => (registerForm = v), 150);
-	}}
->
-	<div class="container-custom">
-		<div class="max-w-3xl mx-auto">
-			{#if registerHeading}
-				<div class="text-center mb-12" in:fly={{ y: 30, duration: 600 }}>
-					<h2 class="text-5xl lg:text-7xl font-bold text-white mb-6">REGISTER YOUR INTEREST</h2>
-					<p class="text-lg text-white opacity-80">
-						If you're ready to chat and share your aspirations, please fill in the form below to find
-						out more about the MSP/MSSP Business Partnering Employee Development Program.
-					</p>
-				</div>
-			{/if}
-			{#if registerForm}
-				<div in:fly={{ y: 30, duration: 600 }}>
-					<ContactForm
-						prefix="[MSP/MSSP Employee Development Program Interest]"
-						class="bg-neutral/50 p-8 md:p-12"
-					/>
-				</div>
-			{/if}
-		</div>
-	</div>
-</section>
+<RegisterInterestSection
+	prefix="[MSP/MSSP Employee Development Program Interest]"
+	introText="If you're ready to chat and share your aspirations, please fill in the form below to find out more about the MSP/MSSP Business Partnering Employee Development Program."
+/>

@@ -1,10 +1,10 @@
 <script lang="ts">
 	import SEO from '$lib/components/SEO.svelte';
-	import ClientLogos from '$lib/components/ClientLogos.svelte';
-	import ContactForm from '$lib/components/ContactForm.svelte';
 	import TestimonialSlider from '$lib/components/TestimonialSlider.svelte';
-	import { fly } from 'svelte/transition';
 	import EvolveBookSection from '$lib/components/EvolveBookSection.svelte';
+	import ClientLogosSection from '$lib/components/ClientLogosSection.svelte';
+	import RegisterInterestSection from '$lib/components/RegisterInterestSection.svelte';
+	import { fly } from 'svelte/transition';
 
 	function trigger(node: HTMLElement, stateSetter: (v: boolean) => void) {
 		let observer: IntersectionObserver;
@@ -23,20 +23,6 @@
 		startObserving();
 		return { destroy: () => observer?.disconnect() };
 	}
-
-	const clientLogos = [
-		'/client-moss.webp',
-		'/client-otto.webp',
-		'/client-ot.webp',
-		'/client-rba.webp',
-		'/client-kh.webp',
-		'/client-edgeward.webp',
-		'/client-mu.webp',
-		'/client-transport.webp',
-		'/client-specsavers.webp',
-		'/client-msd.webp',
-		'/client-lochard.webp'
-	];
 
 	const modules = [
 		{
@@ -121,14 +107,14 @@
 		}
 	];
 
-	let learnImg = $state(false);
-	let learnText = $state(false);
-	let clientsHeading = $state(false);
-	let clientsLogos = $state(false);
+	let introImg = $state(false);
+	let introText = $state(false);
+	let uniqueImg = $state(false);
+	let uniqueText = $state(false);
 	let modulesHeading = $state(false);
 	let modulesGrid = $state(false);
-	let registerHeading = $state(false);
-	let registerForm = $state(false);
+	let ctaImg = $state(false);
+	let ctaText = $state(false);
 </script>
 
 <SEO
@@ -163,9 +149,6 @@
 			<h1 class="mb-6 text-5xl lg:text-6xl font-bold text-black">
 				HR / People & Culture Business Partnering Impact Program
 			</h1>
-			<p class="text-lg font-bold mb-8 text-black max-w-lg">
-				Experts in change. Builders of trust. Leaders in collaboration.
-			</p>
 			<a href="#register-interest" class="btn btn-secondary btn-lg uppercase font-bold mb-6">
 				BOOK YOUR FREE 60-MINUTE STRATEGY SESSION
 			</a>
@@ -178,73 +161,51 @@
 	</div>
 </section>
 
-<!-- What You'll Learn -->
+<!-- Program Intro Section -->
 <section
 	class="py-20 md:py-28 bg-base-100"
 	use:trigger={(v) => {
-		learnImg = v;
-		setTimeout(() => (learnText = v), 150);
+		introImg = v;
+		setTimeout(() => (introText = v), 150);
 	}}
 >
 	<div class="container-custom">
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-			<div>
-				{#if learnText}
-					<div in:fly={{ x: -30, duration: 600 }}>
-						<h2 class="text-4xl md:text-5xl font-bold mb-8">WHAT YOU'LL LEARN</h2>
-						<p class="text-lg leading-relaxed mb-6 opacity-80">
-							Enhancing your HR / People & Culture operations starts with trust: trust in each other
-							and in the team's capabilities. Consistently executing the basics of business
-							partnering is crucial.
-						</p>
-						<p class="text-lg leading-relaxed mb-6 opacity-80">
-							The HR / People & Culture Business Partnering Impact Program is designed to empower
-							your team with the tools, frameworks and mindset to become trusted experts in driving
-							organisational change.
-						</p>
-						<p class="text-lg font-medium mb-4">
-							The learning objectives of the HR/P&C Business Partnering IMPACT Program include:
-						</p>
-						<ul class="space-y-3 mb-8">
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80"
-									>Equip themselves with the necessary skills to meet the expectations of key
-									internal and external stakeholders</span
-								>
-							</li>
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80"
-									>Establish a solid foundation of trust with their team, stakeholders and other
-									functions</span
-								>
-							</li>
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80"
-									>Establish themselves as a consistent and trusted strategic advisor</span
-								>
-							</li>
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80"
-									>Build their business acumen to complement their technical proficiency</span
-								>
-							</li>
-						</ul>
-						<p class="text-base leading-relaxed opacity-70">
-							This program targets HR generalists, Communication experts, L&D, OD, Employee
-							Experience, Recruitment and Talent Acquisition, Rewards and ER/IR professionals.
-						</p>
-					</div>
-				{/if}
-			</div>
-			{#if learnImg}
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+			{#if introText}
+				<div in:fly={{ x: -30, duration: 600 }}>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Take the step towards building a high-performing and trusted HR team – amplify the
+						impact of your team and align your business partnering approach to business needs of your
+						key stakeholders – take your business partnering to the next level.
+					</p>
+					<p class="text-xl font-bold mb-6 opacity-90">
+						Experts in change. Builders of trust. Leaders in collaboration.
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Enhancing your HR / People & Culture operations starts with trust: trust in each other
+						and in the team's capabilities. Consistently executing the basics of business partnering
+						is crucial. When you get these fundamentals right, building sustainable and proactive
+						relationships with stakeholders becomes easier.
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						The HR / People & Culture Business Partnering Impact Program is designed to empower your
+						team with the tools, frameworks and mindset to become trusted experts in driving
+						organisational change.
+					</p>
+					<p class="text-lg leading-relaxed mb-8 opacity-80">
+						This program targets HR generalists, Communication experts, L&D, OD, Employee
+						Experience, Recruitment and Talent Acquisition, Rewards and ER/IR professionals.
+					</p>
+					<a href="#register-interest" class="btn btn-primary btn-lg uppercase font-bold">
+						Register your interest
+					</a>
+				</div>
+			{/if}
+			{#if introImg}
 				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
 					<img
-						src="/bpip-learn.webp"
-						alt="HR Business Partnering learning framework"
+						src="/bpip-intro.webp"
+						alt="HR / People & Culture Business Partnering Program"
 						class="w-full max-w-md object-contain"
 					/>
 				</div>
@@ -253,30 +214,60 @@
 	</div>
 </section>
 
-<!-- Client Logos -->
-<section class="py-16">
-	<div
-		class="container-custom"
-		use:trigger={(v) => {
-			clientsHeading = v;
-			setTimeout(() => (clientsLogos = v), 200);
-		}}
-	>
-		{#if clientsHeading}
-			<h2
-				class="text-4xl md:text-5xl font-bold text-center mb-12"
-				in:fly={{ y: 30, duration: 600 }}
-			>
-				SOME COMPANIES WE'VE PARTNERED WITH
-			</h2>
-		{/if}
-		{#if clientsLogos}
-			<div in:fly={{ y: 20, duration: 600 }}>
-				<ClientLogos logos={clientLogos} marquee={true} />
-			</div>
-		{/if}
+<ClientLogosSection />
+
+<!-- What Makes This Program Unique -->
+<section
+	class="py-20 md:py-28 bg-base-100"
+	use:trigger={(v) => {
+		uniqueImg = v;
+		setTimeout(() => (uniqueText = v), 150);
+	}}
+>
+	<div class="container-custom">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+			{#if uniqueText}
+				<div in:fly={{ x: -30, duration: 600 }}>
+					<h2 class="text-4xl md:text-5xl font-bold mb-6">
+						What makes this HR / People & Culture Business Partnering Training Unique?
+					</h2>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Firstly, we specialise in developing business partners. It's what we do and what we do
+						well. It's what drives us. We are dedicated to building those foundational principles of
+						business partnering with all our participants and their leaders.
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						We achieve this through a blend of research-backed frameworks, practical tools, and
+						real-world insights. But it's not just about the methods – we have real conversations
+						that focus on building trust within the team. Above all, we prioritise taking action.
+						It's about doing something different to get a positive result. Because in the end, it's
+						action that makes all the difference. Positive change doesn't happen by chance.
+					</p>
+					<p class="text-lg leading-relaxed mb-8 opacity-80">
+						So if you're looking at amplifying your team's capability, if you're responsible with
+						driving change across the business, or if you're leading a new team of HR and People and
+						Culture Business Partners and want to get them 'talking' the same language of business
+						partnering – then we'd like to hear from you.
+					</p>
+					<a href="#register-interest" class="btn btn-primary btn-lg uppercase font-bold">
+						Register your interest
+					</a>
+				</div>
+			{/if}
+			{#if uniqueImg}
+				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
+					<img
+						src="/bpip-cta.webp"
+						alt="HR Business Partnering unique program"
+						class="w-full max-w-md object-contain"
+					/>
+				</div>
+			{/if}
+		</div>
 	</div>
 </section>
+
+<EvolveBookSection />
 
 <!-- Core Modules -->
 <section
@@ -312,7 +303,81 @@
 	</div>
 </section>
 
-<EvolveBookSection />
+<!-- Call to Action for HR / People & Culture Teams -->
+<section
+	class="py-20 md:py-28 bg-base-100"
+	use:trigger={(v) => {
+		ctaImg = v;
+		setTimeout(() => (ctaText = v), 150);
+	}}
+>
+	<div class="container-custom">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+			{#if ctaText}
+				<div in:fly={{ x: -30, duration: 600 }}>
+					<h2 class="text-4xl md:text-5xl font-bold mb-6">
+						THE CALL TO ACTION FOR HR / PEOPLE & CULTURE TEAMS!
+					</h2>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						For any team of HR/People & Culture business partners, today's dynamic world of work
+						brings an increased responsibility for driving and owning business outcomes. This call
+						to action is a vital pillar for managing change in any organisation. An effective HR and
+						People & Culture Team forms a key part helping drive change across any organisation and
+						helping achieve core strategic goals.
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Our HR/People & Culture Business Partnering IMPACT Program initiative is tailored to
+						develop a high-functioning and trusted group of HR/P&C business partners, building
+						their commercial acumen, differentiating their capabilities and giving them an edge in
+						the marketplace. Aimed at HR / People & Culture managers and their teams, this learning
+						program is suitable for all levels of experience.
+					</p>
+					<p class="text-lg font-medium mb-4">
+						The learning objectives of the HR/P&C Business Partnering IMPACT Program include:
+					</p>
+					<ul class="space-y-3 mb-8">
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								>Equip themselves with the necessary skills to meet the expectations of key
+								internal and external stakeholders.</span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								>Establish a solid foundation of trust with their team, stakeholders and other
+								functions.</span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								>Establish themselves as a consistent and trusted strategic advisor.</span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								>Build their business acumen to complement their technical proficiency.</span
+							>
+						</li>
+					</ul>
+					<a href="/evolve-book" class="btn btn-primary btn-lg uppercase font-bold">BUY NOW</a>
+				</div>
+			{/if}
+			{#if ctaImg}
+				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
+					<img
+						src="/bpip-book-cover.webp"
+						alt="The Business Partnering Playbook - EVOLVE"
+						class="w-96 object-contain drop-shadow-2xl"
+					/>
+				</div>
+			{/if}
+		</div>
+	</div>
+</section>
 
 <!-- Testimonials -->
 <section class="bg-[#fff000] py-20 md:py-28">
@@ -321,35 +386,4 @@
 	</div>
 </section>
 
-<!-- Register Interest Form -->
-<section
-	id="register-interest"
-	class="section-dark py-20 md:py-28"
-	use:trigger={(v) => {
-		registerHeading = v;
-		setTimeout(() => (registerForm = v), 150);
-	}}
->
-	<div class="container-custom">
-		<div class="max-w-3xl mx-auto">
-			{#if registerHeading}
-				<div class="text-center mb-12" in:fly={{ y: 30, duration: 600 }}>
-					<h2 class="text-5xl lg:text-7xl font-bold text-white mb-6">REGISTER YOUR INTEREST</h2>
-					<p class="text-lg text-white opacity-80">
-						We want to disrupt everyday thinking, spark new ideas and create new ways to interact
-						that will support you to truly have an impact. If you're ready to increase your impact as
-						a Business Partner, register your interest by filling out the form below.
-					</p>
-				</div>
-			{/if}
-			{#if registerForm}
-				<div in:fly={{ y: 30, duration: 600 }}>
-					<ContactForm
-						prefix="[HR / People & Culture Business Partnering Program Interest]"
-						class="bg-neutral/50 p-8 md:p-12"
-					/>
-				</div>
-			{/if}
-		</div>
-	</div>
-</section>
+<RegisterInterestSection prefix="[HR / People & Culture Business Partnering Program Interest]" />

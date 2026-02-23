@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SEO from '$lib/components/SEO.svelte';
-	import ClientLogos from '$lib/components/ClientLogos.svelte';
-	import ContactForm from '$lib/components/ContactForm.svelte';
+	import ClientLogosSection from '$lib/components/ClientLogosSection.svelte';
+	import RegisterInterestSection from '$lib/components/RegisterInterestSection.svelte';
 	import { fly } from 'svelte/transition';
 
 	function trigger(node: HTMLElement, stateSetter: (v: boolean) => void) {
@@ -21,20 +21,6 @@
 		startObserving();
 		return { destroy: () => observer?.disconnect() };
 	}
-
-	const clientLogos = [
-		'/client-moss.webp',
-		'/client-otto.webp',
-		'/client-ot.webp',
-		'/client-rba.webp',
-		'/client-kh.webp',
-		'/client-edgeward.webp',
-		'/client-mu.webp',
-		'/client-transport.webp',
-		'/client-specsavers.webp',
-		'/client-msd.webp',
-		'/client-lochard.webp'
-	];
 
 	const challenges = [
 		{
@@ -205,8 +191,6 @@
 	];
 
 	let introText = $state(false);
-	let clientsHeading = $state(false);
-	let clientsLogos = $state(false);
 	let challengesHeading = $state(false);
 	let challengesGrid = $state(false);
 	let highlightsHeading = $state(false);
@@ -217,8 +201,6 @@
 	let benefitsGrid = $state(false);
 	let whyHeading = $state(false);
 	let whyGrid = $state(false);
-	let registerHeading = $state(false);
-	let registerForm = $state(false);
 </script>
 
 <SEO
@@ -298,30 +280,7 @@
 	</div>
 </section>
 
-<!-- Client Logos -->
-<section class="py-16">
-	<div
-		class="container-custom"
-		use:trigger={(v) => {
-			clientsHeading = v;
-			setTimeout(() => (clientsLogos = v), 200);
-		}}
-	>
-		{#if clientsHeading}
-			<h2
-				class="text-4xl md:text-5xl font-bold text-center mb-12"
-				in:fly={{ y: 30, duration: 600 }}
-			>
-				SOME COMPANIES WE'VE PARTNERED WITH
-			</h2>
-		{/if}
-		{#if clientsLogos}
-			<div in:fly={{ y: 20, duration: 600 }}>
-				<ClientLogos logos={clientLogos} marquee={true} />
-			</div>
-		{/if}
-	</div>
-</section>
+<ClientLogosSection />
 
 <!-- Why Choose — Challenges & Solutions -->
 <section
@@ -515,35 +474,7 @@
 	</div>
 </section>
 
-<!-- Register Interest Form -->
-<section
-	id="register-interest"
-	class="section-dark py-20 md:py-28"
-	use:trigger={(v) => {
-		registerHeading = v;
-		setTimeout(() => (registerForm = v), 150);
-	}}
->
-	<div class="container-custom">
-		<div class="max-w-3xl mx-auto">
-			{#if registerHeading}
-				<div class="text-center mb-12" in:fly={{ y: 30, duration: 600 }}>
-					<h2 class="text-5xl lg:text-7xl font-bold text-white mb-6">REGISTER YOUR INTEREST</h2>
-					<p class="text-lg text-white opacity-80">
-						Ready to unlock the full potential of your marketing and communications teams? Contact us
-						to learn more about how our program can help your organisation achieve its goals. Fill out
-						the form below to get started.
-					</p>
-				</div>
-			{/if}
-			{#if registerForm}
-				<div in:fly={{ y: 30, duration: 600 }}>
-					<ContactForm
-						prefix="[Marketing & Communications Business Partnering IMPACT Program Interest]"
-						class="bg-neutral/50 p-8 md:p-12"
-					/>
-				</div>
-			{/if}
-		</div>
-	</div>
-</section>
+<RegisterInterestSection
+	prefix="[Marketing & Communications Business Partnering IMPACT Program Interest]"
+	introText="Ready to unlock the full potential of your marketing and communications teams? Contact us to learn more about how our program can help your organisation achieve its goals. Fill out the form below to get started."
+/>

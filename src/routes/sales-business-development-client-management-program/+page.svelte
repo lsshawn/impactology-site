@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SEO from '$lib/components/SEO.svelte';
-	import ClientLogos from '$lib/components/ClientLogos.svelte';
-	import ContactForm from '$lib/components/ContactForm.svelte';
+	import ClientLogosSection from '$lib/components/ClientLogosSection.svelte';
+	import RegisterInterestSection from '$lib/components/RegisterInterestSection.svelte';
 	import { fly } from 'svelte/transition';
 
 	function trigger(node: HTMLElement, stateSetter: (v: boolean) => void) {
@@ -21,20 +21,6 @@
 		startObserving();
 		return { destroy: () => observer?.disconnect() };
 	}
-
-	const clientLogos = [
-		'/client-moss.webp',
-		'/client-otto.webp',
-		'/client-ot.webp',
-		'/client-rba.webp',
-		'/client-kh.webp',
-		'/client-edgeward.webp',
-		'/client-mu.webp',
-		'/client-transport.webp',
-		'/client-specsavers.webp',
-		'/client-msd.webp',
-		'/client-lochard.webp'
-	];
 
 	const challenges = [
 		{
@@ -191,9 +177,8 @@
 		}
 	];
 
+	let introImg = $state(false);
 	let introText = $state(false);
-	let clientsHeading = $state(false);
-	let clientsLogos = $state(false);
 	let challengesHeading = $state(false);
 	let challengesGrid = $state(false);
 	let highlightsHeading = $state(false);
@@ -204,8 +189,6 @@
 	let benefitsGrid = $state(false);
 	let whyHeading = $state(false);
 	let whyGrid = $state(false);
-	let registerHeading = $state(false);
-	let registerForm = $state(false);
 </script>
 
 <SEO
@@ -240,9 +223,6 @@
 			<h1 class="mb-6 text-5xl lg:text-6xl font-bold text-black">
 				Sales, Business Development & Client Management Business Partnering Impact Program
 			</h1>
-			<p class="text-lg font-bold mb-8 text-black max-w-lg">
-				Transform Your Sales, BD & Client Management Teams into Strategic Business Partners
-			</p>
 			<a href="#register-interest" class="btn btn-secondary btn-lg uppercase font-bold mb-6">
 				BOOK YOUR FREE 60-MINUTE STRATEGY SESSION
 			</a>
@@ -255,17 +235,21 @@
 	</div>
 </section>
 
-<!-- Intro Section -->
+<!-- Program Intro Section -->
 <section
 	class="py-20 md:py-28 bg-base-100"
 	use:trigger={(v) => {
-		introText = v;
+		introImg = v;
+		setTimeout(() => (introText = v), 150);
 	}}
 >
 	<div class="container-custom">
-		<div class="max-w-4xl mx-auto">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
 			{#if introText}
-				<div in:fly={{ y: 30, duration: 600 }}>
+				<div in:fly={{ x: -30, duration: 600 }}>
+					<p class="text-xl font-bold mb-6 opacity-90">
+						Transform Your Sales, BD & Client Management Teams into Strategic Business Partners
+					</p>
 					<p class="text-lg leading-relaxed mb-6 opacity-80">
 						Sales, Business Development (BD), and Client Management teams are the lifeblood of any
 						growing organisation. Yet, in the complex environments of small to medium enterprises and
@@ -273,43 +257,32 @@
 						ability to deliver consistent growth, align with strategic goals, and maximise client
 						satisfaction.
 					</p>
-					<p class="text-lg leading-relaxed opacity-80">
+					<p class="text-lg leading-relaxed mb-8 opacity-80">
 						The Sales, BD & Client Management Business Partnering IMPACT Program by Impactology is
 						specifically designed to address these challenges. It equips sales leaders and client
 						servicing teams with the skills and strategies to become true business partners, enabling
 						them to drive revenue, build client trust, and align seamlessly with broader
 						organisational objectives.
 					</p>
+					<a href="#register-interest" class="btn btn-primary btn-lg uppercase font-bold">
+						Register your interest
+					</a>
+				</div>
+			{/if}
+			{#if introImg}
+				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
+					<img
+						src="/bpip-intro.webp"
+						alt="Sales, BD & Client Management Business Partnering Program"
+						class="w-full max-w-md object-contain"
+					/>
 				</div>
 			{/if}
 		</div>
 	</div>
 </section>
 
-<!-- Client Logos -->
-<section class="py-16">
-	<div
-		class="container-custom"
-		use:trigger={(v) => {
-			clientsHeading = v;
-			setTimeout(() => (clientsLogos = v), 200);
-		}}
-	>
-		{#if clientsHeading}
-			<h2
-				class="text-4xl md:text-5xl font-bold text-center mb-12"
-				in:fly={{ y: 30, duration: 600 }}
-			>
-				SOME COMPANIES WE'VE PARTNERED WITH
-			</h2>
-		{/if}
-		{#if clientsLogos}
-			<div in:fly={{ y: 20, duration: 600 }}>
-				<ClientLogos logos={clientLogos} marquee={true} />
-			</div>
-		{/if}
-	</div>
-</section>
+<ClientLogosSection />
 
 <!-- Why Choose — Challenges & Solutions -->
 <section
@@ -503,35 +476,20 @@
 	</div>
 </section>
 
-<!-- Register Interest Form -->
-<section
-	id="register-interest"
-	class="section-dark py-20 md:py-28"
-	use:trigger={(v) => {
-		registerHeading = v;
-		setTimeout(() => (registerForm = v), 150);
-	}}
->
-	<div class="container-custom">
-		<div class="max-w-3xl mx-auto">
-			{#if registerHeading}
-				<div class="text-center mb-12" in:fly={{ y: 30, duration: 600 }}>
-					<h2 class="text-5xl lg:text-7xl font-bold text-white mb-6">REGISTER YOUR INTEREST</h2>
-					<p class="text-lg text-white opacity-80">
-						Ready to amplify your sales leadership and team performance? Contact us to learn more
-						about how our program can help your organisation achieve its goals. Fill out the form
-						below to get started.
-					</p>
-				</div>
-			{/if}
-			{#if registerForm}
-				<div in:fly={{ y: 30, duration: 600 }}>
-					<ContactForm
-						prefix="[Sales, BD & Client Management Business Partnering IMPACT Program Interest]"
-						class="bg-neutral/50 p-8 md:p-12"
-					/>
-				</div>
-			{/if}
-		</div>
+<!-- Take the First Step -->
+<section class="py-20 md:py-28 bg-base-100">
+	<div class="container-custom max-w-4xl mx-auto text-center">
+		<h2 class="text-4xl md:text-5xl font-bold mb-6">TAKE THE FIRST STEP TOWARD SUSTAINABLE GROWTH</h2>
+		<p class="text-lg leading-relaxed opacity-80">
+			Empower your sales, BD, and client management teams to overcome bottlenecks, drive revenue,
+			and build long-term client relationships. The Sales, BD & Client Management Business
+			Partnering IMPACT Program is your pathway to creating high-performing teams that thrive in
+			today's competitive environment.
+		</p>
 	</div>
 </section>
+
+<RegisterInterestSection
+	prefix="[Sales, BD & Client Management Business Partnering IMPACT Program Interest]"
+	introText="Ready to amplify your sales leadership and team performance? Contact us to learn more about how our program can help your organisation achieve its goals. Fill out the form below to get started."
+/>

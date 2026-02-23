@@ -1,10 +1,10 @@
 <script lang="ts">
 	import SEO from '$lib/components/SEO.svelte';
-	import ClientLogos from '$lib/components/ClientLogos.svelte';
-	import ContactForm from '$lib/components/ContactForm.svelte';
 	import TestimonialSlider from '$lib/components/TestimonialSlider.svelte';
-	import { fly } from 'svelte/transition';
 	import EvolveBookSection from '$lib/components/EvolveBookSection.svelte';
+	import ClientLogosSection from '$lib/components/ClientLogosSection.svelte';
+	import RegisterInterestSection from '$lib/components/RegisterInterestSection.svelte';
+	import { fly } from 'svelte/transition';
 
 	function trigger(node: HTMLElement, stateSetter: (v: boolean) => void) {
 		let observer: IntersectionObserver;
@@ -23,20 +23,6 @@
 		startObserving();
 		return { destroy: () => observer?.disconnect() };
 	}
-
-	const clientLogos = [
-		'/client-moss.webp',
-		'/client-otto.webp',
-		'/client-ot.webp',
-		'/client-rba.webp',
-		'/client-kh.webp',
-		'/client-edgeward.webp',
-		'/client-mu.webp',
-		'/client-transport.webp',
-		'/client-specsavers.webp',
-		'/client-msd.webp',
-		'/client-lochard.webp'
-	];
 
 	const modules = [
 		{
@@ -121,14 +107,14 @@
 		}
 	];
 
-	let learnImg = $state(false);
-	let learnText = $state(false);
-	let clientsHeading = $state(false);
-	let clientsLogos = $state(false);
+	let introImg = $state(false);
+	let introText = $state(false);
+	let uniqueImg = $state(false);
+	let uniqueText = $state(false);
 	let modulesHeading = $state(false);
 	let modulesGrid = $state(false);
-	let registerHeading = $state(false);
-	let registerForm = $state(false);
+	let ctaImg = $state(false);
+	let ctaText = $state(false);
 </script>
 
 <SEO
@@ -161,11 +147,8 @@
 	<div class="container-custom relative z-10 flex items-center h-full">
 		<div class="max-w-xl">
 			<h1 class="mb-6 text-5xl lg:text-6xl font-bold text-black">
-				Leadership Development Program for Local Government
+				Leadership Development Program for Local Government Area (LGAs) Teams
 			</h1>
-			<p class="text-lg font-bold mb-8 text-black max-w-lg">
-				Community leaders. Public servants. Change makers.
-			</p>
 			<a href="#register-interest" class="btn btn-secondary btn-lg uppercase font-bold mb-6">
 				BOOK YOUR FREE 60-MINUTE STRATEGY SESSION
 			</a>
@@ -178,75 +161,52 @@
 	</div>
 </section>
 
-<!-- What You'll Learn -->
+<!-- Program Intro Section -->
 <section
 	class="py-20 md:py-28 bg-base-100"
 	use:trigger={(v) => {
-		learnImg = v;
-		setTimeout(() => (learnText = v), 150);
+		introImg = v;
+		setTimeout(() => (introText = v), 150);
 	}}
 >
 	<div class="container-custom">
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-			<div>
-				{#if learnText}
-					<div in:fly={{ x: -30, duration: 600 }}>
-						<h2 class="text-4xl md:text-5xl font-bold mb-8">WHAT YOU'LL LEARN</h2>
-						<p class="text-lg leading-relaxed mb-6 opacity-80">
-							Local government leaders operate in one of the most complex environments in the public
-							sector — balancing community expectations, political dynamics, and operational
-							excellence. This program develops the leadership capabilities essential for thriving in
-							this unique context.
-						</p>
-						<p class="text-lg leading-relaxed mb-6 opacity-80">
-							The Leadership Development Program for Local Government is designed to empower your
-							team with the tools, frameworks and mindset to become trusted experts in driving
-							community outcomes.
-						</p>
-						<p class="text-lg font-medium mb-4">
-							The learning objectives of the Leadership Development Program for Local Government
-							include:
-						</p>
-						<ul class="space-y-3 mb-8">
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80"
-									>Equip themselves with the necessary skills to meet the expectations of key
-									internal and external stakeholders</span
-								>
-							</li>
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80"
-									>Establish a solid foundation of trust with their team, stakeholders and other
-									functions</span
-								>
-							</li>
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80"
-									>Establish themselves as a consistent and trusted strategic advisor</span
-								>
-							</li>
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80"
-									>Build their business acumen to complement their leadership proficiency</span
-								>
-							</li>
-						</ul>
-						<p class="text-base leading-relaxed opacity-70">
-							This program features a face-to-face component, and micro-learning activities and
-							check-in process to help embed the Program learnings.
-						</p>
-					</div>
-				{/if}
-			</div>
-			{#if learnImg}
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+			{#if introText}
+				<div in:fly={{ x: -30, duration: 600 }}>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Amplify your leadership, positively impact your colleagues and importantly, impact your
+						community today! Take the first step toward building a high-performing, cohesive LGA
+						business partnering team.
+					</p>
+					<p class="text-xl font-bold mb-6 opacity-90">Impact Your Local Community.</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Enhancing the effectiveness of your LGA business partnering team and fostering
+						meaningful collaboration with internal and community stakeholders begins with trust:
+						trust within the team and with the broader community. It starts with consistently
+						applying the core principles of business partnering.
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Mastering these fundamentals enables council leaders and their teams to develop proactive
+						and impactful relationships with key stakeholders, from internal departments to local
+						community groups. Our Leadership Development Program for Local Government is designed to
+						equip council teams with essential tools, frameworks, and the mindset to drive progress
+						and deliver outcomes that truly benefit the community.
+					</p>
+					<p class="text-lg leading-relaxed mb-8 opacity-80">
+						This program will improve cross-functional collaboration, enhance communication with
+						internal and external stakeholders, and establish purposeful goal-setting that leads to
+						genuine buy-in and aligned teams across Council moving in the same direction.
+					</p>
+					<a href="#register-interest" class="btn btn-primary btn-lg uppercase font-bold">
+						Register your interest
+					</a>
+				</div>
+			{/if}
+			{#if introImg}
 				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
 					<img
-						src="/bpip-learn.webp"
-						alt="Leadership Development for Local Government learning framework"
+						src="/bpip-intro.webp"
+						alt="Leadership Development Program for Local Government"
 						class="w-full max-w-md object-contain"
 					/>
 				</div>
@@ -255,30 +215,57 @@
 	</div>
 </section>
 
-<!-- Client Logos -->
-<section class="py-16">
-	<div
-		class="container-custom"
-		use:trigger={(v) => {
-			clientsHeading = v;
-			setTimeout(() => (clientsLogos = v), 200);
-		}}
-	>
-		{#if clientsHeading}
-			<h2
-				class="text-4xl md:text-5xl font-bold text-center mb-12"
-				in:fly={{ y: 30, duration: 600 }}
-			>
-				SOME COMPANIES WE'VE PARTNERED WITH
-			</h2>
-		{/if}
-		{#if clientsLogos}
-			<div in:fly={{ y: 20, duration: 600 }}>
-				<ClientLogos logos={clientLogos} marquee={true} />
-			</div>
-		{/if}
+<ClientLogosSection />
+
+<!-- What Makes This Program Unique -->
+<section
+	class="py-20 md:py-28 bg-base-100"
+	use:trigger={(v) => {
+		uniqueImg = v;
+		setTimeout(() => (uniqueText = v), 150);
+	}}
+>
+	<div class="container-custom">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+			{#if uniqueText}
+				<div in:fly={{ x: -30, duration: 600 }}>
+					<h2 class="text-4xl md:text-5xl font-bold mb-6">
+						What makes this Leadership Development Program for Local Government unique?
+					</h2>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						We specialise in developing trusted business partners, and our approach is rooted in
+						building solid foundations for success: Know yourself, know your organisation, and know
+						your stakeholders. Create a positive impact.
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Our program is tailored to your council and combines evidence-based frameworks,
+						real-world insights, and meaningful interactions to help participants foster trust,
+						collaboration, and positive change.
+					</p>
+					<p class="text-lg leading-relaxed mb-8 opacity-80">
+						Above all, we focus on action, ensuring your leadership team is prepared to implement
+						strategies that deliver tangible results for the council and the community and have a
+						team with the right behavioural attributes.
+					</p>
+					<a href="#register-interest" class="btn btn-primary btn-lg uppercase font-bold">
+						Register your interest
+					</a>
+				</div>
+			{/if}
+			{#if uniqueImg}
+				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
+					<img
+						src="/bpip-cta.webp"
+						alt="Leadership Development for Local Government unique program"
+						class="w-full max-w-md object-contain"
+					/>
+				</div>
+			{/if}
+		</div>
 	</div>
 </section>
+
+<EvolveBookSection />
 
 <!-- Core Modules -->
 <section
@@ -314,7 +301,75 @@
 	</div>
 </section>
 
-<EvolveBookSection />
+<!-- Call to Action for Local Government Teams -->
+<section
+	class="py-20 md:py-28 bg-base-100"
+	use:trigger={(v) => {
+		ctaImg = v;
+		setTimeout(() => (ctaText = v), 150);
+	}}
+>
+	<div class="container-custom">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+			{#if ctaText}
+				<div in:fly={{ x: -30, duration: 600 }}>
+					<h2 class="text-4xl md:text-5xl font-bold mb-6">
+						THE CALL TO ACTION FOR LOCAL GOVERNMENT (LGA) TEAMS!
+					</h2>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Local government and council leaders operate in a dynamic environment marked by
+						competing demands, budget constraints, and evolving community needs. This program helps
+						leaders navigate these challenges by fostering collaboration, streamlining
+						communication, and delivering results that impact all stakeholders.
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Our Leadership Development Program for Local Government is tailored to help councils
+						create high-performing teams, enhance strategic alignment, and elevate their impact on
+						the community.
+					</p>
+					<p class="text-lg font-medium mb-4">The learning outcomes for participants include:</p>
+					<ul class="space-y-3 mb-8">
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								>Strengthening collaboration between council departments and community
+								stakeholders.</span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								>Establishing trust and effective communication across diverse groups.</span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								>Developing a reputation as a strategic and reliable business partnering team.</span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								>Enhancing business acumen to complement leadership roles.</span
+							>
+						</li>
+					</ul>
+					<a href="/evolve-book" class="btn btn-primary btn-lg uppercase font-bold">BUY NOW</a>
+				</div>
+			{/if}
+			{#if ctaImg}
+				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
+					<img
+						src="/bpip-book-cover.webp"
+						alt="The Business Partnering Playbook - EVOLVE"
+						class="w-96 object-contain drop-shadow-2xl"
+					/>
+				</div>
+			{/if}
+		</div>
+	</div>
+</section>
 
 <!-- Testimonials -->
 <section class="bg-[#fff000] py-20 md:py-28">
@@ -323,35 +378,7 @@
 	</div>
 </section>
 
-<!-- Register Interest Form -->
-<section
-	id="register-interest"
-	class="section-dark py-20 md:py-28"
-	use:trigger={(v) => {
-		registerHeading = v;
-		setTimeout(() => (registerForm = v), 150);
-	}}
->
-	<div class="container-custom">
-		<div class="max-w-3xl mx-auto">
-			{#if registerHeading}
-				<div class="text-center mb-12" in:fly={{ y: 30, duration: 600 }}>
-					<h2 class="text-5xl lg:text-7xl font-bold text-white mb-6">REGISTER YOUR INTEREST</h2>
-					<p class="text-lg text-white opacity-80">
-						We want to disrupt everyday thinking, spark new ideas and create new ways to interact
-						that will support you to truly have an impact. If you're ready to elevate your leadership
-						capabilities in local government, register your interest by filling out the form below.
-					</p>
-				</div>
-			{/if}
-			{#if registerForm}
-				<div in:fly={{ y: 30, duration: 600 }}>
-					<ContactForm
-						prefix="[Leadership Development Program for Local Government Interest]"
-						class="bg-neutral/50 p-8 md:p-12"
-					/>
-				</div>
-			{/if}
-		</div>
-	</div>
-</section>
+<RegisterInterestSection
+	prefix="[Leadership Development Program for Local Government Interest]"
+	introText="At Impactology, we aim to empower council leaders and teams to think differently, foster innovation, and create new ways to engage with each other and their communities. If you're ready to transform your LGA's approach to leadership, reach out to learn more about our Leadership Development Program tailored for Local Government by filling out the form below."
+/>
