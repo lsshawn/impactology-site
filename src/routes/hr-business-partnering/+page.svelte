@@ -69,44 +69,6 @@
 		}
 	];
 
-	const testimonials = [
-		{
-			shortQuote: 'Guidance really helped',
-			quote:
-				'I really connected with and appreciated the style and approach. The one-on-one guidance really helped.',
-			name: 'Claire',
-			title: 'Senior Manager'
-		},
-		{
-			shortQuote: 'Helped me achieve',
-			quote:
-				'My goal was to maintain focus on my most important leadership priorities and this program has helped me achieve this.',
-			name: 'Andrew',
-			title: 'General Counsel'
-		},
-		{
-			shortQuote: 'Program helped me in so many ways',
-			quote:
-				'My learnings from this program have helped me in so many ways both personally and professionally.',
-			name: 'Deborah',
-			title: 'HR Director'
-		},
-		{
-			shortQuote: 'Insights were innovative and pragmatic',
-			quote:
-				'I appreciated the extensive experience from a wide range of sectors to draw upon. The insights shared were innovative and pragmatic.',
-			name: 'Raj',
-			title: 'GM Human Resources'
-		},
-		{
-			shortQuote: 'Truly enriching and transformational experience',
-			quote:
-				'The guidance I have received has been instrumental in helping me to workout my overall vision and strategies for my career and personal goals. This has been a truly enriching and transformational experience.',
-			name: 'Katarina',
-			title: 'Marketing Specialist'
-		}
-	];
-
 	let introImg = $state(false);
 	let introText = $state(false);
 	let uniqueImg = $state(false);
@@ -382,7 +344,7 @@
 <!-- Testimonials -->
 <section class="bg-[#fff000] py-20 md:py-28">
 	<div class="container-custom">
-		<TestimonialSlider {testimonials} />
+		<TestimonialSlider />
 	</div>
 </section>
 
