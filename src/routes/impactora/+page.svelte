@@ -27,17 +27,6 @@
 		return { destroy: () => observer?.disconnect() };
 	}
 
-	// Rotating text state
-	let currentWordIndex = $state(0);
-	const rotatingWords = ['ANSWERS', 'SUPPORT', 'INSIGHTS'];
-
-	$effect(() => {
-		const interval = setInterval(() => {
-			currentWordIndex = (currentWordIndex + 1) % rotatingWords.length;
-		}, 2500);
-		return () => clearInterval(interval);
-	});
-
 	// Testimonial carousel state
 	let currentTestimonial = $state(0);
 	let slideDirection = $state<'left' | 'right'>('right');
@@ -45,8 +34,7 @@
 
 	const testimonials = [
 		{
-			quote:
-				'Impactora provides streamlined insights that narrows down to specific areas',
+			quote: 'Impactora provides streamlined insights that narrows down to specific areas',
 			author: 'Janet M'
 		},
 		{
@@ -66,7 +54,7 @@
 		},
 		{
 			quote:
-				"Whether it\u2019s a quick check-in for some advice or a deep dive. Impactora has it all. In a short space of time, it has been my go-to for personal and professional development.",
+				'Whether it\u2019s a quick check-in for some advice or a deep dive. Impactora has it all. In a short space of time, it has been my go-to for personal and professional development.',
 			author: 'Chan L'
 		}
 	];
@@ -98,27 +86,27 @@
 		{
 			question: 'What is Impactora?',
 			answer:
-				"Impactora is a SaaS based HR platform which helps solving a critical organization challenge \u2013 helping managers and employees receive tailored HR information and advice. Impactora is the platform where employees access tailored advice and information to resolve issues, access insights, make decisions, and achieve their goals which positively impacts their colleagues and work environment \u2013 imagine a combination of Wikipedia and Google tailored to your personal work context and situation."
+				'Impactora is a SaaS based HR platform which helps solving a critical organization challenge \u2013 helping managers and employees receive tailored HR information and advice. Impactora is the platform where employees access tailored advice and information to resolve issues, access insights, make decisions, and achieve their goals which positively impacts their colleagues and work environment \u2013 imagine a combination of Wikipedia and Google tailored to your personal work context and situation.'
 		},
 		{
 			question: 'What is Impactora used for?',
 			answer:
-				"We solve the productivity challenge for employees and HR by providing answers to frequently asked questions for non-contextual information. We solve employee performance challenges by providing the right, tailored information with the right insights at the right time to resolve people issues and improve decision making."
+				'We solve the productivity challenge for employees and HR by providing answers to frequently asked questions for non-contextual information. We solve employee performance challenges by providing the right, tailored information with the right insights at the right time to resolve people issues and improve decision making.\n\nPareto rule exists that 80% of the questions are on simple queries – the focus is to lower service delivery costs. Achievement of key people outcomes however comes from answering 20% of the challenging issues and decisions. Combined, Impactora solves three critical issues:\n• Improve employee performance by providing the right tailored information at the right time with the right level of insights\n• Improve employee and HR productivity by providing answers to non-contextual questions\n• Improve Leaders, Managers, Employees and HR capabilities and knowledge by providing insights to solve contextual issues and decisions\n\nWhilst employees have access to infinite sources of knowledge, data and advice – it is not tailored and it is not specific to their unique situation. This "mass-information" environment creates noise and cognitive overload for employees, where abundant choice is the enemy of action.'
 		},
 		{
 			question: 'Is the Impactora Platform safe and secure?',
 			answer:
-				'Impactora is the trusted Platform where employees feel safe to help them resolve some of the tricky issues, access insights, make decisions, and achieve their goals which positively impacts their colleagues and work environment.'
+				'Impactora is the trusted Platform where employees feel safe to help them resolve some of the tricky issues, access insights, make decisions, and achieve their goals which positively impacts their colleagues and work environment. Click here to better understand how we keep your data safe.'
 		},
 		{
 			question: 'Who is the target audience for Impactora?',
 			answer:
-				'Impactora is designed for mature mid-sized organisations and smaller high growth organisations. Our end users are graduates, early career employees, first-time managers, emerging leaders and newly promoted managers, across all disciplines and job functions.'
+				'Impactora is designed for mature mid-sized organisations and smaller high growth organisations.\n\nOur end users are graduates, early career employees, first-time managers, emerging leaders and newly promoted managers, across all disciplines and job functions.\n\nAlso, organisations are investing in leadership and development programs to help build organisational capabilities and develop their employees. One of the challenges organisations face, is ensuring employees can effectively consolidate the learnings at the conclusion of any development program they attend – particularly, when they are back "in the office" and working in their day-to-day role. Impactora is designed to help employees leverage and consolidate their learnings, by accessing relevant insights and advice that complement the development program they attended.'
 		},
 		{
 			question: 'Which employees can best benefit from Impactora?',
 			answer:
-				"Employees who are stretched in their role and have a lack of time and knowledge on where to seek advice, getting stuck in career, have a fear of failing in their role, looking for a platform to complement existing learning and development programs, and those who have a willingness to embrace new modes of learning."
+				'Employees who are:\n• Stretched in their role and have a lack of time and knowledge on where to seek advice\n• Getting stuck in career: compromising career progression through bad decisions\n• Have a fear of failing in their role – lack confidence\n• Looking for a platform to complement existing learning and development programs\n• Have a willingness to embrace new modes of learning\n• Receiving too much theoretical advice – non-tactical or implementable\n• Not feeling valued at work\n• Lack of timely, actionable personal advice\n• Trying to balance work and personal commitments\n• Lack of connectivity with colleagues\n• Not developing fast enough (keep pace of change and expectations)\n• Lack of personal connection to day-to-day work.'
 		}
 	];
 
@@ -139,7 +127,7 @@
 			icon: '/impactora-icon-decisions.webp',
 			title: 'Make informed\ndecisions',
 			description:
-				"Today\u2019s abundance of choice is often the enemy of action. IMPACTORA allows access to tailored and timely advice, which means you can make more quicker decisions that often create lasting impact."
+				'Today\u2019s abundance of choice is often the enemy of action. IMPACTORA allows access to tailored and timely advice, which means you can make more quicker decisions that often create lasting impact.'
 		},
 		{
 			icon: '/impactora-icon-goals.webp',
@@ -159,25 +147,24 @@
 		{
 			number: '2.',
 			title: 'Start exploring',
-			description:
-				'Access insights and advice tailored to your personal profile and organisation.',
+			description: 'Access insights and advice tailored to your personal profile and organisation.',
 			icon: 'ph:magnifying-glass'
 		},
 		{
 			number: '3.',
 			title: 'Take action sooner',
-			description:
-				'Increase your impact on yourself, your colleagues, your team and customers.',
+			description: 'Increase your impact on yourself, your colleagues, your team and customers.',
 			icon: 'ph:clock'
 		},
 		{
 			number: '4.',
 			title: 'Access daily insights',
-			description:
-				'Your personalised feed will keep you motivated to achieve your goals.',
+			description: 'Your personalised feed will keep you motivated to achieve your goals.',
 			icon: 'ph:calendar'
 		}
 	];
+
+	let videoPlaying = $state(false);
 
 	// Per-section reveal states
 	let heroText = $state(true);
@@ -236,30 +223,31 @@
 />
 
 <!-- Hero Section -->
-<section class="bg-white py-24 md:py-32 relative overflow-hidden min-h-[70vh] flex items-center">
+<section
+	class="section-yellow py-24 md:py-32 relative overflow-hidden min-h-[70vh] flex items-center"
+>
+	<img
+		src="/impactora-hero-bg.webp"
+		alt=""
+		aria-hidden="true"
+		fetchpriority="high"
+		decoding="async"
+		width="1920"
+		height="700"
+		class="hidden md:block absolute inset-0 w-full h-full object-cover object-center"
+	/>
 	<div class="container-custom relative z-10">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 			{#if heroText}
 				<div transition:fly={{ y: 30, duration: 700 }}>
+					<img src="/impactora-logo.webp" alt="Impactora" class="h-10 md:h-12 w-auto mb-6" />
 					<div class="mb-8">
 						<span
 							class="text-6xl md:text-7xl lg:text-[90px] font-bold leading-none"
 							style="font-family: var(--font-heading);"
 						>
-							FIND
+							FIND <span class="text-white">INSIGHTS</span>
 						</span>
-						<div class="relative h-[70px] md:h-[90px] overflow-hidden">
-							{#each rotatingWords as word, i (word)}
-								<span
-									class="text-6xl md:text-7xl lg:text-[90px] font-bold leading-none absolute left-0 transition-all duration-500"
-									style="font-family: var(--font-heading); color: #5ad4ff; {i === currentWordIndex
-										? 'opacity: 1; transform: translateY(0)'
-										: 'opacity: 0; transform: translateY(100%)'}"
-								>
-									{word}
-								</span>
-							{/each}
-						</div>
 					</div>
 					<p class="text-xl mb-8 opacity-80 leading-relaxed max-w-xl">
 						Tailored advice and insights for employees and managers.
@@ -270,26 +258,6 @@
 					>
 						BOOK A DEMO
 					</a>
-				</div>
-			{/if}
-
-			<!-- Product Visual — overlapping screenshots -->
-			{#if heroImg}
-				<div class="relative flex justify-center" transition:fly={{ x: 30, duration: 700 }}>
-					<div class="impactora-screenshots w-full max-w-lg">
-						<img
-							src="/impactora-screenshot-1.webp"
-							alt="IMPACTORA App Dashboard"
-							class="impactora-screenshot-main w-full h-auto"
-							loading="eager"
-						/>
-						<img
-							src="/impactora-screenshot-2.webp"
-							alt="IMPACTORA App Detail"
-							class="impactora-screenshot-secondary"
-							loading="eager"
-						/>
-					</div>
 				</div>
 			{/if}
 		</div>
@@ -307,7 +275,9 @@
 	<div class="container-custom">
 		<div class="max-w-4xl mx-auto text-center">
 			{#if tailoredHeading}
-				<h2 class="mb-8 text-3xl md:text-4xl" transition:fly={{ y: 30, duration: 600 }}>TAILORED ADVICE & INSIGHTS</h2>
+				<h2 class="mb-8 text-3xl md:text-4xl" transition:fly={{ y: 30, duration: 600 }}>
+					TAILORED ADVICE & INSIGHTS
+				</h2>
 			{/if}
 			{#if tailoredText}
 				<div transition:fly={{ y: 30, duration: 600 }}>
@@ -320,8 +290,8 @@
 					</p>
 					<p class="text-lg leading-relaxed">
 						<strong>IMPACTORA</strong> is a SaaS platform designed to bridge that loss of organisational
-						knowledge by providing easy to access and immediate support, advice and insights that are tailored
-						to the individual employee and your business.
+						knowledge by providing easy to access and immediate support, advice and insights that are
+						tailored to the individual employee and your business.
 					</p>
 				</div>
 			{/if}
@@ -337,9 +307,14 @@
 		setTimeout(() => (helpsBoxes = v), 200);
 	}}
 >
-	<div class="max-w-[1400px] mx-auto">
+	<div>
 		{#if helpsHeading}
-			<h2 class="text-center mb-12 text-3xl md:text-4xl pt-16" transition:fly={{ y: 30, duration: 600 }}>IMPACTORA HELPS YOU&hellip;</h2>
+			<h2
+				class="text-center mb-12 text-3xl md:text-4xl pt-16"
+				transition:fly={{ y: 30, duration: 600 }}
+			>
+				IMPACTORA HELPS YOU&hellip;
+			</h2>
 		{/if}
 		{#if helpsBoxes}
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
@@ -354,10 +329,7 @@
 							alt={box.title.replace('\n', ' ')}
 							class="w-24 h-24 mb-6 object-contain"
 						/>
-						<h3
-							class="text-xl mb-4 whitespace-pre-line"
-							style="color: #5ad4ff;"
-						>
+						<h3 class="text-xl mb-4 whitespace-pre-line" style="color: #5ad4ff;">
 							{box.title}
 						</h3>
 						<p class="text-sm leading-relaxed opacity-90">
@@ -381,25 +353,52 @@
 	<div class="container-custom">
 		<div class="max-w-4xl mx-auto text-center">
 			{#if timelyHeading}
-				<h2 class="mb-8 text-3xl md:text-4xl" transition:fly={{ y: 30, duration: 600 }}>TIMELY INFORMATION & ADVICE</h2>
+				<h2 class="mb-8 text-3xl md:text-4xl" transition:fly={{ y: 30, duration: 600 }}>
+					TIMELY INFORMATION & ADVICE
+				</h2>
 			{/if}
 			{#if timelyContent}
 				<div transition:fly={{ y: 30, duration: 600 }}>
 					<p class="text-lg leading-relaxed mb-10">
-						We now have access to infinite sources of knowledge, data, and advice. However, it can be
-						difficult to find information specific to your situation and the abundance of choice is
-						often the enemy of action. <strong>IMPACTORA</strong> provides leaders, managers and employees
+						We now have access to infinite sources of knowledge, data, and advice. However, it can
+						be difficult to find information specific to your situation and the abundance of choice
+						is often the enemy of action. <strong>IMPACTORA</strong> provides leaders, managers and employees
 						access to tailored advice and insights that will positively impact themselves, their teams,
 						colleagues and customers.
 					</p>
 
-					<!-- Promo Banner Image -->
-					<div class="mb-10">
-						<img
-							src="/impactora-promo-banner.webp"
-							alt="IMPACTORA Platform Preview"
-							class="w-full max-w-2xl mx-auto h-auto rounded-sm shadow-lg"
-						/>
+					<div class="mb-10 max-w-2xl mx-auto">
+						{#if videoPlaying}
+							<video
+								src="https://impactology.com.au/wp-content/uploads/2023/03/impactora-welcome-video.mp4"
+								controls
+								autoplay
+								class="w-full h-auto rounded-sm shadow-lg"
+								style="max-height: 300px;"
+							>
+							</video>
+						{:else}
+							<button
+								onclick={() => (videoPlaying = true)}
+								class="relative w-full rounded-sm shadow-lg overflow-hidden group cursor-pointer"
+								aria-label="Play Impactora video"
+							>
+								<img
+									src="/impactora-promo-banner.webp"
+									alt="Impactora platform preview"
+									class="w-full h-auto"
+								/>
+								<div
+									class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors"
+								>
+									<div
+										class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg"
+									>
+										<Icon icon="ph:play-fill" class="text-2xl text-[#5ad4ff] ml-1" />
+									</div>
+								</div>
+							</button>
+						{/if}
 					</div>
 
 					<a
@@ -431,7 +430,10 @@
 			>
 				<div>
 					<p class="text-sm uppercase tracking-wider mb-2 opacity-70">Team management advice</p>
-					<h3 class="text-3xl md:text-4xl mb-6 leading-tight" style="font-family: var(--font-heading);">
+					<h3
+						class="text-3xl md:text-4xl mb-6 leading-tight"
+						style="font-family: var(--font-heading);"
+					>
 						HOW TO IDENTIFY & MANAGE HIGH PERFORMERS?
 					</h3>
 				</div>
@@ -451,7 +453,10 @@
 			>
 				<div>
 					<p class="text-sm uppercase tracking-wider mb-2 opacity-70">Personal development</p>
-					<h3 class="text-3xl md:text-4xl mb-6 leading-tight" style="font-family: var(--font-heading);">
+					<h3
+						class="text-3xl md:text-4xl mb-6 leading-tight"
+						style="font-family: var(--font-heading);"
+					>
 						DEVELOPING THE RIGHT SKILLS FOR YOUR CAREER
 					</h3>
 				</div>
@@ -480,20 +485,22 @@
 >
 	<div class="container-custom">
 		{#if stepsHeading}
-			<h2 class="text-center mb-16 text-3xl md:text-4xl" transition:fly={{ y: 30, duration: 600 }}>HOW IT WORKS</h2>
+			<h2 class="text-center mb-16 text-3xl md:text-4xl" transition:fly={{ y: 30, duration: 600 }}>
+				HOW IT WORKS
+			</h2>
 		{/if}
 
 		{#if stepsItems}
 			<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
 				{#each steps as step, i (i)}
-					<div class="text-center relative" transition:fly={{ y: 30, duration: 600, delay: i * 100 }}>
+					<div
+						class="text-center relative"
+						transition:fly={{ y: 30, duration: 600, delay: i * 100 }}
+					>
 						<div class="w-14 h-14 mx-auto mb-4 flex items-center justify-center">
 							<Icon icon={step.icon} class="text-3xl text-black" />
 						</div>
-						<div
-							class="text-4xl font-bold mb-2"
-							style="font-family: var(--font-heading);"
-						>
+						<div class="text-4xl font-bold mb-2" style="font-family: var(--font-heading);">
 							{step.number}
 						</div>
 						<h3 class="text-lg mb-3" style="font-family: var(--font-heading);">
@@ -648,7 +655,7 @@
 							</button>
 							{#if openFaq === i}
 								<div class="px-6 pb-5">
-									<p class="text-sm leading-relaxed opacity-80">{faq.answer}</p>
+									<p class="text-sm leading-relaxed opacity-80 whitespace-pre-line">{faq.answer}</p>
 								</div>
 							{/if}
 						</div>
@@ -674,8 +681,8 @@
 				<div class="text-center mb-12" transition:fly={{ y: 30, duration: 600 }}>
 					<h2 class="mb-4 text-3xl md:text-4xl">REQUEST AN IMPACTORA DEMONSTRATION</h2>
 					<p class="text-lg opacity-80">
-						Simply fill out the form below and an Impactora representative will contact you to
-						book your demonstration.
+						Simply fill out the form below and an Impactora representative will contact you to book
+						your demonstration.
 					</p>
 				</div>
 			{/if}
