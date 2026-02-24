@@ -77,6 +77,10 @@
 	let modulesGrid = $state(false);
 </script>
 
+<svelte:head>
+	<link rel="preload" as="image" href="/bpip-hero-bg.webp" fetchpriority="high" />
+</svelte:head>
+
 <SEO
 	title="Procurement Business Partner | Impactology"
 	description="Take your procurement strategy to new heights with Impactology's Procurement Business Partner development experience. Boost efficiency and foster sustainable growth."

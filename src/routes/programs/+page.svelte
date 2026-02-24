@@ -52,6 +52,10 @@
 	let connectForm = $state(false);
 </script>
 
+<svelte:head>
+	<link rel="preload" as="image" href="/programs-hero-bg.webp" fetchpriority="high" />
+</svelte:head>
+
 <SEO
 	title="Business Partnering Development Programs | Impactology"
 	description="Choose your journey. Impactology's business partnering development programs help teams think strategically, build relationships and create lasting impact."
@@ -118,7 +122,7 @@
 					Designed for all business partners who are ready to make an impact.
 				</p>
 				<a href="/business-partnering-impact-program">
-					<img src="/programs-know-more.webp" alt="Know More" class="h-12 w-auto" />
+					<img src="/programs-know-more.webp" alt="Know More" width="200" height="48" class="h-12 w-auto" />
 				</a>
 			</div>
 		</div>
@@ -144,13 +148,15 @@
 					designed to prepare your Business Partners for change and drive transformation.
 				</p>
 				<a href="/amplify-your-impact-program">
-					<img src="/programs-know-more.webp" alt="Know More" class="h-12 w-auto" />
+					<img src="/programs-know-more.webp" alt="Know More" width="200" height="48" class="h-12 w-auto" />
 				</a>
 			</div>
 			<div class="reveal-x-right flex justify-center" class:visible={amplifyImg} style="transition-delay: 150ms">
 				<img
 					src="/programs-amplify.webp"
 					alt="AMPLIFY Your Impact Program"
+					width="256"
+					height="256"
 					class="w-64 h-64 object-contain"
 				/>
 			</div>

@@ -79,6 +79,10 @@
 	let ctaText = $state(false);
 </script>
 
+<svelte:head>
+	<link rel="preload" as="image" href="/bpip-hero-bg.webp" fetchpriority="high" />
+</svelte:head>
+
 <SEO
 	title="Leadership Development Program for Local Government Teams | Impactology"
 	description="Transform your LGA leadership team with our tailored Leadership Development Program. Build trust, foster collaboration, and deliver impactful outcomes."

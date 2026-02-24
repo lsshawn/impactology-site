@@ -238,7 +238,7 @@
 	<div class="container-custom relative z-10">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 			<div class="reveal-y" class:visible={heroText}>
-				<img src="/impactora-logo.webp" alt="Impactora" class="h-10 md:h-12 w-auto mb-6" />
+				<img src="/impactora-logo.webp" alt="Impactora" width="368" height="84" class="h-10 md:h-12 w-auto mb-6" />
 				<div class="mb-8">
 					<span
 						class="text-6xl md:text-7xl lg:text-[90px] font-bold leading-none"

@@ -169,6 +169,10 @@
 	let whyGrid = $state(false);
 </script>
 
+<svelte:head>
+	<link rel="preload" as="image" href="/bpip-hero-bg.webp" fetchpriority="high" />
+</svelte:head>
+
 <SEO
 	title="Marketing & Communications Team Business Partnering Program | Impactology"
 	description="Empower marketing and communication teams to become strategic business partners. Drive growth, foster collaboration, and align marketing with organisational goals."

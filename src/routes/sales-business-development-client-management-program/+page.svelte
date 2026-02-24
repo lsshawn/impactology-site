@@ -191,6 +191,10 @@
 	let whyGrid = $state(false);
 </script>
 
+<svelte:head>
+	<link rel="preload" as="image" href="/bpip-hero-bg.webp" fetchpriority="high" />
+</svelte:head>
+
 <SEO
 	title="Sales & Client Management Business Partnering Program | Impactology"
 	description="Empower sales, BD, and client management teams with our Business Partnering IMPACT Program. Drive growth, build trust, and foster long-term client relationships."

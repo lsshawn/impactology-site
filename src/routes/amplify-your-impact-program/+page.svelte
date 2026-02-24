@@ -67,6 +67,10 @@
 	let registerForm = $state(false);
 </script>
 
+<svelte:head>
+	<link rel="preload" as="image" href="/amplify-hero-bg.webp" fetchpriority="high" />
+</svelte:head>
+
 <SEO
 	title="Amplify Your Impact Program | Impactology"
 	description="Amplify transformative outcomes with our Impact Programs. Achieve lasting change and growth with Impactology by your side."

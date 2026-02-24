@@ -72,7 +72,7 @@
 			</div>
 
 			<div class="flex justify-center lg:justify-end">
-				<img src="/evolve-3d-cover.webp" alt="" class="w-full max-w-xl" loading="eager" />
+				<img src="/evolve-3d-cover.webp" alt="" width="576" height="720" class="w-full max-w-xl" loading="eager" fetchpriority="high" />
 			</div>
 		</div>
 	</div>
@@ -85,7 +85,7 @@
 		<div class="grid grid-cols-3 md:grid-cols-6 gap-8 items-center">
 			{#each clientLogos as logo (logo.src)}
 				<div class="flex items-center justify-center">
-					<img src={logo.src} alt={logo.alt} class="max-h-16 w-auto object-contain" />
+					<img src={logo.src} alt={logo.alt} width="160" height="64" class="max-h-16 w-auto object-contain" />
 				</div>
 			{/each}
 		</div>
@@ -126,7 +126,7 @@
 	<div class="container-custom">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 			<div class="flex justify-center lg:justify-start">
-				<img src="/evolve-photo-1.webp" alt="" class="w-full max-w-md shadow-lg" loading="lazy" />
+				<img src="/evolve-photo-1.webp" alt="" width="448" height="300" class="w-full max-w-md shadow-lg" loading="lazy" />
 			</div>
 
 			<div class="prose prose-lg max-w-none">
@@ -150,7 +150,7 @@
 	<div class="container-custom">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 			<div class="flex justify-center lg:justify-start">
-				<img src="/evolve-3d-cover.webp" alt="" class="w-full max-w-lg" loading="lazy" />
+				<img src="/evolve-3d-cover.webp" alt="" width="512" height="640" class="w-full max-w-lg" loading="lazy" />
 			</div>
 
 			<div>
@@ -185,7 +185,7 @@
 				rel="noopener noreferrer"
 				class="flex items-center justify-center"
 			>
-				<img src="/amazon-usa.webp" alt="Buy on Amazon USA" class="w-full max-w-[140px] h-auto" />
+				<img src="/amazon-usa.webp" alt="Buy on Amazon USA" width="140" height="48"  />
 			</a>
 
 			<!-- Amazon UK -->
@@ -195,7 +195,7 @@
 				rel="noopener noreferrer"
 				class="flex items-center justify-center"
 			>
-				<img src="/amazon-uk.webp" alt="Buy on Amazon UK" class="w-full max-w-[140px] h-auto" />
+				<img src="/amazon-uk.webp" alt="Buy on Amazon UK" width="140" height="48"  />
 			</a>
 
 			<!-- Amazon Kindle -->
@@ -208,7 +208,7 @@
 				<img
 					src="/amazon-kindle.webp"
 					alt="Buy on Amazon Kindle"
-					class="w-full max-w-[140px] h-auto"
+					width="140" height="48" 
 				/>
 			</a>
 
@@ -217,7 +217,7 @@
 				<img
 					src="/ibooks-button.webp"
 					alt="Available on Apple Books"
-					class="w-full max-w-[140px] h-auto"
+					width="140" height="48" 
 				/>
 			</div>
 
@@ -231,7 +231,7 @@
 				<img
 					src="/google-play-books.webp"
 					alt="Get it on Google Play Books"
-					class="w-full max-w-[140px] h-auto"
+					width="140" height="48" 
 				/>
 			</a>
 		</div>

@@ -79,6 +79,10 @@
 	let ctaText = $state(false);
 </script>
 
+<svelte:head>
+	<link rel="preload" as="image" href="/bpip-hero-bg.webp" fetchpriority="high" />
+</svelte:head>
+
 <SEO
 	title="IT Business Partnering Program | Impactology"
 	description="Take your internal IT strategy to new heights with Impactology's IT Business Partnering development program. Enhance collaboration and increase productivity and efficiency."

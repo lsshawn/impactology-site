@@ -54,6 +54,10 @@
 	}
 </script>
 
+<svelte:head>
+	<link rel="preload" as="image" href="/about-hero-bg.webp" fetchpriority="high" />
+</svelte:head>
+
 <SEO
 	title="About | Create an Impact | Impactology"
 	description="The Impact is where two ideas collide, grow, and spark to create something big. It can stay within you to ignite at any time."
@@ -183,6 +187,8 @@
 				<img
 					src="/about-what.webp"
 					alt="what it means to create an impact"
+					width="600"
+					height="320"
 					class="w-full h-80 object-cover"
 				/>
 			</div>
@@ -204,6 +210,8 @@
 				<img
 					src="/about-who.webp"
 					alt="community of impactologists"
+					width="600"
+					height="320"
 					class="w-full h-80 object-cover"
 				/>
 			</div>
@@ -288,7 +296,7 @@
 				</div>
 			</div>
 			<div class="reveal-x-right" class:visible={howImg} style="transition-delay: 150ms">
-				<img src="/about-how.webp" alt="how we create impact" class="w-full h-80 object-cover" />
+				<img src="/about-how.webp" alt="how we create impact" width="600" height="320" class="w-full h-80 object-cover" />
 			</div>
 		</div>
 	</div>
@@ -308,6 +316,8 @@
 				<img
 					src="/about-why.webp"
 					alt="why does impact matter"
+					width="600"
+					height="320"
 					class="w-full h-80 object-cover"
 				/>
 			</div>

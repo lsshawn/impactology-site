@@ -79,6 +79,10 @@
 	let ctaText = $state(false);
 </script>
 
+<svelte:head>
+	<link rel="preload" as="image" href="/bpip-hero-bg.webp" fetchpriority="high" />
+</svelte:head>
+
 <SEO
 	title="HR Business Partnering Program | Impactology"
 	description="Take your People & Culture strategy to new heights with Impactology's HR / People & Culture Business Partnering development program. Enhance collaboration, build your team's brand and increase productivity and improve trust with key stakeholders."

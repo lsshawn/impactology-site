@@ -80,6 +80,10 @@
 	let ctaFinanceText = $state(false);
 </script>
 
+<svelte:head>
+	<link rel="preload" as="image" href="/bpip-hero-bg.webp" fetchpriority="high" />
+</svelte:head>
+
 <SEO
 	title="Finance Business Partnering Program | Impactology"
 	description="Drive your Finance strategy to new heights with Impactology's Finance Business Partnering development program. Build clarity, promote collaboration and improve team productivity and efficiency."

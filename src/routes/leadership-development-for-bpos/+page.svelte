@@ -93,6 +93,10 @@
 	let registerForm = $state(false);
 </script>
 
+<svelte:head>
+	<link rel="preload" as="image" href="/bpip-hero-bg.webp" fetchpriority="high" />
+</svelte:head>
+
 <SEO
 	title="Leadership Development for BPOs | Impactology"
 	description="Elevate BPO leadership with Impactology's tailored training. Build trust, foster collaboration, and drive client success with proven frameworks and tools."

@@ -98,6 +98,10 @@
 	let registerForm = $state(false);
 </script>
 
+<svelte:head>
+	<link rel="preload" as="image" href="/bpip-hero-bg.webp" fetchpriority="high" />
+</svelte:head>
+
 <SEO
 	title="Business Partnering Impact Program | Impactology"
 	description="Explore Impactology's Business Partnering Programs. Elevate your brand with innovative solutions & boost growth. Join us today!"
