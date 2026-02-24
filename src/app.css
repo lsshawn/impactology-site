@@ -258,6 +258,29 @@ h6 {
   }
 }
 
+/* Scroll reveal animations — replaces {#if} + transition:fly to prevent flicker */
+.reveal-y {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-x-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-x-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal-y.visible,
+.reveal-x-left.visible,
+.reveal-x-right.visible {
+  opacity: 1;
+  transform: translate(0);
+}
+
 .prose p {
   margin-bottom: 1em;
 }

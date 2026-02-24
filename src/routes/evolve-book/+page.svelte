@@ -1,7 +1,6 @@
 <script lang="ts">
 	import SEO from '$lib/components/SEO.svelte';
 	import Icon from '@iconify/svelte';
-	import { resolve } from '$app/paths';
 
 	const clientLogos = [
 		{ src: '/client-3.webp', alt: '' },
@@ -17,56 +16,6 @@
 		'Initially tasked with providing advice, they are now true collaborating partners, ideally placed to lead and manage change in the changing world of work and business.',
 		'Yet as the Business Partner role has changed, there has been no pathway to develop the competencies essential for their success'
 	];
-
-	// Order form state
-	let firstName = $state('');
-	let lastName = $state('');
-	let email = $state('');
-	let phone = $state('');
-	let address1 = $state('');
-	let address2 = $state('');
-	let city = $state('');
-	let stateField = $state('');
-	let postcode = $state('');
-	let quantity = $state(1);
-	let shipping = $state<'australia' | 'newzealand'>('australia');
-	let cardName = $state('');
-	let cardNumber = $state('');
-	let cardExpiry = $state('');
-	let cardCvv = $state('');
-	let orderStatus = $state<'idle' | 'sending' | 'sent' | 'error'>('idle');
-	let orderError = $state('');
-
-	const BOOK_PRICE = 24.95;
-	const SHIPPING_AUS = 7.95;
-	const SHIPPING_NZ = 13.95;
-
-	const shippingCost = $derived(shipping === 'newzealand' ? SHIPPING_NZ : SHIPPING_AUS);
-	const subtotal = $derived(BOOK_PRICE * quantity);
-	const total = $derived(subtotal + shippingCost);
-
-	async function handleOrderSubmit(e: SubmitEvent) {
-		e.preventDefault();
-		orderStatus = 'sending';
-		try {
-			const res = await fetch('/api/contact', {
-				method: 'POST',
-				headers: { 'Content-Type': 'application/json' },
-				body: JSON.stringify({
-					firstName,
-					lastName,
-					email,
-					phone,
-					message: `BOOK ORDER - EVOLVE\n\nQuantity: ${quantity}\nShipping: ${shipping === 'newzealand' ? 'New Zealand ($13.95)' : 'Australia ($7.95)'}\nTotal: AUD $${total.toFixed(2)}\n\nShipping Address:\n${address1}${address2 ? '\n' + address2 : ''}\n${city}, ${stateField} ${postcode}\n\nPayment: Card ending ${cardNumber.slice(-4)}`
-				})
-			});
-			if (!res.ok) throw new Error('Failed to send');
-			orderStatus = 'sent';
-		} catch {
-			orderStatus = 'error';
-			orderError = 'Something went wrong. Please try again or contact us directly.';
-		}
-	}
 </script>
 
 <SEO
@@ -113,7 +62,9 @@
 					Finally, a book that provides realistic and targeted advice to Business Partners
 				</p>
 				<a
-					href="#buy-now-form"
+					href="https://buy.stripe.com/fZu6oI8LvetG0kne05cQU02"
+					target="_blank"
+					rel="noopener noreferrer"
 					class="btn btn-primary btn-lg uppercase font-bold inline-flex items-center gap-2"
 				>
 					BUY NOW
@@ -194,252 +145,26 @@
 	</div>
 </section>
 
-<!-- Order Form Section -->
+<!-- Buy Section -->
 <section id="buy-now-form" class="section-gray py-20 md:py-28">
 	<div class="container-custom">
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-			<!-- Left: book cover -->
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 			<div class="flex justify-center lg:justify-start">
 				<img src="/evolve-3d-cover.webp" alt="" class="w-full max-w-lg" loading="lazy" />
 			</div>
 
-			<!-- Right: order form -->
 			<div>
-				<h2 class="mb-8 text-4xl font-bold">Order Form</h2>
-
-				{#if orderStatus === 'sent'}
-					<div class="bg-base-100 p-8 shadow-sm text-center">
-						<Icon icon="ph:check-circle-fill" class="text-success text-5xl mb-4 mx-auto" />
-						<h3 class="text-2xl mb-4">Order Received!</h3>
-						<p class="text-lg">
-							Thank you for your order. We'll be in touch shortly to confirm your purchase.
-						</p>
-					</div>
-				{:else}
-					<form onsubmit={handleOrderSubmit} class="flex flex-col gap-5">
-						<!-- Name row -->
-						<div class="grid grid-cols-2 gap-4">
-							<label class="form-control w-full">
-								<div class="label">
-									<span class="label-text font-medium">First Name *</span>
-								</div>
-								<input
-									type="text"
-									bind:value={firstName}
-									required
-									class="input input-bordered w-full rounded-none"
-								/>
-							</label>
-							<label class="form-control w-full">
-								<div class="label">
-									<span class="label-text font-medium">Last Name *</span>
-								</div>
-								<input
-									type="text"
-									bind:value={lastName}
-									required
-									class="input input-bordered w-full rounded-none"
-								/>
-							</label>
-						</div>
-
-						<label class="form-control w-full">
-							<div class="label">
-								<span class="label-text font-medium">Email *</span>
-							</div>
-							<input
-								type="email"
-								bind:value={email}
-								required
-								class="input input-bordered w-full rounded-none"
-							/>
-						</label>
-
-						<label class="form-control w-full">
-							<div class="label">
-								<span class="label-text font-medium">Phone / Mobile</span>
-							</div>
-							<input
-								type="tel"
-								bind:value={phone}
-								class="input input-bordered w-full rounded-none"
-							/>
-						</label>
-
-						<!-- Shipping Address -->
-						<label class="form-control w-full">
-							<div class="label">
-								<span class="label-text font-medium">Address Line 1 *</span>
-							</div>
-							<input
-								type="text"
-								bind:value={address1}
-								required
-								class="input input-bordered w-full rounded-none"
-							/>
-						</label>
-						<label class="form-control w-full">
-							<div class="label">
-								<span class="label-text font-medium">Address Line 2</span>
-							</div>
-							<input
-								type="text"
-								bind:value={address2}
-								class="input input-bordered w-full rounded-none"
-							/>
-						</label>
-						<div class="grid grid-cols-3 gap-4">
-							<label class="form-control w-full">
-								<div class="label">
-									<span class="label-text font-medium">City *</span>
-								</div>
-								<input
-									type="text"
-									bind:value={city}
-									required
-									class="input input-bordered w-full rounded-none"
-								/>
-							</label>
-							<label class="form-control w-full">
-								<div class="label">
-									<span class="label-text font-medium">State *</span>
-								</div>
-								<input
-									type="text"
-									bind:value={stateField}
-									required
-									class="input input-bordered w-full rounded-none"
-								/>
-							</label>
-							<label class="form-control w-full">
-								<div class="label">
-									<span class="label-text font-medium">Postcode *</span>
-								</div>
-								<input
-									type="text"
-									bind:value={postcode}
-									required
-									class="input input-bordered w-full rounded-none"
-								/>
-							</label>
-						</div>
-
-						<!-- EVOLVE price (display only) -->
-						<div class="flex items-center gap-4 py-2">
-							<span class="font-medium">EVOLVE Price:</span>
-							<span>AUD $24.95</span>
-						</div>
-
-						<!-- Quantity -->
-						<label class="form-control w-full max-w-[120px]">
-							<div class="label">
-								<span class="label-text font-medium">Quantity *</span>
-							</div>
-							<input
-								type="number"
-								bind:value={quantity}
-								min="1"
-								max="20"
-								required
-								class="input input-bordered w-full rounded-none"
-							/>
-						</label>
-
-						<!-- Shipping dropdown -->
-						<label class="form-control w-full">
-							<div class="label">
-								<span class="label-text font-medium">Shipping *</span>
-							</div>
-							<select bind:value={shipping} class="select select-bordered w-full rounded-none">
-								<option value="australia">Australia ($7.95)</option>
-								<option value="newzealand">New Zealand ($13.95)</option>
-							</select>
-						</label>
-
-						<!-- Payment -->
-						<div class="border border-base-300 p-4">
-							<p class="font-medium mb-4">Pay with VISA or Mastercard</p>
-							<div class="flex flex-col gap-4">
-								<label class="form-control w-full">
-									<div class="label">
-										<span class="label-text">Name on Card *</span>
-									</div>
-									<input
-										type="text"
-										bind:value={cardName}
-										required
-										autocomplete="cc-name"
-										class="input input-bordered w-full rounded-none"
-									/>
-								</label>
-								<label class="form-control w-full">
-									<div class="label">
-										<span class="label-text">Card Number *</span>
-									</div>
-									<input
-										type="text"
-										bind:value={cardNumber}
-										required
-										autocomplete="cc-number"
-										maxlength={19}
-										placeholder="XXXX XXXX XXXX XXXX"
-										class="input input-bordered w-full rounded-none"
-									/>
-								</label>
-								<div class="grid grid-cols-2 gap-4">
-									<label class="form-control w-full">
-										<div class="label">
-											<span class="label-text">Expiry (MM/YY) *</span>
-										</div>
-										<input
-											type="text"
-											bind:value={cardExpiry}
-											required
-											autocomplete="cc-exp"
-											maxlength={5}
-											placeholder="MM/YY"
-											class="input input-bordered w-full rounded-none"
-										/>
-									</label>
-									<label class="form-control w-full">
-										<div class="label">
-											<span class="label-text">CVV *</span>
-										</div>
-										<input
-											type="text"
-											bind:value={cardCvv}
-											required
-											autocomplete="cc-csc"
-											maxlength={4}
-											placeholder="XXX"
-											class="input input-bordered w-full rounded-none"
-										/>
-									</label>
-								</div>
-							</div>
-						</div>
-
-						{#if orderStatus === 'error'}
-							<div class="alert alert-error rounded-none">
-								<Icon icon="ph:warning-circle" class="text-lg" />
-								<span>{orderError}</span>
-							</div>
-						{/if}
-
-						<button
-							type="submit"
-							class="btn btn-secondary btn-lg uppercase font-bold rounded-none w-full"
-							disabled={orderStatus === 'sending'}
-						>
-							{#if orderStatus === 'sending'}
-								<span class="loading loading-spinner loading-sm"></span>
-								Processing...
-							{:else}
-								BUY NOW
-							{/if}
-						</button>
-					</form>
-				{/if}
+				<h2 class="mb-4 text-4xl font-bold">Buy Your Copy</h2>
+				<p class="text-lg mb-2 opacity-80">Hard copy — AUD $24.95 + shipping</p>
+				<a
+					href="https://buy.stripe.com/fZu6oI8LvetG0kne05cQU02"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="btn btn-secondary btn-lg uppercase font-bold rounded-none w-full sm:w-auto sm:px-16 inline-flex items-center gap-2"
+				>
+					<Icon icon="ph:shopping-cart-simple-bold" class="text-xl" />
+					BUY NOW
+				</a>
 			</div>
 		</div>
 	</div>

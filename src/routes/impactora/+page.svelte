@@ -3,7 +3,6 @@
 	import ContactForm from '$lib/components/ContactForm.svelte';
 	import ClientLogos from '$lib/components/ClientLogos.svelte';
 	import Icon from '@iconify/svelte';
-	import { fly } from 'svelte/transition';
 
 	// Trigger action — fires immediately if already in viewport, else waits for scroll
 	function trigger(node: HTMLElement, stateSetter: (v: boolean) => void) {
@@ -177,7 +176,6 @@
 	let timelyHeading = $state(false);
 	let timelyContent = $state(false);
 	let featureLeft = $state(false);
-	let featureRight = $state(false);
 	let stepsHeading = $state(false);
 	let stepsItems = $state(false);
 	let testimonialsVisible = $state(false);
@@ -239,28 +237,26 @@
 	/>
 	<div class="container-custom relative z-10">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-			{#if heroText}
-				<div transition:fly={{ y: 30, duration: 700 }}>
-					<img src="/impactora-logo.webp" alt="Impactora" class="h-10 md:h-12 w-auto mb-6" />
-					<div class="mb-8">
-						<span
-							class="text-6xl md:text-7xl lg:text-[90px] font-bold leading-none"
-							style="font-family: var(--font-heading);"
-						>
-							FIND <span class="text-white">INSIGHTS</span>
-						</span>
-					</div>
-					<p class="text-xl mb-8 opacity-80 leading-relaxed max-w-xl">
-						Tailored advice and insights for employees and managers.
-					</p>
-					<a
-						href="#contact-section"
-						class="inline-block bg-black text-white px-10 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-white hover:text-[#5ad4ff] hover:outline hover:outline-2 hover:outline-[#5ad4ff] transition-all"
+			<div class="reveal-y" class:visible={heroText}>
+				<img src="/impactora-logo.webp" alt="Impactora" class="h-10 md:h-12 w-auto mb-6" />
+				<div class="mb-8">
+					<span
+						class="text-6xl md:text-7xl lg:text-[90px] font-bold leading-none"
+						style="font-family: var(--font-heading);"
 					>
-						BOOK A DEMO
-					</a>
+						FIND <span class="text-white">INSIGHTS</span>
+					</span>
 				</div>
-			{/if}
+				<p class="text-xl mb-8 opacity-80 leading-relaxed max-w-xl">
+					Tailored advice and insights for employees and managers.
+				</p>
+				<a
+					href="#contact-section"
+					class="inline-block bg-black text-white px-10 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-white hover:text-[#5ad4ff] hover:outline hover:outline-2 hover:outline-[#5ad4ff] transition-all"
+				>
+					BOOK A DEMO
+				</a>
+			</div>
 		</div>
 	</div>
 </section>
@@ -275,27 +271,23 @@
 >
 	<div class="container-custom">
 		<div class="max-w-4xl mx-auto text-center">
-			{#if tailoredHeading}
-				<h2 class="mb-8 text-3xl md:text-4xl" transition:fly={{ y: 30, duration: 600 }}>
-					TAILORED ADVICE & INSIGHTS
-				</h2>
-			{/if}
-			{#if tailoredText}
-				<div transition:fly={{ y: 30, duration: 600 }}>
-					<p class="text-lg leading-relaxed mb-6">
-						The way we work has changed forever. The emergence of remote and hybrid workplaces has
-						presented great opportunities and benefits for both organisations and their employees,
-						but it's not without its challenges. Most notably is the loss of in-person workplace
-						connection, and along with it the "water cooler" conversations where people shared their
-						experiences and knowledge.
-					</p>
-					<p class="text-lg leading-relaxed">
-						<strong>IMPACTORA</strong> is a SaaS platform designed to bridge that loss of organisational
-						knowledge by providing easy to access and immediate support, advice and insights that are
-						tailored to the individual employee and your business.
-					</p>
-				</div>
-			{/if}
+			<h2 class="reveal-y mb-8 text-3xl md:text-4xl" class:visible={tailoredHeading}>
+				TAILORED ADVICE & INSIGHTS
+			</h2>
+			<div class="reveal-y" class:visible={tailoredText} style="transition-delay: 150ms">
+				<p class="text-lg leading-relaxed mb-6">
+					The way we work has changed forever. The emergence of remote and hybrid workplaces has
+					presented great opportunities and benefits for both organisations and their employees,
+					but it's not without its challenges. Most notably is the loss of in-person workplace
+					connection, and along with it the "water cooler" conversations where people shared their
+					experiences and knowledge.
+				</p>
+				<p class="text-lg leading-relaxed">
+					<strong>IMPACTORA</strong> is a SaaS platform designed to bridge that loss of organisational
+					knowledge by providing easy to access and immediate support, advice and insights that are
+					tailored to the individual employee and your business.
+				</p>
+			</div>
 		</div>
 	</div>
 </section>
@@ -309,37 +301,33 @@
 	}}
 >
 	<div>
-		{#if helpsHeading}
-			<h2
-				class="text-center mb-12 text-3xl md:text-4xl pt-16"
-				transition:fly={{ y: 30, duration: 600 }}
-			>
-				IMPACTORA HELPS YOU&hellip;
-			</h2>
-		{/if}
-		{#if helpsBoxes}
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-				{#each helpBoxes as box, i (i)}
-					<div
-						class="p-10 text-white"
-						style="background-color: {['#636363', '#4a4a4a', '#363636', '#1a1a1a'][i]};"
-						transition:fly={{ y: 30, duration: 600, delay: i * 100 }}
-					>
-						<img
-							src={box.icon}
-							alt={box.title.replace('\n', ' ')}
-							class="w-24 h-24 mb-6 object-contain"
-						/>
-						<h3 class="text-xl mb-4 whitespace-pre-line" style="color: #5ad4ff;">
-							{box.title}
-						</h3>
-						<p class="text-sm leading-relaxed opacity-90">
-							{box.description}
-						</p>
-					</div>
-				{/each}
-			</div>
-		{/if}
+		<h2
+			class="reveal-y text-center mb-12 text-3xl md:text-4xl pt-16"
+			class:visible={helpsHeading}
+		>
+			IMPACTORA HELPS YOU&hellip;
+		</h2>
+		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+			{#each helpBoxes as box, i (i)}
+				<div
+					class="reveal-y p-10 text-white"
+					class:visible={helpsBoxes}
+					style="background-color: {['#636363', '#4a4a4a', '#363636', '#1a1a1a'][i]}; transition-delay: {i * 100}ms"
+				>
+					<img
+						src={box.icon}
+						alt={box.title.replace('\n', ' ')}
+						class="w-24 h-24 mb-6 object-contain"
+					/>
+					<h3 class="text-xl mb-4 whitespace-pre-line" style="color: #5ad4ff;">
+						{box.title}
+					</h3>
+					<p class="text-sm leading-relaxed opacity-90">
+						{box.description}
+					</p>
+				</div>
+			{/each}
+		</div>
 	</div>
 </section>
 
@@ -353,283 +341,274 @@
 >
 	<div class="container-custom">
 		<div class="max-w-4xl mx-auto text-center">
-			{#if timelyHeading}
-				<h2 class="mb-8 text-3xl md:text-4xl" transition:fly={{ y: 30, duration: 600 }}>
-					TIMELY INFORMATION & ADVICE
-				</h2>
-			{/if}
-			{#if timelyContent}
-				<div transition:fly={{ y: 30, duration: 600 }}>
-					<p class="text-lg leading-relaxed mb-10">
-						We now have access to infinite sources of knowledge, data, and advice. However, it can
-						be difficult to find information specific to your situation and the abundance of choice
-						is often the enemy of action. <strong>IMPACTORA</strong> provides leaders, managers and employees
-						access to tailored advice and insights that will positively impact themselves, their teams,
-						colleagues and customers.
-					</p>
+			<h2 class="reveal-y mb-8 text-3xl md:text-4xl" class:visible={timelyHeading}>
+				TIMELY INFORMATION & ADVICE
+			</h2>
+			<div class="reveal-y" class:visible={timelyContent} style="transition-delay: 150ms">
+				<p class="text-lg leading-relaxed mb-10">
+					We now have access to infinite sources of knowledge, data, and advice. However, it can
+					be difficult to find information specific to your situation and the abundance of choice
+					is often the enemy of action. <strong>IMPACTORA</strong> provides leaders, managers and employees
+					access to tailored advice and insights that will positively impact themselves, their teams,
+					colleagues and customers.
+				</p>
 
-					<div class="mb-10 max-w-2xl mx-auto">
-						{#if videoPlaying}
-							<video
-								src="https://impactology.com.au/wp-content/uploads/2023/03/impactora-welcome-video.mp4"
-								controls
-								autoplay
-								class="w-full h-auto rounded-sm shadow-lg"
-								style="max-height: 300px;"
+				<div class="mb-10 max-w-2xl mx-auto">
+					{#if videoPlaying}
+						<video
+							src="https://impactology.com.au/wp-content/uploads/2023/03/impactora-welcome-video.mp4"
+							controls
+							autoplay
+							class="w-full h-auto rounded-sm shadow-lg"
+							style="max-height: 300px;"
+						>
+						</video>
+					{:else}
+						<button
+							onclick={() => (videoPlaying = true)}
+							class="relative w-full rounded-sm shadow-lg overflow-hidden group cursor-pointer"
+							aria-label="Play Impactora video"
+						>
+							<img
+								src="/impactora-promo-banner.webp"
+								alt="Impactora platform preview"
+								class="w-full h-auto"
+							/>
+							<div
+								class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors"
 							>
-							</video>
-						{:else}
-							<button
-								onclick={() => (videoPlaying = true)}
-								class="relative w-full rounded-sm shadow-lg overflow-hidden group cursor-pointer"
-								aria-label="Play Impactora video"
-							>
-								<img
-									src="/impactora-promo-banner.webp"
-									alt="Impactora platform preview"
-									class="w-full h-auto"
-								/>
 								<div
-									class="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/40 transition-colors"
+									class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg"
 								>
-									<div
-										class="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center group-hover:scale-110 transition-transform shadow-lg"
-									>
-										<Icon icon="ph:play-fill" class="text-2xl text-[#5ad4ff] ml-1" />
-									</div>
+									<Icon icon="ph:play-fill" class="text-2xl text-[#5ad4ff] ml-1" />
 								</div>
-							</button>
-						{/if}
-					</div>
-
-					<a
-						href="#contact-section"
-						class="inline-block bg-black text-white px-10 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-white hover:text-[#5ad4ff] hover:outline hover:outline-2 hover:outline-[#5ad4ff] transition-all"
-					>
-						BOOK A DEMO
-					</a>
+							</div>
+						</button>
+					{/if}
 				</div>
-			{/if}
+
+				<a
+					href="#contact-section"
+					class="inline-block bg-black text-white px-10 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-white hover:text-[#5ad4ff] hover:outline hover:outline-2 hover:outline-[#5ad4ff] transition-all"
+				>
+					BOOK A DEMO
+				</a>
+			</div>
 		</div>
 	</div>
 </section>
 
 <section
 	class="py-8 overflow-hidden bg-base-100"
-	use:trigger={(v) => {
-		featureLeft = v;
-		setTimeout(() => (featureRight = v), 150);
-	}}
+	use:trigger={(v) => (featureLeft = v)}
 >
-	{#if featureLeft}
+	<div
+		class="reveal-y grid grid-cols-1 md:grid-cols-4 gap-3 px-4 max-w-5xl mx-auto"
+		class:visible={featureLeft}
+		style="grid-template-rows: auto;"
+	>
 		<div
-			class="grid grid-cols-1 md:grid-cols-4 gap-3 px-4 max-w-5xl mx-auto"
-			style="grid-template-rows: auto;"
-			transition:fly={{ y: 30, duration: 600 }}
+			class="md:col-span-2 md:row-span-2 bg-[#A8A8A8] p-8 relative min-h-[320px] flex flex-col justify-end overflow-hidden"
 		>
-			<div
-				class="md:col-span-2 md:row-span-2 bg-[#A8A8A8] p-8 relative min-h-[320px] flex flex-col justify-end overflow-hidden"
+			<img
+				src="/impactora-mask-group.webp"
+				alt=""
+				aria-hidden="true"
+				class="absolute inset-0 w-full h-full object-cover opacity-10"
+			/>
+			<h3 class="text-sky-200 font-medium mb-3 text-xs tracking-wider relative z-10 normal-case">
+				Team management advice
+			</h3>
+			<h2
+				class="text-white text-4xl md:text-5xl font-normal leading-tight normal-case relative z-10"
+				style="font-family: var(--font-heading);"
 			>
-				<img
-					src="/impactora-mask-group.webp"
-					alt=""
-					aria-hidden="true"
-					class="absolute inset-0 w-full h-full object-cover opacity-10"
-				/>
-				<h3 class="text-sky-200 font-medium mb-3 text-xs tracking-wider relative z-10 normal-case">
-					Team management advice
+				How to identify &amp; manage high performers?
+			</h2>
+		</div>
+
+		<div class="bg-[#1EBBD7] p-5 flex flex-col justify-between min-h-[160px]">
+			<Icon icon="ph:quotes" class="text-2xl text-white/60" />
+			<div>
+				<p class="text-white text-xs font-serif italic leading-relaxed mb-3">
+					"If you have to make a mistake, it&#39;s better to make a mistake of action than one of
+					inaction."
+				</p>
+				<p class="text-white/70 text-[10px] uppercase tracking-wider">
+					Federico Fellini — Film Director
+				</p>
+			</div>
+		</div>
+
+		<div class="bg-[#EAEAEA] p-5 flex flex-col justify-between min-h-[160px]">
+			<div>
+				<h3 class="text-[#1EBBD7] text-[10px] uppercase tracking-wider mb-1 normal-case">
+					Personal development advice
 				</h3>
-				<h2
-					class="text-white text-4xl md:text-5xl font-normal leading-tight normal-case relative z-10"
-					style="font-family: var(--font-heading);"
+				<h4 class="text-gray-800 text-xs font-semibold leading-snug normal-case">
+					Initiating opportunities to collaborate with colleagues
+				</h4>
+			</div>
+			<div class="flex items-center gap-2 mt-3">
+				<audio
+					bind:this={audioEl}
+					src="/impactora-demo-audio.mp3"
+					preload="none"
+					onended={() => (audioPlaying = false)}
+				></audio>
+				<button
+					onclick={() => {
+						if (!audioEl) return;
+						if (audioPlaying) {
+							audioEl.pause();
+							audioPlaying = false;
+						} else {
+							audioEl.play();
+							audioPlaying = true;
+						}
+					}}
+					class="w-7 h-7 rounded-full bg-[#1EBBD7] flex items-center justify-center flex-shrink-0"
+					aria-label={audioPlaying ? 'Pause audio' : 'Play audio'}
 				>
-					How to identify &amp; manage high performers?
-				</h2>
-			</div>
-
-			<div class="bg-[#1EBBD7] p-5 flex flex-col justify-between min-h-[160px]">
-				<Icon icon="ph:quotes" class="text-2xl text-white/60" />
-				<div>
-					<p class="text-white text-xs font-serif italic leading-relaxed mb-3">
-						"If you have to make a mistake, it&#39;s better to make a mistake of action than one of
-						inaction."
-					</p>
-					<p class="text-white/70 text-[10px] uppercase tracking-wider">
-						Federico Fellini — Film Director
-					</p>
+					<Icon
+						icon={audioPlaying ? 'ph:pause-fill' : 'ph:play-fill'}
+						class="text-white text-[10px] ml-0.5"
+					/>
+				</button>
+				<div class="flex items-end gap-px flex-1 h-6">
+					{#each [3, 7, 4, 9, 5, 8, 3, 6, 4, 7, 3, 8, 5, 4, 7] as h}
+						<div
+							class="{audioPlaying
+								? 'bg-[#1EBBD7]'
+								: 'bg-[#1EBBD7]/50'} rounded-full flex-1 transition-colors"
+							style="height:{h * 2}px;"
+						></div>
+					{/each}
 				</div>
 			</div>
+		</div>
 
-			<div class="bg-[#EAEAEA] p-5 flex flex-col justify-between min-h-[160px]">
-				<div>
-					<h3 class="text-[#1EBBD7] text-[10px] uppercase tracking-wider mb-1 normal-case">
-						Personal development advice
-					</h3>
-					<h4 class="text-gray-800 text-xs font-semibold leading-snug normal-case">
-						Initiating opportunities to collaborate with colleagues
-					</h4>
-				</div>
-				<div class="flex items-center gap-2 mt-3">
-					<audio
-						bind:this={audioEl}
-						src="/impactora-demo-audio.mp3"
-						preload="none"
-						onended={() => (audioPlaying = false)}
-					></audio>
-					<button
-						onclick={() => {
-							if (!audioEl) return;
-							if (audioPlaying) {
-								audioEl.pause();
-								audioPlaying = false;
-							} else {
-								audioEl.play();
-								audioPlaying = true;
-							}
-						}}
-						class="w-7 h-7 rounded-full bg-[#1EBBD7] flex items-center justify-center flex-shrink-0"
-						aria-label={audioPlaying ? 'Pause audio' : 'Play audio'}
-					>
-						<Icon
-							icon={audioPlaying ? 'ph:pause-fill' : 'ph:play-fill'}
-							class="text-white text-[10px] ml-0.5"
-						/>
-					</button>
-					<div class="flex items-end gap-px flex-1 h-6">
-						{#each [3, 7, 4, 9, 5, 8, 3, 6, 4, 7, 3, 8, 5, 4, 7] as h}
-							<div
-								class="{audioPlaying
-									? 'bg-[#1EBBD7]'
-									: 'bg-[#1EBBD7]/50'} rounded-full flex-1 transition-colors"
-								style="height:{h * 2}px;"
-							></div>
-						{/each}
-					</div>
-				</div>
+		<div class="bg-[#5FD3F3] p-5 flex flex-col justify-between min-h-[160px]">
+			<Icon icon="ph:quotes" class="text-2xl text-white/60" />
+			<div>
+				<p class="text-white text-xs font-serif italic leading-relaxed mb-3">
+					"Your most unhappy customers are your greatest source of learning."
+				</p>
+				<p class="text-white/80 text-[10px] uppercase tracking-wider">Bill Gates</p>
 			</div>
+		</div>
 
-			<div class="bg-[#5FD3F3] p-5 flex flex-col justify-between min-h-[160px]">
-				<Icon icon="ph:quotes" class="text-2xl text-white/60" />
-				<div>
-					<p class="text-white text-xs font-serif italic leading-relaxed mb-3">
-						"Your most unhappy customers are your greatest source of learning."
-					</p>
-					<p class="text-white/80 text-[10px] uppercase tracking-wider">Bill Gates</p>
-				</div>
+		<div class="md:row-span-2 relative bg-slate-700 min-h-[320px] overflow-hidden">
+			<img
+				src="/impactora-mask-group.webp"
+				alt="Expert presenting"
+				class="absolute inset-0 w-full h-full object-cover opacity-60"
+			/>
+			<div
+				class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5"
+			>
+				<h3 class="text-[#5FD3F3] text-[10px] uppercase tracking-wider mb-1">Expert tips</h3>
+				<h4 class="text-white text-sm font-semibold leading-snug mb-3 normal-case">
+					Demonstrating expertise in client presentations
+				</h4>
 			</div>
+		</div>
 
-			<div class="md:row-span-2 relative bg-slate-700 min-h-[320px] overflow-hidden">
-				<img
-					src="/impactora-mask-group.webp"
-					alt="Expert presenting"
-					class="absolute inset-0 w-full h-full object-cover opacity-60"
-				/>
-				<div
-					class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-5"
-				>
-					<h3 class="text-[#5FD3F3] text-[10px] uppercase tracking-wider mb-1">Expert tips</h3>
-					<h4 class="text-white text-sm font-semibold leading-snug mb-3 normal-case">
-						Demonstrating expertise in client presentations
-					</h4>
-				</div>
-			</div>
-
-			<div class="md:col-span-2 bg-[#B6E8F8] p-5 flex flex-col justify-between min-h-[140px]">
-				<div>
-					<h3 class="text-[#0095B3] text-[10px] uppercase tracking-wider mb-1 normal-case">
-						Personal development advice
-					</h3>
-					<h4 class="text-gray-800 text-sm font-semibold leading-snug normal-case">
-						Building trusted relationships
-					</h4>
-				</div>
-				<div class="flex items-center gap-2 mt-3">
-					<audio
-						bind:this={audioEl2}
-						src="https://assets.codepen.io/4358584/Anitek_-_Komorebi.mp3"
-						preload="none"
-						onended={() => (audio2Playing = false)}
-					></audio>
-					<button
-						onclick={() => {
-							if (!audioEl2) return;
-							if (audio2Playing) {
-								audioEl2.pause();
-								audio2Playing = false;
-							} else {
-								audioEl2.play();
-								audio2Playing = true;
-							}
-						}}
-						class="w-7 h-7 rounded-full bg-[#0095B3] flex items-center justify-center flex-shrink-0"
-						aria-label={audio2Playing ? 'Pause audio' : 'Play audio'}
-					>
-						<Icon
-							icon={audio2Playing ? 'ph:pause-fill' : 'ph:play-fill'}
-							class="text-white text-[10px] ml-0.5"
-						/>
-					</button>
-					<div class="flex items-end gap-px flex-1 h-6">
-						{#each [5, 8, 4, 10, 6, 7, 3, 9, 5, 8, 4, 7, 5, 6, 9] as h}
-							<div
-								class="{audio2Playing
-									? 'bg-[#0095B3]'
-									: 'bg-[#0095B3]/40'} rounded-full flex-1 transition-colors"
-								style="height:{h * 2}px;"
-							></div>
-						{/each}
-					</div>
-				</div>
-			</div>
-
-			<div class="bg-[#8FDEFA] p-5 md:row-span-2 flex flex-col justify-between min-h-[280px]">
-				<span
-					class="text-[100px] leading-none text-white/70 normal-case block"
-					style="font-family:var(--font-heading);margin-top:-0.15em;margin-left:-0.05em;">1</span
-				>
-				<div>
-					<h3 class="text-[#0075A0] font-bold text-sm mb-1 normal-case">Develop your skills</h3>
-					<p class="text-gray-700 text-xs leading-relaxed">
-						Seek out feedback from peers or customers.
-					</p>
-				</div>
-			</div>
-
-			<div class="bg-[#0FBBD8] p-5 flex flex-col justify-between min-h-[200px]">
-				<span
-					class="text-[100px] leading-none text-white/40 normal-case block"
-					style="font-family:var(--font-heading);margin-top:-0.15em;margin-left:-0.05em;">2</span
-				>
-				<div>
-					<h3 class="text-white font-semibold text-sm mb-1 normal-case">Shared knowledge</h3>
-					<p class="text-white/80 text-xs leading-relaxed">
-						Seek views from experts outside your organisation.
-					</p>
-				</div>
-			</div>
-
-			<div class="bg-white border border-base-300 p-5 flex flex-col justify-between min-h-[200px]">
-				<div>
-					<h3 class="text-[#1EBBD7] text-[10px] uppercase tracking-wider mb-2">Expert tips</h3>
-					<h2 class="text-gray-900 text-lg font-semibold leading-snug normal-case">
-						Eliminate choice and focus on what truly matters
-					</h2>
-				</div>
-			</div>
-
-			<div class="md:col-span-2 bg-[#5DD3F9] p-6 flex flex-col justify-end min-h-[200px]">
-				<h3 class="text-white/80 text-[10px] uppercase tracking-wider mb-2 normal-case">
-					Personal development
+		<div class="md:col-span-2 bg-[#B6E8F8] p-5 flex flex-col justify-between min-h-[140px]">
+			<div>
+				<h3 class="text-[#0095B3] text-[10px] uppercase tracking-wider mb-1 normal-case">
+					Personal development advice
 				</h3>
-				<h2
-					class="text-white text-3xl md:text-4xl font-normal leading-tight normal-case"
-					style="font-family:var(--font-heading);"
+				<h4 class="text-gray-800 text-sm font-semibold leading-snug normal-case">
+					Building trusted relationships
+				</h4>
+			</div>
+			<div class="flex items-center gap-2 mt-3">
+				<audio
+					bind:this={audioEl2}
+					src="https://assets.codepen.io/4358584/Anitek_-_Komorebi.mp3"
+					preload="none"
+					onended={() => (audio2Playing = false)}
+				></audio>
+				<button
+					onclick={() => {
+						if (!audioEl2) return;
+						if (audio2Playing) {
+							audioEl2.pause();
+							audio2Playing = false;
+						} else {
+							audioEl2.play();
+							audio2Playing = true;
+						}
+					}}
+					class="w-7 h-7 rounded-full bg-[#0095B3] flex items-center justify-center flex-shrink-0"
+					aria-label={audio2Playing ? 'Pause audio' : 'Play audio'}
 				>
-					Developing the right skills for your career
+					<Icon
+						icon={audio2Playing ? 'ph:pause-fill' : 'ph:play-fill'}
+						class="text-white text-[10px] ml-0.5"
+					/>
+				</button>
+				<div class="flex items-end gap-px flex-1 h-6">
+					{#each [5, 8, 4, 10, 6, 7, 3, 9, 5, 8, 4, 7, 5, 6, 9] as h}
+						<div
+							class="{audio2Playing
+								? 'bg-[#0095B3]'
+								: 'bg-[#0095B3]/40'} rounded-full flex-1 transition-colors"
+							style="height:{h * 2}px;"
+						></div>
+					{/each}
+				</div>
+			</div>
+		</div>
+
+		<div class="bg-[#8FDEFA] p-5 md:row-span-2 flex flex-col justify-between min-h-[280px]">
+			<span
+				class="text-[100px] leading-none text-white/70 normal-case block"
+				style="font-family:var(--font-heading);margin-top:-0.15em;margin-left:-0.05em;">1</span
+			>
+			<div>
+				<h3 class="text-[#0075A0] font-bold text-sm mb-1 normal-case">Develop your skills</h3>
+				<p class="text-gray-700 text-xs leading-relaxed">
+					Seek out feedback from peers or customers.
+				</p>
+			</div>
+		</div>
+
+		<div class="bg-[#0FBBD8] p-5 flex flex-col justify-between min-h-[200px]">
+			<span
+				class="text-[100px] leading-none text-white/40 normal-case block"
+				style="font-family:var(--font-heading);margin-top:-0.15em;margin-left:-0.05em;">2</span
+			>
+			<div>
+				<h3 class="text-white font-semibold text-sm mb-1 normal-case">Shared knowledge</h3>
+				<p class="text-white/80 text-xs leading-relaxed">
+					Seek views from experts outside your organisation.
+				</p>
+			</div>
+		</div>
+
+		<div class="bg-white border border-base-300 p-5 flex flex-col justify-between min-h-[200px]">
+			<div>
+				<h3 class="text-[#1EBBD7] text-[10px] uppercase tracking-wider mb-2">Expert tips</h3>
+				<h2 class="text-gray-900 text-lg font-semibold leading-snug normal-case">
+					Eliminate choice and focus on what truly matters
 				</h2>
 			</div>
 		</div>
-	{/if}
+
+		<div class="md:col-span-2 bg-[#5DD3F9] p-6 flex flex-col justify-end min-h-[200px]">
+			<h3 class="text-white/80 text-[10px] uppercase tracking-wider mb-2 normal-case">
+				Personal development
+			</h3>
+			<h2
+				class="text-white text-3xl md:text-4xl font-normal leading-tight normal-case"
+				style="font-family:var(--font-heading);"
+			>
+				Developing the right skills for your career
+			</h2>
+		</div>
+	</div>
 </section>
 
 <section
@@ -640,63 +619,60 @@
 	}}
 >
 	<div class="container-custom">
-		{#if stepsHeading}
-			<h2 class="text-center mb-16 text-3xl md:text-4xl" transition:fly={{ y: 30, duration: 600 }}>
-				HOW IT WORKS
-			</h2>
-		{/if}
+		<h2 class="reveal-y text-center mb-16 text-3xl md:text-4xl" class:visible={stepsHeading}>
+			HOW IT WORKS
+		</h2>
 
-		{#if stepsItems}
-			<div
-				class="flex flex-col lg:flex-row items-stretch justify-center max-w-5xl mx-auto"
-				transition:fly={{ y: 30, duration: 600 }}
-			>
-				{#each steps as step, i (i)}
-					<div class="flex-1 text-center px-4 py-6">
-						<div class="w-14 h-14 mx-auto mb-4 flex items-center justify-center">
-							<Icon icon={step.icon} class="text-4xl text-[#5DD3F9]" />
-						</div>
-						<div class="text-4xl font-bold mb-2" style="font-family: var(--font-heading);">
-							{step.number}
-						</div>
-						<h3 class="text-sm font-bold uppercase tracking-wide mb-3">
-							{step.title.toUpperCase()}
-						</h3>
-						<p class="text-xs leading-relaxed opacity-70 max-w-[200px] mx-auto">
-							{step.description}
-						</p>
+		<div
+			class="reveal-y flex flex-col lg:flex-row items-stretch justify-center max-w-5xl mx-auto"
+			class:visible={stepsItems}
+			style="transition-delay: 200ms"
+		>
+			{#each steps as step, i (i)}
+				<div class="flex-1 text-center px-4 py-6">
+					<div class="w-14 h-14 mx-auto mb-4 flex items-center justify-center">
+						<Icon icon={step.icon} class="text-4xl text-[#5DD3F9]" />
 					</div>
-					{#if i < steps.length - 1}
-						<div class="hidden lg:flex items-center flex-shrink-0 text-base-300" aria-hidden="true">
-							<svg
-								xmlns="http://www.w3.org/2000/svg"
-								width="24"
-								height="48"
-								viewBox="0 0 24 48"
-								fill="none"
-							>
-								<polyline
-									points="4,4 20,24 4,44"
-									stroke="currentColor"
-									stroke-width="2.5"
-									stroke-linecap="round"
-									stroke-linejoin="round"
-								/>
-							</svg>
-						</div>
-					{/if}
-				{/each}
-			</div>
+					<div class="text-4xl font-bold mb-2" style="font-family: var(--font-heading);">
+						{step.number}
+					</div>
+					<h3 class="text-sm font-bold uppercase tracking-wide mb-3">
+						{step.title.toUpperCase()}
+					</h3>
+					<p class="text-xs leading-relaxed opacity-70 max-w-[200px] mx-auto">
+						{step.description}
+					</p>
+				</div>
+				{#if i < steps.length - 1}
+					<div class="hidden lg:flex items-center flex-shrink-0 text-base-300" aria-hidden="true">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							width="24"
+							height="48"
+							viewBox="0 0 24 48"
+							fill="none"
+						>
+							<polyline
+								points="4,4 20,24 4,44"
+								stroke="currentColor"
+								stroke-width="2.5"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+							/>
+						</svg>
+					</div>
+				{/if}
+			{/each}
+		</div>
 
-			<div class="text-center mt-12">
-				<a
-					href="#contact-section"
-					class="inline-block bg-black text-white px-10 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-white hover:text-[#5ad4ff] hover:outline hover:outline-2 hover:outline-[#5ad4ff] transition-all"
-				>
-					BOOK A DEMO
-				</a>
-			</div>
-		{/if}
+		<div class="reveal-y text-center mt-12" class:visible={stepsItems} style="transition-delay: 200ms">
+			<a
+				href="#contact-section"
+				class="inline-block bg-black text-white px-10 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-white hover:text-[#5ad4ff] hover:outline hover:outline-2 hover:outline-[#5ad4ff] transition-all"
+			>
+				BOOK A DEMO
+			</a>
+		</div>
 	</div>
 </section>
 
@@ -705,57 +681,55 @@
 	class="section-blue py-20 md:py-28 relative overflow-hidden"
 	use:trigger={(v) => (testimonialsVisible = v)}
 >
-	{#if testimonialsVisible}
-		<div class="container-custom" transition:fly={{ y: 30, duration: 600 }}>
-			<div class="max-w-3xl mx-auto text-center relative">
-				<!-- Testimonial Box -->
-				<div class="testimonial-title mx-auto">
-					<div
-						class="testimonial-slide {isAnimating
-							? slideDirection === 'right'
-								? 'slide-out-left'
-								: 'slide-out-right'
-							: slideDirection === 'right'
-								? 'slide-in-right'
-								: 'slide-in-left'}"
-					>
-						<div>
-							<h3
-								class="text-xl md:text-2xl font-bold leading-relaxed"
-								style="font-family: var(--font-heading);"
-							>
-								"{testimonials[currentTestimonial].quote}"
-							</h3>
-							<p class="mt-4 text-sm opacity-80">
-								&ndash; {testimonials[currentTestimonial].author}
-							</p>
-						</div>
+	<div class="reveal-y container-custom" class:visible={testimonialsVisible}>
+		<div class="max-w-3xl mx-auto text-center relative">
+			<!-- Testimonial Box -->
+			<div class="testimonial-title mx-auto">
+				<div
+					class="testimonial-slide {isAnimating
+						? slideDirection === 'right'
+							? 'slide-out-left'
+							: 'slide-out-right'
+						: slideDirection === 'right'
+							? 'slide-in-right'
+							: 'slide-in-left'}"
+				>
+					<div>
+						<h3
+							class="text-xl md:text-2xl font-bold leading-relaxed"
+							style="font-family: var(--font-heading);"
+						>
+							"{testimonials[currentTestimonial].quote}"
+						</h3>
+						<p class="mt-4 text-sm opacity-80">
+							&ndash; {testimonials[currentTestimonial].author}
+						</p>
 					</div>
 				</div>
+			</div>
 
-				<!-- Navigation -->
-				<div class="flex items-center justify-center gap-6 mt-12">
-					<button
-						onclick={prevTestimonial}
-						class="w-10 h-10 border border-neutral-content/30 flex items-center justify-center hover:bg-primary hover:text-primary-content hover:border-primary transition-colors"
-						aria-label="Previous testimonial"
-					>
-						<Icon icon="ph:caret-left-bold" />
-					</button>
-					<span class="text-sm opacity-70">
-						{currentTestimonial + 1}/{testimonials.length}
-					</span>
-					<button
-						onclick={nextTestimonial}
-						class="w-10 h-10 border border-neutral-content/30 flex items-center justify-center hover:bg-primary hover:text-primary-content hover:border-primary transition-colors"
-						aria-label="Next testimonial"
-					>
-						<Icon icon="ph:caret-right-bold" />
-					</button>
-				</div>
+			<!-- Navigation -->
+			<div class="flex items-center justify-center gap-6 mt-12">
+				<button
+					onclick={prevTestimonial}
+					class="w-10 h-10 border border-neutral-content/30 flex items-center justify-center hover:bg-primary hover:text-primary-content hover:border-primary transition-colors"
+					aria-label="Previous testimonial"
+				>
+					<Icon icon="ph:caret-left-bold" />
+				</button>
+				<span class="text-sm opacity-70">
+					{currentTestimonial + 1}/{testimonials.length}
+				</span>
+				<button
+					onclick={nextTestimonial}
+					class="w-10 h-10 border border-neutral-content/30 flex items-center justify-center hover:bg-primary hover:text-primary-content hover:border-primary transition-colors"
+					aria-label="Next testimonial"
+				>
+					<Icon icon="ph:caret-right-bold" />
+				</button>
 			</div>
 		</div>
-	{/if}
+	</div>
 </section>
 
 <!-- Clients We've Impacted -->
@@ -767,19 +741,15 @@
 			setTimeout(() => (clientsLogos = v), 200);
 		}}
 	>
-		{#if clientsHeading}
-			<h2
-				class="text-5xl lg:text-7xl font-bold text-center mb-12"
-				transition:fly={{ y: 30, duration: 600 }}
-			>
-				CLIENTS WE'VE IMPACTED
-			</h2>
-		{/if}
-		{#if clientsLogos}
-			<div transition:fly={{ y: 20, duration: 600 }}>
-				<ClientLogos marquee={true} />
-			</div>
-		{/if}
+		<h2
+			class="reveal-y text-5xl lg:text-7xl font-bold text-center mb-12"
+			class:visible={clientsHeading}
+		>
+			CLIENTS WE'VE IMPACTED
+		</h2>
+		<div class="reveal-y" class:visible={clientsLogos} style="transition-delay: 200ms">
+			<ClientLogos marquee={true} />
+		</div>
 	</div>
 </section>
 
@@ -793,30 +763,26 @@
 >
 	<div class="container-custom">
 		<div class="max-w-3xl mx-auto">
-			{#if faqHeading}
-				<div transition:fly={{ y: 30, duration: 600 }}>
-					<h2 class="text-center mb-6 text-3xl md:text-4xl">FREQUENTLY ASKED QUESTIONS</h2>
-					<p class="text-center mb-12 opacity-80">
-						Here are a few of the more common questions we come across. However, if you still can't
-						find what you're looking for, get in touch with us and we'll do our best to provide you
-						with the answers you're after.
-					</p>
-				</div>
-			{/if}
+			<div class="reveal-y" class:visible={faqHeading}>
+				<h2 class="text-center mb-6 text-3xl md:text-4xl">FREQUENTLY ASKED QUESTIONS</h2>
+				<p class="text-center mb-12 opacity-80">
+					Here are a few of the more common questions we come across. However, if you still can't
+					find what you're looking for, get in touch with us and we'll do our best to provide you
+					with the answers you're after.
+				</p>
+			</div>
 
-			{#if faqItems}
-				<div class="space-y-3" transition:fly={{ y: 30, duration: 600 }}>
-					{#each faqs as faq, i (i)}
-						<div class="collapse collapse-arrow bg-base-100 border border-base-300">
-							<input type="radio" name="impactora-faq" checked={i === 0} />
-							<div class="collapse-title font-semibold">{faq.question}</div>
-							<div class="collapse-content text-sm">
-								<p class="leading-relaxed opacity-80 whitespace-pre-line">{faq.answer}</p>
-							</div>
+			<div class="reveal-y space-y-3" class:visible={faqItems} style="transition-delay: 200ms">
+				{#each faqs as faq, i (i)}
+					<div class="collapse collapse-arrow bg-base-100 border border-base-300">
+						<input type="radio" name="impactora-faq" checked={i === 0} />
+						<div class="collapse-title font-semibold">{faq.question}</div>
+						<div class="collapse-content text-sm">
+							<p class="leading-relaxed opacity-80 whitespace-pre-line">{faq.answer}</p>
 						</div>
-					{/each}
-				</div>
-			{/if}
+					</div>
+				{/each}
+			</div>
 		</div>
 	</div>
 </section>
@@ -832,20 +798,16 @@
 >
 	<div class="container-custom">
 		<div class="max-w-xl mx-auto">
-			{#if contactHeading}
-				<div class="text-center mb-12" transition:fly={{ y: 30, duration: 600 }}>
-					<h2 class="mb-4 text-3xl md:text-4xl">REQUEST AN IMPACTORA DEMONSTRATION</h2>
-					<p class="text-lg opacity-80">
-						Simply fill out the form below and an Impactora representative will contact you to book
-						your demonstration.
-					</p>
-				</div>
-			{/if}
-			{#if contactForm}
-				<div transition:fly={{ y: 30, duration: 600 }}>
-					<ContactForm prefix="[IMPACTORA Demo Request]" />
-				</div>
-			{/if}
+			<div class="reveal-y text-center mb-12" class:visible={contactHeading}>
+				<h2 class="mb-4 text-3xl md:text-4xl">REQUEST AN IMPACTORA DEMONSTRATION</h2>
+				<p class="text-lg opacity-80">
+					Simply fill out the form below and an Impactora representative will contact you to book
+					your demonstration.
+				</p>
+			</div>
+			<div class="reveal-y" class:visible={contactForm} style="transition-delay: 150ms">
+				<ContactForm prefix="[IMPACTORA Demo Request]" />
+			</div>
 		</div>
 	</div>
 </section>

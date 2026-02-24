@@ -2,6 +2,7 @@ import { json, error } from '@sveltejs/kit';
 import sgMail from '@sendgrid/mail';
 import {
 	SENDGRID_API_KEY,
+	CONTACT_EMAIL_FROM,
 	CONTACT_EMAIL_TO,
 	CONTACT_EMAIL_TO_DEV
 } from '$env/static/private';
@@ -14,7 +15,7 @@ sgMail.setApiKey(SENDGRID_API_KEY);
 export const POST: RequestHandler = async ({ request }) => {
 	const { firstName, lastName, email, phone, company, message } = await request.json();
 
-	if (!firstName || !lastName || !email || !company || !message) {
+	if (!firstName || !lastName || !email || !message) {
 		throw error(400, 'Missing required fields');
 	}
 
@@ -25,7 +26,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		<p><strong>Name:</strong> ${firstName} ${lastName}</p>
 		<p><strong>Email:</strong> ${email}</p>
 		<p><strong>Phone:</strong> ${phone || '—'}</p>
-		<p><strong>Company:</strong> ${company}</p>
+		<p><strong>Company:</strong> ${company || '—'}</p>
 		<hr />
 		<p><strong>Message:</strong></p>
 		<p>${message.replace(/\n/g, '<br>')}</p>
@@ -33,9 +34,9 @@ export const POST: RequestHandler = async ({ request }) => {
 
 	await sgMail.send({
 		to,
-		from: 'Impactology <noreply@impactology.com.au>',
+		from: { email: CONTACT_EMAIL_FROM, name: 'Website Contact Form' },
 		replyTo: email,
-		subject: `New enquiry from ${firstName} ${lastName}`,
+		subject: `New website enquiry from ${firstName} ${lastName}`,
 		html
 	});
 

@@ -61,7 +61,7 @@
 			type="text"
 			bind:value={firstName}
 			required
-			class="input input-bordered w-full rounded-none"
+			class="input input-bordered w-full rounded-none bg-white text-black placeholder:text-black/40"
 			placeholder="John"
 		/>
 	</label>
@@ -74,7 +74,7 @@
 			type="text"
 			bind:value={lastName}
 			required
-			class="input input-bordered w-full rounded-none"
+			class="input input-bordered w-full rounded-none bg-white text-black placeholder:text-black/40"
 			placeholder="Smith"
 		/>
 	</label>
@@ -87,7 +87,7 @@
 			type="email"
 			bind:value={email}
 			required
-			class="input input-bordered w-full rounded-none"
+			class="input input-bordered w-full rounded-none bg-white text-black placeholder:text-black/40"
 			placeholder="john@company.com"
 		/>
 	</label>
@@ -99,20 +99,19 @@
 		<input
 			type="tel"
 			bind:value={phone}
-			class="input input-bordered w-full rounded-none"
+			class="input input-bordered w-full rounded-none bg-white text-black placeholder:text-black/40"
 			placeholder="+61 400 000 000"
 		/>
 	</label>
 
 	<label class="form-control w-full md:col-span-2">
 		<div class="label">
-			<span class="label-text font-medium">Company</span>
+			<span class="label-text font-medium">Company (optional)</span>
 		</div>
 		<input
 			type="text"
 			bind:value={company}
-			required
-			class="input input-bordered w-full rounded-none"
+			class="input input-bordered w-full rounded-none bg-white text-black placeholder:text-black/40"
 			placeholder="Your Company Name"
 		/>
 	</label>
@@ -124,7 +123,7 @@
 		<textarea
 			bind:value={message}
 			required
-			class="textarea textarea-bordered w-full rounded-none h-32"
+			class="textarea textarea-bordered w-full rounded-none h-32 bg-white text-black placeholder:text-black/40"
 			placeholder="Tell us about your goals and how we can support you..."
 		></textarea>
 	</label>

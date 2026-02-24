@@ -1,6 +1,5 @@
 <script lang="ts">
 	import ContactForm from '$lib/components/ContactForm.svelte';
-	import { fly } from 'svelte/transition';
 
 	interface Props {
 		prefix: string;
@@ -37,17 +36,13 @@
 >
 	<div class="container-custom">
 		<div class="max-w-3xl mx-auto">
-			{#if sectionHeading}
-				<div class="text-center mb-12" in:fly={{ y: 30, duration: 600 }}>
-					<h2 class="text-5xl lg:text-7xl font-bold text-white mb-6">REGISTER YOUR INTEREST</h2>
-					<p class="text-lg text-white opacity-80">{introText}</p>
-				</div>
-			{/if}
-			{#if sectionForm}
-				<div in:fly={{ y: 30, duration: 600 }}>
-					<ContactForm {prefix} class="bg-neutral/50 p-8 md:p-12" />
-				</div>
-			{/if}
+			<div class="reveal-y text-center mb-12" class:visible={sectionHeading}>
+				<h2 class="text-5xl lg:text-7xl font-bold text-white mb-6">REGISTER YOUR INTEREST</h2>
+				<p class="text-lg text-white opacity-80">{introText}</p>
+			</div>
+			<div class="reveal-y" class:visible={sectionForm} style="transition-delay: 150ms">
+				<ContactForm {prefix} class="bg-neutral/50 p-8 md:p-12" />
+			</div>
 		</div>
 	</div>
 </section>

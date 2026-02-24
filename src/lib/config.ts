@@ -5,7 +5,7 @@ import {
 	PUBLIC_STRIPE_YEARLY_LINK
 } from '$env/static/public';
 
-const APP_NAME = 'Monorepo Starter';
+const APP_NAME = 'Impactology';
 
 export const config = {
 	name: APP_NAME,

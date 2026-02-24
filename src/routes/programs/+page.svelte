@@ -2,7 +2,6 @@
 	import SEO from '$lib/components/SEO.svelte';
 	import ContactForm from '$lib/components/ContactForm.svelte';
 	import ClientLogos from '$lib/components/ClientLogos.svelte';
-	import { fly } from 'svelte/transition';
 
 	// Trigger action — fires immediately if already in viewport, else waits for scroll
 	function trigger(node: HTMLElement, stateSetter: (v: boolean) => void) {
@@ -80,20 +79,18 @@
 	style="background-image: url('/programs-hero-bg.webp');"
 >
 	<div class="absolute inset-0 bg-neutral/80"></div>
-	{#if heroVisible}
-		<div
-			class="container-custom relative z-10 text-center"
-			transition:fly={{ y: 30, duration: 700 }}
-		>
-			<h1 class="text-5xl md:text-6xl lg:text-6xl mb-6 leading-none text-neutral-content font-bold">
-				BUSINESS PARTNERING DEVELOPMENT Programs
-			</h1>
-			<div class="border-t-2 border-primary w-24 mb-8 mx-auto"></div>
-			<p class="text-xl md:text-2xl font-medium opacity-90 text-neutral-content">
-				Together Lets Create an Impact Path. Choose Your Journey.
-			</p>
-		</div>
-	{/if}
+	<div
+		class="reveal-y container-custom relative z-10 text-center"
+		class:visible={heroVisible}
+	>
+		<h1 class="text-5xl md:text-6xl lg:text-6xl mb-6 leading-none text-neutral-content font-bold">
+			BUSINESS PARTNERING DEVELOPMENT Programs
+		</h1>
+		<div class="border-t-2 border-primary w-24 mb-8 mx-auto"></div>
+		<p class="text-xl md:text-2xl font-medium opacity-90 text-neutral-content">
+			Together Lets Create an Impact Path. Choose Your Journey.
+		</p>
+	</div>
 </section>
 
 <!-- BPIP Program — image left, text right -->
@@ -106,28 +103,24 @@
 >
 	<div class="container-custom">
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-			{#if bpipImg}
-				<div class="flex justify-center" transition:fly={{ x: -30, duration: 600 }}>
-					<img
-						src="/programs-bpip.webp"
-						alt="Business Partnering IMPACT Program"
-						class="w-64 h-64 object-contain"
-					/>
-				</div>
-			{/if}
-			{#if bpipText}
-				<div transition:fly={{ x: 30, duration: 600 }}>
-					<h2 class="text-4xl md:text-5xl mb-6 leading-tight font-bold">
-						Business Partnering IMPACT Program
-					</h2>
-					<p class="text-lg leading-relaxed mb-8 opacity-80">
-						Designed for all business partners who are ready to make an impact.
-					</p>
-					<a href="/business-partnering-impact-program">
-						<img src="/programs-know-more.webp" alt="Know More" class="h-12 w-auto" />
-					</a>
-				</div>
-			{/if}
+			<div class="reveal-x-left flex justify-center" class:visible={bpipImg}>
+				<img
+					src="/programs-bpip.webp"
+					alt="Business Partnering IMPACT Program"
+					class="w-64 h-64 object-contain"
+				/>
+			</div>
+			<div class="reveal-x-right" class:visible={bpipText} style="transition-delay: 150ms">
+				<h2 class="text-4xl md:text-5xl mb-6 leading-tight font-bold">
+					Business Partnering IMPACT Program
+				</h2>
+				<p class="text-lg leading-relaxed mb-8 opacity-80">
+					Designed for all business partners who are ready to make an impact.
+				</p>
+				<a href="/business-partnering-impact-program">
+					<img src="/programs-know-more.webp" alt="Know More" class="h-12 w-auto" />
+				</a>
+			</div>
 		</div>
 	</div>
 </section>
@@ -142,29 +135,25 @@
 >
 	<div class="container-custom">
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-			{#if amplifyText}
-				<div transition:fly={{ x: -30, duration: 600 }}>
-					<h2 class="text-4xl md:text-5xl mb-6 leading-tight text-white font-bold">
-						AMPLIFY YOUR IMPACT PROGRAM
-					</h2>
-					<p class="text-lg leading-relaxed mb-8 opacity-80 text-white">
-						A follow-up to the Business Partnering IMPACT Program, this Program Experience is
-						designed to prepare your Business Partners for change and drive transformation.
-					</p>
-					<a href="/amplify-your-impact-program">
-						<img src="/programs-know-more.webp" alt="Know More" class="h-12 w-auto" />
-					</a>
-				</div>
-			{/if}
-			{#if amplifyImg}
-				<div class="flex justify-center" transition:fly={{ x: 30, duration: 600 }}>
-					<img
-						src="/programs-amplify.webp"
-						alt="AMPLIFY Your Impact Program"
-						class="w-64 h-64 object-contain"
-					/>
-				</div>
-			{/if}
+			<div class="reveal-x-left" class:visible={amplifyText}>
+				<h2 class="text-4xl md:text-5xl mb-6 leading-tight text-white font-bold">
+					AMPLIFY YOUR IMPACT PROGRAM
+				</h2>
+				<p class="text-lg leading-relaxed mb-8 opacity-80 text-white">
+					A follow-up to the Business Partnering IMPACT Program, this Program Experience is
+					designed to prepare your Business Partners for change and drive transformation.
+				</p>
+				<a href="/amplify-your-impact-program">
+					<img src="/programs-know-more.webp" alt="Know More" class="h-12 w-auto" />
+				</a>
+			</div>
+			<div class="reveal-x-right flex justify-center" class:visible={amplifyImg} style="transition-delay: 150ms">
+				<img
+					src="/programs-amplify.webp"
+					alt="AMPLIFY Your Impact Program"
+					class="w-64 h-64 object-contain"
+				/>
+			</div>
 		</div>
 	</div>
 </section>
@@ -178,19 +167,15 @@
 			setTimeout(() => (clientsLogos = v), 200);
 		}}
 	>
-		{#if clientsHeading}
-			<h2
-				class="text-5xl lg:text-7xl font-bold text-center mb-12"
-				transition:fly={{ y: 30, duration: 600 }}
-			>
-				CLIENTS WE'VE IMPACTED
-			</h2>
-		{/if}
-		{#if clientsLogos}
-			<div transition:fly={{ y: 20, duration: 600 }}>
-				<ClientLogos logos={clientLogos} marquee={true} />
-			</div>
-		{/if}
+		<h2
+			class="reveal-y text-5xl lg:text-7xl font-bold text-center mb-12"
+			class:visible={clientsHeading}
+		>
+			CLIENTS WE'VE IMPACTED
+		</h2>
+		<div class="reveal-y" class:visible={clientsLogos} style="transition-delay: 200ms">
+			<ClientLogos logos={clientLogos} marquee={true} />
+		</div>
 	</div>
 </section>
 
@@ -204,26 +189,23 @@
 		}}
 	>
 		<div class="max-w-3xl mx-auto">
-			{#if connectHeading}
-				<h2
-					class="text-5xl lg:text-7xl font-bold text-center text-white mb-4"
-					transition:fly={{ y: 30, duration: 600 }}
-				>
-					CONNECT WITH US
-				</h2>
-				<p
-					class="text-center text-lg mb-12 opacity-80 text-white"
-					transition:fly={{ y: 20, duration: 600, delay: 100 }}
-				>
-					Ready to create an impact path for your team? <br /> Let's talk about which program is right
-					for you.
-				</p>
-			{/if}
-			{#if connectForm}
-				<div transition:fly={{ y: 30, duration: 600 }}>
-					<ContactForm prefix="[Programs Page Enquiry]" class="bg-neutral/50 p-8 md:p-12" />
-				</div>
-			{/if}
+			<h2
+				class="reveal-y text-5xl lg:text-7xl font-bold text-center text-white mb-4"
+				class:visible={connectHeading}
+			>
+				CONNECT WITH US
+			</h2>
+			<p
+				class="reveal-y text-center text-lg mb-12 opacity-80 text-white"
+				class:visible={connectHeading}
+				style="transition-delay: 100ms"
+			>
+				Ready to create an impact path for your team? <br /> Let's talk about which program is right
+				for you.
+			</p>
+			<div class="reveal-y" class:visible={connectForm} style="transition-delay: 150ms">
+				<ContactForm prefix="[Programs Page Enquiry]" class="bg-neutral/50 p-8 md:p-12" />
+			</div>
 		</div>
 	</div>
 </section>

@@ -1,6 +1,5 @@
 <script lang="ts">
 	import ClientLogos from '$lib/components/ClientLogos.svelte';
-	import { fly } from 'svelte/transition';
 
 	const logos = [
 		'/client-moss.webp',
@@ -42,18 +41,14 @@
 			setTimeout(() => (logosVisible = v), 200);
 		}}
 	>
-		{#if heading}
-			<h2
-				class="text-4xl md:text-5xl font-bold text-center mb-12"
-				in:fly={{ y: 30, duration: 600 }}
-			>
-				SOME COMPANIES WE'VE PARTNERED WITH
-			</h2>
-		{/if}
-		{#if logosVisible}
-			<div in:fly={{ y: 20, duration: 600 }}>
-				<ClientLogos {logos} marquee={true} />
-			</div>
-		{/if}
+		<h2
+			class="reveal-y text-4xl md:text-5xl font-bold text-center mb-12"
+			class:visible={heading}
+		>
+			SOME COMPANIES WE'VE PARTNERED WITH
+		</h2>
+		<div class="reveal-y" class:visible={logosVisible} style="transition-delay: 200ms">
+			<ClientLogos {logos} marquee={true} />
+		</div>
 	</div>
 </section>
