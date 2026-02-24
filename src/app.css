@@ -81,6 +81,7 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
+  font-weight: bold;
 }
 
 /*
@@ -99,6 +100,11 @@ h6 {
 
 .section-yellow {
   background-color: var(--section-yellow);
+  color: var(--color-primary-content);
+}
+
+.section-blue {
+  background-color: #5ad4ff;
   color: var(--color-primary-content);
 }
 
