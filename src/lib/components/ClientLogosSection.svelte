@@ -33,7 +33,7 @@
 	let logosVisible = $state(false);
 </script>
 
-<section class="py-16">
+<section class="py-16" style="min-height: 220px;">
 	<div
 		class="container-custom"
 		use:trigger={(v) => {
@@ -47,7 +47,7 @@
 		>
 			SOME COMPANIES WE'VE PARTNERED WITH
 		</h2>
-		<div class="reveal-y" class:visible={logosVisible} style="transition-delay: 200ms">
+		<div class="reveal-y" class:visible={logosVisible} style="transition-delay: 200ms; min-height: 56px;">
 			<ClientLogos {logos} marquee={true} />
 		</div>
 	</div>

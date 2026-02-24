@@ -101,6 +101,10 @@
 	}}
 />
 
+<svelte:head>
+	<link rel="preload" as="image" href="/bpip-hero-bg.webp" fetchpriority="high" />
+</svelte:head>
+
 <!-- Hero Section -->
 <section
 	class="section-yellow py-24 md:py-8 bg-cover bg-center relative"
@@ -163,6 +167,8 @@
 					<img
 						src="/bpip-intro.webp"
 						alt="MSP/MSSP Employee Development Program"
+						width="665"
+						height="374"
 						class="w-full max-w-md object-contain"
 					/>
 				</div>
@@ -330,6 +336,8 @@
 					<img
 						src="/bpip-book-cover.webp"
 						alt="The Business Partnering Playbook - EVOLVE"
+						width="384"
+						height="519"
 						class="w-96 object-contain drop-shadow-2xl"
 					/>
 				</div>

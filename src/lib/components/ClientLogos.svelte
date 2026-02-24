@@ -35,7 +35,7 @@
 				<div class="flex items-center gap-16 shrink-0" aria-hidden={set === logos ? undefined : 'true'}>
 					{#each set as logo}
 						<div class="flex items-center justify-center shrink-0">
-							<img src={logo} alt="Client logo" class="max-h-14 w-auto object-contain" loading="lazy" />
+							<img src={logo} alt="Client logo" width="112" height="56" class="max-h-14 w-auto object-contain" loading="lazy" />
 						</div>
 					{/each}
 				</div>
@@ -63,7 +63,7 @@
 		>
 			{#each logos as logo}
 				<div class="flex items-center justify-center shrink-0 px-4">
-					<img src={logo} alt="Client logo" class="max-h-14 w-auto object-contain" loading="lazy" />
+					<img src={logo} alt="Client logo" width="112" height="56" class="max-h-14 w-auto object-contain" loading="lazy" />
 				</div>
 			{/each}
 		</div>
@@ -84,7 +84,7 @@
 	<div class="grid grid-cols-3 md:grid-cols-6 gap-8 items-center {className}">
 		{#each logos as logo}
 			<div class="flex items-center justify-center p-4">
-				<img src={logo} alt="Client logo" class="max-h-14 w-auto object-contain" loading="lazy" />
+				<img src={logo} alt="Client logo" width="112" height="56" class="max-h-14 w-auto object-contain" loading="lazy" />
 			</div>
 		{/each}
 	</div>
