@@ -162,6 +162,10 @@
 	];
 
 	let videoPlaying = $state(false);
+	let audioPlaying = $state(false);
+	let audioEl = $state<HTMLAudioElement | null>(null);
+	let audio2Playing = $state(false);
+	let audioEl2 = $state<HTMLAudioElement | null>(null);
 
 	// Per-section reveal states
 	let heroText = $state(true);
@@ -466,15 +470,39 @@
 					</h4>
 				</div>
 				<div class="flex items-center gap-2 mt-3">
+					<audio
+						bind:this={audioEl}
+						src="/impactora-demo-audio.mp3"
+						preload="none"
+						onended={() => (audioPlaying = false)}
+					></audio>
 					<button
+						onclick={() => {
+							if (!audioEl) return;
+							if (audioPlaying) {
+								audioEl.pause();
+								audioPlaying = false;
+							} else {
+								audioEl.play();
+								audioPlaying = true;
+							}
+						}}
 						class="w-7 h-7 rounded-full bg-[#1EBBD7] flex items-center justify-center flex-shrink-0"
-						aria-label="Play audio"
+						aria-label={audioPlaying ? 'Pause audio' : 'Play audio'}
 					>
-						<Icon icon="ph:play-fill" class="text-white text-[10px] ml-0.5" />
+						<Icon
+							icon={audioPlaying ? 'ph:pause-fill' : 'ph:play-fill'}
+							class="text-white text-[10px] ml-0.5"
+						/>
 					</button>
 					<div class="flex items-end gap-px flex-1 h-6">
 						{#each [3, 7, 4, 9, 5, 8, 3, 6, 4, 7, 3, 8, 5, 4, 7] as h}
-							<div class="bg-[#1EBBD7]/50 rounded-full flex-1" style="height:{h * 2}px;"></div>
+							<div
+								class="{audioPlaying
+									? 'bg-[#1EBBD7]'
+									: 'bg-[#1EBBD7]/50'} rounded-full flex-1 transition-colors"
+								style="height:{h * 2}px;"
+							></div>
 						{/each}
 					</div>
 				</div>
@@ -503,15 +531,6 @@
 					<h4 class="text-white text-sm font-semibold leading-snug mb-3 normal-case">
 						Demonstrating expertise in client presentations
 					</h4>
-					<button
-						class="flex items-center gap-2 text-white text-[10px] font-bold uppercase tracking-wider"
-						aria-label="Play video"
-					>
-						<span class="w-6 h-6 rounded-full border border-white flex items-center justify-center">
-							<Icon icon="ph:play-fill" class="text-white text-[9px] ml-px" />
-						</span>
-						PLAY VIDEO
-					</button>
 				</div>
 			</div>
 
@@ -525,15 +544,39 @@
 					</h4>
 				</div>
 				<div class="flex items-center gap-2 mt-3">
+					<audio
+						bind:this={audioEl2}
+						src="https://assets.codepen.io/4358584/Anitek_-_Komorebi.mp3"
+						preload="none"
+						onended={() => (audio2Playing = false)}
+					></audio>
 					<button
+						onclick={() => {
+							if (!audioEl2) return;
+							if (audio2Playing) {
+								audioEl2.pause();
+								audio2Playing = false;
+							} else {
+								audioEl2.play();
+								audio2Playing = true;
+							}
+						}}
 						class="w-7 h-7 rounded-full bg-[#0095B3] flex items-center justify-center flex-shrink-0"
-						aria-label="Play audio"
+						aria-label={audio2Playing ? 'Pause audio' : 'Play audio'}
 					>
-						<Icon icon="ph:play-fill" class="text-white text-[10px] ml-0.5" />
+						<Icon
+							icon={audio2Playing ? 'ph:pause-fill' : 'ph:play-fill'}
+							class="text-white text-[10px] ml-0.5"
+						/>
 					</button>
 					<div class="flex items-end gap-px flex-1 h-6">
 						{#each [5, 8, 4, 10, 6, 7, 3, 9, 5, 8, 4, 7, 5, 6, 9] as h}
-							<div class="bg-[#0095B3]/40 rounded-full flex-1" style="height:{h * 2}px;"></div>
+							<div
+								class="{audio2Playing
+									? 'bg-[#0095B3]'
+									: 'bg-[#0095B3]/40'} rounded-full flex-1 transition-colors"
+								style="height:{h * 2}px;"
+							></div>
 						{/each}
 					</div>
 				</div>
@@ -572,17 +615,6 @@
 						Eliminate choice and focus on what truly matters
 					</h2>
 				</div>
-				<button
-					class="mt-3 self-start flex items-center gap-2 text-gray-700 text-[10px] font-bold uppercase tracking-wider"
-					aria-label="Play video"
-				>
-					<span
-						class="w-6 h-6 rounded-full border border-gray-500 flex items-center justify-center"
-					>
-						<Icon icon="ph:play-fill" class="text-gray-700 text-[9px] ml-px" />
-					</span>
-					PLAY VIDEO
-				</button>
 			</div>
 
 			<div class="md:col-span-2 bg-[#5DD3F9] p-6 flex flex-col justify-end min-h-[200px]">
