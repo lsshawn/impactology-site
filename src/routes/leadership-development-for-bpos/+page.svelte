@@ -1,7 +1,7 @@
 <script lang="ts">
 	import SEO from '$lib/components/SEO.svelte';
-	import ClientLogos from '$lib/components/ClientLogos.svelte';
-	import ContactForm from '$lib/components/ContactForm.svelte';
+	import ClientLogosSection from '$lib/components/ClientLogosSection.svelte';
+	import RegisterInterestSection from '$lib/components/RegisterInterestSection.svelte';
 	import TestimonialSlider from '$lib/components/TestimonialSlider.svelte';
 	import { fly } from 'svelte/transition';
 	import EvolveBookSection from '$lib/components/EvolveBookSection.svelte';
@@ -24,73 +24,59 @@
 		return { destroy: () => observer?.disconnect() };
 	}
 
-	const clientLogos = [
-		'/client-moss.webp',
-		'/client-otto.webp',
-		'/client-ot.webp',
-		'/client-rba.webp',
-		'/client-kh.webp',
-		'/client-edgeward.webp',
-		'/client-mu.webp',
-		'/client-transport.webp',
-		'/client-specsavers.webp',
-		'/client-msd.webp',
-		'/client-lochard.webp'
-	];
-
 	const modules = [
 		{
 			icon: '/bpip-icon01.webp',
 			title: 'KNOW YOUR BUSINESS',
 			subtitle: 'How BPO leaders can align with client and organisational goals',
 			description:
-				"BPO leaders who understand both their organisation and their clients' businesses are better positioned to deliver value. This module covers the core elements of business models and how BPO leaders can use this knowledge to align services, drive better outcomes and support informed decision-making."
+				"This module offers a clear, practical framework for understanding your client's business model and aligning it with your BPO's strategic goals. It equips leaders and teams with tools and strategies to develop a strong commercial mindset, empowering them to make informed decisions that drive success for both your business and your clients."
 		},
 		{
 			icon: '/bpip-icon02.webp',
 			title: 'KNOW YOUR STAKEHOLDERS',
 			subtitle: 'Trust is the foundation of all success!',
 			description:
-				'Building trusted relationships with clients and internal teams is the cornerstone of BPO leadership success. This module focuses on identifying key stakeholder relationships, developing trust, and building the communication skills necessary to maintain a strong, impactful presence across all business interactions.'
+				'BPOs thrive on solid relationships built on trust and adaptability – internally within teams and externally with clients. This module focuses on building trust through effective communication, and meaningful engagement with all stakeholders. We focus on the importance of building trust, nurturing meaningful communication skills, and maintaining a relevant presence in the business partnering relationship.'
 		},
 		{
 			icon: '/bpip-icon03.webp',
 			title: 'KNOW YOUR ENVIRONMENT',
 			subtitle: 'Adapting to industry trends and client dynamics',
 			description:
-				"BPO leaders operate in dynamic environments shaped by technology, industry trends, and evolving client expectations. This module builds your capacity to scan and understand the macro environment, identify emerging trends, and adapt your team's approach to stay ahead of change and deliver consistent value."
+				"In a rapidly changing landscape, BPO leaders need a deep understanding of external factors that influence their clients' industries and their own operations. This module helps participants develop an 'outside-in' perspective, equipping them to anticipate changes, mitigate risks, and adapt to evolving client demands."
 		},
 		{
 			icon: '/bpip-icon04.webp',
 			title: 'BPO LEADERSHIP TOOLKIT',
 			subtitle: 'Elevating team and client impact through practical tools',
 			description:
-				'Participants are introduced to tools like the ACDC Contextual Partnering Model to understand how to navigate different delivery modes depending on the team and client context. These tools provide a framework for developing a strong personal and team brand, and for amplifying your impact as a BPO leader.'
+				'Participants are introduced to the AC/DC Contextual Partnering Model, which helps leaders understand and identify the different business partnering delivery modes and adjust their approach based on client and team needs. This module emphasises building a trusted personal brand, nurturing strong awareness, and leveraging different styles of business partnering to maximise impact in diverse contexts.'
 		},
 		{
 			icon: '/bpip-icon05.webp',
 			title: 'UNLOCK THE POWER OF DATA STORYTELLING',
 			subtitle: 'A critical skill for influencing clients and teams',
 			description:
-				'In BPO environments, the ability to communicate performance data compellingly is essential. This module teaches BPO leaders how to use data storytelling to influence client decisions, engage their teams, and clearly articulate the value of the services they deliver.'
+				'Effective storytelling transforms how BPO leaders and teams communicate insights, build alignment, and influence outcomes. This module equips participants with a model to better represent data in their storytelling, driving better collaboration and building relevance with clients.'
 		},
 		{
 			icon: '/bpip-icon06.webp',
 			title: 'KNOW THE VALUE YOU DELIVER',
 			subtitle: "Articulating and measuring your team's impact",
 			description:
-				'To demonstrate impact, BPO leaders need frameworks for measuring and communicating the value their teams create. This module shares practical approaches for assessing service value, understanding client priorities, and building a culture of accountability and continuous improvement within your BPO team.'
+				'BPO leaders must consistently demonstrate the value they bring to clients and their organisations. This module introduces a framework for measuring and articulating team contributions, helping leaders align their efforts with client objectives and build long-term trust.'
 		}
 	];
 
-	let learnImg = $state(false);
-	let learnText = $state(false);
-	let clientsHeading = $state(false);
-	let clientsLogos = $state(false);
+	let introImg = $state(false);
+	let introText = $state(false);
+	let uniqueImg = $state(false);
+	let uniqueText = $state(false);
 	let modulesHeading = $state(false);
 	let modulesGrid = $state(false);
-	let registerHeading = $state(false);
-	let registerForm = $state(false);
+	let ctaImg = $state(false);
+	let ctaText = $state(false);
 </script>
 
 <svelte:head>
@@ -141,78 +127,55 @@
 	</div>
 </section>
 
-<!-- What You'll Learn -->
+<!-- Program Intro Section -->
 <section
 	class="py-20 md:py-28 bg-base-100"
 	use:trigger={(v) => {
-		learnImg = v;
-		setTimeout(() => (learnText = v), 150);
+		introImg = v;
+		setTimeout(() => (introText = v), 150);
 	}}
 >
 	<div class="container-custom">
-		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-			<div>
-				{#if learnText}
-					<div in:fly={{ x: -30, duration: 600 }}>
-						<h2 class="text-4xl md:text-5xl font-bold mb-8">WHAT YOU'LL LEARN</h2>
-						<p class="text-lg leading-relaxed mb-6 opacity-80">
-							At Impactology, we empower BPO leaders and teams to thrive in complex, dynamic
-							environments. Our program is built around four core principles: know yourself, know
-							your organisation, know your clients, and know their organisation.
-						</p>
-						<p class="text-lg leading-relaxed mb-6 opacity-80">
-							This Leadership Training Program for BPO Leaders and Teams is designed to build the
-							capability, confidence and commercial acumen needed to lead high-performing BPO teams
-							and deliver exceptional client outcomes.
-						</p>
-						<p class="text-lg font-medium mb-4">
-							The call to action for BPO leaders — participants will:
-						</p>
-						<ul class="space-y-3 mb-8">
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80"
-									>Enhance communication and collaboration across teams and clients</span
-								>
-							</li>
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80"
-									>Build trust through consistency and reliable service delivery</span
-								>
-							</li>
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80"
-									>Develop a cohesive team culture focused on client success</span
-								>
-							</li>
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80"
-									>Strengthen strategic alignment with client and organisational goals</span
-								>
-							</li>
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80"
-									>Overcome obstacles with empathy and effective reframing techniques</span
-								>
-							</li>
-							<li class="flex items-start gap-3">
-								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80">Foster creativity and proactivity in service delivery</span
-								>
-							</li>
-						</ul>
-					</div>
-				{/if}
-			</div>
-			{#if learnImg}
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+			{#if introText}
+				<div in:fly={{ x: -30, duration: 600 }}>
+					<h2 class="text-4xl md:text-5xl font-bold mb-8">
+						LEADERSHIP TRAINING PROGRAM FOR BPO LEADERS AND TEAMS
+					</h2>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Step out of the daily whirlwind and take action toward building a high-performing,
+						cohesive BPO team – amplify your leadership and drive client success today!
+					</p>
+					<p class="text-xl font-bold mb-6 opacity-90">
+						Builders of trust. Champions of seamless service delivery.
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						BPO leaders and teams play a vital role in representing their clients, serving as the
+						first point of contact for issues, questions, and solutions. Success hinges on smooth
+						cross-functional collaboration, adapting to ever-evolving client needs, and fostering
+						strong cultural alignment across global teams.
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Our BPO Leadership Development Experience is tailored for BPOs and equips leaders and
+						their teams with the practical tools, proven frameworks, and a growth mindset to execute
+						strategies effectively, build trust with clients, and foster a positive and resilient
+						work environment.
+					</p>
+					<p class="text-lg leading-relaxed mb-8 opacity-80">
+						Whether your goal is to strengthen collaboration, enhance communication, or unify team
+						culture, this program is for you: builds the skills needed to adapt, excel, and deliver
+						exceptional client service in a dynamic industry.
+					</p>
+					<a href="#register-interest" class="btn btn-primary btn-lg uppercase font-bold">
+						Register your interest
+					</a>
+				</div>
+			{/if}
+			{#if introImg}
 				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
 					<img
-						src="/bpip-learn.webp"
-						alt="Leadership Development for BPOs learning framework"
+						src="/bpip-intro.webp"
+						alt="Leadership Development for BPOs"
 						class="w-full max-w-md object-contain"
 					/>
 				</div>
@@ -221,30 +184,60 @@
 	</div>
 </section>
 
-<!-- Client Logos -->
-<section class="py-16">
-	<div
-		class="container-custom"
-		use:trigger={(v) => {
-			clientsHeading = v;
-			setTimeout(() => (clientsLogos = v), 200);
-		}}
-	>
-		{#if clientsHeading}
-			<h2
-				class="text-4xl md:text-5xl font-bold text-center mb-12"
-				in:fly={{ y: 30, duration: 600 }}
-			>
-				SOME COMPANIES WE'VE PARTNERED WITH
-			</h2>
-		{/if}
-		{#if clientsLogos}
-			<div in:fly={{ y: 20, duration: 600 }}>
-				<ClientLogos logos={clientLogos} marquee={true} />
-			</div>
-		{/if}
+<ClientLogosSection />
+
+<!-- What Makes This Program Unique -->
+<section
+	class="py-20 md:py-28 bg-base-100"
+	use:trigger={(v) => {
+		uniqueImg = v;
+		setTimeout(() => (uniqueText = v), 150);
+	}}
+>
+	<div class="container-custom">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+			{#if uniqueText}
+				<div in:fly={{ x: -30, duration: 600 }}>
+					<h2 class="text-4xl md:text-5xl font-bold mb-6">
+						What makes this Leadership Training Program for BPOs unique?
+					</h2>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						At Impactology, we specialise in helping leaders and teams develop into trusted business
+						partners. It is what we love doing, and what we excel at. Our approach is rooted in four
+						core principles:
+					</p>
+					<p class="text-xl font-bold mb-6 opacity-90">
+						Know yourself, know your organisation, know your clients, and know their organisation.
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						This program blends evidence-based tools, actionable insights, and practical case studies
+						to develop the skills essential for thriving in high-pressure, client-focused
+						environments.
+					</p>
+					<p class="text-lg leading-relaxed mb-8 opacity-80">
+						We focus on driving results – equipping BPO leaders and teams to apply their learning
+						effectively, fostering stronger client relationships, enhancing team cohesion, and
+						boosting overall performance.
+					</p>
+					<a href="#register-interest" class="btn btn-primary btn-lg uppercase font-bold">
+						Register your interest
+					</a>
+				</div>
+			{/if}
+			{#if uniqueImg}
+				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
+					<img
+						src="/bpip-cta.webp"
+						alt="Leadership Training Program for BPOs unique"
+						class="w-full max-w-md object-contain"
+					/>
+				</div>
+			{/if}
+		</div>
 	</div>
 </section>
+
+<EvolveBookSection />
 
 <!-- Core Modules -->
 <section
@@ -280,7 +273,92 @@
 	</div>
 </section>
 
-<EvolveBookSection />
+<!-- Call to Action for BPO Leaders -->
+<section
+	class="py-20 md:py-28 bg-base-100"
+	use:trigger={(v) => {
+		ctaImg = v;
+		setTimeout(() => (ctaText = v), 150);
+	}}
+>
+	<div class="container-custom">
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+			{#if ctaText}
+				<div in:fly={{ x: -30, duration: 600 }}>
+					<h2 class="text-4xl md:text-5xl font-bold mb-6">
+						THE CALL TO ACTION FOR BPO LEADERS!
+					</h2>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						BPO leaders and teams must navigate complex client needs, cross-cultural dynamics, and
+						evolving industry challenges. This program equips participants with the leadership skills
+						to thrive in this complex environment, ensuring greater team unity and building stronger
+						client partnerships.
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Our Leadership Development Program for BPOs is tailored to help leaders and teams excel
+						in their roles, deliver exceptional client results, and drive growth within the
+						organisation.
+					</p>
+					<p class="text-lg font-medium mb-4">The learning outcomes for participants include:</p>
+					<ul class="space-y-3 mb-8">
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								><strong>Enhancing communication and collaboration:</strong> Strengthening the ability
+								to work effectively across teams and stakeholders.</span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								><strong>Building trust through consistency:</strong> Fostering strong business partnering
+								relationships with colleagues and clients by consistently delivering on commitments.</span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								><strong>Developing a cohesive team culture:</strong> Promoting an environment that values
+								diversity of thought and inclusivity to unite and empower the team.</span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								><strong>Strengthening strategic alignment:</strong> Aligning efforts with client and
+								organisational goals for maximum impact.</span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								><strong>Overcoming obstacles with empathy:</strong> Using reframing techniques and a
+								proven approach to promoting empathy with stakeholders and clients.</span
+							>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80"
+								><strong>Fostering creativity and proactivity:</strong> Encouraging innovative thinking
+								and decision-making to stay ahead in a dynamic environment.</span
+							>
+						</li>
+					</ul>
+					<a href="/evolve-book" class="btn btn-primary btn-lg uppercase font-bold">BUY NOW</a>
+				</div>
+			{/if}
+			{#if ctaImg}
+				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
+					<img
+						src="/bpip-book-cover.webp"
+						alt="The Business Partnering Playbook - EVOLVE"
+						class="w-96 object-contain drop-shadow-2xl"
+					/>
+				</div>
+			{/if}
+		</div>
+	</div>
+</section>
 
 <!-- Testimonials -->
 <section class="bg-[#fff000] py-20 md:py-28">
@@ -289,35 +367,7 @@
 	</div>
 </section>
 
-<!-- Register Interest Form -->
-<section
-	id="register-interest"
-	class="section-dark py-20 md:py-28"
-	use:trigger={(v) => {
-		registerHeading = v;
-		setTimeout(() => (registerForm = v), 150);
-	}}
->
-	<div class="container-custom">
-		<div class="max-w-3xl mx-auto">
-			{#if registerHeading}
-				<div class="text-center mb-12" in:fly={{ y: 30, duration: 600 }}>
-					<h2 class="text-5xl lg:text-7xl font-bold text-white mb-6">REGISTER YOUR INTEREST</h2>
-					<p class="text-lg text-white opacity-80">
-						At Impactology, we empower BPO leaders and teams to thrive in complex, dynamic
-						environments. Connect with us to find out how this program can help your team by filling
-						out the form below.
-					</p>
-				</div>
-			{/if}
-			{#if registerForm}
-				<div in:fly={{ y: 30, duration: 600 }}>
-					<ContactForm
-						prefix="[Leadership Development for BPOs Interest]"
-						class="bg-neutral/50 p-8 md:p-12"
-					/>
-				</div>
-			{/if}
-		</div>
-	</div>
-</section>
+<RegisterInterestSection
+	prefix="[Leadership Development for BPOs Interest]"
+	introText="At Impactology, we empower BPO leaders and teams to thrive in complex, dynamic environments, transforming them into high-performing business partners. Ready to amplify your leadership presence and strengthen client relationships? Let's start the conversation – complete the form below to take the first step."
+/>
