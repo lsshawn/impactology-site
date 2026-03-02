@@ -13,7 +13,7 @@
 		<div class="max-w-4xl mx-auto">
 			<h1 class="mb-12 text-center">PRIVACY POLICY</h1>
 
-			<div class="prose prose-lg mx-auto">
+			<div class="prose prose-lg mx-auto [&_ol]:list-decimal [&_ol[type='a']]:list-[lower-alpha] [&_ul]:list-disc [&_ol]:pl-6 [&_ul]:pl-6 [&_li]:mb-1">
 				<p>
 					This privacy policy applies to the management of your personal information (&ldquo;Your
 					Information&rdquo;) by or on behalf of Impactology Pty. Ltd.
