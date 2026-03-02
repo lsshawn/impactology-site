@@ -1,6 +1,6 @@
 <script lang="ts">
 	import SEO from '$lib/components/SEO.svelte';
-	import Icon from '@iconify/svelte';
+	import ContactForm from '$lib/components/ContactForm.svelte';
 
 	const bookSections = [
 		{
@@ -130,13 +130,6 @@
 		}
 	];
 
-	let name = $state('');
-	let email = $state('');
-	let phone = $state('');
-	let answer1 = $state('');
-	let answer2 = $state('');
-	let answer3 = $state('');
-	let status = $state<'idle' | 'sending' | 'sent' | 'error'>('idle');
 </script>
 
 <SEO
@@ -152,18 +145,7 @@
 <section class="py-20 md:py-28">
 	<div class="container-custom">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-			<div class="order-2 lg:order-1 flex justify-center lg:justify-start">
-				<img
-					src="/resources/book-3d-cover.webp"
-					alt="EVOLVE - The Business Partnering Playbook"
-					width="380"
-					height="513"
-					class="w-full max-w-xs md:max-w-sm shadow-lg"
-					loading="eager"
-					fetchpriority="high"
-				/>
-			</div>
-			<div class="order-1 lg:order-2">
+			<div>
 				<h2 class="text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight font-bold normal-case">
 					EVOLVE
 				</h2>
@@ -186,9 +168,20 @@
 					EVOLVE shares practical strategies to navigate service models, enhance your business
 					acumen, and how to amplify value for your stakeholders and organisation.
 				</p>
-				<a href="/evolve-book" class="btn btn-secondary btn-lg uppercase font-bold rounded-none">
+				<a href="/evolve-book" class="btn btn-primary btn-rounded btn-lg uppercase font-bold">
 					Buy Now
 				</a>
+			</div>
+			<div class="flex justify-center lg:justify-end">
+				<img
+					src="/resources/book-3d-cover.webp"
+					alt="EVOLVE - The Business Partnering Playbook"
+					width="460"
+					height="621"
+					class="w-full max-w-sm md:max-w-lg"
+					loading="eager"
+					fetchpriority="high"
+				/>
 			</div>
 		</div>
 	</div>
@@ -198,7 +191,9 @@
 {#each bookSections as section, i (section.id)}
 	<section class="py-16 {i % 2 === 0 ? 'section-gray' : 'bg-base-100'}">
 		<div class="container-custom">
-			<h2 class="text-3xl md:text-4xl font-bold mb-10 border-b-4 border-secondary pb-4 inline-block">
+			<h2
+				class="text-3xl md:text-4xl font-bold mb-10 border-b-4 border-secondary pb-4 inline-block"
+			>
 				{section.title}
 			</h2>
 			<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
@@ -209,7 +204,9 @@
 						rel="noopener noreferrer"
 						class="group flex flex-col items-center gap-3 hover:opacity-80 transition-opacity"
 					>
-						<div class="w-full aspect-square overflow-hidden shadow-md group-hover:shadow-lg transition-shadow">
+						<div
+							class="w-full aspect-square overflow-hidden shadow-md group-hover:shadow-lg transition-shadow"
+						>
 							<img
 								src={book.image}
 								alt={book.title}
@@ -220,9 +217,8 @@
 							/>
 						</div>
 						<p class="text-sm text-center font-medium leading-tight">{book.title}</p>
-						<span class="text-xs uppercase tracking-wide font-bold flex items-center gap-1">
-							<Icon icon="ph:shopping-cart" class="text-base" />
-							Amazon
+						<span class="btn btn-primary btn-xs rounded-full font-bold uppercase px-4">
+							Read It
 						</span>
 					</a>
 				{/each}
@@ -241,113 +237,7 @@
 			<p class="text-center mb-10 text-base">
 				Connect with like-minded people who are making an impact.
 			</p>
-
-			<form
-				class="flex flex-col gap-5"
-				onsubmit={async (e) => {
-					e.preventDefault();
-					status = 'sending';
-					// Community form submission
-					await new Promise((r) => setTimeout(r, 800));
-					status = 'sent';
-				}}
-			>
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text font-medium">Name</span>
-					</div>
-					<input
-						type="text"
-						bind:value={name}
-						placeholder="Your Name"
-						required
-						class="input input-bordered w-full rounded-none bg-base-100"
-					/>
-				</label>
-
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text font-medium">Email</span>
-					</div>
-					<input
-						type="email"
-						bind:value={email}
-						placeholder="Your Email Address"
-						required
-						class="input input-bordered w-full rounded-none bg-base-100"
-					/>
-				</label>
-
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text font-medium">Phone</span>
-					</div>
-					<input
-						type="tel"
-						bind:value={phone}
-						placeholder="Your Phone Number"
-						class="input input-bordered w-full rounded-none bg-base-100"
-					/>
-				</label>
-
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text font-medium">What does impact mean to you?</span>
-					</div>
-					<textarea
-						bind:value={answer1}
-						placeholder="What does impact mean to you?"
-						required
-						class="textarea textarea-bordered w-full rounded-none bg-base-100 h-28"
-					></textarea>
-				</label>
-
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text font-medium">How have you impacted your community?</span>
-					</div>
-					<textarea
-						bind:value={answer2}
-						placeholder="How have you impacted your community?"
-						required
-						class="textarea textarea-bordered w-full rounded-none bg-base-100 h-28"
-					></textarea>
-				</label>
-
-				<label class="form-control w-full">
-					<div class="label">
-						<span class="label-text font-medium"
-							>What message do you want to share with the Impactology Community?</span
-						>
-					</div>
-					<textarea
-						bind:value={answer3}
-						placeholder="What message do you want to share with the Impactology Community?"
-						required
-						class="textarea textarea-bordered w-full rounded-none bg-base-100 h-28"
-					></textarea>
-				</label>
-
-				{#if status === 'sent'}
-					<div class="alert alert-success rounded-none">
-						<Icon icon="ph:check-circle" class="text-lg" />
-						<span>Thank you for joining the community!</span>
-					</div>
-				{/if}
-
-				<button
-					type="submit"
-					class="btn btn-secondary btn-lg uppercase font-bold rounded-none w-full"
-					disabled={status === 'sending' || status === 'sent'}
-				>
-					{#if status === 'sending'}
-						<span class="loading loading-spinner loading-sm"></span>
-						Submitting...
-					{:else}
-						SUBMIT
-					{/if}
-				</button>
-			</form>
+			<ContactForm prefix="Resources page enquiry" />
 		</div>
 	</div>
 </section>
