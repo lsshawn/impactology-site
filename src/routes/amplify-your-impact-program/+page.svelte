@@ -275,7 +275,7 @@
 			{#if registerHeading}
 				<div class="text-center mb-12" in:fly={{ y: 30, duration: 600 }}>
 					<h2 class="text-5xl lg:text-7xl font-bold text-white mb-6">
-						IS THIS PROGRAM RIGHT FOR YOU?
+						IS THIS PROGRAM EXPERIENCE RIGHT FOR YOU?
 					</h2>
 					<p class="text-lg text-white opacity-80">
 						Connect with us to see if this Program Experience is suited to your individual and team

@@ -10,7 +10,7 @@ author: "George Liberopoulos"
 
 Technology has always been the growth engine room of modern business. But the expectations placed on IT teams have shifted dramatically. No longer is it enough to "keep the systems running in the background". Today, organisations want IT leaders who can sit at the planning and strategy table.
 
-This shift has given rise to the **IT Business Partner**, a role that bridges the gap between technology delivery and business outcomes. It's a position that demands more than technical expertise; it requires commercial awareness, stakeholder influence, and strategic thinking.
+This shift has given rise to the [**IT Business Partner**](/it-business-partnering/), a role that bridges the gap between technology delivery and business outcomes. It's a position that demands more than technical expertise; it requires commercial awareness, stakeholder influence, and strategic thinking.
 
 ## From Support Function to Strategic Advisor
 
