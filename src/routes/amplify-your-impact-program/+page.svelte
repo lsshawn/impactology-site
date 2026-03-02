@@ -54,7 +54,7 @@
 			title: 'MICRO-LEARNING ACTIVITIES',
 			subtitle: 'Bite-Sized Skill Building',
 			description:
-				'Quick, focused micro-learning activities enhance learning retention by delivering core concepts and skills in short, easily digestible segments via our proprietary technology platform IMPACTORA.'
+				'Quick, focused micro-learning activities enhance learning retention by delivering core concepts and skills in short, easily digestible segments via our proprietary technology platform <a href="/impactora" class="text-[#5ad4ff] hover:underline">IMPACTORA</a>.'
 		}
 	];
 
@@ -231,7 +231,9 @@
 							<h3 class="text-2xl font-bold text-primary mb-1">{feature.title}</h3>
 							<p class="text-sm text-white mb-3">{feature.subtitle}</p>
 						</div>
-						<p class="text-sm leading-relaxed opacity-90 text-base-100">{feature.description}</p>
+						<p class="text-sm leading-relaxed opacity-90 text-base-100">
+							{@html feature.description}
+						</p>
 					</div>
 				{/each}
 			</div>
@@ -246,7 +248,9 @@
 							<h3 class="text-2xl font-bold text-primary mb-1">{feature.title}</h3>
 							<p class="text-sm text-white mb-3">{feature.subtitle}</p>
 						</div>
-						<p class="text-sm leading-relaxed opacity-90 text-base-100">{feature.description}</p>
+						<p class="text-sm leading-relaxed opacity-90 text-base-100">
+							{@html feature.description}
+						</p>
 					</div>
 				{/each}
 			</div>
