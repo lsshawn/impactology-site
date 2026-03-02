@@ -44,7 +44,7 @@
 			title: 'KNOW YOUR BUSINESS',
 			subtitle: 'How BPO leaders can align with client and organisational goals',
 			description:
-				'BPO leaders who understand both their organisation and their clients\' businesses are better positioned to deliver value. This module covers the core elements of business models and how BPO leaders can use this knowledge to align services, drive better outcomes and support informed decision-making.'
+				"BPO leaders who understand both their organisation and their clients' businesses are better positioned to deliver value. This module covers the core elements of business models and how BPO leaders can use this knowledge to align services, drive better outcomes and support informed decision-making."
 		},
 		{
 			icon: '/bpip-icon02.webp',
@@ -58,7 +58,7 @@
 			title: 'KNOW YOUR ENVIRONMENT',
 			subtitle: 'Adapting to industry trends and client dynamics',
 			description:
-				'BPO leaders operate in dynamic environments shaped by technology, industry trends, and evolving client expectations. This module builds your capacity to scan and understand the macro environment, identify emerging trends, and adapt your team\'s approach to stay ahead of change and deliver consistent value.'
+				"BPO leaders operate in dynamic environments shaped by technology, industry trends, and evolving client expectations. This module builds your capacity to scan and understand the macro environment, identify emerging trends, and adapt your team's approach to stay ahead of change and deliver consistent value."
 		},
 		{
 			icon: '/bpip-icon04.webp',
@@ -79,7 +79,7 @@
 			title: 'KNOW THE VALUE YOU DELIVER',
 			subtitle: "Articulating and measuring your team's impact",
 			description:
-				"To demonstrate impact, BPO leaders need frameworks for measuring and communicating the value their teams create. This module shares practical approaches for assessing service value, understanding client priorities, and building a culture of accountability and continuous improvement within your BPO team."
+				'To demonstrate impact, BPO leaders need frameworks for measuring and communicating the value their teams create. This module shares practical approaches for assessing service value, understanding client priorities, and building a culture of accountability and continuous improvement within your BPO team.'
 		}
 	];
 
@@ -129,9 +129,6 @@
 			<h1 class="mb-6 text-5xl lg:text-6xl font-bold text-black">
 				Leadership Development for BPOS
 			</h1>
-			<p class="text-lg font-bold mb-8 text-black max-w-lg">
-				Builders of trust. Champions of seamless service delivery.
-			</p>
 			<a href="#register-interest" class="btn btn-secondary btn-lg uppercase font-bold mb-6">
 				BOOK YOUR FREE 60-MINUTE STRATEGY SESSION
 			</a>
@@ -174,27 +171,38 @@
 						<ul class="space-y-3 mb-8">
 							<li class="flex items-start gap-3">
 								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80">Enhance communication and collaboration across teams and clients</span>
+								<span class="opacity-80"
+									>Enhance communication and collaboration across teams and clients</span
+								>
 							</li>
 							<li class="flex items-start gap-3">
 								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80">Build trust through consistency and reliable service delivery</span>
+								<span class="opacity-80"
+									>Build trust through consistency and reliable service delivery</span
+								>
 							</li>
 							<li class="flex items-start gap-3">
 								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80">Develop a cohesive team culture focused on client success</span>
+								<span class="opacity-80"
+									>Develop a cohesive team culture focused on client success</span
+								>
 							</li>
 							<li class="flex items-start gap-3">
 								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80">Strengthen strategic alignment with client and organisational goals</span>
+								<span class="opacity-80"
+									>Strengthen strategic alignment with client and organisational goals</span
+								>
 							</li>
 							<li class="flex items-start gap-3">
 								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80">Overcome obstacles with empathy and effective reframing techniques</span>
+								<span class="opacity-80"
+									>Overcome obstacles with empathy and effective reframing techniques</span
+								>
 							</li>
 							<li class="flex items-start gap-3">
 								<span class="text-primary mt-1 shrink-0">●</span>
-								<span class="opacity-80">Foster creativity and proactivity in service delivery</span>
+								<span class="opacity-80">Foster creativity and proactivity in service delivery</span
+								>
 							</li>
 						</ul>
 					</div>

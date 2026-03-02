@@ -216,11 +216,12 @@
 						and helping achieve core strategic goals.
 					</p>
 					<p class="text-lg leading-relaxed mb-6 opacity-80">
-						Our <strong>Procurement Business Partnering training</strong> is tailored to develop a
-						high-functioning and trusted group of <strong>procurement business partners</strong>,
-						amplifying their business acumen, differentiating their capabilities and giving them an
-						edge in the marketplace. Aimed at procurement managers and their teams, this course is
-						suitable for all levels of experience.
+						Our <a href="/programs" class="text-primary underline"><strong>Procurement Business Partnering training</strong></a> is
+						tailored to develop a high-functioning and trusted group of
+						<strong>procurement business partners</strong>, amplifying their business acumen,
+						differentiating their capabilities and giving them an edge in the marketplace. Aimed at
+						procurement managers and their teams, this course is suitable for all levels of
+						experience.
 					</p>
 					<p class="text-lg font-medium mb-4">
 						Upon finishing the Procurement Business Partnering Training, participants will be able
@@ -255,7 +256,7 @@
 						</li>
 					</ul>
 					<p class="text-base leading-relaxed opacity-70 mb-8">
-						This <strong><a href="/programs">business partnering development program</a></strong> features
+						This <strong><a href="/programs" class="text-primary underline">business partnering development program</a></strong> features
 						a face-to-face component, and micro-learning activities and check-in process to help embed
 						the Program learnings. The program aims to enhance service delivery standards with key stakeholders,
 						and build a greater depth of relationship with external vendors and suppliers.

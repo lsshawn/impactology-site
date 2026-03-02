@@ -141,8 +141,8 @@
 				<div in:fly={{ x: -30, duration: 600 }}>
 					<p class="text-lg leading-relaxed mb-6 opacity-80">
 						Take the step towards building a high-performing and trusted HR team – amplify the
-						impact of your team and align your business partnering approach to business needs of your
-						key stakeholders – take your business partnering to the next level.
+						impact of your team and align your business partnering approach to business needs of
+						your key stakeholders – take your business partnering to the next level.
 					</p>
 					<p class="text-xl font-bold mb-6 opacity-90">
 						Experts in change. Builders of trust. Leaders in collaboration.
@@ -151,7 +151,9 @@
 						Enhancing your HR / People & Culture operations starts with trust: trust in each other
 						and in the team's capabilities. Consistently executing the basics of business partnering
 						is crucial. When you get these fundamentals right, building sustainable and proactive
-						relationships with stakeholders becomes easier.
+						relationships with stakeholders becomes easier. Just like in life, trust is earned
+						through consistency and respect. Focus on these essentials, and your team, like a
+						well-coached high performing team, will thrive.
 					</p>
 					<p class="text-lg leading-relaxed mb-6 opacity-80">
 						The HR / People & Culture Business Partnering Impact Program is designed to empower your
@@ -293,9 +295,9 @@
 					</p>
 					<p class="text-lg leading-relaxed mb-6 opacity-80">
 						Our HR/People & Culture Business Partnering IMPACT Program initiative is tailored to
-						develop a high-functioning and trusted group of HR/P&C business partners, building
-						their commercial acumen, differentiating their capabilities and giving them an edge in
-						the marketplace. Aimed at HR / People & Culture managers and their teams, this learning
+						develop a high-functioning and trusted group of HR/P&C business partners, building their
+						commercial acumen, differentiating their capabilities and giving them an edge in the
+						marketplace. Aimed at HR / People & Culture managers and their teams, this learning
 						program is suitable for all levels of experience.
 					</p>
 					<p class="text-lg font-medium mb-4">
@@ -305,8 +307,8 @@
 						<li class="flex items-start gap-3">
 							<span class="text-primary mt-1 shrink-0">●</span>
 							<span class="opacity-80"
-								>Equip themselves with the necessary skills to meet the expectations of key
-								internal and external stakeholders.</span
+								>Equip themselves with the necessary skills to meet the expectations of key internal
+								and external stakeholders.</span
 							>
 						</li>
 						<li class="flex items-start gap-3">
