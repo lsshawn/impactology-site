@@ -110,6 +110,7 @@
 	class="section-yellow py-24 md:py-8 bg-cover bg-center relative"
 	style="background-image: url('/bpip-hero-bg.webp'); height: 60vh; max-height: 60vh;"
 >
+	<div class="absolute inset-0 bg-yellow-300/70 md:hidden"></div>
 	<div class="container-custom relative z-10 flex items-center h-full">
 		<div class="max-w-xl">
 			<h1 class="mb-6 text-5xl lg:text-6xl font-bold text-black">
@@ -210,8 +211,8 @@
 						Know yourself, know your organisation, know your clients, and know their organisation.
 					</p>
 					<p class="text-lg leading-relaxed mb-6 opacity-80">
-						This program blends evidence-based tools, actionable insights, and practical case studies
-						to develop the skills essential for thriving in high-pressure, client-focused
+						This program blends evidence-based tools, actionable insights, and practical case
+						studies to develop the skills essential for thriving in high-pressure, client-focused
 						environments.
 					</p>
 					<p class="text-lg leading-relaxed mb-8 opacity-80">
@@ -285,14 +286,12 @@
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 			{#if ctaText}
 				<div in:fly={{ x: -30, duration: 600 }}>
-					<h2 class="text-4xl md:text-5xl font-bold mb-6">
-						THE CALL TO ACTION FOR BPO LEADERS!
-					</h2>
+					<h2 class="text-4xl md:text-5xl font-bold mb-6">THE CALL TO ACTION FOR BPO LEADERS!</h2>
 					<p class="text-lg leading-relaxed mb-6 opacity-80">
 						BPO leaders and teams must navigate complex client needs, cross-cultural dynamics, and
-						evolving industry challenges. This program equips participants with the leadership skills
-						to thrive in this complex environment, ensuring greater team unity and building stronger
-						client partnerships.
+						evolving industry challenges. This program equips participants with the leadership
+						skills to thrive in this complex environment, ensuring greater team unity and building
+						stronger client partnerships.
 					</p>
 					<p class="text-lg leading-relaxed mb-6 opacity-80">
 						Our Leadership Development Program for BPOs is tailored to help leaders and teams excel

@@ -110,9 +110,10 @@
 	class="section-yellow py-24 md:py-8 bg-cover bg-center relative"
 	style="background-image: url('/bpip-hero-bg.webp'); height: 60vh; max-height: 60vh;"
 >
+	<div class="absolute inset-0 bg-yellow-300/70 md:hidden"></div>
 	<div class="container-custom relative z-10 flex items-center h-full">
 		<div class="max-w-xl">
-			<h1 class="mb-6 text-5xl lg:text-6xl font-bold text-black">
+			<h1 class="mb-6 text-4xl lg:text-6xl font-bold text-black">
 				Leadership Development Program for Local Government Area (LGAs) Teams
 			</h1>
 			<a href="#register-interest" class="btn btn-secondary btn-lg uppercase font-bold mb-6">
@@ -152,11 +153,11 @@
 						applying the core principles of business partnering.
 					</p>
 					<p class="text-lg leading-relaxed mb-6 opacity-80">
-						Mastering these fundamentals enables council leaders and their teams to develop proactive
-						and impactful relationships with key stakeholders, from internal departments to local
-						community groups. Our Leadership Development Program for Local Government is designed to
-						equip council teams with essential tools, frameworks, and the mindset to drive progress
-						and deliver outcomes that truly benefit the community.
+						Mastering these fundamentals enables council leaders and their teams to develop
+						proactive and impactful relationships with key stakeholders, from internal departments
+						to local community groups. Our Leadership Development Program for Local Government is
+						designed to equip council teams with essential tools, frameworks, and the mindset to
+						drive progress and deliver outcomes that truly benefit the community.
 					</p>
 					<p class="text-lg leading-relaxed mb-8 opacity-80">
 						This program will improve cross-functional collaboration, enhance communication with
@@ -298,8 +299,7 @@
 						<li class="flex items-start gap-3">
 							<span class="text-primary mt-1 shrink-0">●</span>
 							<span class="opacity-80"
-								>Strengthening collaboration between council departments and community
-								stakeholders.</span
+								>Strengthening collaboration between council departments and community stakeholders.</span
 							>
 						</li>
 						<li class="flex items-start gap-3">

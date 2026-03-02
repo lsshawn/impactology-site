@@ -28,7 +28,7 @@
 		{
 			icon: '/bpip-icon01.webp',
 			title: 'KNOW YOUR BUSINESS',
-			subtitle: "How MSP/MSSP employees can best support your company's business model.",
+			subtitle: 'How MSP/MSSP employees can best support their business model',
 			description:
 				"We share a systematic and clear approach on what it means to think and act strategically while nurturing a strong commercial mindset for MSP/MSSP leaders and employees. This module is essential for the development of a mature and effective MSP/MSSP, covers the broad and inter-related areas of your company's business model, and how to use this information to support the business and clients with informed decision-making as part of the overall business strategy."
 		},
@@ -42,7 +42,7 @@
 		{
 			icon: '/bpip-icon03.webp',
 			title: 'KNOW YOUR MACRO WORLD',
-			subtitle: 'Understanding external influences for effective decision-making.',
+			subtitle: 'Understanding external influences helps optimise decision-making.',
 			description:
 				"Effective business decisions are influenced by balancing both internal and external factors across different industries, markets and geographies. This module focuses on building a strong \"outside-in\" view of the world, and how macro-environmental factors impact a company's direction. A solid understanding of the macro factors that impact the organisation, and is critical to effective decision making."
 		},
@@ -56,14 +56,14 @@
 		{
 			icon: '/bpip-icon05.webp',
 			title: 'LEARN DATA STORYTELLING',
-			subtitle: 'A vital "life" skill for all MSP/MSSP teams.',
+			subtitle: 'A vital "life" skill for all MSP/MSSP Professionals',
 			description:
 				"Storytelling plays a major role in all work contexts and done well, helps transform the relationships with clients, vendors/partners and on their business. This life skill can help unearth an IT team's ability to better collaborate and negotiate better outcomes for the overall business. The result: creating a high-performance culture that thrives on action and outcomes, not just ideas."
 		},
 		{
 			icon: '/bpip-icon06.webp',
 			title: 'KNOW THE VALUE YOU DELIVER',
-			subtitle: 'Measuring and articulating your impact.',
+			subtitle: 'Measuring and articulating the value you deliver',
 			description:
 				"How do you know you're having an impact? You need to know how to clearly articulate and measure the value your team delivers to your valued clients. It is knowing the trade-offs you make about what you do and what you don't do as a team: this makes all the difference to all stakeholders. This module shares some high impact frameworks for you to use in assessing the value your business deliver individually and as a team."
 		}
@@ -110,6 +110,7 @@
 	class="section-yellow py-24 md:py-8 bg-cover bg-center relative"
 	style="background-image: url('/bpip-hero-bg.webp'); height: 60vh; max-height: 60vh;"
 >
+	<div class="absolute inset-0 bg-yellow-300/70 md:hidden"></div>
 	<div class="container-custom relative z-10 flex items-center h-full">
 		<div class="max-w-xl">
 			<h1 class="mb-6 text-5xl lg:text-6xl font-bold text-black">
@@ -140,22 +141,41 @@
 			{#if introText}
 				<div in:fly={{ x: -30, duration: 600 }}>
 					<p class="text-lg leading-relaxed mb-6 opacity-80">
-						Take the first step towards building a trusted and high-performing MSP/MSSP team –
-						amplify your business partnering impact to the next level.
+						Take the first step toward <strong>building a high-performing team</strong> that thrives
+						on trust, collaboration, and leadership. Scale your Managed Service Provider (MSP) or
+						Managed Security Service Provider (MSSP) business while preserving your company culture
+						and aligning employee development with your growth aspirations.
 					</p>
-					<p class="text-xl font-bold mb-6 opacity-90">
-						Empower your team. Drive sustainable growth.
-					</p>
+					<p class="text-xl font-bold mb-6 opacity-90">Builders of trust. Experts in technology.</p>
 					<p class="text-lg leading-relaxed mb-6 opacity-80">
 						In the dynamic world of MSPs/MSSPs, growth is both an opportunity and a challenge. While
 						increasing MRR and scaling rapidly can be empowering, unchecked growth often puts undue
 						pressure on the very teams driving your success. Sustainable growth begins with
-						prioritising employee development.
+						prioritising employee development—ensuring your team grows in step with your business.
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						This starts with equipping employees with the principles of <strong
+							>business partnering.</strong
+						>
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Historically, business partnering referred to internal consultants/advisors supporting
+						functional success. Today, it's more than a role – it's an attitude. It's about
+						fostering collaboration, trust, and a deep passion for the business. It's about
+						understanding your work's impact on clients and how cross-functional collaboration
+						unlocks innovation and success.
+					</p>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						The <strong>MSP/MSSP Employee Development Program</strong> equips your team with the tools,
+						frameworks, language, and mindset they need to become trusted experts in prioritising exceptional
+						client value. Through this program, your employees will develop the skills to break silos,
+						embrace collaboration, and align their behaviors with your company's mission and vision.
 					</p>
 					<p class="text-lg leading-relaxed mb-8 opacity-80">
-						Our focus is on establishing the core fundamentals of business partnering to drive
-						sustainable growth through high-performing teams: know yourself, know your business, know
-						your colleagues, know your clients.
+						<strong>Ready to empower your team?</strong> If you're responsible for driving employee or
+						business growth and want your team to 'speak the language' of business partnering while working
+						in alignment to achieve your company's goals, we'd love to hear from you. Let's start the
+						conversation today!
 					</p>
 					<a href="#register-interest" class="btn btn-primary btn-lg uppercase font-bold">
 						Register your interest
@@ -192,22 +212,42 @@
 			{#if uniqueText}
 				<div in:fly={{ x: -30, duration: 600 }}>
 					<h2 class="text-4xl md:text-5xl font-bold mb-6">
-						What makes this MSP/MSSP Employee Development Program unique?
+						WHAT MAKES THIS MSP/MSSP EMPLOYEE DEVELOPMENT PROGRAM UNIQUE?
 					</h2>
-					<p class="text-lg leading-relaxed mb-6 opacity-80">
-						Firstly, we specialise in developing business partners. It's what we do, it's what we
-						are passionate about and what we do well. It's our dedication to establishing the core
-						fundamentals of business partnering with all our participants: Know yourself. Know your
-						business. Know your stakeholders.
+					<p class="text-xl font-bold mb-4 opacity-90">
+						We Specialise in Developing Business Partners
 					</p>
 					<p class="text-lg leading-relaxed mb-6 opacity-80">
-						We deliver content through a combination of research-driven tools and frameworks,
-						real-world insights, and meaningful conversations that emphasise building trust across
-						the team and organisation.
+						This is our passion, our expertise, and what we excel at. We thrive on supporting the
+						growth and development of employees in the MSP/MSSP space. Our focus is on establishing
+						the core fundamentals of business partnering to drive sustainable growth through
+						high-performing teams:
+					</p>
+					<ul class="space-y-2 mb-6">
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80">Know yourself.</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80">Know your business.</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80">Know your colleagues.</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-primary mt-1 shrink-0">●</span>
+							<span class="opacity-80">Know your clients.</span>
+						</li>
+					</ul>
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
+						Our approach combines research-driven tools and frameworks, real-world insights, and
+						meaningful connections that foster trust across teams and organisations.
 					</p>
 					<p class="text-lg leading-relaxed mb-8 opacity-80">
-						Above all, we prioritise taking action. Doing something different to get a positive
-						result for your business and clients.
+						In a fast-paced, ever-changing industry, staying the same is simply not an option.
+						Taking action is our priority—and we're here to help you do the same.
 					</p>
 					<a href="#register-interest" class="btn btn-primary btn-lg uppercase font-bold">
 						Register your interest
@@ -276,26 +316,26 @@
 			{#if ctaText}
 				<div in:fly={{ x: -30, duration: 600 }}>
 					<h2 class="text-4xl md:text-5xl font-bold mb-6">
-						THE CALL TO ACTION FOR MSP/MSSP TEAMS!
+						THE CALL TO ACTION FOR MSP/MSSPs!
 					</h2>
 					<p class="text-lg leading-relaxed mb-6 opacity-80">
 						In today's dynamic environment, businesses face increasing industry disruption, market
-						uncertainties, risk, and rapid innovation. For any team of <strong
-							>MSP/MSSP business partners</strong
-						>, these considerations bring an increased responsibility for driving and owning business
-						outcomes. This call to action serves as a vital pillar in managing change across any
-						organisation and staying relevant in the face of fast-changing industry and technology
-						market trends.
+						uncertainties, risk, and rapid innovation. For any <strong
+							>aspiring high performing MSP/MSSP team</strong
+						>, more than ever, these considerations bring an increased responsibility for driving and
+						owning business outcomes. This call to action for leaders and employees serves as a
+						vital pillar in managing growth and preserving your company culture and staying relevant
+						in the face of fast-changing industry and technology market trends. Setting the
+						foundation and defining sustainable growth in the MSP/MSSP world, forms a key part
+						helping scale growth and helping achieve core strategic goals.
 					</p>
 					<p class="text-lg leading-relaxed mb-6 opacity-80">
-						Our <strong>MSP/MSSP Employee Development Program</strong> is tailored to develop a high-performing
-						and trusted group of employees, amplifying their business acumen, differentiating their capabilities
-						and giving them an edge in the marketplace. Aimed at MSP/MSSP managers and their teams, this
-						course is suitable for all backgrounds.
+						Our <strong>MSP/MSSP development experience</strong> is tailored to develop a high-performing
+						<strong>business partners</strong>, amplifying their business acumen, differentiating their
+						capabilities and giving them an edge in the marketplace. Tailored to the MSP/MSSP sector,
+						this course is suitable for all experience and backgrounds.
 					</p>
-					<p class="text-lg font-medium mb-4">
-						Upon finishing the MSP/MSSP Employee Development Program, participants will be able to:
-					</p>
+					<p class="text-lg font-medium mb-4">The learning outcomes for participants include:</p>
 					<ul class="space-y-3 mb-8">
 						<li class="flex items-start gap-3">
 							<span class="text-primary mt-1 shrink-0">●</span>
@@ -324,10 +364,6 @@
 							>
 						</li>
 					</ul>
-					<p class="text-base leading-relaxed opacity-70 mb-8">
-						This program features a face-to-face component, and micro-learning activities and
-						check-in process to help embed the Program learnings.
-					</p>
 					<a href="/evolve-book" class="btn btn-primary btn-lg uppercase font-bold">BUY NOW</a>
 				</div>
 			{/if}

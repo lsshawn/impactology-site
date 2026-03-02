@@ -111,6 +111,7 @@
 	class="section-yellow py-24 md:py-8 bg-cover bg-center relative"
 	style="background-image: url('/bpip-hero-bg.webp'); height: 60vh; max-height: 60vh;"
 >
+	<div class="absolute inset-0 bg-yellow-300/70 md:hidden"></div>
 	<div class="container-custom relative z-10 flex items-center h-full">
 		<div class="max-w-xl">
 			<h1 class="mb-6 text-5xl lg:text-6xl font-bold text-black">

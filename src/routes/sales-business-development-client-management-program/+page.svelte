@@ -222,9 +222,10 @@
 	class="section-yellow py-24 md:py-8 bg-cover bg-center relative"
 	style="background-image: url('/bpip-hero-bg.webp'); height: 60vh; max-height: 60vh;"
 >
+	<div class="absolute inset-0 bg-yellow-300/70 md:hidden"></div>
 	<div class="container-custom relative z-10 flex items-center h-full">
 		<div class="max-w-xl">
-			<h1 class="mb-6 text-5xl lg:text-6xl font-bold text-black">
+			<h1 class="mb-6 text-3xl lg:text-6xl font-bold text-black">
 				Sales, Business Development & Client Management Business Partnering Impact Program
 			</h1>
 			<a href="#register-interest" class="btn btn-secondary btn-lg uppercase font-bold mb-6">
@@ -256,16 +257,16 @@
 					</p>
 					<p class="text-lg leading-relaxed mb-6 opacity-80">
 						Sales, Business Development (BD), and Client Management teams are the lifeblood of any
-						growing organisation. Yet, in the complex environments of small to medium enterprises and
-						large enterprise-level businesses, these teams often face challenges that hinder their
-						ability to deliver consistent growth, align with strategic goals, and maximise client
-						satisfaction.
+						growing organisation. Yet, in the complex environments of small to medium enterprises
+						and large enterprise-level businesses, these teams often face challenges that hinder
+						their ability to deliver consistent growth, align with strategic goals, and maximise
+						client satisfaction.
 					</p>
 					<p class="text-lg leading-relaxed mb-8 opacity-80">
 						The Sales, BD & Client Management Business Partnering IMPACT Program by Impactology is
 						specifically designed to address these challenges. It equips sales leaders and client
-						servicing teams with the skills and strategies to become true business partners, enabling
-						them to drive revenue, build client trust, and align seamlessly with broader
+						servicing teams with the skills and strategies to become true business partners,
+						enabling them to drive revenue, build client trust, and align seamlessly with broader
 						organisational objectives.
 					</p>
 					<a href="#register-interest" class="btn btn-primary btn-lg uppercase font-bold">
@@ -313,7 +314,9 @@
 					<div class="border border-neutral-content/20 p-8 hover:border-primary transition-colors">
 						<h3 class="text-xl text-primary font-bold mb-4">{challenge.title}</h3>
 						<p class="text-sm font-bold text-white mb-1">The Challenge:</p>
-						<p class="text-sm leading-relaxed opacity-80 text-base-100 mb-4">{challenge.challenge}</p>
+						<p class="text-sm leading-relaxed opacity-80 text-base-100 mb-4">
+							{challenge.challenge}
+						</p>
 						<p class="text-sm font-bold text-white mb-1">Our Solution:</p>
 						<p class="text-sm leading-relaxed opacity-80 text-base-100">{challenge.solution}</p>
 					</div>
@@ -483,7 +486,9 @@
 <!-- Take the First Step -->
 <section class="py-20 md:py-28 bg-base-100">
 	<div class="container-custom max-w-4xl mx-auto text-center">
-		<h2 class="text-4xl md:text-5xl font-bold mb-6">TAKE THE FIRST STEP TOWARD SUSTAINABLE GROWTH</h2>
+		<h2 class="text-4xl md:text-5xl font-bold mb-6">
+			TAKE THE FIRST STEP TOWARD SUSTAINABLE GROWTH
+		</h2>
 		<p class="text-lg leading-relaxed opacity-80">
 			Empower your sales, BD, and client management teams to overcome bottlenecks, drive revenue,
 			and build long-term client relationships. The Sales, BD & Client Management Business
