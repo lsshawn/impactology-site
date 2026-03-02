@@ -1,7 +1,10 @@
 <script lang="ts">
 	import SEO from '$lib/components/SEO.svelte';
+	import TestimonialSlider from '$lib/components/TestimonialSlider.svelte';
+	import EvolveBookSection from '$lib/components/EvolveBookSection.svelte';
 	import ClientLogosSection from '$lib/components/ClientLogosSection.svelte';
 	import RegisterInterestSection from '$lib/components/RegisterInterestSection.svelte';
+	import ProgramBenefitsSection from '$lib/components/ProgramBenefitsSection.svelte';
 	import { fly } from 'svelte/transition';
 
 	function trigger(node: HTMLElement, stateSetter: (v: boolean) => void) {
@@ -22,96 +25,48 @@
 		return { destroy: () => observer?.disconnect() };
 	}
 
-	const challenges = [
+	const modules = [
 		{
-			title: 'Siloed Operations and Misaligned Priorities',
-			challenge:
-				'Sales and BD teams often work in isolation and/or in silos, leading to misalignment with marketing, operations, and product development teams.',
-			solution:
-				'Our program fosters cross-functional collaboration and strategic alignment, ensuring sales and client servicing teams work cohesively with other departments to deliver holistic solutions to clients.'
+			icon: '/bpip-icon01.webp',
+			title: 'BUILD STRATEGIC BUSINESS PARTNERING SKILLS',
+			subtitle: 'Engage with clients as trusted advisors rather than transactional salespeople.',
+			description:
+				'Train your teams to engage with clients as trusted advisors rather than transactional salespeople. Develop the skills to align with and influence key stakeholders internally and externally, positioning your team as strategic partners who add real value.'
 		},
 		{
-			title: 'Transactional Client Relationships',
-			challenge:
-				'Sales teams may struggle to move beyond transactional interactions, which can limit their ability to build long-term, trust-based client relationships.',
-			solution:
-				'We train teams to adopt a consultative approach, positioning themselves as trusted advisors who add strategic value to clients.'
+			icon: '/bpip-icon02.webp',
+			title: 'STRENGTHEN LEADERSHIP ACROSS TEAMS',
+			subtitle: 'Inspire teams, foster collaboration, and drive accountability.',
+			description:
+				'Provide tools and frameworks to inspire teams, foster collaboration, and drive accountability. Equip leaders to navigate market disruptions and drive innovation, building high-performing teams that thrive in high-pressure environments.'
 		},
 		{
-			title: 'Leadership Gaps in Driving Performance',
-			challenge:
-				'Sales leaders may lack the tools to effectively inspire, align, and manage diverse teams in high-pressure environments.',
-			solution:
-				'Our leadership program empowers sales directors and team leaders to build high-performing teams that thrive on collaboration and accountability.'
+			icon: '/bpip-icon03.webp',
+			title: 'FOSTER CROSS-FUNCTIONAL COLLABORATION',
+			subtitle: 'Create alignment between sales, marketing, operations, and product teams.',
+			description:
+				'Create alignment between sales, marketing, operations, and product teams for seamless delivery. Train teams to communicate client needs effectively across functions to enhance service delivery and client satisfaction.'
 		},
 		{
-			title: 'Lack of Commercial Acumen Across Teams',
-			challenge:
-				'Sales professionals may lack the broader business acumen needed to align their efforts with organisational goals and make strategic decisions.',
-			solution:
-				'We enhance commercial acumen through targeted training, enabling teams to make smarter, more impactful decisions.'
-		}
-	];
-
-	const programHighlights = [
-		{
-			title: 'Build Strategic Business Partnering Skills',
-			items: [
-				{
-					subtitle: 'Enhance Client Relationships',
-					description:
-						'Train your teams to engage with clients as trusted advisors rather than transactional salespeople.'
-				},
-				{
-					subtitle: 'Increase Influence',
-					description:
-						'Develop the skills to align with and influence key stakeholders internally and externally.'
-				}
-			]
+			icon: '/bpip-icon04.webp',
+			title: 'ENHANCE COMMERCIAL ACUMEN',
+			subtitle: 'Align sales strategies with organisational goals and market dynamics.',
+			description:
+				'Train teams to align sales strategies with organisational goals and market dynamics. Equip sales teams to demonstrate ROI and articulate the value of their solutions to clients and leadership, enabling smarter and more impactful decisions.'
 		},
 		{
-			title: 'Strengthen Leadership Across Teams',
-			items: [
-				{
-					subtitle: 'Empower Sales Leaders',
-					description:
-						'Provide tools and frameworks to inspire teams, foster collaboration, and drive accountability.'
-				},
-				{
-					subtitle: 'Lead Through Change',
-					description: 'Equip leaders to navigate market disruptions and drive innovation.'
-				}
-			]
+			icon: '/bpip-icon05.webp',
+			title: 'OVERCOME SILOED OPERATIONS',
+			subtitle: 'Foster cross-functional collaboration and strategic alignment.',
+			description:
+				'Our program fosters cross-functional collaboration and strategic alignment, ensuring sales and client servicing teams work cohesively with other departments to deliver holistic solutions to clients, breaking down silos that hinder performance.'
 		},
 		{
-			title: 'Foster Cross-Functional Collaboration',
-			items: [
-				{
-					subtitle: 'Break Down Silos',
-					description:
-						'Create alignment between sales, marketing, operations, and product teams for seamless delivery.'
-				},
-				{
-					subtitle: 'Improve Communication',
-					description:
-						'Train teams to communicate client needs effectively across functions to enhance service delivery and client satisfaction.'
-				}
-			]
-		},
-		{
-			title: 'Enhance Commercial Acumen',
-			items: [
-				{
-					subtitle: 'Understand the Business Landscape',
-					description:
-						'Train teams to align sales strategies with organisational goals and market dynamics.'
-				},
-				{
-					subtitle: 'Focus on Value Creation',
-					description:
-						'Equip sales teams to demonstrate ROI and articulate the value of their solutions to clients and leadership.'
-				}
-			]
+			icon: '/bpip-icon06.webp',
+			title: 'BUILD TRUST-BASED CLIENT RELATIONSHIPS',
+			subtitle: 'Adopt a consultative approach for long-term client partnerships.',
+			description:
+				'We train teams to adopt a consultative approach, positioning themselves as trusted advisors who add strategic value to clients. Build trust and drive long-term partnerships that deliver exceptional client experiences and foster loyalty.'
 		}
 	];
 
@@ -152,7 +107,8 @@
 		},
 		{
 			title: 'Increased Client Retention',
-			description: 'Deliver exceptional client experiences that foster loyalty and repeat business.'
+			description:
+				'Deliver exceptional client experiences that foster loyalty and repeat business.'
 		}
 	];
 
@@ -179,16 +135,10 @@
 
 	let introImg = $state(false);
 	let introText = $state(false);
-	let challengesHeading = $state(false);
-	let challengesGrid = $state(false);
-	let highlightsHeading = $state(false);
-	let highlightsGrid = $state(false);
-	let whoHeading = $state(false);
-	let whoGrid = $state(false);
-	let benefitsHeading = $state(false);
-	let benefitsGrid = $state(false);
-	let whyHeading = $state(false);
-	let whyGrid = $state(false);
+	let uniqueImg = $state(false);
+	let uniqueText = $state(false);
+	let modulesHeading = $state(false);
+	let modulesGrid = $state(false);
 </script>
 
 <svelte:head>
@@ -225,7 +175,7 @@
 	<div class="absolute inset-0 bg-yellow-300/70 md:hidden"></div>
 	<div class="container-custom relative z-10 flex items-center h-full">
 		<div class="max-w-xl">
-			<h1 class="mb-6 text-3xl lg:text-6xl font-bold text-black">
+			<h1 class="mb-6 text-3xl lg:text-5xl font-bold text-black">
 				Sales, Business Development & Client Management Business Partnering Impact Program
 			</h1>
 			<a href="#register-interest" class="btn btn-secondary btn-lg uppercase font-bold mb-6">
@@ -289,193 +239,118 @@
 
 <ClientLogosSection />
 
-<!-- Why Choose — Challenges & Solutions -->
+<!-- Why Choose This Program -->
 <section
-	class="py-20 md:py-28 bg-[#212023]"
+	class="py-20 md:py-28 bg-base-100"
 	use:trigger={(v) => {
-		challengesHeading = v;
-		setTimeout(() => (challengesGrid = v), 150);
+		uniqueImg = v;
+		setTimeout(() => (uniqueText = v), 150);
 	}}
 >
 	<div class="container-custom">
-		{#if challengesHeading}
-			<div class="text-center mb-6" in:fly={{ y: 30, duration: 600 }}>
-				<h2 class="text-4xl md:text-5xl font-bold text-base-100 mb-4">
-					WHY CHOOSE THE SALES, BD & CLIENT MANAGEMENT BUSINESS PARTNERING IMPACT PROGRAM?
-				</h2>
-				<p class="text-lg text-base-100 opacity-80">
-					Addressing Common Challenges Faced by Sales and BD Teams
-				</p>
-			</div>
-		{/if}
-		{#if challengesGrid}
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-12" in:fly={{ y: 30, duration: 600 }}>
-				{#each challenges as challenge, i (i)}
-					<div class="border border-neutral-content/20 p-8 hover:border-primary transition-colors">
-						<h3 class="text-xl text-primary font-bold mb-4">{challenge.title}</h3>
-						<p class="text-sm font-bold text-white mb-1">The Challenge:</p>
-						<p class="text-sm leading-relaxed opacity-80 text-base-100 mb-4">
-							{challenge.challenge}
-						</p>
-						<p class="text-sm font-bold text-white mb-1">Our Solution:</p>
-						<p class="text-sm leading-relaxed opacity-80 text-base-100">{challenge.solution}</p>
+		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+			{#if uniqueText}
+				<div in:fly={{ x: -30, duration: 600 }}>
+					<h2 class="text-4xl md:text-5xl font-bold mb-6">
+						Why Choose The Sales, BD & Client Management Business Partnering Impact Program?
+					</h2>
+					<p class="text-lg font-bold mb-4 opacity-90">
+						Addressing Common Challenges Faced by Sales and BD Teams
+					</p>
+					<div class="space-y-6 mb-8">
+						<div>
+							<p class="font-bold mb-1">Siloed Operations and Misaligned Priorities</p>
+							<p class="text-sm leading-relaxed opacity-80 mb-1">
+								<strong>The Challenge:</strong> Sales and BD teams often work in isolation and/or in
+								silos, leading to misalignment with marketing, operations, and product development teams.
+							</p>
+							<p class="text-sm leading-relaxed opacity-80">
+								<strong>Our Solution:</strong> Our program fosters cross-functional collaboration and
+								strategic alignment, ensuring sales and client servicing teams work cohesively with other
+								departments to deliver holistic solutions to clients.
+							</p>
+						</div>
+						<div>
+							<p class="font-bold mb-1">Transactional Client Relationships</p>
+							<p class="text-sm leading-relaxed opacity-80 mb-1">
+								<strong>The Challenge:</strong> Sales teams may struggle to move beyond transactional
+								interactions, which can limit their ability to build long-term, trust-based client relationships.
+							</p>
+							<p class="text-sm leading-relaxed opacity-80">
+								<strong>Our Solution:</strong> We train teams to adopt a consultative approach, positioning
+								themselves as trusted advisors who add strategic value to clients.
+							</p>
+						</div>
+						<div>
+							<p class="font-bold mb-1">Leadership Gaps in Driving Performance</p>
+							<p class="text-sm leading-relaxed opacity-80 mb-1">
+								<strong>The Challenge:</strong> Sales leaders may lack the tools to effectively inspire,
+								align, and manage diverse teams in high-pressure environments.
+							</p>
+							<p class="text-sm leading-relaxed opacity-80">
+								<strong>Our Solution:</strong> Our leadership program empowers sales directors and team
+								leaders to build high-performing teams that thrive on collaboration and accountability.
+							</p>
+						</div>
+						<div>
+							<p class="font-bold mb-1">Lack of Commercial Acumen Across Teams</p>
+							<p class="text-sm leading-relaxed opacity-80 mb-1">
+								<strong>The Challenge:</strong> Sales professionals may lack the broader business acumen
+								needed to align their efforts with organisational goals and make strategic decisions.
+							</p>
+							<p class="text-sm leading-relaxed opacity-80">
+								<strong>Our Solution:</strong> We enhance commercial acumen through targeted training,
+								enabling teams to make smarter, more impactful decisions.
+							</p>
+						</div>
 					</div>
-				{/each}
-			</div>
-		{/if}
+					<a href="#register-interest" class="btn btn-primary btn-lg uppercase font-bold">
+						Register your interest
+					</a>
+				</div>
+			{/if}
+			{#if uniqueImg}
+				<div class="flex justify-center" in:fly={{ x: 30, duration: 600 }}>
+					<img
+						src="/bpip-cta.webp"
+						alt="Sales & BD Business Partnering unique program"
+						class="w-full max-w-md object-contain"
+					/>
+				</div>
+			{/if}
+		</div>
 	</div>
 </section>
 
+<EvolveBookSection />
+
 <!-- Program Highlights -->
 <section
-	class="py-20 md:py-28 bg-base-300"
+	class="py-20 md:py-28 bg-[#212023]"
 	use:trigger={(v) => {
-		highlightsHeading = v;
-		setTimeout(() => (highlightsGrid = v), 150);
+		modulesHeading = v;
+		setTimeout(() => (modulesGrid = v), 150);
 	}}
 >
 	<div class="container-custom">
-		{#if highlightsHeading}
+		{#if modulesHeading}
 			<h2
-				class="text-4xl md:text-5xl font-bold text-center mb-16"
+				class="text-5xl lg:text-7xl font-bold text-center mb-16 text-base-100"
 				in:fly={{ y: 30, duration: 600 }}
 			>
 				PROGRAM HIGHLIGHTS
 			</h2>
 		{/if}
-		{#if highlightsGrid}
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-8" in:fly={{ y: 30, duration: 600 }}>
-				{#each programHighlights as highlight, i (i)}
-					<div class="border border-base-content/20 p-8">
-						<h3 class="text-xl font-bold mb-6 text-primary">{highlight.title}</h3>
-						{#each highlight.items as item}
-							<div class="mb-4 last:mb-0">
-								<p class="font-bold mb-1">{item.subtitle}:</p>
-								<p class="text-sm opacity-80 leading-relaxed">{item.description}</p>
-							</div>
-						{/each}
-					</div>
-				{/each}
-			</div>
-		{/if}
-	</div>
-</section>
-
-<!-- Who Should Attend -->
-<section
-	class="py-20 md:py-28 bg-base-100"
-	use:trigger={(v) => {
-		whoHeading = v;
-		setTimeout(() => (whoGrid = v), 150);
-	}}
->
-	<div class="container-custom">
-		{#if whoHeading}
-			<h2
-				class="text-4xl md:text-5xl font-bold text-center mb-12"
-				in:fly={{ y: 30, duration: 600 }}
-			>
-				WHO SHOULD ATTEND?
-			</h2>
-		{/if}
-		{#if whoGrid}
-			<div
-				class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto"
-				in:fly={{ y: 30, duration: 600 }}
-			>
-				{#each whoShouldAttend as role, i (i)}
-					<div class="bg-base-200 p-4 text-center">
-						<p class="font-medium">{role}</p>
-					</div>
-				{/each}
-			</div>
-		{/if}
-	</div>
-</section>
-
-<!-- Program Benefits -->
-<section
-	class="bg-[#fff000] py-20 md:py-28"
-	use:trigger={(v) => {
-		benefitsHeading = v;
-		setTimeout(() => (benefitsGrid = v), 150);
-	}}
->
-	<div class="container-custom">
-		{#if benefitsHeading}
-			<h2
-				class="text-4xl md:text-5xl font-bold text-center mb-16"
-				in:fly={{ y: 30, duration: 600 }}
-			>
-				PROGRAM BENEFITS
-			</h2>
-		{/if}
-		{#if benefitsGrid}
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12" in:fly={{ y: 30, duration: 600 }}>
-				<div>
-					<h3 class="text-2xl font-bold mb-8 text-center">For Your Team</h3>
-					<div class="space-y-4">
-						{#each teamBenefits as benefit}
-							<div class="flex items-start gap-4 bg-black/10 p-6">
-								<span class="text-black mt-1 shrink-0 text-xl">●</span>
-								<div>
-									<p class="font-bold mb-1">{benefit.title}:</p>
-									<p class="text-sm opacity-90">{benefit.description}</p>
-								</div>
-							</div>
-						{/each}
-					</div>
-				</div>
-				<div>
-					<h3 class="text-2xl font-bold mb-8 text-center">For Your Organisation</h3>
-					<div class="space-y-4">
-						{#each orgBenefits as benefit}
-							<div class="flex items-start gap-4 bg-black/10 p-6">
-								<span class="text-black mt-1 shrink-0 text-xl">●</span>
-								<div>
-									<p class="font-bold mb-1">{benefit.title}:</p>
-									<p class="text-sm opacity-90">{benefit.description}</p>
-								</div>
-							</div>
-						{/each}
-					</div>
-				</div>
-			</div>
-		{/if}
-	</div>
-</section>
-
-<!-- Why Impactology -->
-<section
-	class="py-20 md:py-28 bg-base-100"
-	use:trigger={(v) => {
-		whyHeading = v;
-		setTimeout(() => (whyGrid = v), 150);
-	}}
->
-	<div class="container-custom">
-		{#if whyHeading}
-			<div class="text-center mb-12" in:fly={{ y: 30, duration: 600 }}>
-				<h2 class="text-4xl md:text-5xl font-bold mb-6">WHY IMPACTOLOGY?</h2>
-				<p class="text-lg max-w-3xl mx-auto opacity-80">
-					At Impactology, we understand the unique challenges that sales, BD, and client management
-					teams face in small to medium and large organisations. Our tailored programs are designed
-					to address these pain points and deliver actionable solutions that drive real change.
-				</p>
-			</div>
-		{/if}
-		{#if whyGrid}
-			<div
-				class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto"
-				in:fly={{ y: 30, duration: 600 }}
-			>
-				{#each whyDifferent as item}
-					<div class="flex items-start gap-4 border border-base-300 p-6">
-						<span class="text-primary mt-1 shrink-0 text-xl">★</span>
-						<div>
-							<p class="font-bold mb-1">{item.title}:</p>
-							<p class="text-sm opacity-80">{item.description}</p>
+		{#if modulesGrid}
+			<div class="grid grid-cols-1 lg:grid-cols-3 gap-8" in:fly={{ y: 30, duration: 600 }}>
+				{#each modules as module, i (i)}
+					<div class="border border-neutral-content/20 p-8 hover:border-primary transition-colors">
+						<div class="mb-6">
+							<img src={module.icon} alt={module.title} class="w-16 h-16 object-contain mb-4" />
+							<h3 class="text-2xl text-primary font-bold mb-1">{module.title}</h3>
+							<p class="text-sm text-white mb-3">{module.subtitle}</p>
 						</div>
+						<p class="text-sm leading-relaxed opacity-90 text-base-100">{module.description}</p>
 					</div>
 				{/each}
 			</div>
@@ -483,18 +358,18 @@
 	</div>
 </section>
 
-<!-- Take the First Step -->
-<section class="py-20 md:py-28 bg-base-100">
-	<div class="container-custom max-w-4xl mx-auto text-center">
-		<h2 class="text-4xl md:text-5xl font-bold mb-6">
-			TAKE THE FIRST STEP TOWARD SUSTAINABLE GROWTH
-		</h2>
-		<p class="text-lg leading-relaxed opacity-80">
-			Empower your sales, BD, and client management teams to overcome bottlenecks, drive revenue,
-			and build long-term client relationships. The Sales, BD & Client Management Business
-			Partnering IMPACT Program is your pathway to creating high-performing teams that thrive in
-			today's competitive environment.
-		</p>
+<ProgramBenefitsSection
+	{whoShouldAttend}
+	{teamBenefits}
+	{orgBenefits}
+	{whyDifferent}
+	whyIntro="At Impactology, we understand the unique challenges that sales, BD, and client management teams face in small to medium and large organisations. Our tailored programs are designed to address these pain points and deliver actionable solutions that drive real change."
+/>
+
+<!-- Testimonials -->
+<section class="bg-[#fff000] py-20 md:py-28">
+	<div class="container-custom">
+		<TestimonialSlider />
 	</div>
 </section>
 
