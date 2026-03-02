@@ -203,7 +203,7 @@
 	<div class="absolute inset-0 bg-yellow-300/70 md:hidden"></div>
 	<div class="container-custom relative z-10 flex items-center h-full">
 		<div class="max-w-xl">
-			<h1 class="mb-6 text-5xl lg:text-6xl font-bold text-black">
+			<h1 class="mb-6 text-3xl lg:text-6xl font-bold text-black">
 				Marketing & Communications Team Business Partnering Impact Program
 			</h1>
 			<a href="#register-interest" class="btn btn-secondary btn-lg uppercase font-bold mb-6">
@@ -407,7 +407,6 @@
 		setTimeout(() => (whoGrid = v), 150);
 	}}
 >
-
 	<div class="container-custom">
 		{#if whoHeading}
 			<h2
