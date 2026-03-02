@@ -87,12 +87,12 @@
 		{
 			question: 'What is Impactora used for?',
 			answer:
-				'We solve the productivity challenge for employees and HR by providing answers to frequently asked questions for non-contextual information. We solve employee performance challenges by providing the right, tailored information with the right insights at the right time to resolve people issues and improve decision making.\n\nPareto rule exists that 80% of the questions are on simple queries – the focus is to lower service delivery costs. Achievement of key people outcomes however comes from answering 20% of the challenging issues and decisions. Combined, Impactora solves three critical issues:\n• Improve employee performance by providing the right tailored information at the right time with the right level of insights\n• Improve employee and HR productivity by providing answers to non-contextual questions\n• Improve Leaders, Managers, Employees and HR capabilities and knowledge by providing insights to solve contextual issues and decisions\n\nWhilst employees have access to infinite sources of knowledge, data and advice – it is not tailored and it is not specific to their unique situation. This "mass-information" environment creates noise and cognitive overload for employees, where abundant choice is the enemy of action.'
+				'We solve the productivity challenge for employees and HR by providing answers to frequently asked questions for non-contextual information. We solve employee performance challenges by providing the right, tailored information with the right insights at the right time to resolve people issues and improve decision making.\n\nPareto rule exists that 80% of the questions are on simple queries – the focus is to lower service delivery costs. Achievement of key people outcomes however comes from answering 20% of the challenging issues and decisions. Combined, Impactora solves three critical issues:\n• Improve employee performance by providing the right tailored information at the right time with the right level of insights\n• Improve employee and HR productivity by providing answers to non-contextual questions\n• Improve Leaders, Managers, Employees and HR capabilities and knowledge by providing insights to solve contextual issues and decisions\n\nWhilst employees have access to infinite sources of knowledge, data and advice – it is not tailored and it is not specific to their unique situation. This “mass-information” environment creates noise and cognitive overload for employees, where abundant choice is the enemy of action. This solution provides organisations access to a scalable Platform technology that empowers employees to take ownership of their day-to-day actions and behaviours and positively impact themselves, their team, their colleagues, their customers and community'
 		},
 		{
 			question: 'Is the Impactora Platform safe and secure?',
 			answer:
-				'Impactora is the trusted Platform where employees feel safe to help them resolve some of the tricky issues, access insights, make decisions, and achieve their goals which positively impacts their colleagues and work environment. Click here to better understand how we keep your data safe.'
+				'Impactora is the trusted Platform where employees feel safe to help them resolve some of the tricky issues, access insights, make decisions, and achieve their goals which positively impacts their colleagues and work environment. <a href="/legals1/impactora-privacy" class="underline hover:opacity-70">Click here to better understand how we keep your data safe.</a>'
 		},
 		{
 			question: 'Who is the target audience for Impactora?',
@@ -102,7 +102,7 @@
 		{
 			question: 'Which employees can best benefit from Impactora?',
 			answer:
-				'Employees who are:\n• Stretched in their role and have a lack of time and knowledge on where to seek advice\n• Getting stuck in career: compromising career progression through bad decisions\n• Have a fear of failing in their role – lack confidence\n• Looking for a platform to complement existing learning and development programs\n• Have a willingness to embrace new modes of learning\n• Receiving too much theoretical advice – non-tactical or implementable\n• Not feeling valued at work\n• Lack of timely, actionable personal advice\n• Trying to balance work and personal commitments\n• Lack of connectivity with colleagues\n• Not developing fast enough (keep pace of change and expectations)\n• Lack of personal connection to day-to-day work.'
+				'Employees who are:\n• Stretched in their role and have a lack of time and knowledge on where to seek advice\n• Getting stuck in career: compromising career progression through bad decisions\n• Have a fear of failing in their role – lack confidence\n• Looking for a platform to complement existing learning and development programs\n• Have a willingness to embrace new modes of learning\n• Receiving too much theoretical advice – non-tactical or implementable\n• Management doesn’t get me\n• Not feeling valued at work\n• Lack of timely, actionable personal advice\n• Trying to balance work and personal commitments\n• Lack of connectivity with colleagues\n• Fear of not being good enough.\n• Not developing fast enough (keep pace of change and expectations)\n• Lack of personal connection to day-to-day work.'
 		}
 	];
 
@@ -238,7 +238,13 @@
 	<div class="container-custom relative z-10">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 			<div class="reveal-y" class:visible={heroText}>
-				<img src="/impactora-logo.webp" alt="Impactora" width="368" height="84" class="h-10 md:h-12 w-auto mb-6" />
+				<img
+					src="/impactora-logo.webp"
+					alt="Impactora"
+					width="368"
+					height="84"
+					class="h-10 md:h-12 w-auto mb-6"
+				/>
 				<div class="mb-8">
 					<span
 						class="text-6xl md:text-7xl lg:text-[90px] font-bold leading-none"
@@ -277,15 +283,15 @@
 			<div class="reveal-y" class:visible={tailoredText} style="transition-delay: 150ms">
 				<p class="text-lg leading-relaxed mb-6">
 					The way we work has changed forever. The emergence of remote and hybrid workplaces has
-					presented great opportunities and benefits for both organisations and their employees,
-					but it's not without its challenges. Most notably is the loss of in-person workplace
+					presented great opportunities and benefits for both organisations and their employees, but
+					it's not without its challenges. Most notably is the loss of in-person workplace
 					connection, and along with it the "water cooler" conversations where people shared their
 					experiences and knowledge.
 				</p>
 				<p class="text-lg leading-relaxed">
 					<strong>IMPACTORA</strong> is a SaaS platform designed to bridge that loss of organisational
-					knowledge by providing easy to access and immediate support, advice and insights that are
-					tailored to the individual employee and your business.
+					knowledge by providing easy to access and immediate support, advice and insights that are tailored
+					to the individual employee and your business.
 				</p>
 			</div>
 		</div>
@@ -301,10 +307,7 @@
 	}}
 >
 	<div>
-		<h2
-			class="reveal-y text-center mb-12 text-3xl md:text-4xl pt-16"
-			class:visible={helpsHeading}
-		>
+		<h2 class="reveal-y text-center mb-12 text-3xl md:text-4xl pt-16" class:visible={helpsHeading}>
 			IMPACTORA HELPS YOU&hellip;
 		</h2>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
@@ -312,7 +315,9 @@
 				<div
 					class="reveal-y p-10 text-white"
 					class:visible={helpsBoxes}
-					style="background-color: {['#636363', '#4a4a4a', '#363636', '#1a1a1a'][i]}; transition-delay: {i * 100}ms"
+					style="background-color: {['#636363', '#4a4a4a', '#363636', '#1a1a1a'][
+						i
+					]}; transition-delay: {i * 100}ms"
 				>
 					<img
 						src={box.icon}
@@ -346,9 +351,9 @@
 			</h2>
 			<div class="reveal-y" class:visible={timelyContent} style="transition-delay: 150ms">
 				<p class="text-lg leading-relaxed mb-10">
-					We now have access to infinite sources of knowledge, data, and advice. However, it can
-					be difficult to find information specific to your situation and the abundance of choice
-					is often the enemy of action. <strong>IMPACTORA</strong> provides leaders, managers and employees
+					We now have access to infinite sources of knowledge, data, and advice. However, it can be
+					difficult to find information specific to your situation and the abundance of choice is
+					often the enemy of action. <strong>IMPACTORA</strong> provides leaders, managers and employees
 					access to tailored advice and insights that will positively impact themselves, their teams,
 					colleagues and customers.
 				</p>
@@ -398,10 +403,7 @@
 	</div>
 </section>
 
-<section
-	class="py-8 overflow-hidden bg-base-100"
-	use:trigger={(v) => (featureLeft = v)}
->
+<section class="py-8 overflow-hidden bg-base-100" use:trigger={(v) => (featureLeft = v)}>
 	<div
 		class="reveal-y grid grid-cols-1 md:grid-cols-4 gap-3 px-4 max-w-5xl mx-auto"
 		class:visible={featureLeft}
@@ -416,7 +418,7 @@
 				aria-hidden="true"
 				class="absolute inset-0 w-full h-full object-cover opacity-10"
 			/>
-			<h3 class="text-sky-200 font-medium mb-3 text-xs tracking-wider relative z-10 normal-case">
+			<h3 class="text-sky-200 font-medium mb-3 text-sm tracking-wider relative z-10 normal-case">
 				Team management advice
 			</h3>
 			<h2
@@ -430,7 +432,7 @@
 		<div class="bg-[#1EBBD7] p-5 flex flex-col justify-between min-h-[160px]">
 			<Icon icon="ph:quotes" class="text-2xl text-white/60" />
 			<div>
-				<p class="text-white text-xs font-serif italic leading-relaxed mb-3">
+				<p class="text-white text-sm font-serif italic leading-relaxed mb-3">
 					"If you have to make a mistake, it&#39;s better to make a mistake of action than one of
 					inaction."
 				</p>
@@ -445,7 +447,7 @@
 				<h3 class="text-[#1EBBD7] text-[10px] uppercase tracking-wider mb-1 normal-case">
 					Personal development advice
 				</h3>
-				<h4 class="text-gray-800 text-xs font-semibold leading-snug normal-case">
+				<h4 class="text-gray-800 text-sm font-semibold leading-snug normal-case">
 					Initiating opportunities to collaborate with colleagues
 				</h4>
 			</div>
@@ -491,7 +493,7 @@
 		<div class="bg-[#5FD3F3] p-5 flex flex-col justify-between min-h-[160px]">
 			<Icon icon="ph:quotes" class="text-2xl text-white/60" />
 			<div>
-				<p class="text-white text-xs font-serif italic leading-relaxed mb-3">
+				<p class="text-white text-sm font-serif italic leading-relaxed mb-3">
 					"Your most unhappy customers are your greatest source of learning."
 				</p>
 				<p class="text-white/80 text-[10px] uppercase tracking-wider">Bill Gates</p>
@@ -569,7 +571,7 @@
 			>
 			<div>
 				<h3 class="text-[#0075A0] font-bold text-sm mb-1 normal-case">Develop your skills</h3>
-				<p class="text-gray-700 text-xs leading-relaxed">
+				<p class="text-gray-700 text-sm leading-relaxed">
 					Seek out feedback from peers or customers.
 				</p>
 			</div>
@@ -582,7 +584,7 @@
 			>
 			<div>
 				<h3 class="text-white font-semibold text-sm mb-1 normal-case">Shared knowledge</h3>
-				<p class="text-white/80 text-xs leading-relaxed">
+				<p class="text-white/80 text-sm leading-relaxed">
 					Seek views from experts outside your organisation.
 				</p>
 			</div>
@@ -636,10 +638,10 @@
 					<div class="text-4xl font-bold mb-2" style="font-family: var(--font-heading);">
 						{step.number}
 					</div>
-					<h3 class="text-sm font-bold uppercase tracking-wide mb-3">
+					<h3 class="text-base font-bold uppercase tracking-wide mb-3">
 						{step.title.toUpperCase()}
 					</h3>
-					<p class="text-xs leading-relaxed opacity-70 max-w-[200px] mx-auto">
+					<p class="text-sm leading-relaxed opacity-70 max-w-[200px] mx-auto">
 						{step.description}
 					</p>
 				</div>
@@ -665,7 +667,11 @@
 			{/each}
 		</div>
 
-		<div class="reveal-y text-center mt-12" class:visible={stepsItems} style="transition-delay: 200ms">
+		<div
+			class="reveal-y text-center mt-12"
+			class:visible={stepsItems}
+			style="transition-delay: 200ms"
+		>
 			<a
 				href="#contact-section"
 				class="inline-block bg-black text-white px-10 py-4 rounded-full font-bold text-sm uppercase tracking-wider hover:bg-white hover:text-[#5ad4ff] hover:outline hover:outline-2 hover:outline-[#5ad4ff] transition-all"
@@ -778,7 +784,7 @@
 						<input type="radio" name="impactora-faq" checked={i === 0} />
 						<div class="collapse-title font-semibold">{faq.question}</div>
 						<div class="collapse-content text-sm">
-							<p class="leading-relaxed opacity-80 whitespace-pre-line">{faq.answer}</p>
+							<p class="leading-relaxed opacity-80 whitespace-pre-line">{@html faq.answer}</p>
 						</div>
 					</div>
 				{/each}
