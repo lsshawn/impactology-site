@@ -2,6 +2,7 @@
 	import SEO from '$lib/components/SEO.svelte';
 	import Icon from '@iconify/svelte';
 	import { getAllBlogPosts } from '$lib/data/blog-posts';
+	import EvolveBookSection from '$lib/components/EvolveBookSection.svelte';
 
 	const blogPosts = getAllBlogPosts();
 
@@ -40,20 +41,15 @@
 	}}
 />
 
-<!-- Hero Section -->
-<section class="section-yellow py-16 md:py-24">
-	<div class="container-custom">
-		<h2 class="mb-4">BLOG</h2>
-		<p class="text-xl md:text-2xl max-w-3xl">
-			Insights, strategies, and practical guides for business partners and team leaders looking to
-			make a meaningful impact.
-		</p>
-	</div>
-</section>
+<EvolveBookSection />
 
 <!-- Blog Posts Grid -->
 <section class="py-16 md:py-20 bg-base-100">
 	<div class="container-custom">
+		<p class="text-center font-bold text-xl md:text-3xl max-w-3xl mx-auto mb-12">
+			Impact and inspiration should be shared with the community. Here is some of our impactful
+			content.
+		</p>
 		<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 			{#each blogPosts as post (post.id)}
 				<article class="group flex flex-col h-full">
