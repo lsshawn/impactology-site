@@ -18,7 +18,7 @@
 </script>
 
 <section
-	class="py-20 md:py-28 bg-base-300"
+	class="py-6 bg-base-300"
 	use:trigger={(v) => {
 		bookImg = v;
 		setTimeout(() => (bookText = v), 150);
@@ -34,11 +34,10 @@
 				</p>
 				<p class="text-lg leading-relaxed mb-6 opacity-80">
 					Business Partners hold a vital role as trusted confidants with deep technical expertise,
-					and their impact is evident across all business functions. Initially tasked with
-					providing advice, they are now true collaborating partners, ideally placed to lead and
-					manage change in the changing world of work and business. Yet as the Business Partner
-					role has changed, there has been no pathway to develop the competencies essential for
-					their success.
+					and their impact is evident across all business functions. Initially tasked with providing
+					advice, they are now true collaborating partners, ideally placed to lead and manage change
+					in the changing world of work and business. Yet as the Business Partner role has changed,
+					there has been no pathway to develop the competencies essential for their success.
 				</p>
 				<p class="text-lg leading-relaxed mb-6 opacity-80">
 					Until now. If you are a current or aspiring Business Partner – HR, Finance, Procurement,
