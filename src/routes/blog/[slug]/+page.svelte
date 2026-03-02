@@ -53,12 +53,12 @@
 	/>
 
 	<!-- Hero Section with Featured Image -->
-	<section class="relative min-h-[50vh] md:min-h-[60vh] flex items-end">
+	<section class="relative min-h-[50vh] md:min-h-[70vh] flex items-end">
 		<div class="absolute inset-0">
 			<img
 				src={metadata.featuredImage}
 				alt={metadata.title}
-				class="w-full h-full object-cover"
+				class="w-full h-full object-cover object-top"
 				loading="eager"
 				decoding="async"
 				fetchpriority="high"
@@ -236,8 +236,14 @@
 		line-height: 1.8;
 	}
 
-	:global(.prose ul),
+	:global(.prose ul) {
+		list-style-type: disc;
+		margin-bottom: 1.25rem;
+		padding-left: 1.5rem;
+	}
+
 	:global(.prose ol) {
+		list-style-type: decimal;
 		margin-bottom: 1.25rem;
 		padding-left: 1.5rem;
 	}
