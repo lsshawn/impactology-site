@@ -7,10 +7,8 @@
 		beholdWidgetId?: string;
 	}
 
-	let {
-		instagramHandle = 'impactologyaust',
-		beholdWidgetId = 'YOUR_BEHOLD_WIDGET_ID'
-	}: Props = $props();
+	let { instagramHandle = 'impactora.app', beholdWidgetId = 'kfhyxuwNktDLNMGyZ5cu' }: Props =
+		$props();
 
 	onMount(() => {
 		const script = document.createElement('script');
@@ -24,15 +22,13 @@
 	<div class="container-custom">
 		<!-- Header -->
 		<div class="text-center mb-12">
-			<h2 class="text-4xl md:text-5xl lg:text-6xl mb-4">FOLLOW US ON INSTAGRAM</h2>
 			<a
 				href="https://instagram.com/{instagramHandle}"
 				target="_blank"
 				rel="noopener noreferrer"
-				class="text-primary hover:underline text-lg font-medium inline-flex items-center gap-2"
+				class="hover:underline text-lg font-medium inline-flex items-center gap-2"
 			>
-				@{instagramHandle}
-				<Icon icon="ph:arrow-square-out" class="text-sm" />
+				<h2 class="text-4xl md:text-5xl lg:text-6xl mb-4">FOLLOW US ON INSTAGRAM</h2>
 			</a>
 		</div>
 
