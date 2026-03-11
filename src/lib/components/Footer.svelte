@@ -1,5 +1,33 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
+
+	let email = $state('');
+	let status = $state<'idle' | 'loading' | 'success' | 'error'>('idle');
+	let message = $state('');
+
+	async function handleSubscribe(e: SubmitEvent) {
+		e.preventDefault();
+		status = 'loading';
+		try {
+			const res = await fetch('/api/newsletter', {
+				method: 'POST',
+				headers: { 'Content-Type': 'application/json' },
+				body: JSON.stringify({ email })
+			});
+			const data = await res.json();
+			if (res.ok) {
+				status = 'success';
+				message = data.message;
+				email = '';
+			} else {
+				status = 'error';
+				message = 'Something went wrong. Please try again.';
+			}
+		} catch {
+			status = 'error';
+			message = 'Something went wrong. Please try again.';
+		}
+	}
 </script>
 
 <footer>
@@ -13,20 +41,27 @@
 					<h3 class="text-2xl font-bold mb-2">STAY IN THE LOOP</h3>
 					<p class="text-sm opacity-80">Receive news and information on upcoming events</p>
 				</div>
-				<form class="flex flex-col sm:flex-row gap-2 w-full max-w-md">
+				<form onsubmit={handleSubscribe} class="flex flex-col sm:flex-row gap-2 w-full max-w-md">
 					<input
 						type="email"
 						placeholder="Email address"
 						class="input flex-1 bg-white text-black rounded-none border-none"
+						bind:value={email}
 						required
 					/>
 					<button
 						type="submit"
 						class="btn btn-secondary uppercase font-bold hover:border-primary hover:text-primary rounded-none"
+						disabled={status === 'loading'}
 					>
-						SIGN UP
+						{status === 'loading' ? 'SIGNING UP...' : 'SIGN UP'}
 					</button>
 				</form>
+				{#if status === 'success' || status === 'error'}
+					<p class="text-sm mt-2 {status === 'success' ? 'text-green-400' : 'text-red-400'}">
+						{message}
+					</p>
+				{/if}
 			</div>
 		</div>
 	</div>

@@ -1,11 +1,6 @@
 import { json, error } from '@sveltejs/kit';
 import sgMail from '@sendgrid/mail';
-import {
-	SENDGRID_API_KEY,
-	CONTACT_EMAIL_FROM,
-	CONTACT_EMAIL_TO,
-	CONTACT_EMAIL_TO_DEV
-} from '$env/static/private';
+import { SENDGRID_API_KEY } from '$env/static/private';
 import { dev } from '$app/environment';
 
 import type { RequestHandler } from './$types';
@@ -19,7 +14,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		throw error(400, 'Missing required fields');
 	}
 
-	const to = dev ? CONTACT_EMAIL_TO_DEV : CONTACT_EMAIL_TO;
+	const to = dev ? 'sub@sshawn.com' : 'hello@impactology.com.au';
 
 	const html = `
 		<h2>New Contact Form Submission</h2>
@@ -34,7 +29,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
 	await sgMail.send({
 		to,
-		from: { email: CONTACT_EMAIL_FROM, name: 'Website Contact Form' },
+		from: { email: 'do-not-reply@impactora.com.au', name: 'Website Contact Form' },
 		replyTo: email,
 		subject: `New website enquiry from ${firstName} ${lastName}`,
 		html

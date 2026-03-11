@@ -111,7 +111,11 @@
 					class="w-full h-full"
 				></iframe>
 			</div>
-			<div class="reveal-x-right text-white" class:visible={heroText} style="transition-delay: 150ms">
+			<div
+				class="reveal-x-right text-white"
+				class:visible={heroText}
+				style="transition-delay: 150ms"
+			>
 				<h1 class="mb-8 text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight">
 					Idea Brokers That Facilitate Impact
 				</h1>
@@ -141,10 +145,7 @@
 <!-- About Impactology heading -->
 <section class="py-16 bg-base-200">
 	<div class="container-custom" use:trigger={(v) => (aboutHeading = v)}>
-		<h2
-			class="reveal-y text-5xl lg:text-7xl font-bold text-center"
-			class:visible={aboutHeading}
-		>
+		<h2 class="reveal-y text-5xl lg:text-7xl font-bold text-center" class:visible={aboutHeading}>
 			ABOUT IMPACTOLOGY
 		</h2>
 	</div>
@@ -161,11 +162,7 @@
 	<div class="container-custom">
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 			<div class="reveal-x-left" class:visible={whatText}>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 144.85 141.15"
-					class="w-16 h-16 mb-6"
-				>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.85 141.15" class="w-16 h-16 mb-6">
 					<polygon
 						fill="#231f20"
 						points="75.39 141.15 69.47 141.15 69.47 80.22 51.4 117.26 46.08 114.66 63.9 78.13 17.01 116.1 13.29 111.5 60.39 73.35 20.55 82.55 19.22 76.78 59.26 67.53 0 53.85 1.33 48.08 60.8 61.81 28.7 35.82 32.43 31.21 63.92 56.72 37.53 2.6 42.85 0 69.47 54.57 69.47 13.58 75.39 13.58 75.39 54.57 102 0 107.33 2.6 80.93 56.72 112.43 31.21 116.16 35.82 84.05 61.81 143.52 48.08 144.85 53.85 85.59 67.53 125.63 76.78 124.3 82.55 84.47 73.35 131.57 111.5 127.84 116.1 80.96 78.13 98.77 114.66 93.45 117.26 75.39 80.22 75.39 141.15"
@@ -176,8 +173,8 @@
 				<div class="prose prose-lg">
 					<p>
 						Impact is where two ideas collide, grow, spark to create something bigger. It can stay
-						within you to be ignited at any time. Impact can come from anywhere or anyone. It can
-						be a conversation, a comment, a book, an email or a presentation. Impact can be big or
+						within you to be ignited at any time. Impact can come from anywhere or anyone. It can be
+						a conversation, a comment, a book, an email or a presentation. Impact can be big or
 						small.
 					</p>
 					<p>An impact will leave someone with more than they had before they met you.</p>
@@ -249,11 +246,7 @@
 	<div class="container-custom">
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
 			<div class="reveal-x-left" class:visible={howText}>
-				<svg
-					xmlns="http://www.w3.org/2000/svg"
-					viewBox="0 0 137.64 119.25"
-					class="w-16 h-16 mb-6"
-				>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.64 119.25" class="w-16 h-16 mb-6">
 					<rect
 						fill="#231f20"
 						x="351.8"
@@ -296,7 +289,13 @@
 				</div>
 			</div>
 			<div class="reveal-x-right" class:visible={howImg} style="transition-delay: 150ms">
-				<img src="/about-how.webp" alt="how we create impact" width="600" height="320" class="w-full h-80 object-cover" />
+				<img
+					src="/about-how.webp"
+					alt="how we create impact"
+					width="600"
+					height="320"
+					class="w-full h-80 object-cover"
+				/>
 			</div>
 		</div>
 	</div>
@@ -339,8 +338,8 @@
 				<h2 class="text-5xl font-bold mb-8">WHY?</h2>
 				<div class="prose prose-lg">
 					<p>
-						It's times like these we learn to live again. We believe in creating a space for
-						living again. There has never been a better time for a community of impactologists.
+						It's times like these we learn to live again. We believe in creating a space for living
+						again. There has never been a better time for a community of impactologists.
 					</p>
 					<p class="font-bold">Be interested. Be curious. Be an impactologist.</p>
 				</div>
@@ -399,7 +398,7 @@
 						<Icon icon="ph:linkedin-logo-fill" class="text-xl" />
 					</a>
 					<a
-						href="mailto:george@impactology.com.au"
+						href="mailto:hello@impactology.com.au"
 						class="btn btn-circle bg-base-200 text-base-content border-none hover:bg-primary"
 						aria-label="Email"
 					>
@@ -416,7 +415,11 @@
 					</a>
 				</div>
 			</div>
-			<div class="reveal-x-right aspect-video w-full" class:visible={founderVideo} style="transition-delay: 150ms">
+			<div
+				class="reveal-x-right aspect-video w-full"
+				class:visible={founderVideo}
+				style="transition-delay: 150ms"
+			>
 				<iframe
 					src="https://www.youtube.com/embed/e5kvi9kXKJ0"
 					title="George Liberopoulos - Impactology Founder"
