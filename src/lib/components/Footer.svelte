@@ -19,6 +19,7 @@
 				status = 'success';
 				message = data.message;
 				email = '';
+				gtag('event', 'newsletter_signup');
 			} else {
 				status = 'error';
 				message = 'Something went wrong. Please try again.';

@@ -22,6 +22,7 @@
 			});
 			if (!res.ok) throw new Error('Failed to send');
 			status = 'sent';
+			gtag('event', 'contact_form_submit');
 			firstName = '';
 			lastName = '';
 			email = '';

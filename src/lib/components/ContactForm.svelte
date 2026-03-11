@@ -35,6 +35,7 @@
 			});
 			if (!res.ok) throw new Error('Failed to send');
 			formStatus = 'sent';
+			gtag('event', 'contact_form_submit');
 			firstName = '';
 			lastName = '';
 			email = '';
