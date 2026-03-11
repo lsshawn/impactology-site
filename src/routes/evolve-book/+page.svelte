@@ -62,7 +62,7 @@
 					Finally, a book that provides realistic and targeted advice to Business Partners
 				</p>
 				<a
-					href="https://buy.stripe.com/fZu6oI8LvetG0kne05cQU02"
+					href="https://buy.stripe.com/5kQeVddPR5krg7E33scfK00"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="btn btn-primary btn-lg uppercase font-bold inline-flex items-center gap-2"
@@ -72,7 +72,15 @@
 			</div>
 
 			<div class="flex justify-center lg:justify-end">
-				<img src="/evolve-3d-cover.webp" alt="" width="576" height="720" class="w-full max-w-xl" loading="eager" fetchpriority="high" />
+				<img
+					src="/evolve-3d-cover.webp"
+					alt=""
+					width="576"
+					height="720"
+					class="w-full max-w-xl"
+					loading="eager"
+					fetchpriority="high"
+				/>
 			</div>
 		</div>
 	</div>
@@ -85,7 +93,13 @@
 		<div class="grid grid-cols-3 md:grid-cols-6 gap-8 items-center">
 			{#each clientLogos as logo (logo.src)}
 				<div class="flex items-center justify-center">
-					<img src={logo.src} alt={logo.alt} width="160" height="64" class="max-h-16 w-auto object-contain" />
+					<img
+						src={logo.src}
+						alt={logo.alt}
+						width="160"
+						height="64"
+						class="max-h-16 w-auto object-contain"
+					/>
 				</div>
 			{/each}
 		</div>
@@ -126,7 +140,14 @@
 	<div class="container-custom">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 			<div class="flex justify-center lg:justify-start">
-				<img src="/evolve-photo-1.webp" alt="" width="448" height="300" class="w-full max-w-md shadow-lg" loading="lazy" />
+				<img
+					src="/evolve-photo-1.webp"
+					alt=""
+					width="448"
+					height="300"
+					class="w-full max-w-md shadow-lg"
+					loading="lazy"
+				/>
 			</div>
 
 			<div class="prose prose-lg max-w-none">
@@ -150,14 +171,21 @@
 	<div class="container-custom">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 			<div class="flex justify-center lg:justify-start">
-				<img src="/evolve-3d-cover.webp" alt="" width="512" height="640" class="w-full max-w-lg" loading="lazy" />
+				<img
+					src="/evolve-3d-cover.webp"
+					alt=""
+					width="512"
+					height="640"
+					class="w-full max-w-lg"
+					loading="lazy"
+				/>
 			</div>
 
 			<div>
 				<h2 class="mb-4 text-4xl font-bold">Buy Your Copy</h2>
 				<p class="text-lg mb-2 opacity-80">Hard copy — AUD $24.95 + shipping</p>
 				<a
-					href="https://buy.stripe.com/fZu6oI8LvetG0kne05cQU02"
+					href="https://buy.stripe.com/5kQeVddPR5krg7E33scfK00"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="btn btn-secondary btn-lg uppercase font-bold rounded-none w-full sm:w-auto sm:px-16 inline-flex items-center gap-2"
@@ -205,20 +233,12 @@
 				rel="noopener noreferrer"
 				class="flex items-center justify-center"
 			>
-				<img
-					src="/amazon-kindle.webp"
-					alt="Buy on Amazon Kindle"
-					width="140" height="48" 
-				/>
+				<img src="/amazon-kindle.webp" alt="Buy on Amazon Kindle" width="140" height="48"  />
 			</a>
 
 			<!-- Apple iBooks (no link on live site) -->
 			<div class="flex items-center justify-center">
-				<img
-					src="/ibooks-button.webp"
-					alt="Available on Apple Books"
-					width="140" height="48" 
-				/>
+				<img src="/ibooks-button.webp" alt="Available on Apple Books" width="140" height="48"  />
 			</div>
 
 			<!-- Google Play Books -->
@@ -231,7 +251,9 @@
 				<img
 					src="/google-play-books.webp"
 					alt="Get it on Google Play Books"
-					width="140" height="48" 
+					width="140"
+					height="48"
+					
 				/>
 			</a>
 		</div>
