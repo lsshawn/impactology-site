@@ -14,7 +14,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		throw error(400, 'Missing required fields');
 	}
 
-	const to = dev ? 'sub@sshawn.com' : 'hello@impactology.com.au';
+	const to = dev ? 'sub@sshawn.com' : 'george@impactology.com.au';
 
 	const html = `
 		<h2>New Contact Form Submission</h2>

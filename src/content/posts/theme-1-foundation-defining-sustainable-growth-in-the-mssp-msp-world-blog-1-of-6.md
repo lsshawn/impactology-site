@@ -94,4 +94,4 @@ In the pursuit of growth, it's crucial to remember – though it may sound clich
 
 **If you're ready to explore how building high-performing teams can transform your MSP and help navigate growth challenges, I'd love to connect. Feel free to reach out for a chat…**
 
-**Contact details:Co-Founder and CEO, Impactology. Email: hello@impactology.com.au Mobile: +61 404 459 507**
+**Contact details:Co-Founder and CEO, Impactology. Email: george@impactology.com.au Mobile: +61 404 459 507**

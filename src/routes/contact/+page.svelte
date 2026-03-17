@@ -53,7 +53,7 @@
 			'@type': 'Organization',
 			name: 'Impactology',
 			url: 'https://impactology.com.au/',
-			email: 'hello@impactology.com.au',
+			email: 'george@impactology.com.au',
 			sameAs: [
 				'https://www.facebook.com/ImpactologyAust/',
 				'https://www.youtube.com/channel/UC2c5m2Io0INs-PnShJUaHQA',

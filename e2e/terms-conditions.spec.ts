@@ -65,7 +65,7 @@ test.describe('Terms & Conditions Page', () => {
 		test('has email contact link', async ({ page }) => {
 			const emailLink = page.getByRole('link', { name: /hello@impactology\.com\.au/i });
 			await expect(emailLink).toBeVisible();
-			await expect(emailLink).toHaveAttribute('href', 'mailto:hello@impactology.com.au');
+			await expect(emailLink).toHaveAttribute('href', 'mailto:george@impactology.com.au');
 		});
 
 		test('has website link', async ({ page }) => {

@@ -256,7 +256,7 @@
 				<p>
 					You are responsible for ensuring that Your Information is accurate, current and complete
 					and we encourage you to contact us to update Your Information if it changes at:
-					<a href="mailto:hello@impactology.com.au">hello@impactology.com.au</a>
+					<a href="mailto:george@impactology.com.au">george@impactology.com.au</a>
 				</p>
 				<p>
 					You may ask to access Your Information in accordance with the Privacy Act, including by
@@ -294,7 +294,7 @@
 				<p>We can be contacted via:</p>
 				<p>
 					Email:
-					<a href="mailto:hello@impactology.com.au">hello@impactology.com.au</a>
+					<a href="mailto:george@impactology.com.au">george@impactology.com.au</a>
 				</p>
 				<p>
 					Or for more information about privacy issues in Australia and protecting your privacy,

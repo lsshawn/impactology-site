@@ -262,7 +262,7 @@
 				<p>If you have any questions about these Terms, please contact us at:</p>
 				<p>
 					Email:
-					<a href="mailto:hello@impactology.com.au">hello@impactology.com.au</a>
+					<a href="mailto:george@impactology.com.au">george@impactology.com.au</a>
 				</p>
 				<p>
 					Website:

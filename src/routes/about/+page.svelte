@@ -398,7 +398,7 @@
 						<Icon icon="ph:linkedin-logo-fill" class="text-xl" />
 					</a>
 					<a
-						href="mailto:hello@impactology.com.au"
+						href="mailto:george@impactology.com.au"
 						class="btn btn-circle bg-base-200 text-base-content border-none hover:bg-primary"
 						aria-label="Email"
 					>
