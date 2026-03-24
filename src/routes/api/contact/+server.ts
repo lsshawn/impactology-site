@@ -29,7 +29,7 @@ export const POST: RequestHandler = async ({ request }) => {
 
 	await sgMail.send({
 		to,
-		from: { email: 'do-not-reply@impactora.com.au', name: 'Website Contact Form' },
+		from: { email: 'noreply@impactology.com.au', name: 'Website Contact Form' },
 		replyTo: email,
 		subject: `New website enquiry from ${firstName} ${lastName}`,
 		html
