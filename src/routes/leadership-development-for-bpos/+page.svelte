@@ -116,7 +116,7 @@
 			<h1 class="mb-6 text-4xl lg:text-6xl font-bold text-black">
 				Leadership Development for BPOS
 			</h1>
-			<a href="#register-interest" class="btn btn-secondary btn-lg uppercase font-bold mb-6">
+			<a href="#register-interest" class="inline-block bg-secondary text-secondary-content px-6 py-4 uppercase font-bold mb-6 hover:brightness-90 transition-all rounded-4xl text-center">
 				BOOK YOUR FREE 60-MINUTE STRATEGY SESSION
 			</a>
 			<div class="text-base max-w-xl prose prose-lg">
