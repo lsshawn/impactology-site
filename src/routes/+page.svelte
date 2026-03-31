@@ -252,7 +252,9 @@
 			class="max-w-xs md:max-w-sm lg:max-w-md hidden lg:block opacity-0 pointer-events-none"
 			loading="lazy"
 		/>
-		<div class="text-center md:text-left">
+		<div
+			class="text-center lg:text-left bg-white/20 backdrop-blur-sm rounded-2xl p-6 lg:bg-transparent lg:backdrop-blur-none lg:rounded-none lg:p-0"
+		>
 			<img
 				src="/impactora-logo.webp"
 				alt="Impactora"
