@@ -1,52 +1,10 @@
 <script lang="ts">
 	import SEO from '$lib/components/SEO.svelte';
-	import Icon from '@iconify/svelte';
 	import InstagramSection from '$lib/components/InstagramSection.svelte';
 	import ContactForm from '$lib/components/ContactForm.svelte';
 	import TestimonialSlider from '$lib/components/TestimonialSlider.svelte';
-
-	const clientPhotos = [
-		'/client-photo-1.webp',
-		'/client-photo-2.webp',
-		'/client-photo-3.webp',
-		'/client-photo-4.webp',
-		'/client-photo-5.webp',
-		'/client-photo-6.webp'
-	];
-
-	const clientLogos1 = [
-		'/client-moss.webp',
-		'/client-otto.webp',
-		'/client-ot.webp',
-		'/client-rba.webp',
-		'/client-kh.webp',
-		'/client-edgeward.webp'
-	];
-
-	const clientLogos2 = [
-		'/client-mu.webp',
-		'/client-transport.webp',
-		'/client-specsavers.webp',
-		'/client-msd.webp',
-		'/client-lochard.webp'
-	];
-
-	const moreLogos = [
-		'/client-1.webp',
-		'/client-otto.webp',
-		'/client-3.webp',
-		'/client-4.webp',
-		'/client-5.webp',
-		'/client-7.webp',
-		'/client-6.webp',
-		'/client-8.webp',
-		'/client-msd.webp',
-		'/client-10.webp',
-		'/client-11.webp',
-		'/client-12.webp',
-		'/client-13.webp',
-		'/client-14.webp'
-	];
+	import ClientLogosSection from '$lib/components/ClientLogosSection.svelte';
+	import { galleryImages } from '$lib/content/gallery';
 
 	const testimonials = [
 		{
@@ -157,9 +115,9 @@
 </section>
 
 <!-- What is Impactology -->
-<section class="py-20 bg-base-100">
-	<div class="text-center max-w-4xl mx-auto">
-		<h2 class="mb-6 text-5xl lg:text-7xl font-bold">WHAT IS IMPACTOLOGY?</h2>
+<section class="py-20 bg-base-100 container-custom">
+	<div class="md:text-center max-w-4xl mx-auto">
+		<h2 class="mb-6 text-5xl lg:text-7xl font-bold text-center">WHAT IS IMPACTOLOGY?</h2>
 		<div class="prose prose-lg mx-auto max-w-xl">
 			<p>
 				In short, we aim to disrupt conventional thinking. We connect people in ways that spark new
@@ -263,122 +221,27 @@
 <!-- Meet Our Clients -->
 <section class="py-16 bg-base-100">
 	<h2 class="mb-10 text-5xl lg:text-7xl font-bold text-center">MEET OUR CLIENTS</h2>
-	<div class="relative group/carousel">
-		<!-- Left Arrow -->
-		<button
-			onclick={() => {
-				const el = document.getElementById('clients-carousel');
-				if (el) el.scrollBy({ left: -el.clientWidth * 0.75, behavior: 'smooth' });
-			}}
-			class="hidden md:flex absolute left-4 top-1/2 -translate-y-1/2 z-10 btn btn-secondary btn-circle shadow-lg opacity-0 group-hover/carousel:opacity-100 transition-opacity"
-			aria-label="Scroll left"
-		>
-			<Icon icon="ph:arrow-left-bold" class="text-xl" />
-		</button>
-
-		<div id="clients-carousel" class="carousel carousel-center w-full gap-1 rounded-none">
-			{#each clientPhotos as photo, i}
-				<div id="client-slide-{i}" class="carousel-item">
-					<img
-						src={photo}
-						alt="Client workshop"
-						width="640"
-						height="427"
-						class="h-64 md:h-96 w-auto object-cover"
-						loading="lazy"
-					/>
-				</div>
-			{/each}
-		</div>
-
-		<!-- Right Arrow -->
-		<button
-			onclick={() => {
-				const el = document.getElementById('clients-carousel');
-				if (el) el.scrollBy({ left: el.clientWidth * 0.75, behavior: 'smooth' });
-			}}
-			class="hidden md:flex absolute right-4 top-1/2 -translate-y-1/2 z-10 btn btn-secondary btn-circle shadow-lg opacity-0 group-hover/carousel:opacity-100 transition-opacity"
-			aria-label="Scroll right"
-		>
-			<Icon icon="ph:arrow-right-bold" class="text-xl" />
-		</button>
-	</div>
-
-	<div class="flex justify-center gap-2 mt-6">
-		{#each clientPhotos as _, i}
-			<a
-				href="#client-slide-{i}"
-				class="btn btn-xs btn-circle btn-ghost border border-base-300"
-				aria-label="Go to slide {i + 1}"
-			></a>
+	<div class="carousel carousel-center w-full gap-2 rounded-none">
+		{#each galleryImages as photo, i}
+			<div class="carousel-item">
+				<img
+					src={photo.src}
+					alt={photo.alt}
+					width="640"
+					height="427"
+					class="h-64 md:h-80 w-auto object-cover"
+					loading="lazy"
+				/>
+			</div>
 		{/each}
 	</div>
 </section>
 
 <!-- Client Logos -->
-<section class="py-16">
-	<div class="container-custom">
-		<h2 class="mb-10 text-5xl lg:text-7xl font-bold text-center">
-			SOME COMPANIES WE'VE PARTNERED WITH
-		</h2>
-
-		<!-- First Row -->
-		<div class="grid grid-cols-2 md:grid-cols-7 gap-8 items-center mb-12">
-			{#each clientLogos1 as logo}
-				<div class="flex items-center justify-center p-4">
-					<img
-						src={logo}
-						alt="Client logo"
-						width="200"
-						height="64"
-						class="max-h-16 w-auto object-contain"
-						loading="lazy"
-					/>
-				</div>
-			{/each}
-			<div class="flex items-center justify-center">
-				<a href="/contact" class="btn btn-secondary uppercase font-bold rounded-none px-8">
-					CONTACT US
-				</a>
-			</div>
-		</div>
-
-		<!-- Second Row -->
-		<div class="grid grid-cols-2 md:grid-cols-5 gap-8 items-center mb-12">
-			{#each clientLogos2 as logo}
-				<div class="flex items-center justify-center p-4">
-					<img
-						src={logo}
-						alt="Client logo"
-						width="200"
-						height="64"
-						class="max-h-16 w-auto object-contain"
-						loading="lazy"
-					/>
-				</div>
-			{/each}
-		</div>
-
-		<!-- Third Row - More Logos -->
-		<div class="grid grid-cols-3 md:grid-cols-7 gap-6 items-center">
-			{#each moreLogos as logo}
-				<div class="flex items-center justify-center p-2">
-					<img
-						src={logo}
-						alt="Client logo"
-						width="200"
-						height="48"
-						class="max-h-12 w-auto object-contain"
-						loading="lazy"
-					/>
-				</div>
-			{/each}
-		</div>
-	</div>
-</section>
+<ClientLogosSection />
 
 <!-- Impactora Promo Section -->
-<div class="hero min-h-[80vh] md:bg-[image:url('/impactora-promo-banner.webp')] bg-neutral">
+<div class="hero min-h-[80vh] bg-[image:url('/impactora-promo-banner.webp')] bg-neutral">
 	<div class="hero-content flex-col lg:flex-row-reverse w-full max-w-7xl gap-8 lg:gap-16">
 		<img
 			src="/impactora-promo-banner.webp"
@@ -404,7 +267,7 @@
 			<h2 class="text-4xl md:text-6xl font-bold uppercase leading-tight mb-8">
 				FOR EMPLOYEES &amp; MANAGERS
 			</h2>
-			<p class="text-base leading-relaxed mb-8 max-w-lg mx-auto md:mx-0">
+			<p class="leading-relaxed mb-8 max-w-lg mx-auto md:mx-0">
 				<strong>IMPACTORA</strong> is a SaaS platform designed to bridge the loss of organisational knowledge
 				that we are all experiencing with today's remote and hybrid working environments. It provides
 				easy to access and immediate support, advice, and insights that are tailored to the individual
