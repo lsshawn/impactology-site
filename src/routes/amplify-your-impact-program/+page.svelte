@@ -137,10 +137,10 @@
 							capability uplift to prepare for change? Are you looking for practical ways to drive
 							higher performance and collaboration across your team?
 						</p>
-						<p class="text-lg leading-relaxed mb-6 opacity-80">
+						<p class="text-lg leading-relaxed mb-6">
 							Our <strong>AMPLIFY Business Partnering Program Experience</strong> is a follow-up
 							program to our signature
-							<a href="/business-partnering-impact-program" class="text-primary hover:underline"
+							<a href="/business-partnering-impact-program" class="hover:underline text-blue-500"
 								>Business Partnering IMPACT Program</a
 							>, with a customised approach designed for your team's specific needs and your
 							organisation's goals.
