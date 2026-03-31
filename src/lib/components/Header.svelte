@@ -12,7 +12,14 @@
 	<div class="container-custom min-h-[84px] flex items-center justify-between">
 		<!-- Logo -->
 		<a href="/" class="flex items-center shrink-0">
-			<img src="/logo.webp" alt="Impactology" width="368" height="84" class="h-[54px] w-auto object-contain" fetchpriority="high" />
+			<img
+				src="/logo.webp"
+				alt="Impactology"
+				width="368"
+				height="84"
+				class="h-[54px] w-auto object-contain"
+				fetchpriority="high"
+			/>
 		</a>
 
 		<!-- Desktop Navigation + CTA -->
@@ -40,9 +47,7 @@
 						class="absolute top-full right-0 hidden group-hover:block bg-base-100 shadow-lg w-96 p-2 z-50"
 					>
 						<li>
-							<a href="/programs" class="text-sm font-bold">
-								All Programs
-							</a>
+							<a href="/programs" class="text-sm font-bold"> All Programs </a>
 						</li>
 						<li class="border-t border-base-200 my-1"></li>
 						<li>
@@ -71,11 +76,9 @@
 					<ul
 						class="absolute top-full right-0 hidden group-hover:block bg-base-100 shadow-lg w-64 p-2 z-50"
 					>
-						<li><a href="/resources" class="text-sm font-bold">All Resources</a></li>
-						<li class="border-t border-base-200 my-1"></li>
-						<li><a href="/evolve-book" class="text-sm">Evolve Book</a></li>
-						<li><a href="/impactology-live-2020" class="text-sm">Impactology Live 2020</a></li>
 						<li><a href="/blog" class="text-sm">Content</a></li>
+						<li><a href="/evolve-book" class="text-sm">Evolve Book</a></li>
+						<li><a href="/impactology-live-2020" class="text-sm">Impactology Live</a></li>
 					</ul>
 				</li>
 				<li>
@@ -126,12 +129,11 @@
 					<details>
 						<summary>Resources</summary>
 						<ul class="pl-4">
-							<li><a href="/resources" onclick={toggleMenu} class="font-bold">All Resources</a></li>
+							<li><a href="/blog" onclick={toggleMenu}>Content</a></li>
 							<li><a href="/evolve-book" onclick={toggleMenu}>Evolve Book</a></li>
 							<li>
-								<a href="/impactology-live-2020" onclick={toggleMenu}>Impactology Live 2020</a>
+								<a href="/impactology-live-2020" onclick={toggleMenu}>Impactology Live</a>
 							</li>
-							<li><a href="/blog" onclick={toggleMenu}>Content</a></li>
 						</ul>
 					</details>
 				</li>
