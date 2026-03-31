@@ -41,8 +41,6 @@
 	}}
 />
 
-<EvolveBookSection />
-
 <!-- Blog Posts Grid -->
 <section class="py-16 md:py-20 bg-base-100">
 	<div class="container-custom">
@@ -87,6 +85,8 @@
 		</div>
 	</div>
 </section>
+
+<EvolveBookSection />
 
 <!-- CTA Section -->
 <section class="section-dark py-16 md:py-20">
