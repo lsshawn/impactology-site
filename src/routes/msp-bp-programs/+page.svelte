@@ -44,7 +44,7 @@
 			title: 'KNOW YOUR MACRO WORLD',
 			subtitle: 'Understanding external influences helps optimise decision-making.',
 			description:
-				"Effective business decisions are influenced by balancing both internal and external factors across different industries, markets and geographies. This module focuses on building a strong \"outside-in\" view of the world, and how macro-environmental factors impact a company's direction. A solid understanding of the macro factors that impact the organisation, and is critical to effective decision making."
+				'Effective business decisions are influenced by balancing both internal and external factors across different industries, markets and geographies. This module focuses on building a strong "outside-in" view of the world, and how macro-environmental factors impact a company\'s direction. A solid understanding of the macro factors that impact the organisation, and is critical to effective decision making.'
 		},
 		{
 			icon: '/bpip-icon04.webp',
@@ -107,16 +107,16 @@
 
 <!-- Hero Section -->
 <section
-	class="section-yellow py-24 md:py-8 bg-cover bg-center relative"
-	style="background-image: url('/bpip-hero-bg.webp'); height: 60vh; max-height: 60vh;"
+	class="section-yellow pt-12 pb-24 md:py-8 bg-cover bg-center relative md:min-h-[60vh]"
+	style="background-image: url('/bpip-hero-bg.webp');"
 >
 	<div class="absolute inset-0 bg-yellow-300/70 md:hidden"></div>
 	<div class="container-custom relative z-10 flex items-center h-full">
 		<div class="max-w-xl">
-			<h1 class="mb-6 text-5xl lg:text-6xl font-bold text-black">
+			<h1 class="mb-6 text-4xl lg:text-6xl font-bold text-black">
 				Managed Service Provider (MSP/MSSP) Employee Development Program
 			</h1>
-			<a href="#register-interest" class="btn btn-secondary btn-lg uppercase font-bold mb-6">
+			<a href="#register-interest" class="btn btn-secondary btn-lg uppercase font-bold mb-6 px-4">
 				BOOK YOUR FREE 60-MINUTE STRATEGY SESSION
 			</a>
 			<div class="text-base max-w-xl prose prose-lg">
@@ -141,10 +141,10 @@
 			{#if introText}
 				<div in:fly={{ x: -30, duration: 600 }}>
 					<p class="text-lg leading-relaxed mb-6 opacity-80">
-						Take the first step toward <strong>building a high-performing team</strong> that thrives
-						on trust, collaboration, and leadership. Scale your Managed Service Provider (MSP) or
-						Managed Security Service Provider (MSSP) business while preserving your company culture
-						and aligning employee development with your growth aspirations.
+						Take the first step toward <strong>building a high-performing team</strong> that thrives on
+						trust, collaboration, and leadership. Scale your Managed Service Provider (MSP) or Managed
+						Security Service Provider (MSSP) business while preserving your company culture and aligning
+						employee development with your growth aspirations.
 					</p>
 					<p class="text-xl font-bold mb-6 opacity-90">Builders of trust. Experts in technology.</p>
 					<p class="text-lg leading-relaxed mb-6 opacity-80">
@@ -315,25 +315,24 @@
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 			{#if ctaText}
 				<div in:fly={{ x: -30, duration: 600 }}>
-					<h2 class="text-4xl md:text-5xl font-bold mb-6">
-						THE CALL TO ACTION FOR MSP/MSSPs!
-					</h2>
+					<h2 class="text-4xl md:text-5xl font-bold mb-6">THE CALL TO ACTION FOR MSP/MSSPs!</h2>
 					<p class="text-lg leading-relaxed mb-6 opacity-80">
 						In today's dynamic environment, businesses face increasing industry disruption, market
 						uncertainties, risk, and rapid innovation. For any <strong
 							>aspiring high performing MSP/MSSP team</strong
-						>, more than ever, these considerations bring an increased responsibility for driving and
-						owning business outcomes. This call to action for leaders and employees serves as a
+						>, more than ever, these considerations bring an increased responsibility for driving
+						and owning business outcomes. This call to action for leaders and employees serves as a
 						vital pillar in managing growth and preserving your company culture and staying relevant
 						in the face of fast-changing industry and technology market trends. Setting the
 						foundation and defining sustainable growth in the MSP/MSSP world, forms a key part
 						helping scale growth and helping achieve core strategic goals.
 					</p>
 					<p class="text-lg leading-relaxed mb-6 opacity-80">
-						Our <strong>MSP/MSSP development experience</strong> is tailored to develop a high-performing
-						<strong>business partners</strong>, amplifying their business acumen, differentiating their
-						capabilities and giving them an edge in the marketplace. Tailored to the MSP/MSSP sector,
-						this course is suitable for all experience and backgrounds.
+						Our <strong>MSP/MSSP development experience</strong> is tailored to develop a
+						high-performing
+						<strong>business partners</strong>, amplifying their business acumen, differentiating
+						their capabilities and giving them an edge in the marketplace. Tailored to the MSP/MSSP
+						sector, this course is suitable for all experience and backgrounds.
 					</p>
 					<p class="text-lg font-medium mb-4">The learning outcomes for participants include:</p>
 					<ul class="space-y-3 mb-8">

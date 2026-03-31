@@ -107,8 +107,8 @@
 
 <!-- Hero Section -->
 <section
-	class="section-yellow py-24 md:py-8 bg-cover bg-center relative"
-	style="background-image: url('/bpip-hero-bg.webp'); height: 60vh; max-height: 60vh;"
+	class="section-yellow pt-12 pb-24 md:py-8 bg-cover bg-center relative md:min-h-[60vh]"
+	style="background-image: url('/bpip-hero-bg.webp');"
 >
 	<div class="absolute inset-0 bg-yellow-300/70 md:hidden"></div>
 	<div class="container-custom relative z-10 flex items-center h-full">
