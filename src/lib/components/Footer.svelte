@@ -36,17 +36,17 @@
 	<div class="bg-[#3e3e3e] py-12">
 		<div class="container-custom">
 			<div
-				class="flex flex-col md:flex-row justify-center items-center gap-6 text-white text-center md:text-left"
+				class="flex flex-col md:flex-row justify-center items-stretch md:items-center gap-6 text-white text-center md:text-left"
 			>
 				<div class="shrink-0">
 					<h3 class="text-2xl font-bold mb-2">STAY IN THE LOOP</h3>
 					<p class="text-sm opacity-80">Receive news and information on upcoming events</p>
 				</div>
-				<form onsubmit={handleSubscribe} class="flex flex-col sm:flex-row gap-2 w-full max-w-md">
+				<form onsubmit={handleSubscribe} class="flex flex-col sm:flex-row gap-2 w-full sm:max-w-md">
 					<input
 						type="email"
 						placeholder="Email address"
-						class="input flex-1 bg-white text-black rounded-none border-none"
+						class="input flex-1 bg-white text-black rounded-none border-none w-full"
 						bind:value={email}
 						required
 					/>
