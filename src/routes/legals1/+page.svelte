@@ -70,7 +70,7 @@
 					class="border border-base-300 rounded-2xl p-8 md:p-10 bg-white hover:shadow-lg hover:border-gray-300 transition-all duration-300"
 				>
 					<div class="mb-8">
-						<img src="/impactora-logo.webp" alt="Impactora" class="h-10 w-auto" />
+						<img src="/impactora-logo-blue.png" alt="Impactora" class="h-10 w-auto" />
 					</div>
 
 					<div class="space-y-3">
