@@ -84,10 +84,12 @@
 		decoding="async"
 		width="1920"
 		height="1080"
-		class="hidden md:block absolute inset-0 w-full h-full object-cover object-center"
+		class="absolute inset-0 w-full h-full object-cover object-[75%_center] md:object-center"
 	/>
 	<div class="container-custom relative z-10">
-		<div class="max-w-xl">
+		<div
+			class="max-w-xl bg-white/30 backdrop-blur-md rounded-2xl p-6 md:bg-transparent md:backdrop-blur-none md:rounded-none md:p-0"
+		>
 			<h2 class="mb-6 text-5xl lg:text-8xl font-bold">MAKE AN IMPACT</h2>
 			<p class="text-2xl md:text-3xl font-bold mb-8">
 				Leadership Development Solutions Designed for Business Partners.
