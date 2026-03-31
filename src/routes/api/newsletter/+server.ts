@@ -1,4 +1,4 @@
-import { json, error } from '@sveltejs/kit';
+import { json } from '@sveltejs/kit';
 import { MAILCHIMP_API_KEY, MAILCHIMP_LIST_ID } from '$env/static/private';
 import type { RequestHandler } from './$types';
 
@@ -6,7 +6,7 @@ export const POST: RequestHandler = async ({ request }) => {
 	const { email } = await request.json();
 
 	if (!email) {
-		throw error(400, 'Email is required');
+		return json({ ok: false, message: 'Email is required' }, { status: 400 });
 	}
 
 	const dc = MAILCHIMP_API_KEY.split('-')[1];
@@ -31,7 +31,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		if (data.title === 'Member Exists') {
 			return json({ ok: true, message: 'You are already subscribed!' });
 		}
-		throw error(500, 'Failed to subscribe. Please try again.');
+		return json({ ok: false, message: 'Failed to subscribe. Please try again.' }, { status: 500 });
 	}
 
 	return json({ ok: true, message: 'Successfully subscribed!' });

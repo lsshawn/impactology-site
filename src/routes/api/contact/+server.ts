@@ -1,4 +1,4 @@
-import { json, error } from '@sveltejs/kit';
+import { json } from '@sveltejs/kit';
 import sgMail from '@sendgrid/mail';
 import { SENDGRID_API_KEY } from '$env/static/private';
 import { dev } from '$app/environment';
@@ -11,7 +11,7 @@ export const POST: RequestHandler = async ({ request }) => {
 	const { firstName, lastName, email, phone, company, message } = await request.json();
 
 	if (!firstName || !lastName || !email || !message) {
-		throw error(400, 'Missing required fields');
+		return json({ ok: false, message: 'Missing required fields' }, { status: 400 });
 	}
 
 	const to = dev ? 'sub@sshawn.com' : 'george@impactology.com.au';
