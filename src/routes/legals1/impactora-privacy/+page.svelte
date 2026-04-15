@@ -5,7 +5,7 @@
 <SEO
 	title="Privacy Policy | Impactora"
 	description="Privacy policy for Impactora Pty Ltd, outlining how we collect, use, and manage your personal data."
-	canonical="https://impactology.com.au/legals1/impactora-privacy/"
+	canonical="https://www.impactology.com.au/legals1/impactora-privacy/"
 />
 
 <section class="py-20 bg-base-100">

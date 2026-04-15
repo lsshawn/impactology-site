@@ -76,9 +76,9 @@
 	description="Amplify transformative outcomes with our Impact Programs. Achieve lasting change and growth with Impactology by your side."
 	ogTitle="Amplify Your Impact Program - Impactology"
 	ogDescription="Amplify transformative outcomes with our Impact Programs. Achieve lasting change and growth with Impactology by your side."
-	ogImage="https://impactology.com.au/icon3.png"
+	ogImage="https://www.impactology.com.au/icon3.png"
 	ogType="website"
-	canonical="https://impactology.com.au/amplify-your-impact-program"
+	canonical="https://www.impactology.com.au/amplify-your-impact-program"
 	jsonLd={{
 		'@context': 'https://schema.org',
 		'@type': 'Course',
@@ -88,7 +88,7 @@
 		provider: {
 			'@type': 'Organization',
 			name: 'Impactology',
-			url: 'https://impactology.com.au'
+			url: 'https://www.impactology.com.au'
 		}
 	}}
 />

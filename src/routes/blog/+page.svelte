@@ -21,21 +21,21 @@
 	description="Insights, strategies, and practical guides for business partners, team leaders, and professionals looking to make a meaningful impact in their organisations."
 	ogTitle="Blog | Impactology"
 	ogDescription="Insights, strategies, and practical guides for business partners, team leaders, and professionals looking to make a meaningful impact."
-	ogImage="https://impactology.com.au/logo.png"
+	ogImage="https://www.impactology.com.au/logo.png"
 	ogType="website"
-	canonical="https://impactology.com.au/blog"
+	canonical="https://www.impactology.com.au/blog"
 	jsonLd={{
 		'@context': 'https://schema.org',
 		'@type': 'Blog',
 		name: 'Impactology Blog',
 		description: 'Insights and strategies for business partners and team leaders.',
-		url: 'https://impactology.com.au/blog',
+		url: 'https://www.impactology.com.au/blog',
 		publisher: {
 			'@type': 'Organization',
 			name: 'Impactology',
 			logo: {
 				'@type': 'ImageObject',
-				url: 'https://impactology.com.au/logo.png'
+				url: 'https://www.impactology.com.au/logo.png'
 			}
 		}
 	}}

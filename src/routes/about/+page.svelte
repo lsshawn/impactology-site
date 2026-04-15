@@ -63,16 +63,16 @@
 	description="The Impact is where two ideas collide, grow, and spark to create something big. It can stay within you to ignite at any time."
 	ogTitle="About | Create an Impact | Impactology"
 	ogDescription="The Impact is where two ideas collide, grow, and spark to create something big. It can stay within you to ignite at any time."
-	ogImage="https://impactology.com.au/wp-content/uploads/2020/09/man-2-sparks-photo-1531574688974-2386ec946fe5.jpg"
+	ogImage="https://www.impactology.com.au/wp-content/uploads/2020/09/man-2-sparks-photo-1531574688974-2386ec946fe5.jpg"
 	ogType="website"
-	canonical="https://impactology.com.au/about/"
+	canonical="https://www.impactology.com.au/about/"
 	jsonLd={{
 		'@context': 'https://schema.org',
 		'@type': 'WebPage',
 		name: 'About Impactology',
 		description:
 			'The Impact is where two ideas collide, grow, and spark to create something big. It can stay within you to ignite at any time.',
-		url: 'https://impactology.com.au/about/',
+		url: 'https://www.impactology.com.au/about/',
 		breadcrumb: {
 			'@type': 'BreadcrumbList',
 			itemListElement: [
@@ -80,13 +80,13 @@
 					'@type': 'ListItem',
 					position: 1,
 					name: 'Home',
-					item: 'https://impactology.com.au/'
+					item: 'https://www.impactology.com.au/'
 				},
 				{
 					'@type': 'ListItem',
 					position: 2,
 					name: 'About',
-					item: 'https://impactology.com.au/about/'
+					item: 'https://www.impactology.com.au/about/'
 				}
 			]
 		}

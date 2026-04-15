@@ -89,9 +89,9 @@
 	description="Drive your Finance strategy to new heights with Impactology's Finance Business Partnering development program. Build clarity, promote collaboration and improve team productivity and efficiency."
 	ogTitle="Finance Business Partnering Program | Impactology"
 	ogDescription="Drive your Finance strategy to new heights with Impactology's Finance Business Partnering development program. Build clarity, promote collaboration and improve team productivity and efficiency."
-	ogImage="https://impactology.com.au/icon2.png"
+	ogImage="https://www.impactology.com.au/icon2.png"
 	ogType="website"
-	canonical="https://impactology.com.au/finance-business-partnering"
+	canonical="https://www.impactology.com.au/finance-business-partnering"
 	jsonLd={{
 		'@context': 'https://schema.org',
 		'@type': 'Course',
@@ -101,7 +101,7 @@
 		provider: {
 			'@type': 'Organization',
 			name: 'Impactology',
-			url: 'https://impactology.com.au'
+			url: 'https://www.impactology.com.au'
 		}
 	}}
 />

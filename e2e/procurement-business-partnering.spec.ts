@@ -271,7 +271,7 @@ test.describe('Procurement Business Partnering Page', () => {
 			const canonical = page.locator('link[rel="canonical"]');
 			await expect(canonical).toHaveAttribute(
 				'href',
-				'https://impactology.com.au/procurement-business-partnering'
+				'https://www.impactology.com.au/procurement-business-partnering'
 			);
 		});
 	});

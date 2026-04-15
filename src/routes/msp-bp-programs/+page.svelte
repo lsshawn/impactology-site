@@ -84,9 +84,9 @@
 	description="Empower your MSP/MSSP team with skills to foster trust, collaboration, and growth. Align employee development with your business goals for sustainable success."
 	ogTitle="MSP MSSP Leadership Development Program | Impactology"
 	ogDescription="Empower your MSP/MSSP team with skills to foster trust, collaboration, and growth. Align employee development with your business goals for sustainable success."
-	ogImage="https://impactology.com.au/icon2.png"
+	ogImage="https://www.impactology.com.au/icon2.png"
 	ogType="website"
-	canonical="https://impactology.com.au/msp-bp-programs"
+	canonical="https://www.impactology.com.au/msp-bp-programs"
 	jsonLd={{
 		'@context': 'https://schema.org',
 		'@type': 'Course',
@@ -96,7 +96,7 @@
 		provider: {
 			'@type': 'Organization',
 			name: 'Impactology',
-			url: 'https://impactology.com.au'
+			url: 'https://www.impactology.com.au'
 		}
 	}}
 />

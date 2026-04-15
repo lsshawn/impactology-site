@@ -234,7 +234,7 @@ test.describe('Business Partnering Impact Program Page', () => {
 			const canonical = page.locator('link[rel="canonical"]');
 			await expect(canonical).toHaveAttribute(
 				'href',
-				'https://impactology.com.au/business-partnering-impact-program'
+				'https://www.impactology.com.au/business-partnering-impact-program'
 			);
 		});
 	});

@@ -353,7 +353,7 @@
 	ogTitle="Impactology Live | Create an Impact | Impactology"
 	ogDescription="Last November 2020, the Impactology Live 3-day event connected 33 global speakers that are having an impact with those wanting to be inspired to learn more."
 	ogType="website"
-	canonical="https://impactology.com.au/impactology-live-2020"
+	canonical="https://www.impactology.com.au/impactology-live-2020"
 	jsonLd={{
 		'@context': 'https://schema.org',
 		'@type': 'Event',
@@ -367,11 +367,11 @@
 		organizer: {
 			'@type': 'Organization',
 			name: 'Impactology',
-			url: 'https://impactology.com.au'
+			url: 'https://www.impactology.com.au'
 		},
 		location: {
 			'@type': 'VirtualLocation',
-			url: 'https://impactology.com.au/impactology-live-2020'
+			url: 'https://www.impactology.com.au/impactology-live-2020'
 		}
 	}}
 />

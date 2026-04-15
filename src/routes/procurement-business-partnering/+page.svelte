@@ -86,9 +86,9 @@
 	description="Take your procurement strategy to new heights with Impactology's Procurement Business Partner development experience. Boost efficiency and foster sustainable growth."
 	ogTitle="Procurement Business Partner | Impactology"
 	ogDescription="Take your procurement strategy to new heights with Impactology's Procurement Business Partner development experience. Boost efficiency and foster sustainable growth."
-	ogImage="https://impactology.com.au/icon2.png"
+	ogImage="https://www.impactology.com.au/icon2.png"
 	ogType="website"
-	canonical="https://impactology.com.au/procurement-business-partnering"
+	canonical="https://www.impactology.com.au/procurement-business-partnering"
 	jsonLd={{
 		'@context': 'https://schema.org',
 		'@type': 'Course',
@@ -98,7 +98,7 @@
 		provider: {
 			'@type': 'Organization',
 			name: 'Impactology',
-			url: 'https://impactology.com.au'
+			url: 'https://www.impactology.com.au'
 		}
 	}}
 />

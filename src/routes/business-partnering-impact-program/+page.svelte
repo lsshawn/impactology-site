@@ -107,9 +107,9 @@
 	description="Explore Impactology's Business Partnering Programs. Elevate your brand with innovative solutions & boost growth. Join us today!"
 	ogTitle="Business Partnering Impact Program | Impactology"
 	ogDescription="Our Business Partnering Impact Program is designed to help build a high performing and effective team of business partners, enhancing their business partnering capability."
-	ogImage="https://impactology.com.au/icon2.png"
+	ogImage="https://www.impactology.com.au/icon2.png"
 	ogType="website"
-	canonical="https://impactology.com.au/business-partnering-impact-program"
+	canonical="https://www.impactology.com.au/business-partnering-impact-program"
 	jsonLd={{
 		'@context': 'https://schema.org',
 		'@type': 'Course',
@@ -119,7 +119,7 @@
 		provider: {
 			'@type': 'Organization',
 			name: 'Impactology',
-			url: 'https://impactology.com.au'
+			url: 'https://www.impactology.com.au'
 		}
 	}}
 />

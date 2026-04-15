@@ -275,7 +275,7 @@ test.describe('HR Business Partnering Page', () => {
 			const canonical = page.locator('link[rel="canonical"]');
 			await expect(canonical).toHaveAttribute(
 				'href',
-				'https://impactology.com.au/hr-business-partnering'
+				'https://www.impactology.com.au/hr-business-partnering'
 			);
 		});
 	});

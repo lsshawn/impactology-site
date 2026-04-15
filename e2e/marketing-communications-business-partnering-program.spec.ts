@@ -372,7 +372,7 @@ test.describe('Marketing & Communications Business Partnering Program Page', () 
 			const canonical = page.locator('link[rel="canonical"]');
 			await expect(canonical).toHaveAttribute(
 				'href',
-				'https://impactology.com.au/marketing-communications-business-partnering-program'
+				'https://www.impactology.com.au/marketing-communications-business-partnering-program'
 			);
 		});
 	});

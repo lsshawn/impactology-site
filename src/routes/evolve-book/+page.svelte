@@ -23,9 +23,9 @@
 	description="Evolve Book shows you how to navigate service models and systems, build your commercial acumen and deliver value to your organisation. Contact us!"
 	ogTitle="Evolve Book | Create an Impact | Impactology"
 	ogDescription="Evolve Book shows you how to navigate service models and systems, build your commercial acumen and deliver value to your organisation. Contact us!"
-	ogImage="https://impactology.com.au/evolve-book-cover.png"
+	ogImage="https://www.impactology.com.au/evolve-book-cover.png"
 	ogType="website"
-	canonical="https://impactology.com.au/evolve-book"
+	canonical="https://www.impactology.com.au/evolve-book"
 	jsonLd={{
 		'@context': 'https://schema.org',
 		'@type': 'Book',
@@ -39,7 +39,7 @@
 		publisher: {
 			'@type': 'Organization',
 			name: 'Impactology',
-			url: 'https://impactology.com.au'
+			url: 'https://www.impactology.com.au'
 		},
 		offers: {
 			'@type': 'Offer',

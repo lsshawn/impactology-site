@@ -28,7 +28,7 @@
 	}: Props = $props();
 
 	let siteName = 'Impactology';
-	let siteUrl = 'https://impactology.com.au';
+	let siteUrl = 'https://www.impactology.com.au';
 </script>
 
 <svelte:head>

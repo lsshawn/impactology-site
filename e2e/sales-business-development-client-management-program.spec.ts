@@ -343,7 +343,7 @@ test.describe('Sales, BD & Client Management Business Partnering Program Page', 
 			const canonical = page.locator('link[rel="canonical"]');
 			await expect(canonical).toHaveAttribute(
 				'href',
-				'https://impactology.com.au/sales-business-development-client-management-program'
+				'https://www.impactology.com.au/sales-business-development-client-management-program'
 			);
 		});
 	});

@@ -6,7 +6,7 @@
 <SEO
 	title="Legal Center | Impactology & Impactora"
 	description="Clear and transparent legal documentation for Impactology programs and Impactora platform."
-	canonical="https://impactology.com.au/legals1/"
+	canonical="https://www.impactology.com.au/legals1/"
 />
 
 <section class="py-16 md:py-24 bg-base-100">

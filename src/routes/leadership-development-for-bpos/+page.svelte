@@ -88,9 +88,9 @@
 	description="Elevate BPO leadership with Impactology's tailored training. Build trust, foster collaboration, and drive client success with proven frameworks and tools."
 	ogTitle="Leadership Development for BPOs | Impactology"
 	ogDescription="Elevate BPO leadership with Impactology's tailored training. Build trust, foster collaboration, and drive client success with proven frameworks and tools."
-	ogImage="https://impactology.com.au/icon2.png"
+	ogImage="https://www.impactology.com.au/icon2.png"
 	ogType="website"
-	canonical="https://impactology.com.au/leadership-development-for-bpos"
+	canonical="https://www.impactology.com.au/leadership-development-for-bpos"
 	jsonLd={{
 		'@context': 'https://schema.org',
 		'@type': 'Course',
@@ -100,7 +100,7 @@
 		provider: {
 			'@type': 'Organization',
 			name: 'Impactology',
-			url: 'https://impactology.com.au'
+			url: 'https://www.impactology.com.au'
 		}
 	}}
 />
