@@ -61,9 +61,9 @@
 	description="Choose your journey. Impactology's business partnering development programs help teams think strategically, build relationships and create lasting impact."
 	ogTitle="Business Partnering Development Programs | Impactology"
 	ogDescription="Together let's create an impact path. Choose your journey with Impactology's suite of business partnering programs."
-	ogImage="https://impactology.com.au/icon1.png"
+	ogImage="https://www.impactology.com.au/icon1.png"
 	ogType="website"
-	canonical="https://impactology.com.au/programs"
+	canonical="https://www.impactology.com.au/programs"
 	jsonLd={{
 		'@context': 'https://schema.org',
 		'@type': 'ItemList',
@@ -72,7 +72,7 @@
 		provider: {
 			'@type': 'Organization',
 			name: 'Impactology',
-			url: 'https://impactology.com.au'
+			url: 'https://www.impactology.com.au'
 		}
 	}}
 />

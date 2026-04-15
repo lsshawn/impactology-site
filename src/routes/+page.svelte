@@ -50,16 +50,16 @@
 	description="Whether you're looking to sustainably grow your business, upskill your team, or pursue a new opportunity, we have a solution or program to arm you."
 	ogTitle="Sustainably Grow your Business | Create an Impact | Impactology"
 	ogDescription="Whether you're looking to sustainably grow your business, upskill your team, or pursue a new opportunity, we have a solution or program to arm you."
-	ogImage="https://impactology.com.au/icon1.png"
+	ogImage="https://www.impactology.com.au/icon1.png"
 	ogType="website"
-	canonical="https://impactology.com.au/"
+	canonical="https://www.impactology.com.au/"
 	preloadImage="/home_banner1.webp"
 	jsonLd={{
 		'@context': 'https://schema.org',
 		'@type': 'Organization',
 		name: 'Impactology',
-		url: 'https://impactology.com.au/',
-		logo: 'https://impactology.com.au/logo.png',
+		url: 'https://www.impactology.com.au/',
+		logo: 'https://www.impactology.com.au/logo.png',
 		description:
 			"Whether you're looking to sustainably grow your business, upskill your team, or pursue a new opportunity, we have a solution or program to arm you.",
 		sameAs: [

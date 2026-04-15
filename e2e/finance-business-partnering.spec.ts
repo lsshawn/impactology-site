@@ -271,7 +271,7 @@ test.describe('Finance Business Partnering Page', () => {
 			const canonical = page.locator('link[rel="canonical"]');
 			await expect(canonical).toHaveAttribute(
 				'href',
-				'https://impactology.com.au/finance-business-partnering'
+				'https://www.impactology.com.au/finance-business-partnering'
 			);
 		});
 	});

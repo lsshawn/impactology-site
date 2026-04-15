@@ -24,7 +24,7 @@
 		ogDescription={metadata.excerpt}
 		ogImage={metadata.featuredImage}
 		ogType="article"
-		canonical="https://impactology.com.au/blog/{metadata.slug}"
+		canonical="https://www.impactology.com.au/blog/{metadata.slug}"
 		jsonLd={{
 			'@context': 'https://schema.org',
 			'@type': 'BlogPosting',
@@ -42,12 +42,12 @@
 				name: 'Impactology',
 				logo: {
 					'@type': 'ImageObject',
-					url: 'https://impactology.com.au/logo.png'
+					url: 'https://www.impactology.com.au/logo.png'
 				}
 			},
 			mainEntityOfPage: {
 				'@type': 'WebPage',
-				'@id': `https://impactology.com.au/blog/${metadata.slug}`
+				'@id': `https://www.impactology.com.au/blog/${metadata.slug}`
 			}
 		}}
 	/>
@@ -126,7 +126,7 @@
 					<p class="font-bold mb-4 uppercase text-sm">Share this article</p>
 					<div class="flex gap-3">
 						<a
-							href="https://www.linkedin.com/sharing/share-offsite/?url=https://impactology.com.au/blog/{metadata.slug}"
+							href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.impactology.com.au/blog/{metadata.slug}"
 							target="_blank"
 							rel="noopener noreferrer"
 							class="btn btn-square btn-outline rounded-none"
@@ -135,7 +135,7 @@
 							<Icon icon="ph:linkedin-logo-bold" class="text-xl" />
 						</a>
 						<a
-							href="https://twitter.com/intent/tweet?url=https://impactology.com.au/blog/{metadata.slug}&text={encodeURIComponent(
+							href="https://twitter.com/intent/tweet?url=https://www.impactology.com.au/blog/{metadata.slug}&text={encodeURIComponent(
 								metadata.title
 							)}"
 							target="_blank"
@@ -148,7 +148,7 @@
 						<a
 							href="mailto:?subject={encodeURIComponent(
 								metadata.title
-							)}&body=Check out this article: https://impactology.com.au/blog/{metadata.slug}"
+							)}&body=Check out this article: https://www.impactology.com.au/blog/{metadata.slug}"
 							class="btn btn-square btn-outline rounded-none"
 							aria-label="Share via Email"
 						>

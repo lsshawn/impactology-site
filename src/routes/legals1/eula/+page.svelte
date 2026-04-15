@@ -5,7 +5,7 @@
 <SEO
 	title="End User Licence Agreement | Impactora"
 	description="End User Licence Agreement (EULA) for Impactora software, owned by Impactora Pty Ltd. This agreement governs your use of the Impactora software and associated services."
-	canonical="https://impactology.com.au/legals1/eula/"
+	canonical="https://www.impactology.com.au/legals1/eula/"
 />
 
 <section class="py-20 bg-base-100">

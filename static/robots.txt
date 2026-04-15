@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://impactology.com.au/sitemap.xml
+Sitemap: https://www.impactology.com.au/sitemap.xml

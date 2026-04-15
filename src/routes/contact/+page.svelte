@@ -42,17 +42,17 @@
 	ogTitle="Contact | Create an Impact | Impactology"
 	ogDescription="Get in touch with Impactology. We're here to help you make an impact."
 	ogType="website"
-	canonical="https://impactology.com.au/contact/"
+	canonical="https://www.impactology.com.au/contact/"
 	jsonLd={{
 		'@context': 'https://schema.org',
 		'@type': 'ContactPage',
 		name: 'Contact Impactology',
 		description: "Get in touch with Impactology. We're here to help you make an impact.",
-		url: 'https://impactology.com.au/contact/',
+		url: 'https://www.impactology.com.au/contact/',
 		mainEntity: {
 			'@type': 'Organization',
 			name: 'Impactology',
-			url: 'https://impactology.com.au/',
+			url: 'https://www.impactology.com.au/',
 			email: 'george@impactology.com.au',
 			sameAs: [
 				'https://www.facebook.com/ImpactologyAust/',

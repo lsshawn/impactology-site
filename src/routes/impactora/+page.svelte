@@ -199,9 +199,9 @@
 	description="IMPACTORA delivers instant, contextual advice for managers and HR professionals. Navigate workplace challenges with AI-powered insights available 24/7."
 	ogTitle="Impactora - Impactology | Timely Information & Advice"
 	ogDescription="IMPACTORA delivers instant, contextual advice for managers and HR professionals. Navigate workplace challenges with AI-powered insights available 24/7."
-	ogImage="https://impactology.com.au/icon1.png"
+	ogImage="https://www.impactology.com.au/icon1.png"
 	ogType="website"
-	canonical="https://impactology.com.au/impactora"
+	canonical="https://www.impactology.com.au/impactora"
 	jsonLd={{
 		'@context': 'https://schema.org',
 		'@type': 'SoftwareApplication',
@@ -216,7 +216,7 @@
 		provider: {
 			'@type': 'Organization',
 			name: 'Impactology',
-			url: 'https://impactology.com.au'
+			url: 'https://www.impactology.com.au'
 		}
 	}}
 />
@@ -361,7 +361,7 @@
 				<div class="mb-10 max-w-2xl mx-auto">
 					{#if videoPlaying}
 						<video
-							src="https://impactology.com.au/wp-content/uploads/2023/03/impactora-welcome-video.mp4"
+							src="https://www.impactology.com.au/wp-content/uploads/2023/03/impactora-welcome-video.mp4"
 							controls
 							autoplay
 							class="w-full h-auto rounded-sm shadow-lg"

@@ -88,9 +88,9 @@
 	description="Take your People & Culture strategy to new heights with Impactology's HR / People & Culture Business Partnering development program. Enhance collaboration, build your team's brand and increase productivity and improve trust with key stakeholders."
 	ogTitle="HR Business Partnering Program | Impactology"
 	ogDescription="Take your People & Culture strategy to new heights with Impactology's HR / People & Culture Business Partnering development program. Enhance collaboration, build your team's brand and increase productivity and improve trust with key stakeholders."
-	ogImage="https://impactology.com.au/icon3.png"
+	ogImage="https://www.impactology.com.au/icon3.png"
 	ogType="website"
-	canonical="https://impactology.com.au/hr-business-partnering"
+	canonical="https://www.impactology.com.au/hr-business-partnering"
 	jsonLd={{
 		'@context': 'https://schema.org',
 		'@type': 'Course',
@@ -100,7 +100,7 @@
 		provider: {
 			'@type': 'Organization',
 			name: 'Impactology',
-			url: 'https://impactology.com.au'
+			url: 'https://www.impactology.com.au'
 		}
 	}}
 />

@@ -150,9 +150,9 @@
 	description="Empower sales, BD, and client management teams with our Business Partnering IMPACT Program. Drive growth, build trust, and foster long-term client relationships."
 	ogTitle="Sales & Client Management Business Partnering Program | Impactology"
 	ogDescription="Empower sales, BD, and client management teams with our Business Partnering IMPACT Program. Drive growth, build trust, and foster long-term client relationships."
-	ogImage="https://impactology.com.au/icon2.png"
+	ogImage="https://www.impactology.com.au/icon2.png"
 	ogType="website"
-	canonical="https://impactology.com.au/sales-business-development-client-management-program"
+	canonical="https://www.impactology.com.au/sales-business-development-client-management-program"
 	jsonLd={{
 		'@context': 'https://schema.org',
 		'@type': 'Course',
@@ -162,7 +162,7 @@
 		provider: {
 			'@type': 'Organization',
 			name: 'Impactology',
-			url: 'https://impactology.com.au'
+			url: 'https://www.impactology.com.au'
 		}
 	}}
 />

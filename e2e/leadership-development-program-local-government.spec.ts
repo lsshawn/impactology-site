@@ -278,7 +278,7 @@ test.describe('Leadership Development Program for Local Government Page', () => 
 			const canonical = page.locator('link[rel="canonical"]');
 			await expect(canonical).toHaveAttribute(
 				'href',
-				'https://impactology.com.au/leadership-development-program-local-government'
+				'https://www.impactology.com.au/leadership-development-program-local-government'
 			);
 		});
 	});

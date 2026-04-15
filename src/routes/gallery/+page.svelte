@@ -60,18 +60,18 @@
 	ogDescription="Discover how Impactology transforms lives through training. Browse our gallery of real-life sessions, showcasing impactful techniques and success stories."
 	ogImage="/client-photo-1.webp"
 	ogType="website"
-	canonical="https://impactology.com.au/gallery"
+	canonical="https://www.impactology.com.au/gallery"
 	jsonLd={{
 		'@context': 'https://schema.org',
 		'@type': 'ImageGallery',
 		name: 'Impactology Photo Gallery',
 		description:
 			'Photos from Impactology workshops, leadership development programs, and business partnering events.',
-		url: 'https://impactology.com.au/gallery',
+		url: 'https://www.impactology.com.au/gallery',
 		publisher: {
 			'@type': 'Organization',
 			name: 'Impactology',
-			url: 'https://impactology.com.au'
+			url: 'https://www.impactology.com.au'
 		}
 	}}
 />

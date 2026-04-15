@@ -88,9 +88,9 @@
 	description="Take your internal IT strategy to new heights with Impactology's IT Business Partnering development program. Enhance collaboration and increase productivity and efficiency."
 	ogTitle="IT Business Partnering Program | Impactology"
 	ogDescription="Take your internal IT strategy to new heights with Impactology's IT Business Partnering development program. Enhance collaboration and increase productivity and efficiency."
-	ogImage="https://impactology.com.au/icon3.png"
+	ogImage="https://www.impactology.com.au/icon3.png"
 	ogType="website"
-	canonical="https://impactology.com.au/it-business-partnering"
+	canonical="https://www.impactology.com.au/it-business-partnering"
 	jsonLd={{
 		'@context': 'https://schema.org',
 		'@type': 'Course',
@@ -100,7 +100,7 @@
 		provider: {
 			'@type': 'Organization',
 			name: 'Impactology',
-			url: 'https://impactology.com.au'
+			url: 'https://www.impactology.com.au'
 		}
 	}}
 />

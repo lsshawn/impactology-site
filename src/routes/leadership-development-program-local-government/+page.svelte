@@ -88,9 +88,9 @@
 	description="Transform your LGA leadership team with our tailored Leadership Development Program. Build trust, foster collaboration, and deliver impactful outcomes."
 	ogTitle="Leadership Development Program for Local Government Teams | Impactology"
 	ogDescription="Transform your LGA leadership team with our tailored Leadership Development Program. Build trust, foster collaboration, and deliver impactful outcomes."
-	ogImage="https://impactology.com.au/icon2.png"
+	ogImage="https://www.impactology.com.au/icon2.png"
 	ogType="website"
-	canonical="https://impactology.com.au/leadership-development-program-local-government"
+	canonical="https://www.impactology.com.au/leadership-development-program-local-government"
 	jsonLd={{
 		'@context': 'https://schema.org',
 		'@type': 'Course',
@@ -100,7 +100,7 @@
 		provider: {
 			'@type': 'Organization',
 			name: 'Impactology',
-			url: 'https://impactology.com.au'
+			url: 'https://www.impactology.com.au'
 		}
 	}}
 />

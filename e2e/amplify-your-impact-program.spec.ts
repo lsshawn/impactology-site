@@ -266,7 +266,7 @@ test.describe('Amplify Your Impact Program Page', () => {
 			const canonical = page.locator('link[rel="canonical"]');
 			await expect(canonical).toHaveAttribute(
 				'href',
-				'https://impactology.com.au/amplify-your-impact-program'
+				'https://www.impactology.com.au/amplify-your-impact-program'
 			);
 		});
 	});

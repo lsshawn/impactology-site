@@ -268,7 +268,7 @@ test.describe('IT Business Partnering Page', () => {
 			const canonical = page.locator('link[rel="canonical"]');
 			await expect(canonical).toHaveAttribute(
 				'href',
-				'https://impactology.com.au/it-business-partnering'
+				'https://www.impactology.com.au/it-business-partnering'
 			);
 		});
 	});

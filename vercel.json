@@ -1,5 +1,18 @@
 {
 	"$schema": "https://openapi.vercel.sh/vercel.json",
+	"redirects": [
+		{
+			"source": "/:path(.*)",
+			"has": [
+				{
+					"type": "host",
+					"value": "impactology.com.au"
+				}
+			],
+			"destination": "https://www.impactology.com.au/:path",
+			"permanent": true
+		}
+	],
 	"headers": [
 		{
 			"source": "/:path*.webp",

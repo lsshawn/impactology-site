@@ -5,7 +5,7 @@
 <SEO
 	title="Terms & Conditions | Impactology"
 	description="Terms and conditions governing the use of Impactology's programs, services, and website."
-	canonical="https://impactology.com.au/legals1/terms/"
+	canonical="https://www.impactology.com.au/legals1/terms/"
 />
 
 <section class="py-20 bg-base-100">
@@ -266,7 +266,7 @@
 				</p>
 				<p>
 					Website:
-					<a href="https://impactology.com.au" target="_blank" rel="noopener noreferrer"
+					<a href="https://www.impactology.com.au" target="_blank" rel="noopener noreferrer"
 						>www.impactology.com.au</a
 					>
 				</p>

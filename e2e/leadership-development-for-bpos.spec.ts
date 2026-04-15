@@ -273,7 +273,7 @@ test.describe('Leadership Development for BPOs Page', () => {
 			const canonical = page.locator('link[rel="canonical"]');
 			await expect(canonical).toHaveAttribute(
 				'href',
-				'https://impactology.com.au/leadership-development-for-bpos'
+				'https://www.impactology.com.au/leadership-development-for-bpos'
 			);
 		});
 	});

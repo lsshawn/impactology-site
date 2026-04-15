@@ -27,7 +27,7 @@
 
 	const modules = [
 		{
-			icon: 'https://impactology.com.au/wp-content/uploads/2021/08/core-icon01.png',
+			icon: 'https://www.impactology.com.au/wp-content/uploads/2021/08/core-icon01.png',
 			title: 'Develop Strategic Business Partnering Skills',
 			bullets: [
 				{
@@ -41,7 +41,7 @@
 			]
 		},
 		{
-			icon: 'https://impactology.com.au/wp-content/uploads/2021/08/core-icon02.png',
+			icon: 'https://www.impactology.com.au/wp-content/uploads/2021/08/core-icon02.png',
 			title: 'Enhance Business Acumen',
 			bullets: [
 				{
@@ -55,7 +55,7 @@
 			]
 		},
 		{
-			icon: 'https://impactology.com.au/wp-content/uploads/2021/08/core-icon03.png',
+			icon: 'https://www.impactology.com.au/wp-content/uploads/2021/08/core-icon03.png',
 			title: 'Foster Cross-Functional Collaboration',
 			bullets: [
 				{
@@ -69,7 +69,7 @@
 			]
 		},
 		{
-			icon: 'https://impactology.com.au/wp-content/uploads/2021/08/core-icon04.png',
+			icon: 'https://www.impactology.com.au/wp-content/uploads/2021/08/core-icon04.png',
 			title: 'Measure and Communicate Value',
 			bullets: [
 				{
@@ -83,7 +83,7 @@
 			]
 		},
 		{
-			icon: 'https://impactology.com.au/wp-content/uploads/2021/08/core-icon03.png',
+			icon: 'https://www.impactology.com.au/wp-content/uploads/2021/08/core-icon03.png',
 			title: 'Adapt to Change and Drive Innovation',
 			bullets: [
 				{
@@ -173,9 +173,9 @@
 	description="Empower marketing and communication teams to become strategic business partners. Drive growth, foster collaboration, and align marketing with organisational goals."
 	ogTitle="Marketing & Communications Team Business Partnering Program | Impactology"
 	ogDescription="Empower marketing and communication teams to become strategic business partners. Drive growth, foster collaboration, and align marketing with organisational goals."
-	ogImage="https://impactology.com.au/icon2.png"
+	ogImage="https://www.impactology.com.au/icon2.png"
 	ogType="website"
-	canonical="https://impactology.com.au/marketing-communications-business-partnering-program"
+	canonical="https://www.impactology.com.au/marketing-communications-business-partnering-program"
 	jsonLd={{
 		'@context': 'https://schema.org',
 		'@type': 'Course',
@@ -185,7 +185,7 @@
 		provider: {
 			'@type': 'Organization',
 			name: 'Impactology',
-			url: 'https://impactology.com.au'
+			url: 'https://www.impactology.com.au'
 		}
 	}}
 />

@@ -138,7 +138,7 @@
 	ogTitle="Resources | Create an Impact | Impactology"
 	ogDescription="Explore our curated book recommendations to impact your mind, body, community, finances and work."
 	ogType="website"
-	canonical="https://impactology.com.au/resources/"
+	canonical="https://www.impactology.com.au/resources/"
 />
 
 <!-- EVOLVE Book Hero Section -->

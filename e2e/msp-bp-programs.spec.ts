@@ -250,7 +250,7 @@ test.describe('MSP BP Programs Page', () => {
 
 		test('has canonical URL', async ({ page }) => {
 			const canonical = page.locator('link[rel="canonical"]');
-			await expect(canonical).toHaveAttribute('href', 'https://impactology.com.au/msp-bp-programs');
+			await expect(canonical).toHaveAttribute('href', 'https://www.impactology.com.au/msp-bp-programs');
 		});
 	});
 });
