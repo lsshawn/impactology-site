@@ -44,6 +44,7 @@
 <!-- Blog Posts Grid -->
 <section class="py-16 md:py-20 bg-base-100">
 	<div class="container-custom">
+		<h1 class="sr-only">Business Partnering Blog</h1>
 		<p class="text-center font-bold text-xl md:text-3xl max-w-3xl mx-auto mb-12">
 			Impact and inspiration should be shared with the community. Here is some of our impactful
 			content.

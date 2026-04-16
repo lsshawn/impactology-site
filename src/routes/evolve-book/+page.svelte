@@ -55,6 +55,7 @@
 	<div class="container-custom">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 			<div>
+				<h1 class="sr-only">Evolve — The Business Partnering Book</h1>
 				<h2 class="text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight font-bold normal-case">
 					If you are a current or aspiring Business Partner, this is the book for you!
 				</h2>

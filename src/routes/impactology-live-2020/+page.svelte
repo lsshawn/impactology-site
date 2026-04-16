@@ -382,6 +382,7 @@
 	style="background-image: url('/geometric-pattern.webp'); background-size: cover; background-position: center; background-blend-mode: multiply;"
 >
 	<div class="container-custom text-center">
+		<h1 class="sr-only">Impactology Live Events</h1>
 		<h2 class="text-4xl md:text-6xl mb-8 font-bold">IMPACTOLOGY LIVE</h2>
 		<h2 class="text-2xl md:text-3xl mb-4 font-bold">ONE GLOBAL COMMUNITY MAKING IMPACT</h2>
 		<p class="text-xl">When ideas and inspiration collide, it creates IMPACT.</p>

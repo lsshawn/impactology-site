@@ -90,6 +90,7 @@
 		<div
 			class="max-w-xl bg-white/30 backdrop-blur-md rounded-2xl p-6 md:bg-transparent md:backdrop-blur-none md:rounded-none md:p-0"
 		>
+			<h1 class="sr-only">Business Partnering Training and Development Programs</h1>
 			<h2 class="mb-6 text-5xl lg:text-8xl font-bold">MAKE AN IMPACT</h2>
 			<p class="text-2xl md:text-3xl font-bold mb-8">
 				Leadership Development Solutions Designed for Business Partners.
@@ -128,7 +129,7 @@
 			<p>
 				Whether you're looking to sustainably grow your business, upskill your team, or pursuing a
 				new opportunity, we have a solution or program to arm you with the knowledge you'll need to
-				make a truly meaningful impact in the work you do.
+				make a truly meaningful impact in the work you do. Explore our <a href="/finance-business-partnering" class="underline hover:text-primary transition-colors">finance business partnering training</a> to develop your team's commercial acumen.
 			</p>
 		</div>
 	</div>
@@ -303,7 +304,7 @@
 			</h2>
 			<p class="text-center text-lg mb-12 max-w-2xl mx-auto">
 				At Impactology, our focus is on helping companies thrive and grow and individuals to live
-				better, work smarter and be authentic in the way they work with others.
+				better, work smarter and be authentic in the way they work with others. Discover our <a href="/hr-business-partnering" class="underline hover:text-primary transition-colors">HR business partnering program</a> for People &amp; Culture teams.
 			</p>
 
 			<ContactForm class="max-w-3xl mx-auto" />

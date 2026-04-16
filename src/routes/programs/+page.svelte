@@ -118,8 +118,11 @@
 				<h2 class="text-4xl md:text-5xl mb-6 leading-tight font-bold">
 					Business Partnering IMPACT Program
 				</h2>
-				<p class="text-lg leading-relaxed mb-8 opacity-80">
+				<p class="text-lg leading-relaxed mb-4 opacity-80">
 					Designed for all business partners who are ready to make an impact.
+				</p>
+				<p class="text-lg leading-relaxed mb-8 opacity-80">
+					See our specialised <a href="/finance-business-partnering" class="underline hover:text-primary transition-colors">finance business partnering training</a> for finance teams.
 				</p>
 				<a href="/business-partnering-impact-program">
 					<img src="/programs-know-more.webp" alt="Know More" width="200" height="48" class="h-12 w-auto" />
@@ -143,9 +146,12 @@
 				<h2 class="text-4xl md:text-5xl mb-6 leading-tight text-white font-bold">
 					AMPLIFY YOUR IMPACT PROGRAM
 				</h2>
-				<p class="text-lg leading-relaxed mb-8 opacity-80 text-white">
+				<p class="text-lg leading-relaxed mb-4 opacity-80 text-white">
 					A follow-up to the Business Partnering IMPACT Program, this Program Experience is
 					designed to prepare your Business Partners for change and drive transformation.
+				</p>
+				<p class="text-lg leading-relaxed mb-8 opacity-80 text-white">
+					Looking for people-focused development? See our <a href="/hr-business-partnering" class="underline hover:text-primary transition-colors">HR business partner training</a>.
 				</p>
 				<a href="/amplify-your-impact-program">
 					<img src="/programs-know-more.webp" alt="Know More" width="200" height="48" class="h-12 w-auto" />
@@ -161,6 +167,13 @@
 				/>
 			</div>
 		</div>
+	</div>
+</section>
+
+<!-- Local Government Program -->
+<section class="py-12 bg-base-100">
+	<div class="container-custom text-center">
+		<p class="text-lg opacity-80">We also offer a <a href="/leadership-development-program-local-government" class="underline hover:text-primary transition-colors">Leadership Development Program for Local Government</a> teams.</p>
 	</div>
 </section>
 

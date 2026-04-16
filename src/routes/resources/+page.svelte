@@ -144,6 +144,7 @@
 <!-- EVOLVE Book Hero Section -->
 <section class="py-20 md:py-28">
 	<div class="container-custom">
+		<h1 class="sr-only">Business Partnering Resources</h1>
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 			<div>
 				<h2 class="text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight font-bold normal-case">

@@ -277,6 +277,7 @@
 >
 	<div class="container-custom">
 		<div class="max-w-4xl mx-auto text-center">
+			<h1 class="sr-only">Impactora — Personalised Business Partnering Coaching</h1>
 			<h2 class="reveal-y mb-8 text-3xl md:text-4xl" class:visible={tailoredHeading}>
 				TAILORED ADVICE & INSIGHTS
 			</h2>

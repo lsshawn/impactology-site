@@ -161,9 +161,12 @@
 						team with the tools, frameworks and mindset to become trusted experts in driving
 						organisational change.
 					</p>
-					<p class="text-lg leading-relaxed mb-8 opacity-80">
+					<p class="text-lg leading-relaxed mb-6 opacity-80">
 						This program targets HR generalists, Communication experts, L&D, OD, Employee
 						Experience, Recruitment and Talent Acquisition, Rewards and ER/IR professionals.
+					</p>
+					<p class="text-lg leading-relaxed mb-8 opacity-80">
+						For a broader approach to effective business partnering, explore our <a href="/business-partnering-impact-program" class="underline hover:text-primary transition-colors">Business Partnering Impact Program</a>.
 					</p>
 					<a href="#register-interest" class="btn btn-primary btn-lg uppercase font-bold">
 						Register your interest
