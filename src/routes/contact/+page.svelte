@@ -22,7 +22,12 @@
 			});
 			if (!res.ok) throw new Error('Failed to send');
 			status = 'sent';
-			gtag('event', 'contact_form_submit');
+			gtag('event', 'form_submit', {
+				form_id: 'contact',
+				form_name: 'contact',
+				form_destination: '/api/contact'
+			});
+			gtag('event', 'generate_lead', { value: 1, currency: 'AUD' });
 			firstName = '';
 			lastName = '';
 			email = '';

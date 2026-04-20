@@ -19,7 +19,12 @@
 				status = 'success';
 				message = data.message;
 				email = '';
-				gtag('event', 'newsletter_signup');
+				gtag('event', 'sign_up', { method: 'newsletter' });
+				gtag('event', 'form_submit', {
+					form_id: 'newsletter',
+					form_name: 'newsletter',
+					form_destination: '/api/newsletter'
+				});
 			} else {
 				status = 'error';
 				message = 'Something went wrong. Please try again.';

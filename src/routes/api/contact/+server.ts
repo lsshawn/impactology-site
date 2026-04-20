@@ -8,16 +8,17 @@ import type { RequestHandler } from './$types';
 sgMail.setApiKey(SENDGRID_API_KEY);
 
 export const POST: RequestHandler = async ({ request }) => {
-	const { firstName, lastName, email, phone, company, message } = await request.json();
+	const { firstName, lastName, email, phone, company, message, test } = await request.json();
 
 	if (!firstName || !lastName || !email || !message) {
 		return json({ ok: false, message: 'Missing required fields' }, { status: 400 });
 	}
 
-	const to = dev ? 'sub@sshawn.com' : 'george@impactology.com.au';
+	const to = test ? 'sub@sshawn.com' : dev ? 'sub@sshawn.com' : 'george@impactology.com.au';
+	const subjectPrefix = test ? '[HEALTHCHECK] ' : '';
 
 	const html = `
-		<h2>New Contact Form Submission</h2>
+		<h2>${test ? '[HEALTHCHECK] ' : ''}New Contact Form Submission</h2>
 		<p><strong>Name:</strong> ${firstName} ${lastName}</p>
 		<p><strong>Email:</strong> ${email}</p>
 		<p><strong>Phone:</strong> ${phone || '—'}</p>
@@ -31,7 +32,7 @@ export const POST: RequestHandler = async ({ request }) => {
 		to,
 		from: { email: 'noreply@impactology.com.au', name: 'Website Contact Form' },
 		replyTo: email,
-		subject: `New website enquiry from ${firstName} ${lastName}`,
+		subject: `${subjectPrefix}New website enquiry from ${firstName} ${lastName}`,
 		html
 	});
 
