@@ -1,6 +1,7 @@
 <script lang="ts">
 	import SEO from '$lib/components/SEO.svelte';
 	import Icon from '@iconify/svelte';
+	import { track } from '$lib/analytics';
 
 	const clientLogos = [
 		{ src: '/client-3.webp', alt: '' },
@@ -66,6 +67,7 @@
 					href="https://buy.stripe.com/5kQeVddPR5krg7E33scfK00"
 					target="_blank"
 					rel="noopener noreferrer"
+					onclick={() => track('book_buy_click', { store: 'stripe' })}
 					class="btn btn-primary btn-lg uppercase font-bold inline-flex items-center gap-2"
 				>
 					BUY NOW
@@ -189,6 +191,7 @@
 					href="https://buy.stripe.com/5kQeVddPR5krg7E33scfK00"
 					target="_blank"
 					rel="noopener noreferrer"
+					onclick={() => track('book_buy_click', { store: 'stripe' })}
 					class="btn btn-secondary btn-lg uppercase font-bold rounded-none w-full sm:w-auto sm:px-16 inline-flex items-center gap-2"
 				>
 					<Icon icon="ph:shopping-cart-simple-bold" class="text-xl" />
@@ -212,6 +215,7 @@
 				href="https://www.amazon.com/dp/B09J8BXC59"
 				target="_blank"
 				rel="noopener noreferrer"
+				onclick={() => track('book_buy_click', { store: 'amazon_us' })}
 				class="flex items-center justify-center"
 			>
 				<img src="/amazon-usa.webp" alt="Buy on Amazon USA" width="140" height="48"  />
@@ -222,6 +226,7 @@
 				href="https://www.amazon.co.uk/dp/B09J8BXC59"
 				target="_blank"
 				rel="noopener noreferrer"
+				onclick={() => track('book_buy_click', { store: 'amazon_uk' })}
 				class="flex items-center justify-center"
 			>
 				<img src="/amazon-uk.webp" alt="Buy on Amazon UK" width="140" height="48"  />
@@ -232,6 +237,7 @@
 				href="https://www.amazon.com.au/dp/B09J8BXC59"
 				target="_blank"
 				rel="noopener noreferrer"
+				onclick={() => track('book_buy_click', { store: 'amazon_kindle' })}
 				class="flex items-center justify-center"
 			>
 				<img src="/amazon-kindle.webp" alt="Buy on Amazon Kindle" width="140" height="48"  />
@@ -247,6 +253,7 @@
 				href="https://play.google.com/store/books/details/Rita_Cincotta_EVOLVE?id=XXRHEAAAQBAJ&hl=en&gl=US"
 				target="_blank"
 				rel="noopener noreferrer"
+				onclick={() => track('book_buy_click', { store: 'google_play' })}
 				class="flex items-center justify-center"
 			>
 				<img

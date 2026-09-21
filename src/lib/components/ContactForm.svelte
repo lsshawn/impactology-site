@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
+	import { track } from '$lib/analytics';
 
 	type Props = {
 		prefix?: string;
@@ -41,6 +42,7 @@
 				form_destination: '/api/contact'
 			});
 			gtag('event', 'generate_lead', { value: 1, currency: 'AUD' });
+			track('contact_submit', { form: prefix ? `contact_${prefix}` : 'contact' });
 			firstName = '';
 			lastName = '';
 			email = '';

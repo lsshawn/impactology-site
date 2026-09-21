@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
+	import { track } from '$lib/analytics';
 
 	let email = $state('');
 	let status = $state<'idle' | 'loading' | 'success' | 'error'>('idle');
@@ -25,6 +26,7 @@
 					form_name: 'newsletter',
 					form_destination: '/api/newsletter'
 				});
+				track('newsletter_signup');
 			} else {
 				status = 'error';
 				message = 'Something went wrong. Please try again.';
