@@ -4,6 +4,8 @@
 	import ClientLogos from '$lib/components/ClientLogos.svelte';
 	import Icon from '@iconify/svelte';
 
+	let { data } = $props();
+
 	// Trigger action — fires immediately if already in viewport, else waits for scroll
 	function trigger(node: HTMLElement, stateSetter: (v: boolean) => void) {
 		let observer: IntersectionObserver;
@@ -77,34 +79,6 @@
 			isAnimating = false;
 		}, 300);
 	}
-
-	const faqs = [
-		{
-			question: 'What is Impactora?',
-			answer:
-				'Impactora is a SaaS based HR platform which helps solving a critical organization challenge \u2013 helping managers and employees receive tailored HR information and advice. Impactora is the platform where employees access tailored advice and information to resolve issues, access insights, make decisions, and achieve their goals which positively impacts their colleagues and work environment \u2013 imagine a combination of Wikipedia and Google tailored to your personal work context and situation.'
-		},
-		{
-			question: 'What is Impactora used for?',
-			answer:
-				'We solve the productivity challenge for employees and HR by providing answers to frequently asked questions for non-contextual information. We solve employee performance challenges by providing the right, tailored information with the right insights at the right time to resolve people issues and improve decision making.\n\nPareto rule exists that 80% of the questions are on simple queries – the focus is to lower service delivery costs. Achievement of key people outcomes however comes from answering 20% of the challenging issues and decisions. Combined, Impactora solves three critical issues:\n• Improve employee performance by providing the right tailored information at the right time with the right level of insights\n• Improve employee and HR productivity by providing answers to non-contextual questions\n• Improve Leaders, Managers, Employees and HR capabilities and knowledge by providing insights to solve contextual issues and decisions\n\nWhilst employees have access to infinite sources of knowledge, data and advice – it is not tailored and it is not specific to their unique situation. This “mass-information” environment creates noise and cognitive overload for employees, where abundant choice is the enemy of action. This solution provides organisations access to a scalable Platform technology that empowers employees to take ownership of their day-to-day actions and behaviours and positively impact themselves, their team, their colleagues, their customers and community'
-		},
-		{
-			question: 'Is the Impactora Platform safe and secure?',
-			answer:
-				'Impactora is the trusted Platform where employees feel safe to help them resolve some of the tricky issues, access insights, make decisions, and achieve their goals which positively impacts their colleagues and work environment. <a href="/legals1/impactora-privacy" class="underline hover:opacity-70">Click here to better understand how we keep your data safe.</a>'
-		},
-		{
-			question: 'Who is the target audience for Impactora?',
-			answer:
-				'Impactora is designed for mature mid-sized organisations and smaller high growth organisations.\n\nOur end users are graduates, early career employees, first-time managers, emerging leaders and newly promoted managers, across all disciplines and job functions.\n\nAlso, organisations are investing in leadership and development programs to help build organisational capabilities and develop their employees. One of the challenges organisations face, is ensuring employees can effectively consolidate the learnings at the conclusion of any development program they attend – particularly, when they are back "in the office" and working in their day-to-day role. Impactora is designed to help employees leverage and consolidate their learnings, by accessing relevant insights and advice that complement the development program they attended.'
-		},
-		{
-			question: 'Which employees can best benefit from Impactora?',
-			answer:
-				'Employees who are:\n• Stretched in their role and have a lack of time and knowledge on where to seek advice\n• Getting stuck in career: compromising career progression through bad decisions\n• Have a fear of failing in their role – lack confidence\n• Looking for a platform to complement existing learning and development programs\n• Have a willingness to embrace new modes of learning\n• Receiving too much theoretical advice – non-tactical or implementable\n• Management doesn’t get me\n• Not feeling valued at work\n• Lack of timely, actionable personal advice\n• Trying to balance work and personal commitments\n• Lack of connectivity with colleagues\n• Fear of not being good enough.\n• Not developing fast enough (keep pace of change and expectations)\n• Lack of personal connection to day-to-day work.'
-		}
-	];
 
 	const helpBoxes = [
 		{
@@ -780,12 +754,13 @@
 			</div>
 
 			<div class="reveal-y space-y-3" class:visible={faqItems} style="transition-delay: 200ms">
-				{#each faqs as faq, i (i)}
+				{#each data.faqs as faq, i (faq.question)}
 					<div class="collapse collapse-arrow bg-base-100 border border-base-300">
 						<input type="radio" name="impactora-faq" checked={i === 0} />
 						<div class="collapse-title font-semibold">{faq.question}</div>
 						<div class="collapse-content text-sm">
-							<p class="leading-relaxed opacity-80 whitespace-pre-line">{@html faq.answer}</p>
+							<!-- eslint-disable-next-line svelte/no-at-html-tags -- Impactora's app admins write it (api /v1/content/site-faq) -->
+							<div class="leading-relaxed opacity-80 space-y-3">{@html faq.answer}</div>
 						</div>
 					</div>
 				{/each}
