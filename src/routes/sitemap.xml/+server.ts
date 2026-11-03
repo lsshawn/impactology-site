@@ -6,7 +6,6 @@ const staticPages = [
 	'/',
 	'/about/',
 	'/programs',
-	'/resources/',
 	'/blog',
 	'/contact/',
 	'/gallery',

@@ -2,9 +2,12 @@
 	import SEO from '$lib/components/SEO.svelte';
 	import ContactForm from '$lib/components/ContactForm.svelte';
 	import ClientLogos from '$lib/components/ClientLogos.svelte';
+	import { impactoraLogos } from '$lib/data/client-logos';
 	import Icon from '@iconify/svelte';
 
 	let { data } = $props();
+
+	const showFeatureGrid = false;
 
 	// Trigger action — fires immediately if already in viewport, else waits for scroll
 	function trigger(node: HTMLElement, stateSetter: (v: boolean) => void) {
@@ -378,6 +381,8 @@
 	</div>
 </section>
 
+<!-- Feature tile grid: hidden until the team decides how to use this layout (Aug 2026 sheet, row 13). -->
+{#if showFeatureGrid}
 <section class="py-8 overflow-hidden bg-base-100" use:trigger={(v) => (featureLeft = v)}>
 	<div
 		class="reveal-y grid grid-cols-1 md:grid-cols-4 gap-3 px-4 max-w-5xl mx-auto"
@@ -587,6 +592,7 @@
 		</div>
 	</div>
 </section>
+{/if}
 
 <section
 	class="py-20 md:py-28 bg-base-100"
@@ -729,7 +735,7 @@
 			CLIENTS WE'VE IMPACTED
 		</h2>
 		<div class="reveal-y" class:visible={clientsLogos} style="transition-delay: 200ms">
-			<ClientLogos marquee={true} />
+			<ClientLogos logos={impactoraLogos} marquee={true} />
 		</div>
 	</div>
 </section>

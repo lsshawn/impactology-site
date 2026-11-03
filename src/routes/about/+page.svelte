@@ -60,9 +60,9 @@
 
 <SEO
 	title="About | Create an Impact | Impactology"
-	description="The Impact is where two ideas collide, grow, and spark to create something big. It can stay within you to ignite at any time."
+	description="Impactology helps people, leaders and organisations challenge conventional thinking and turn ambition into action through leadership development and development diagnostics."
 	ogTitle="About | Create an Impact | Impactology"
-	ogDescription="The Impact is where two ideas collide, grow, and spark to create something big. It can stay within you to ignite at any time."
+	ogDescription="Impactology helps people, leaders and organisations challenge conventional thinking and turn ambition into action through leadership development and development diagnostics."
 	ogImage="https://www.impactology.com.au/wp-content/uploads/2020/09/man-2-sparks-photo-1531574688974-2386ec946fe5.jpg"
 	ogType="website"
 	canonical="https://www.impactology.com.au/about/"
@@ -71,7 +71,7 @@
 		'@type': 'WebPage',
 		name: 'About Impactology',
 		description:
-			'The Impact is where two ideas collide, grow, and spark to create something big. It can stay within you to ignite at any time.',
+			'Impactology helps people, leaders and organisations challenge conventional thinking and turn ambition into action through leadership development and development diagnostics.',
 		url: 'https://www.impactology.com.au/about/',
 		breadcrumb: {
 			'@type': 'BreadcrumbList',
@@ -101,35 +101,36 @@
 	<div class="absolute inset-0 bg-black/80"></div>
 	<div class="container-custom relative z-10">
 		<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-			<div class="reveal-x-left aspect-video w-full" class:visible={heroVideo}>
-				<iframe
-					src="https://www.youtube.com/embed/mQTRlUu-F4c"
-					title="Impactology Introduction"
-					frameborder="0"
-					allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-					allowfullscreen
-					class="w-full h-full"
-				></iframe>
-			</div>
+			<!-- Placeholder: a new intro video is coming. -->
+			<div
+				class="reveal-x-left aspect-video w-full border border-white/20 bg-white/5"
+				class:visible={heroVideo}
+				aria-hidden="true"
+			></div>
 			<div
 				class="reveal-x-right text-white"
 				class:visible={heroText}
 				style="transition-delay: 150ms"
 			>
 				<h1 class="mb-8 text-4xl md:text-5xl lg:text-6xl font-bold uppercase leading-tight">
-					Idea Brokers That Facilitate Impact
+					Thinking Differently Is Just the Beginning.
 				</h1>
 				<div class="prose prose-lg prose-invert mb-8">
 					<p>
-						Inspiration is when an idea gets hold of you and moves towards where you want to go.
-						That is what we want to create with Impactology. It's the one spark that takes you
-						towards your goal.
+						Ideas can challenge what we believe. Conversations can change how we see things. But
+						real impact comes from what happens next.
 					</p>
 					<p>
-						We want to disrupt every day thinking and spark new ideas and create new ways to
-						interact that will truly have an impact.
+						At Impactology, we work with people, leaders and organisations to challenge
+						conventional thinking, unlock new possibilities and turn ambition into action.
 					</p>
-					<p>We believe in the what, the how and the who. And most importantly the WHY?</p>
+					<p>
+						Through leadership development and personalised development diagnostics, we help
+						people build the confidence, capabilities and connections to perform at their best and
+						make a meaningful difference.
+					</p>
+					<p>Because inspiration is only the beginning.</p>
+					<p>What you do with it is what matters.</p>
 					<p class="font-bold">Let's make an impact together.</p>
 				</div>
 				<a
@@ -169,15 +170,13 @@
 					/>
 					<circle fill="#fff200" cx="72.43" cy="65.85" r="17.02" />
 				</svg>
-				<h2 class="text-5xl font-bold mb-8">WHAT?</h2>
+				<h2 class="text-5xl font-bold mb-2">WHAT?</h2>
+				<p class="text-2xl font-bold mb-8">Ideas Are Only the Beginning</p>
 				<div class="prose prose-lg">
-					<p>
-						Impact is where two ideas collide, grow, spark to create something bigger. It can stay
-						within you to be ignited at any time. Impact can come from anywhere or anyone. It can be
-						a conversation, a comment, a book, an email or a presentation. Impact can be big or
-						small.
-					</p>
-					<p>An impact will leave someone with more than they had before they met you.</p>
+					<p>The world isn't short of ideas. What's harder is doing something with them.</p>
+					<p>We help people challenge familiar ways of thinking, see opportunities they might otherwise miss and turn new insights into action.</p>
+					<p>Sometimes it's a different approach to leading a team. A conversation that changes someone's perspective. Or the confidence to do something they've been putting off.</p>
+					<p>Not every impact makes headlines. Some of the most important ones happen quietly, every day.</p>
 				</div>
 			</div>
 			<div class="reveal-x-right" class:visible={whatImg} style="transition-delay: 150ms">
@@ -221,14 +220,12 @@
 					/>
 					<circle fill="#fff200" cx="90.78" cy="74.19" r="16.89" />
 				</svg>
-				<h2 class="text-5xl font-bold mb-8">WHO?</h2>
+				<h2 class="text-5xl font-bold mb-2">WHO?</h2>
+				<p class="text-2xl font-bold mb-8">For People Who Aren't Standing Still</p>
 				<div class="prose prose-lg">
-					<p>
-						We want to create a community of people to inspire each other. Famous names and names
-						you've yet to hear. Some are writers. Some are artists. There are leaders, athletes,
-						scholars. All striving to be better. One action at a time.
-					</p>
-					<p>All are impactologists. We want you to join us and impact us and others.</p>
+					<p>We work with curious minds, ambitious professionals, emerging leaders and organisations willing to challenge the way things have always been done.</p>
+					<p>People who want to become better at what they do, understand themselves and others more deeply, and contribute something worthwhile.</p>
+					<p>From those taking their first steps in leadership to experienced professionals looking for a fresh perspective, we work with people who believe there's more to discover and achieve.</p>
 				</div>
 			</div>
 		</div>
@@ -278,14 +275,12 @@
 					/>
 					<circle fill="#fcee23" cx="104.94" cy="32.7" r="15.82" />
 				</svg>
-				<h2 class="text-5xl font-bold mb-8">HOW?</h2>
+				<h2 class="text-5xl font-bold mb-2">HOW?</h2>
+				<p class="text-2xl font-bold mb-8">Less Theory. More Doing.</p>
 				<div class="prose prose-lg">
-					<p>
-						We celebrate awesomeness on every level. From breaking world records, finding a cure,
-						launching a rocket ship. Each is an action that creates an impact. Every conversation,
-						every communication can open a door to a new opportunity.
-					</p>
-					<p>We provide the platform. You provide the discussion. Together we create impact.</p>
+					<p>We believe learning should change something.</p>
+					<p>Through leadership development and personalised development diagnostics, we help people better understand themselves, develop new capabilities and approach their work differently. Our approach combines research, practical frameworks, honest conversations and opportunities to apply what you've learned. No learning for learning's sake. No inspiration without application. Because the real test isn't what happens during a workshop or assessment.</p>
+					<p>It's what happens afterwards.</p>
 				</div>
 			</div>
 			<div class="reveal-x-right" class:visible={howImg} style="transition-delay: 150ms">
@@ -335,13 +330,13 @@
 					<circle fill="#fff200" cx="33.51" cy="11.31" r="11.31" />
 					<circle fill="#fff200" cx="89.09" cy="84" r="11.31" />
 				</svg>
-				<h2 class="text-5xl font-bold mb-8">WHY?</h2>
+				<h2 class="text-5xl font-bold mb-2">WHY?</h2>
+				<p class="text-2xl font-bold mb-8">Because Every Interaction Matters</p>
 				<div class="prose prose-lg">
-					<p>
-						It's times like these we learn to live again. We believe in creating a space for living
-						again. There has never been a better time for a community of impactologists.
-					</p>
-					<p class="font-bold">Be interested. Be curious. Be an impactologist.</p>
+					<p>Think about the people who have influenced your life. Chances are, it wasn't always something extraordinary they did.</p>
+					<p>Perhaps they challenged your thinking. Saw something in you that you hadn't recognised. Or gave you the confidence to take a chance.</p>
+					<p>We believe those moments matter. And that the way we lead, communicate, make decisions and treat others can have an influence far beyond what we see.</p>
+					<p class="font-bold">That's why Impactology exists.<br />To help people become the kind of influence they once benefited from themselves.</p>
 				</div>
 			</div>
 		</div>
@@ -352,15 +347,26 @@
 	</div>
 </section>
 
-<!-- Our Founder -->
+<!-- Our Co-Founders -->
 <section class="py-20 md:py-28 bg-base-100">
 	<div class="container-custom">
 		<h2
 			class="reveal-y text-5xl lg:text-7xl font-bold text-center mb-16"
 			class:visible={founderHeading}
 		>
-			OUR FOUNDER
+			OUR CO-FOUNDERS
 		</h2>
+		<div class="mx-auto mb-20 max-w-3xl" use:trigger={(v) => (founderHeading = v)}>
+			<div class="prose prose-lg mb-8">
+				<p>I’ve had the great fortune to explore some amazing places around the world. After having grown up in the United States, I spent 20 years in Asia working, living and traveling.</p>
+				<p>For me, and for many of the people I’ve met on dusty trekking trails and in even dustier hotels, travel is intoxicating. You often feel a great experience before you see it. You meet people who inspire and challenge you. You wonder what’s around the next corner. It’s that thrill of discovery that continues to inspire me to leave the familiar in search of something new, both in life and in work.</p>
+				<p>Throughout my career, I’ve moved between large multinational companies and building businesses of my own. Across all my roles, one question has consistently guided me: How can I make a positive impact on people’s experience of work and their lives?</p>
+				<p>Starting IMPACTORA gives me the opportunity to continue that journey at scale. To bring together the experiences that have shaped me, the successes as well as plenty of lessons learned, and use them to help people starting their careers and emerging as the leaders of tomorrow.</p>
+				<p>My hope for Impactora is that together we can build an engaging community, enabled by the latest technology, to help people create their own personal journey of positively impacting themselves and the world around them.</p>
+			</div>
+			<h3 class="text-2xl font-bold">Jeremy Andrulis</h3>
+			<p class="text-sm tracking-wider uppercase opacity-70">Co-Founder, IMPACTORA</p>
+		</div>
 		<div
 			class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-5xl mx-auto"
 			use:trigger={(v) => {
@@ -373,20 +379,22 @@
 				<div class="prose prose-lg mb-8">
 					<p>
 						I am passionate about assisting people to be more confident and excel at what they do
-						best.
+						best. I am loyal, trusting and love talking to people.
 					</p>
-					<p>I am loyal, trusting and love talking to people.</p>
+					<p>I am inspired by storytelling that allows me to grow, learn and be better.</p>
+					<p>I am a passionate advocate for mental health.</p>
 					<p>
-						I am inspired by storytelling that allows me to grow, learn and be better. I can be
-						restless and get snappy when I'm hungry.
+						I wish I knew early in my career, that you cannot outsource your growth. Own your
+						development, and growth will happen when the moment you’re in, collides with the courage
+						to act.
 					</p>
 					<p>
-						Formula 1 is a passion, cinema is my release, futsal and the gym keeps me fit, trusted
-						friends are a treasure, and family is everything.
+						Formula 1 is a passion, cinema is my release, trusted friends are a treasure, family is
+						everything and I never miss a gym session with my kids.
 					</p>
 				</div>
 				<h3 class="text-2xl font-bold">George Liberopoulos</h3>
-				<p class="text-sm uppercase tracking-wider opacity-70 mb-6">Co-founder, Impactology</p>
+				<p class="text-sm uppercase tracking-wider opacity-70 mb-6">Co-Founder, Impactology</p>
 				<div class="flex gap-4">
 					<a
 						href="https://www.linkedin.com/in/george-liberopoulos-0561143/"

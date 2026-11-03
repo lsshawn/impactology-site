@@ -63,18 +63,18 @@
 					</ul>
 				</li>
 				<li class="group relative">
-					<a
-						href="/resources"
-						class="font-bold rounded-none bg-transparent hover:bg-transparent border-b-2 border-transparent hover:border-primary transition-colors duration-200 flex items-center gap-1"
+					<span
+						tabindex="0"
+						class="font-bold rounded-none bg-transparent hover:bg-transparent border-b-2 border-transparent hover:border-primary transition-colors duration-200 flex items-center gap-1 cursor-default"
 					>
 						Resources
 						<Icon
 							icon="ph:caret-down"
 							class="text-sm transition-transform duration-200 group-hover:rotate-180"
 						/>
-					</a>
+					</span>
 					<ul
-						class="absolute top-full right-0 hidden group-hover:block bg-base-100 shadow-lg w-64 p-2 z-50"
+						class="absolute top-full right-0 hidden group-hover:block group-focus-within:block bg-base-100 shadow-lg w-64 p-2 z-50"
 					>
 						<li><a href="/blog" class="text-sm">Content</a></li>
 						<li><a href="/evolve-book" class="text-sm">Evolve Book</a></li>
@@ -139,9 +139,9 @@
 				</li>
 				<li><a href="/about" onclick={toggleMenu}>About</a></li>
 				<li class="mt-4">
-					<button href="/#make_impacts" class="btn btn-primary uppercase" onclick={toggleMenu}>
+					<a href="/#make_impacts" class="btn btn-primary uppercase" onclick={toggleMenu}>
 						GET IN TOUCH
-					</button>
+					</a>
 				</li>
 			</ul>
 		</div>

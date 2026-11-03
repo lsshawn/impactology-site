@@ -1,19 +1,6 @@
 <script lang="ts">
 	import ClientLogos from '$lib/components/ClientLogos.svelte';
 
-	const logos = [
-		'/client-moss.webp',
-		'/client-otto.webp',
-		'/client-ot.webp',
-		'/client-rba.webp',
-		'/client-kh.webp',
-		'/client-edgeward.webp',
-		'/client-mu.webp',
-		'/client-transport.webp',
-		'/client-specsavers.webp',
-		'/client-msd.webp',
-		'/client-lochard.webp'
-	];
 
 	function trigger(node: HTMLElement, stateSetter: (v: boolean) => void) {
 		const observer = new IntersectionObserver(
@@ -48,7 +35,7 @@
 			SOME COMPANIES WE'VE PARTNERED WITH
 		</h2>
 		<div class="reveal-y" class:visible={logosVisible} style="transition-delay: 200ms; min-height: 56px;">
-			<ClientLogos {logos} marquee={true} />
+			<ClientLogos marquee={true} />
 		</div>
 	</div>
 </section>

@@ -4,6 +4,7 @@
 	import ContactForm from '$lib/components/ContactForm.svelte';
 	import TestimonialSlider from '$lib/components/TestimonialSlider.svelte';
 	import ClientLogosSection from '$lib/components/ClientLogosSection.svelte';
+	import PhotoCarousel from '$lib/components/PhotoCarousel.svelte';
 	import { galleryImages } from '$lib/content/gallery';
 
 	const testimonials = [
@@ -123,13 +124,24 @@
 		<h2 class="mb-6 text-5xl lg:text-7xl font-bold text-center">WHAT IS IMPACTOLOGY?</h2>
 		<div class="prose prose-lg mx-auto max-w-xl">
 			<p>
-				In short, we aim to disrupt conventional thinking. We connect people in ways that spark new
-				ideas and help them achieve their goals faster.
+				At Impactology, we help people, leaders and organisations achieve more of what matters to
+				them.
 			</p>
 			<p>
-				Whether you're looking to sustainably grow your business, upskill your team, or pursuing a
-				new opportunity, we have a solution or program to arm you with the knowledge you'll need to
-				make a truly meaningful impact in the work you do. Explore our <a href="/finance-business-partnering" class="underline hover:text-primary transition-colors">finance business partnering training</a> to develop your team's commercial acumen.
+				Through leadership development, <a
+					href="/finance-business-partnering"
+					class="underline hover:text-primary transition-colors">business partnering programs</a
+				> and personalised development diagnostics, we help individuals and teams better understand
+				themselves, strengthen their capabilities and improve how they lead, communicate and work
+				together.
+			</p>
+			<p>
+				Whether you're looking to develop your people, improve team performance or prepare for new
+				responsibilities, we combine research, practical frameworks and hands-on learning to help you
+				achieve better outcomes.
+			</p>
+			<p>
+				Our focus is simple: learning that changes how people think, work and perform.
 			</p>
 		</div>
 	</div>
@@ -224,20 +236,7 @@
 <!-- Meet Our Clients -->
 <section class="py-16 bg-base-100">
 	<h2 class="mb-10 text-5xl lg:text-7xl font-bold text-center">MEET OUR CLIENTS</h2>
-	<div class="carousel carousel-center w-full gap-2 rounded-none">
-		{#each galleryImages as photo, i}
-			<div class="carousel-item">
-				<img
-					src={photo.src}
-					alt={photo.alt}
-					width="640"
-					height="427"
-					class="h-64 md:h-80 w-auto object-cover"
-					loading="lazy"
-				/>
-			</div>
-		{/each}
-	</div>
+	<PhotoCarousel photos={galleryImages} />
 </section>
 
 <!-- Client Logos -->

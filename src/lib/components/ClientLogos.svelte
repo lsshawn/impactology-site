@@ -1,5 +1,6 @@
 <script lang="ts">
 	import Icon from '@iconify/svelte';
+	import { partnerLogos } from '$lib/data/client-logos';
 
 	type Props = {
 		logos?: string[];
@@ -8,19 +9,7 @@
 		class?: string;
 	};
 
-	const defaultLogos = [
-		'/client-moss.webp',
-		'/client-otto.webp',
-		'/client-ot.webp',
-		'/client-rba.webp',
-		'/client-kh.webp',
-		'/client-edgeward.webp',
-		'/client-mu.webp',
-		'/client-transport.webp',
-		'/client-specsavers.webp',
-		'/client-msd.webp',
-		'/client-lochard.webp'
-	];
+	const defaultLogos = partnerLogos;
 
 	let { logos = defaultLogos, carousel = false, marquee = false, class: className = '' }: Props =
 		$props();

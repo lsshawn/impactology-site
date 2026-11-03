@@ -26,19 +26,6 @@
 		return { destroy: () => observer?.disconnect() };
 	}
 
-	const clientLogos = [
-		'/client-moss.webp',
-		'/client-otto.webp',
-		'/client-ot.webp',
-		'/client-rba.webp',
-		'/client-kh.webp',
-		'/client-edgeward.webp',
-		'/client-mu.webp',
-		'/client-transport.webp',
-		'/client-specsavers.webp',
-		'/client-msd.webp',
-		'/client-lochard.webp'
-	];
 
 	// Per-block reveal states
 	let heroVisible = $state(true);
@@ -193,7 +180,7 @@
 			CLIENTS WE'VE IMPACTED
 		</h2>
 		<div class="reveal-y" class:visible={clientsLogos} style="transition-delay: 200ms">
-			<ClientLogos logos={clientLogos} marquee={true} />
+			<ClientLogos marquee={true} />
 		</div>
 	</div>
 </section>

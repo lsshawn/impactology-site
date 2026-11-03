@@ -28,19 +28,6 @@
 		return { destroy: () => observer?.disconnect() };
 	}
 
-	const clientLogos = [
-		'/client-moss.webp',
-		'/client-otto.webp',
-		'/client-ot.webp',
-		'/client-rba.webp',
-		'/client-kh.webp',
-		'/client-edgeward.webp',
-		'/client-mu.webp',
-		'/client-transport.webp',
-		'/client-specsavers.webp',
-		'/client-msd.webp',
-		'/client-lochard.webp'
-	];
 
 	const modules = [
 		{
@@ -247,7 +234,7 @@
 		{/if}
 		{#if clientsLogos}
 			<div in:fly={{ y: 20, duration: 600 }}>
-				<ClientLogos logos={clientLogos} marquee={true} />
+				<ClientLogos marquee={true} />
 			</div>
 		{/if}
 	</div>
